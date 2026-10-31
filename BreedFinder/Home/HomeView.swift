@@ -19,25 +19,10 @@ struct HomeView: View {
                     .foregroundStyle(Color.accentColor)
             }
 
-            VStack(spacing: 10) {
-                Text("Breed Finder")
-                    .font(.largeTitle.bold())
-                Text("Film your dog for 5 seconds and find out what breed it is.")
-                    .font(.body)
-                    .foregroundStyle(.secondary)
-                    .multilineTextAlignment(.center)
-            }
+            Text("Breed Finder")
+                .font(.largeTitle.bold())
 
             Spacer()
-
-            VStack(alignment: .leading, spacing: 14) {
-                Step(icon: "video.fill", text: "Record your dog for 5 seconds")
-                Step(icon: "photo.stack", text: "We check 5 frames from the video")
-                Step(icon: "list.number", text: "See the top 3 breeds and fun facts")
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(18)
-            .background(Color(.secondarySystemBackground), in: RoundedRectangle(cornerRadius: 18))
 
             Button(action: onScan) {
                 Label("Scan a Dog", systemImage: "camera.viewfinder")
@@ -50,21 +35,5 @@ struct HomeView: View {
             .controlSize(.large)
         }
         .padding(24)
-    }
-}
-
-private struct Step: View {
-    let icon: String
-    let text: String
-
-    var body: some View {
-        HStack(spacing: 14) {
-            Image(systemName: icon)
-                .font(.body.weight(.semibold))
-                .foregroundStyle(Color.accentColor)
-                .frame(width: 28)
-            Text(text)
-                .font(.subheadline)
-        }
     }
 }
