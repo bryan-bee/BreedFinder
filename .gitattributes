@@ -1,0 +1,3 @@
+# Core ML model files are binary; never let git convert their line endings.
+*.mlmodel binary
+*.bin binary
