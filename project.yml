@@ -11,7 +11,7 @@ options:
 settings:
   base:
     # Your Apple Developer Team ID (developer.apple.com/account -> Membership details).
-    DEVELOPMENT_TEAM: ""
+    DEVELOPMENT_TEAM: "35ADT9U8CX"
     CODE_SIGN_STYLE: Automatic
     SWIFT_VERSION: "5.0"
     MARKETING_VERSION: "1.0.0"     # the version shown on the App Store
