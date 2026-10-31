@@ -12,8 +12,15 @@ struct FramePrediction {
 
     var dogProbability: Double { breedProbabilities.values.reduce(0, +) }
 
-    /// A frame counts toward the answer if either model is convinced there's a dog in it.
-    var containsDog: Bool { dogDetected || dogProbability >= 0.5 }
+    /// Real dogs score above 0.99, even blurry or when the animal detector misses them,
+    /// while rooms and furniture usually score well under 0.5. 0.8 leaves room for both.
+    static let minimumDogProbability = 0.8
+
+    /// A frame counts toward the answer only if the classifier is convinced there's a dog
+    /// in it. The animal detector decides where the classifier looks, but isn't enough on
+    /// its own: if it fires on something that isn't a dog, rescaling the classifier's
+    /// small leftover breed probabilities to 100% turns them into a confident-looking guess.
+    var containsDog: Bool { dogProbability >= Self.minimumDogProbability }
 }
 
 struct FrameAnalysis {

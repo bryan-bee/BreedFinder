@@ -22,6 +22,7 @@ final class BreedAggregatorTests: XCTestCase {
         let frames = [
             FramePrediction(dogDetected: false, breedProbabilities: ["Pug": 0.2]),
             FramePrediction(dogDetected: true, breedProbabilities: ["Beagle": 0.9]),
+            FramePrediction(dogDetected: true, breedProbabilities: ["Beagle": 0.85]),
         ]
 
         let guesses = BreedAggregator.topGuesses(from: frames)
@@ -31,9 +32,35 @@ final class BreedAggregatorTests: XCTestCase {
     }
 
     func testConfidentClassifierCountsEvenWhenDetectorMissesTheDog() {
-        let frames = [FramePrediction(dogDetected: false, breedProbabilities: ["Pug": 0.8])]
+        let frames = Array(repeating: FramePrediction(dogDetected: false, breedProbabilities: ["Pug": 0.9]), count: 2)
 
         XCTAssertEqual(BreedAggregator.topGuesses(from: frames).map(\.breed), ["Pug"])
+    }
+
+    /// An empty room: the animal detector fires, but the classifier mostly says "Not a dog".
+    func testDetectorAloneDoesNotCountAFrame() {
+        let frames = Array(
+            repeating: FramePrediction(dogDetected: true, breedProbabilities: ["Pug": 0.1, "Beagle": 0.05, "Boxer": 0.03]),
+            count: 5
+        )
+
+        XCTAssertTrue(BreedAggregator.topGuesses(from: frames).isEmpty)
+    }
+
+    func testUnsureClassifierDoesNotCountAFrame() {
+        let frames = Array(
+            repeating: FramePrediction(dogDetected: false, breedProbabilities: ["Pug": 0.4, "Beagle": 0.3]),
+            count: 5
+        )
+
+        XCTAssertTrue(BreedAggregator.topGuesses(from: frames).isEmpty)
+    }
+
+    func testOneStrayDogFrameIsNotEnough() {
+        let empty = FramePrediction(dogDetected: false, breedProbabilities: ["Pug": 0.05])
+        let frames = [empty, empty, FramePrediction(dogDetected: true, breedProbabilities: ["Pug": 0.95]), empty, empty]
+
+        XCTAssertTrue(BreedAggregator.topGuesses(from: frames).isEmpty)
     }
 
     func testNoDogInAnyFrameMeansNoGuesses() {
