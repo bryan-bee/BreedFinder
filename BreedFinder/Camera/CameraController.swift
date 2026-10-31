@@ -1,7 +1,7 @@
 import AVFoundation
 import Combine
 
-/// Owns the capture session and records fixed-length clips from the back camera.
+/// Owns the capture session, zooms, and records fixed-length clips from the back camera.
 ///
 /// All AVCaptureSession work happens on `sessionQueue`: starting a session blocks
 /// for a noticeable moment, and Apple asks that it never run on the main thread.
@@ -15,10 +15,15 @@ final class CameraController: NSObject, ObservableObject {
 
     @Published private(set) var status: Status = .unknown
     @Published private(set) var isRecording = false
+    /// The zoom in the Camera app's numbers, where 1× is the main lens.
+    @Published private(set) var zoom: CGFloat = 1
+    /// How far this phone's camera zooms, and its zoom buttons. Nil until the camera is set up.
+    @Published private(set) var zoomScale: ZoomScale?
 
     let session = AVCaptureSession()
     private let movieOutput = AVCaptureMovieFileOutput()
     private let sessionQueue = DispatchQueue(label: "BreedFinder.camera")
+    private var camera: AVCaptureDevice?
     private var isConfigured = false
     private var onFinish: ((Result<URL, Error>) -> Void)?
 
@@ -58,6 +63,17 @@ final class CameraController: NSObject, ObservableObject {
         }
     }
 
+    /// Zooms to `zoom` (in the Camera app's numbers), within what this phone allows. The
+    /// zoom buttons glide there (`animated`); pinching follows the fingers directly.
+    /// Call on the main thread.
+    func setZoom(_ zoom: CGFloat, animated: Bool = false) {
+        guard let zoomScale else { return }
+        let zoom = min(max(zoom, 1), zoomScale.maxZoom)
+        self.zoom = zoom
+        let factor = zoomScale.deviceFactor(for: zoom)
+        sessionQueue.async { [self] in setDeviceZoomFactor(factor, animated: animated) }
+    }
+
     private func configureAndRun() {
         sessionQueue.async { [self] in
             if !isConfigured {
@@ -66,6 +82,7 @@ final class CameraController: NSObject, ObservableObject {
                     return
                 }
                 isConfigured = true
+                setUpZoom()
             }
             if !session.isRunning { session.startRunning() }
             setStatus(.ready)
@@ -74,7 +91,7 @@ final class CameraController: NSObject, ObservableObject {
 
     private func configureSession() -> Bool {
         guard
-            let camera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back),
+            let camera = Self.backCamera(),
             let input = try? AVCaptureDeviceInput(device: camera)
         else { return false }
 
@@ -86,6 +103,7 @@ final class CameraController: NSObject, ObservableObject {
         guard session.canAddInput(input), session.canAddOutput(movieOutput) else { return false }
         session.addInput(input)
         session.addOutput(movieOutput)
+        self.camera = camera
 
         // AVFoundation stops the recording itself when the clip is long enough.
         movieOutput.maxRecordedDuration = CMTime(seconds: Self.clipDuration, preferredTimescale: 600)
@@ -95,6 +113,53 @@ final class CameraController: NSObject, ObservableObject {
             connection.videoRotationAngle = 90
         }
         return true
+    }
+
+    /// The back camera. On phones with more than one back lens this is the combined camera,
+    /// which switches to the telephoto lens by itself when zoomed in, like the Camera app.
+    static func backCamera() -> AVCaptureDevice? {
+        let types: [AVCaptureDevice.DeviceType] = [
+            .builtInTripleCamera, .builtInDualWideCamera, .builtInDualCamera, .builtInWideAngleCamera,
+        ]
+        return types.lazy.compactMap { AVCaptureDevice.default($0, for: .video, position: .back) }.first
+    }
+
+    /// Opens the camera at 1× (on phones with an ultra-wide lens, the combined camera would
+    /// otherwise start on it) and publishes how far it zooms. Runs once, before the session
+    /// first starts: after that the zoom stays wherever the user left it, scan after scan.
+    /// Call on `sessionQueue`.
+    private func setUpZoom() {
+        guard let camera else { return }
+        let zoomScale = ZoomScale(camera: camera)
+        do { try camera.lockForConfiguration() } catch { return }
+        // Change lenses only when the user zooms, not by itself when the dog comes close or
+        // the light drops, so the picture doesn't jump in the middle of a recording.
+        if camera.primaryConstituentDeviceSwitchingBehavior != .unsupported {
+            camera.setPrimaryConstituentDeviceSwitchingBehavior(
+                .restricted, restrictedSwitchingBehaviorConditions: .videoZoomChanged
+            )
+        }
+        camera.unlockForConfiguration()
+        setDeviceZoomFactor(zoomScale.deviceFactor(for: 1), animated: false)
+
+        DispatchQueue.main.async { [self] in
+            self.zoomScale = zoomScale
+            zoom = 1
+        }
+    }
+
+    /// Call on `sessionQueue`.
+    private func setDeviceZoomFactor(_ factor: CGFloat, animated: Bool) {
+        guard let camera else { return }
+        do { try camera.lockForConfiguration() } catch { return }
+        defer { camera.unlockForConfiguration() }
+        // A zoom factor outside the allowed range raises an exception, so clamp it first.
+        let factor = min(max(factor, camera.minAvailableVideoZoomFactor), camera.maxAvailableVideoZoomFactor)
+        if animated {
+            camera.ramp(toVideoZoomFactor: factor, withRate: 6)
+        } else {
+            camera.videoZoomFactor = factor
+        }
     }
 
     private func setStatus(_ status: Status) {

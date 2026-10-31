@@ -4,7 +4,7 @@ An iPhone app that guesses a dog's breed from a 5-second video. Point the camera
 
 ## How it works
 
-**Home → Camera → Scanning → Result.** Tap *Scan a Dog*, record 5 seconds, watch the 5 frames get scanned (so you can see if the video was usable), then get the result: your dog and the best-matching breed side by side as fanned cards, the top 3 guesses (tap one to compare), and a profile of the breed with its origin, lifespan, size, temperament and fun facts.
+**Home → Camera → Scanning → Result.** Tap *Scan a Dog*, record 5 seconds (pinch or tap 1× / 2× / 5× to zoom in on a dog that's far away), watch the 5 frames get scanned (so you can see if the video was usable), then get the result: your dog and the best-matching breed side by side as fanned cards, the top 3 guesses (tap one to compare), and a profile of the breed with its origin, lifespan, size, temperament and fun facts.
 
 ```
 record 5 s video ──► pull 5 frames ──► for each frame:                       ──► combine ──► top 3
@@ -20,7 +20,8 @@ record 5 s video ──► pull 5 frames ──► for each frame:              
 | File | What it does |
 |---|---|
 | [Home/HomeView.swift](BreedFinder/Home/HomeView.swift) | Start screen with the *Scan a Dog* button |
-| [Camera/CameraController.swift](BreedFinder/Camera/CameraController.swift) | Capture session; records exactly 5 s of portrait video |
+| [Camera/CameraController.swift](BreedFinder/Camera/CameraController.swift) | Capture session and zoom; records exactly 5 s of portrait video |
+| [Camera/ZoomScale.swift](BreedFinder/Camera/ZoomScale.swift) | Turns the Camera app's zoom numbers (1×, 2×, 5×) into the camera's own zoom factors |
 | [Scanning/ScanningView.swift](BreedFinder/Scanning/ScanningView.swift) | The 5 frames with a scanner sweep while the model runs |
 | [Results/ResultView.swift](BreedFinder/Results/ResultView.swift) | Card fan, top 3 guesses, breed profile, frames used |
 | [Analysis/FrameExtractor.swift](BreedFinder/Analysis/FrameExtractor.swift) | Pulls 5 evenly spaced frames out of the clip |
