@@ -15,7 +15,7 @@ settings:
     CODE_SIGN_STYLE: Automatic
     SWIFT_VERSION: "5.0"
     MARKETING_VERSION: "1.0.0"     # the version shown on the App Store
-    CURRENT_PROJECT_VERSION: "1"   # bump for every upload to App Store Connect
+    CURRENT_PROJECT_VERSION: "2"   # bump for every upload to App Store Connect
 
 targets:
   BreedFinder:
