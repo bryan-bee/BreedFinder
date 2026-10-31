@@ -1,0 +1,365 @@
+{
+  "Canaan Dog": {
+    "summary": "An ancient pariah breed from the Middle East, re-established in the 1930s from semi-wild desert dogs to work as a guard and herding dog.",
+    "origin": "Israel", "lifespan": "12–15 years", "weight": "35–55 lb", "group": "Herding",
+    "temperament": ["Alert", "Vigilant", "Devoted"],
+    "funFacts": [
+      "It's the national dog of Israel.",
+      "Dogs of this type have survived on their own in the Negev desert for thousands of years."
+    ]
+  },
+  "Cane Corso": {
+    "summary": "A large Italian mastiff descended from Roman war dogs, used for centuries to guard property and hunt big game.",
+    "origin": "Italy", "lifespan": "9–12 years", "weight": "88–110 lb", "group": "Working",
+    "temperament": ["Affectionate", "Intelligent", "Majestic"],
+    "funFacts": [
+      "Its name roughly means \"bodyguard dog,\" from the Latin \"cohors\" (guardian).",
+      "The breed nearly vanished in the 20th century and was revived by Italian enthusiasts in the 1970s."
+    ]
+  },
+  "Cardigan Welsh Corgi": {
+    "summary": "The older of the two corgi breeds, a low-slung Welsh cattle dog distinguished by its long, foxy tail.",
+    "origin": "Wales", "lifespan": "12–15 years", "weight": "25–38 lb", "group": "Herding",
+    "temperament": ["Affectionate", "Loyal", "Smart"],
+    "funFacts": [
+      "Unlike the Pembroke, the Cardigan has a long tail and larger, rounder ears.",
+      "\"Corgi\" is usually translated from Welsh as \"dwarf dog.\""
+    ]
+  },
+  "Cavalier King Charles Spaniel": {
+    "summary": "A gentle toy spaniel descended from the lapdogs of English royalty, especially King Charles II.",
+    "origin": "England", "lifespan": "12–15 years", "weight": "13–18 lb", "group": "Toy",
+    "temperament": ["Affectionate", "Gentle", "Graceful"],
+    "funFacts": [
+      "King Charles II was said to take his spaniels almost everywhere, even to council meetings.",
+      "The red-and-white \"Blenheim\" color is named after Blenheim Palace."
+    ]
+  },
+  "Cavapoo": {
+    "summary": "A cross between a Cavalier King Charles Spaniel and a toy or miniature Poodle, bred as a gentle, lower-shedding companion.",
+    "origin": "Australia", "lifespan": "12–15 years", "weight": "9–25 lb", "group": "Designer crossbreed",
+    "temperament": ["Affectionate", "Gentle", "Playful"],
+    "funFacts": [
+      "In Australia it's called the Cavoodle and is one of the country's most popular dogs.",
+      "Its coat can be wavy or tightly curled, depending on which parent it takes after."
+    ]
+  },
+  "Chesapeake Bay Retriever": {
+    "summary": "A powerful American retriever bred to haul ducks out of the icy waters of the Chesapeake Bay.",
+    "origin": "United States (Maryland)", "lifespan": "10–13 years", "weight": "55–80 lb", "group": "Sporting",
+    "temperament": ["Affectionate", "Bright", "Sensitive"],
+    "funFacts": [
+      "The breed descends from two Newfoundland puppies rescued from a sinking ship off Maryland in 1807.",
+      "Its oily, wavy double coat is almost waterproof.",
+      "It's the state dog of Maryland."
+    ]
+  },
+  "Chihuahua": {
+    "summary": "The world's smallest dog breed, named after the Mexican state of Chihuahua and probably descended from the Techichi dogs of ancient Mexico.",
+    "origin": "Mexico", "lifespan": "14–16 years", "weight": "Up to 6 lb", "group": "Toy",
+    "temperament": ["Charming", "Graceful", "Sassy"],
+    "funFacts": [
+      "Chihuahuas have the largest brain relative to body size of any dog breed.",
+      "Many are born with a soft spot on the skull, called a molera, like a human baby."
+    ]
+  },
+  "Chinese Crested": {
+    "summary": "An elegant toy breed that comes in two varieties in the same litter: the mostly hairless Hairless and the fully coated Powderpuff.",
+    "origin": "China (likely older African or Mexican roots)", "lifespan": "13–18 years", "weight": "8–12 lb", "group": "Toy",
+    "temperament": ["Affectionate", "Lively", "Alert"],
+    "funFacts": [
+      "Hairless and Powderpuff puppies can be born in the same litter.",
+      "Chinese Cresteds have won the World's Ugliest Dog Contest several times."
+    ]
+  },
+  "Chow Chow": {
+    "summary": "An ancient Chinese breed with a lion-like mane and an aloof, almost cat-like personality.",
+    "origin": "China", "lifespan": "8–12 years", "weight": "45–70 lb", "group": "Non-Sporting",
+    "temperament": ["Dignified", "Bright", "Serious-minded"],
+    "funFacts": [
+      "Chow Chows have blue-black tongues.",
+      "Sigmund Freud's Chow, Jofi, often sat in on his therapy sessions."
+    ]
+  },
+  "Clumber Spaniel": {
+    "summary": "The heaviest of the spaniels, a long, low, mostly white gundog developed at Clumber Park, the Duke of Newcastle's estate.",
+    "origin": "England", "lifespan": "10–12 years", "weight": "55–85 lb", "group": "Sporting",
+    "temperament": ["Gentle", "Loyal", "Amusing"],
+    "funFacts": [
+      "It's named after Clumber Park in Nottinghamshire.",
+      "King Edward VII kept Clumbers at the royal Sandringham estate."
+    ]
+  },
+  "Cockapoo": {
+    "summary": "A cross between a Cocker Spaniel and a Poodle, one of the oldest \"designer\" dogs, dating back to the 1950s in the United States.",
+    "origin": "United States", "lifespan": "12–15 years", "weight": "6–25 lb", "group": "Designer crossbreed",
+    "temperament": ["Friendly", "Affectionate", "Outgoing"],
+    "funFacts": [
+      "It's considered one of the first popular designer crossbreeds.",
+      "In the UK, Cockapoos regularly rank among the most popular dogs."
+    ]
+  },
+  "Cocker Spaniel": {
+    "summary": "The smallest of the AKC's sporting dogs, a merry American spaniel with a long, silky coat, developed from the English Cocker.",
+    "origin": "United States", "lifespan": "10–14 years", "weight": "20–30 lb", "group": "Sporting",
+    "temperament": ["Gentle", "Smart", "Happy"],
+    "funFacts": [
+      "Lady in Disney's Lady and the Tramp is an American Cocker Spaniel.",
+      "\"Cocker\" comes from their use in hunting woodcock."
+    ]
+  },
+  "Collie": {
+    "summary": "A graceful Scottish herding dog with a flowing coat, made world-famous by the Lassie films and TV series.",
+    "origin": "Scotland", "lifespan": "12–14 years", "weight": "50–75 lb", "group": "Herding",
+    "temperament": ["Devoted", "Graceful", "Proud"],
+    "funFacts": [
+      "Lassie was played by male Collies, starting with a dog named Pal.",
+      "Queen Victoria helped make Collies fashionable in the 1860s."
+    ]
+  },
+  "Curly-Coated Retriever": {
+    "summary": "One of the oldest retriever breeds, covered in tight, crisp curls that shed water and brambles.",
+    "origin": "England", "lifespan": "10–12 years", "weight": "60–95 lb", "group": "Sporting",
+    "temperament": ["Confident", "Proud", "Smart"],
+    "funFacts": [
+      "It's the tallest of the retriever breeds.",
+      "Its tight curls protect it in icy water and thick cover."
+    ]
+  },
+  "Dachshund": {
+    "summary": "A long-bodied, short-legged German hound bred to dig into badger dens, now one of the world's most popular companions.",
+    "origin": "Germany", "lifespan": "12–16 years", "weight": "16–32 lb (standard), under 11 lb (miniature)", "group": "Hound",
+    "temperament": ["Friendly", "Curious", "Spunky"],
+    "funFacts": [
+      "\"Dachshund\" means \"badger dog\" in German.",
+      "A Dachshund named Waldi was the first official Olympic mascot (Munich, 1972).",
+      "They come in three coat types: smooth, wirehaired and longhaired."
+    ]
+  },
+  "Dalmatian": {
+    "summary": "A spotted coach dog named after Dalmatia in Croatia, famous for running alongside horse-drawn carriages and fire engines.",
+    "origin": "Croatia", "lifespan": "11–13 years", "weight": "45–70 lb", "group": "Non-Sporting",
+    "temperament": ["Dignified", "Smart", "Outgoing"],
+    "funFacts": [
+      "Dalmatian puppies are born pure white; their spots appear as they grow.",
+      "They became firehouse mascots because they guarded and calmed the horses that pulled fire wagons."
+    ]
+  },
+  "Dandie Dinmont Terrier": {
+    "summary": "A long, low terrier from the Scottish Borders with a big, fluffy topknot, bred to hunt otters and badgers.",
+    "origin": "Scotland", "lifespan": "12–15 years", "weight": "18–24 lb", "group": "Terrier",
+    "temperament": ["Independent", "Proud", "Playful"],
+    "funFacts": [
+      "It's the only breed named after a fictional character: Dandie Dinmont in Sir Walter Scott's 1815 novel Guy Mannering.",
+      "It's one of the rarest terrier breeds today."
+    ]
+  },
+  "Dingo": {
+    "summary": "Australia's wild dog, descended from domestic dogs that arrived with people thousands of years ago and returned to the wild.",
+    "origin": "Australia", "lifespan": "7–13 years", "weight": "22–44 lb", "group": "Wild dog",
+    "temperament": ["Wary", "Intelligent", "Independent"],
+    "funFacts": [
+      "The Dingo Fence, built to keep dingoes away from sheep, stretches about 5,600 km across Australia.",
+      "Dingoes have unusually flexible joints and can rotate their wrists and climb."
+    ]
+  },
+  "Doberman Pinscher": {
+    "summary": "A sleek, powerful guard dog developed in Germany in the 1890s. Dobermans are loyal, alert and highly trainable.",
+    "origin": "Germany", "lifespan": "10–12 years", "weight": "60–100 lb", "group": "Working",
+    "temperament": ["Loyal", "Fearless", "Alert"],
+    "funFacts": [
+      "Tax collector Louis Dobermann bred the first Dobermans to protect him on his rounds.",
+      "A Doberman named Kurt is honored at the U.S. War Dog Cemetery on Guam after dying in the 1944 battle there."
+    ]
+  },
+  "Dogue de Bordeaux": {
+    "summary": "A massive French mastiff with a huge head and a red coat, used historically to guard estates and drive cattle.",
+    "origin": "France", "lifespan": "5–8 years", "weight": "99–110+ lb", "group": "Working",
+    "temperament": ["Loyal", "Courageous", "Affectionate"],
+    "funFacts": [
+      "Hooch, Tom Hanks's co-star in Turner & Hooch (1989), was a Dogue de Bordeaux.",
+      "It has one of the largest heads relative to its body of any breed."
+    ]
+  },
+  "English Bulldog": {
+    "summary": "A stocky, wrinkled English breed with a pushed-in face, once used in bull-baiting and later reshaped into a gentle, calm companion.",
+    "origin": "England", "lifespan": "8–10 years", "weight": "40–50 lb", "group": "Non-Sporting",
+    "temperament": ["Friendly", "Courageous", "Calm"],
+    "funFacts": [
+      "The Bulldog is the mascot of the U.S. Marine Corps and many universities, including Yale.",
+      "Because of their large heads, most Bulldog puppies are born by C-section."
+    ]
+  },
+  "English Cocker Spaniel": {
+    "summary": "A compact British gundog bred to flush and retrieve woodcock, a little taller and leaner than its American cousin.",
+    "origin": "England", "lifespan": "12–14 years", "weight": "26–34 lb", "group": "Sporting",
+    "temperament": ["Merry", "Responsive", "Animated"],
+    "funFacts": [
+      "The AKC split the English and American Cocker into separate breeds in 1946.",
+      "Its constantly wagging tail earned it the nickname \"merry cocker.\""
+    ]
+  },
+  "English Foxhound": {
+    "summary": "A sturdy pack hound bred for centuries by English hunts, with breeding records going back to the 1700s.",
+    "origin": "England", "lifespan": "10–13 years", "weight": "60–75 lb", "group": "Hound",
+    "temperament": ["Sociable", "Gentle", "Easygoing"],
+    "funFacts": [
+      "Some English Foxhound packs have stud books dating back to the 1700s.",
+      "It's one of the least common breeds registered with the AKC."
+    ]
+  },
+  "English Setter": {
+    "summary": "A gentle, elegant bird dog with a speckled coat, bred to \"set\" (crouch) when it finds game birds.",
+    "origin": "England", "lifespan": "12 years", "weight": "45–80 lb", "group": "Sporting",
+    "temperament": ["Friendly", "Mellow", "Merry"],
+    "funFacts": [
+      "Its speckled coat pattern is called \"belton,\" after a village in Northumberland.",
+      "Setters got their name from crouching low to show hunters where birds were hiding."
+    ]
+  },
+  "English Springer Spaniel": {
+    "summary": "A medium-sized British gundog bred to \"spring\" (flush) game birds into the air for hunters.",
+    "origin": "England", "lifespan": "12–14 years", "weight": "40–50 lb", "group": "Sporting",
+    "temperament": ["Friendly", "Playful", "Obedient"],
+    "funFacts": [
+      "Millie, George H. W. Bush's Springer, \"wrote\" a bestselling book about life in the White House.",
+      "Springers are widely used as detection dogs by police and customs agencies."
+    ]
+  },
+  "English Toy Spaniel": {
+    "summary": "A small, flat-faced spaniel, called the King Charles Spaniel in the UK, that has been a royal lapdog since the Tudor era.",
+    "origin": "England", "lifespan": "10–12 years", "weight": "8–14 lb", "group": "Toy",
+    "temperament": ["Playful", "Polite", "Gentle"],
+    "funFacts": [
+      "In the 1920s, breeders recreated the longer-nosed spaniels in old paintings, giving rise to the Cavalier King Charles Spaniel.",
+      "Legend says Mary, Queen of Scots had her toy spaniel with her at her execution."
+    ]
+  },
+  "Entlebucher Mountain Dog": {
+    "summary": "The smallest of the four Swiss mountain dogs, a nimble tricolor cattle herder from the Entlebuch valley.",
+    "origin": "Switzerland", "lifespan": "11–13 years", "weight": "40–65 lb", "group": "Herding",
+    "temperament": ["Loyal", "Smart", "Enthusiastic"],
+    "funFacts": [
+      "It's the smallest of the four Swiss Sennenhund breeds.",
+      "The AKC recognized it only in 2011."
+    ]
+  },
+  "Field Spaniel": {
+    "summary": "A rare, medium-sized British spaniel with a glossy coat, bred to hunt birds in dense cover.",
+    "origin": "England", "lifespan": "12–13 years", "weight": "35–50 lb", "group": "Sporting",
+    "temperament": ["Sweet", "Sensitive", "Fun-loving"],
+    "funFacts": [
+      "The breed nearly disappeared in the early 1900s after being bred for exaggerated length.",
+      "It's one of the rarest sporting breeds registered with the AKC."
+    ]
+  },
+  "Fila Brasileiro": {
+    "summary": "A huge Brazilian mastiff known for its tracking ability and fierce devotion to its family.",
+    "origin": "Brazil", "lifespan": "9–11 years", "weight": "90+ lb", "group": "Not AKC-recognized",
+    "temperament": ["Loyal", "Protective", "Courageous"],
+    "funFacts": [
+      "It moves both legs on one side at the same time, a \"camel pace\" that's unusual in dogs.",
+      "It's banned or restricted in several countries, including the UK."
+    ]
+  },
+  "Finnish Spitz": {
+    "summary": "Finland's national dog, a fox-red spitz that hunts birds by barking to mark the tree where they perch.",
+    "origin": "Finland", "lifespan": "13–15 years", "weight": "20–33 lb", "group": "Non-Sporting",
+    "temperament": ["Lively", "Friendly", "Vocal"],
+    "funFacts": [
+      "Finland holds barking contests for the breed; top barkers can bark more than 100 times a minute.",
+      "It's the national dog of Finland."
+    ]
+  },
+  "Flat-Coated Retriever": {
+    "summary": "A sleek black or liver retriever known for its lifelong, puppy-like enthusiasm.",
+    "origin": "England", "lifespan": "8–10 years", "weight": "60–70 lb", "group": "Sporting",
+    "temperament": ["Cheerful", "Optimistic", "Good-humored"],
+    "funFacts": [
+      "Owners call it the \"Peter Pan\" of retrievers because it never seems to grow up.",
+      "It was England's most popular retriever before the Labrador and Golden took over."
+    ]
+  },
+  "French Bulldog": {
+    "summary": "A compact companion with signature \"bat ears,\" developed in France from toy bulldogs brought over by English lace workers.",
+    "origin": "France", "lifespan": "10–12 years", "weight": "Under 28 lb", "group": "Non-Sporting",
+    "temperament": ["Adaptable", "Playful", "Smart"],
+    "funFacts": [
+      "In 2022 it became America's most popular breed, ending the Labrador's 31-year run.",
+      "Most Frenchies can't swim well because of their heavy front ends."
+    ]
+  },
+  "German Pinscher": {
+    "summary": "A sleek, medium-sized German ratter and watchdog, and an ancestor of the Doberman and the Miniature Pinscher.",
+    "origin": "Germany", "lifespan": "12–14 years", "weight": "25–45 lb", "group": "Working",
+    "temperament": ["Intelligent", "Courageous", "Vivacious"],
+    "funFacts": [
+      "It helped create both the Doberman Pinscher and the Miniature Pinscher.",
+      "The breed nearly disappeared after the two World Wars."
+    ]
+  },
+  "German Shepherd": {
+    "summary": "A versatile, intelligent German herding dog that has become the world's leading police, military and service dog.",
+    "origin": "Germany", "lifespan": "7–10 years", "weight": "50–90 lb", "group": "Herding",
+    "temperament": ["Confident", "Courageous", "Smart"],
+    "funFacts": [
+      "The breed was founded by Captain Max von Stephanitz in 1899.",
+      "Rin Tin Tin, rescued from a World War I battlefield, became a Hollywood star.",
+      "The first U.S. guide dog for the blind, Buddy, was a German Shepherd."
+    ]
+  },
+  "German Shorthaired Pointer": {
+    "summary": "An all-purpose German hunting dog that points, retrieves and tracks on land and in water.",
+    "origin": "Germany", "lifespan": "10–12 years", "weight": "45–70 lb", "group": "Sporting",
+    "temperament": ["Friendly", "Smart", "Willing to please"],
+    "funFacts": [
+      "A GSP named CJ won Best in Show at Westminster in 2016.",
+      "Their webbed feet make them strong swimmers."
+    ]
+  },
+  "German Wirehaired Pointer": {
+    "summary": "A rugged, all-weather German gundog with a wiry, water-resistant coat and a distinctive beard.",
+    "origin": "Germany", "lifespan": "14–16 years", "weight": "50–70 lb", "group": "Sporting",
+    "temperament": ["Affectionate", "Eager", "Enthusiastic"],
+    "funFacts": [
+      "In Germany it's called the Deutsch Drahthaar and is one of the most popular hunting dogs.",
+      "Its harsh coat protects it from brambles and icy water."
+    ]
+  },
+  "Giant Schnauzer": {
+    "summary": "The largest of the three schnauzers, developed in Bavaria to drive cattle and later used as a police and guard dog.",
+    "origin": "Germany", "lifespan": "12–15 years", "weight": "55–85 lb", "group": "Working",
+    "temperament": ["Loyal", "Alert", "Trainable"],
+    "funFacts": [
+      "It was once known as the Munich Schnauzer.",
+      "\"Schnauzer\" comes from the German word for snout."
+    ]
+  },
+  "Glen of Imaal Terrier": {
+    "summary": "A short-legged, sturdy Irish terrier from the remote Glen of Imaal in County Wicklow.",
+    "origin": "Ireland", "lifespan": "12–15 years", "weight": "32–40 lb", "group": "Terrier",
+    "temperament": ["Spirited", "Brave", "Gentle"],
+    "funFacts": [
+      "Glens were reportedly used as \"turnspit dogs,\" running in wheels to turn meat roasting over a fire.",
+      "It's one of the rarest terrier breeds in the world."
+    ]
+  },
+  "Golden Retriever": {
+    "summary": "A friendly, eager-to-please Scottish gundog bred to retrieve waterfowl, now one of the world's most popular family dogs.",
+    "origin": "Scotland", "lifespan": "10–12 years", "weight": "55–75 lb", "group": "Sporting",
+    "temperament": ["Friendly", "Intelligent", "Devoted"],
+    "funFacts": [
+      "The breed was developed by Lord Tweedmouth in the Scottish Highlands in the mid-1800s.",
+      "Goldens have such a \"soft mouth\" that many can carry a raw egg without breaking it."
+    ]
+  },
+  "Goldendoodle": {
+    "summary": "A cross between a Golden Retriever and a Poodle, popular since the 1990s as a friendly, lower-shedding family dog.",
+    "origin": "United States", "lifespan": "10–15 years", "weight": "15–90 lb (toy to standard)", "group": "Designer crossbreed",
+    "temperament": ["Friendly", "Intelligent", "Affectionate"],
+    "funFacts": [
+      "Breeders use labels like F1 (Golden × Poodle) and F1B (F1 × Poodle) to describe the mix.",
+      "Goldendoodles come in toy, miniature, medium and standard sizes."
+    ]
+  }
+}

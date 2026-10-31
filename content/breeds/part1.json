@@ -1,0 +1,436 @@
+{
+  "Affenpinscher": {
+    "summary": "A small, wiry-coated toy dog with a monkey-like face, originally bred to hunt rats in German kitchens and stables. It's confident and comical, with a big-dog attitude.",
+    "origin": "Germany", "lifespan": "12–15 years", "weight": "7–10 lb", "group": "Toy",
+    "temperament": ["Confident", "Funny", "Fearless"],
+    "funFacts": [
+      "\"Affenpinscher\" is German for \"monkey terrier.\"",
+      "The French call it the \"diablotin moustachu\" — the mustached little devil.",
+      "An Affenpinscher named Banana Joe won Best in Show at Westminster in 2013."
+    ]
+  },
+  "Afghan Hound": {
+    "summary": "An ancient sighthound with a long, silky coat, bred to hunt in the mountains of Afghanistan. Aloof and dignified, it's also surprisingly silly with its family.",
+    "origin": "Afghanistan", "lifespan": "12–18 years", "weight": "50–60 lb", "group": "Hound",
+    "temperament": ["Dignified", "Independent", "Aloof"],
+    "funFacts": [
+      "Snuppy, the first cloned dog (South Korea, 2005), was an Afghan Hound.",
+      "Pablo Picasso had an Afghan Hound named Kabul who appears in some of his work.",
+      "The ring curl at the tip of its tail is a breed hallmark."
+    ]
+  },
+  "Airedale Terrier": {
+    "summary": "The largest of the terriers, the \"King of Terriers\" was bred in Yorkshire's Aire Valley to hunt otters and rats. It's clever, confident and tireless.",
+    "origin": "England", "lifespan": "11–14 years", "weight": "50–70 lb", "group": "Terrier",
+    "temperament": ["Clever", "Confident", "Outgoing"],
+    "funFacts": [
+      "Airedales carried messages and stood sentry for soldiers in World War I.",
+      "President Warren G. Harding's Airedale, Laddie Boy, reportedly had his own chair at Cabinet meetings."
+    ]
+  },
+  "Akita": {
+    "summary": "A large, powerful spitz breed from the mountains of northern Japan. Akitas are famously loyal and dignified, and reserved with strangers.",
+    "origin": "Japan", "lifespan": "10–13 years", "weight": "70–130 lb", "group": "Working",
+    "temperament": ["Loyal", "Dignified", "Courageous"],
+    "funFacts": [
+      "Hachikō, the Akita who waited for his late owner at a Tokyo train station for nearly ten years, is Japan's symbol of loyalty.",
+      "Helen Keller brought the first Akita to the United States in 1937."
+    ]
+  },
+  "Alaskan Malamute": {
+    "summary": "One of the oldest Arctic sled dogs, bred by the Mahlemiut Inuit to haul heavy loads over long distances. Malamutes are strong, friendly and very vocal.",
+    "origin": "United States (Alaska)", "lifespan": "10–14 years", "weight": "75–85 lb", "group": "Working",
+    "temperament": ["Affectionate", "Loyal", "Playful"],
+    "funFacts": [
+      "It's the official state dog of Alaska.",
+      "Malamutes were built for strength and endurance, hauling freight rather than racing.",
+      "They're known for \"talking\" with woo-woo howls instead of barking."
+    ]
+  },
+  "American Bulldog": {
+    "summary": "A muscular, athletic bulldog descended from the working bulldogs of the American South, used on farms to catch livestock and guard property.",
+    "origin": "United States", "lifespan": "10–15 years", "weight": "60–100 lb", "group": "Not AKC-recognized",
+    "temperament": ["Confident", "Loyal", "Energetic"],
+    "funFacts": [
+      "The breed nearly vanished after World War II and was revived by breeders John D. Johnson and Alan Scott.",
+      "Chance, the wisecracking dog in Homeward Bound (1993), was an American Bulldog."
+    ]
+  },
+  "American Eskimo Dog": {
+    "summary": "A fluffy white spitz descended from German spitz dogs brought over by immigrants. Smart and eager to please, \"Eskies\" were stars of early 1900s circuses.",
+    "origin": "United States (German roots)", "lifespan": "13–15 years", "weight": "6–35 lb (toy to standard)", "group": "Non-Sporting",
+    "temperament": ["Playful", "Smart", "Perky"],
+    "funFacts": [
+      "It has nothing to do with the Inuit: it was renamed from \"American Spitz\" after World War I to avoid anti-German sentiment.",
+      "Traveling circuses featured Eskies doing tricks like walking a tightrope."
+    ]
+  },
+  "American Foxhound": {
+    "summary": "A lean, long-legged scent hound developed in colonial Virginia and Maryland for fox hunting. Easygoing at home, it's a tireless runner in the field.",
+    "origin": "United States", "lifespan": "11–13 years", "weight": "60–70 lb", "group": "Hound",
+    "temperament": ["Independent", "Easygoing", "Sweet-tempered"],
+    "funFacts": [
+      "George Washington bred foxhounds and is often called a founder of the breed.",
+      "It's the state dog of Virginia."
+    ]
+  },
+  "American Hairless Terrier": {
+    "summary": "A small, active terrier descended from the Rat Terrier. Its hairless variety traces back to a single hairless puppy born in Louisiana in 1972.",
+    "origin": "United States", "lifespan": "14–16 years", "weight": "12–16 lb", "group": "Terrier",
+    "temperament": ["Energetic", "Alert", "Curious"],
+    "funFacts": [
+      "With no coat, it needs sunscreen in summer and a sweater in winter.",
+      "It's often suggested for people with dog allergies because it sheds so little."
+    ]
+  },
+  "American Pit Bull Terrier": {
+    "summary": "A muscular, athletic terrier descended from British bull-and-terrier dogs. Recognized by the UKC but not the AKC, it's known for its affection toward people.",
+    "origin": "United States", "lifespan": "12–14 years", "weight": "30–60 lb", "group": "Not AKC-recognized",
+    "temperament": ["Confident", "Affectionate", "Eager to please"],
+    "funFacts": [
+      "Pete the Pup, with the ring around his eye in the Our Gang (Little Rascals) comedies, was an American Pit Bull Terrier.",
+      "Pit bull–type dogs were popular American family dogs and mascots in the early 1900s."
+    ]
+  },
+  "American Staffordshire Terrier": {
+    "summary": "A stocky, muscular terrier recognized by the AKC in 1936, sharing its roots with the American Pit Bull Terrier. AmStaffs are confident and people-loving.",
+    "origin": "United States", "lifespan": "12–16 years", "weight": "40–70 lb", "group": "Terrier",
+    "temperament": ["Confident", "Smart", "Good-natured"],
+    "funFacts": [
+      "\"American\" was added to its name in 1972 to tell it apart from the smaller Staffordshire Bull Terrier.",
+      "The AKC and UKC registered the same original dogs under different names."
+    ]
+  },
+  "American Water Spaniel": {
+    "summary": "A medium-sized brown spaniel with a curly coat, developed around the Great Lakes to retrieve waterfowl from small boats.",
+    "origin": "United States (Wisconsin)", "lifespan": "10–14 years", "weight": "25–45 lb", "group": "Sporting",
+    "temperament": ["Eager", "Happy", "Charming"],
+    "funFacts": [
+      "It's the state dog of Wisconsin.",
+      "Its dense, curly coat sheds water, keeping it warm in cold lakes."
+    ]
+  },
+  "Anatolian Shepherd Dog": {
+    "summary": "A large, rugged livestock guardian from Turkey, bred for thousands of years to protect flocks from wolves. Calm and independent, it makes its own decisions.",
+    "origin": "Turkey", "lifespan": "11–13 years", "weight": "80–150 lb", "group": "Working",
+    "temperament": ["Loyal", "Independent", "Reserved"],
+    "funFacts": [
+      "In Namibia, Anatolians guard livestock from cheetahs, which helps protect the cheetahs from farmers.",
+      "It's built to cover huge distances patrolling a flock's territory."
+    ]
+  },
+  "Appenzeller Sennenhund": {
+    "summary": "A medium-sized, tricolor Swiss mountain dog from the Appenzell region, bred to herd cattle and guard farms. It's lively, loud and loyal.",
+    "origin": "Switzerland", "lifespan": "12–14 years", "weight": "48–70 lb", "group": "AKC Foundation Stock Service",
+    "temperament": ["Lively", "Reliable", "Fearless"],
+    "funFacts": [
+      "It's one of four Swiss Sennenhund breeds, along with the Bernese, Entlebucher and Greater Swiss Mountain Dog.",
+      "Its tail curls tightly over its back, unlike the other Swiss mountain dogs."
+    ]
+  },
+  "Australian Cattle Dog": {
+    "summary": "A tough, compact herding dog developed in 19th-century Australia to move cattle over vast distances, partly from Dingo bloodlines.",
+    "origin": "Australia", "lifespan": "12–16 years", "weight": "35–50 lb", "group": "Herding",
+    "temperament": ["Alert", "Curious", "Tireless"],
+    "funFacts": [
+      "An Australian Cattle Dog named Bluey lived 29 years and 5 months, long the record for the oldest dog.",
+      "Puppies are born white; the blue or red speckled coat develops as they grow.",
+      "They're also called Blue Heelers or Red Heelers because they nip cattle's heels."
+    ]
+  },
+  "Australian Kelpie": {
+    "summary": "An energetic, intelligent herding dog developed in Australia to work sheep in harsh heat with little supervision.",
+    "origin": "Australia", "lifespan": "10–14 years", "weight": "31–46 lb", "group": "Not AKC-recognized",
+    "temperament": ["Alert", "Eager", "Tireless"],
+    "funFacts": [
+      "Kelpies are famous for running across the backs of packed sheep to reach the other side of the flock.",
+      "The breed is named after a 19th-century dog called Kelpie, itself named for a Scottish water spirit."
+    ]
+  },
+  "Australian Shepherd": {
+    "summary": "A medium-sized herding dog that, despite its name, was developed on ranches in the American West. Aussies are brilliant, energetic and need a job.",
+    "origin": "United States", "lifespan": "12–15 years", "weight": "40–65 lb", "group": "Herding",
+    "temperament": ["Smart", "Work-oriented", "Exuberant"],
+    "funFacts": [
+      "Its ancestors likely came to America with Basque shepherds who had worked in Australia.",
+      "Many Aussies have two different-colored eyes.",
+      "The breed became popular through rodeos and horse shows in the 1950s."
+    ]
+  },
+  "Australian Terrier": {
+    "summary": "A small, sturdy terrier developed in Australia to control snakes and rodents and to keep watch over homes and farms.",
+    "origin": "Australia", "lifespan": "11–15 years", "weight": "15–20 lb", "group": "Terrier",
+    "temperament": ["Spirited", "Alert", "Courageous"],
+    "funFacts": [
+      "It was the first breed developed in Australia to be recognized and shown there.",
+      "The soft topknot of hair on its head is a breed signature."
+    ]
+  },
+  "Basenji": {
+    "summary": "An ancient hunting dog from Central Africa, known as the \"barkless dog.\" Basenjis are curious, independent and remarkably cat-like.",
+    "origin": "Central Africa (Congo)", "lifespan": "13–14 years", "weight": "22–24 lb", "group": "Hound",
+    "temperament": ["Independent", "Smart", "Poised"],
+    "funFacts": [
+      "Instead of barking, Basenjis make a yodel-like sound called a \"baroo.\"",
+      "They groom themselves like cats and have very little doggy odor.",
+      "Like wolves, females come into heat only once a year."
+    ]
+  },
+  "Basset Hound": {
+    "summary": "A short-legged French scent hound with long ears and a nose second only to the Bloodhound's. Patient and low-key at home, stubborn on a scent trail.",
+    "origin": "France", "lifespan": "12–13 years", "weight": "40–65 lb", "group": "Hound",
+    "temperament": ["Patient", "Low-key", "Charming"],
+    "funFacts": [
+      "\"Basset\" comes from the French \"bas,\" meaning low.",
+      "Its long ears help sweep scents up toward its nose.",
+      "A Basset Hound is the mascot of Hush Puppies shoes."
+    ]
+  },
+  "Beagle": {
+    "summary": "A compact scent hound bred in England to hunt rabbits in packs. Merry and curious, it's one of America's most popular family dogs.",
+    "origin": "England", "lifespan": "10–15 years", "weight": "20–30 lb", "group": "Hound",
+    "temperament": ["Merry", "Friendly", "Curious"],
+    "funFacts": [
+      "Snoopy from Peanuts is a Beagle.",
+      "The USDA's \"Beagle Brigade\" sniffs out banned food and plants at U.S. airports.",
+      "A Beagle's nose has around 220 million scent receptors."
+    ]
+  },
+  "Bearded Collie": {
+    "summary": "A shaggy Scottish herding dog with a long coat and a \"beard,\" known for its bouncy, exuberant personality.",
+    "origin": "Scotland", "lifespan": "12–14 years", "weight": "45–55 lb", "group": "Herding",
+    "temperament": ["Smart", "Bouncy", "Charismatic"],
+    "funFacts": [
+      "\"Beardies\" bounce while herding to see over the flock, and many still bounce when excited.",
+      "A Beardie's coat often lightens as a puppy and darkens again as it matures."
+    ]
+  },
+  "Beauceron": {
+    "summary": "A large black-and-tan French herding dog, the \"Berger de Beauce,\" used for centuries to herd and guard sheep.",
+    "origin": "France", "lifespan": "10–12 years", "weight": "70–110 lb", "group": "Herding",
+    "temperament": ["Faithful", "Gentle", "Smart"],
+    "funFacts": [
+      "Double dewclaws on the hind legs are a required breed trait.",
+      "Beaucerons served as messengers and sentries for the French army in both World Wars."
+    ]
+  },
+  "Bedlington Terrier": {
+    "summary": "A graceful terrier from northern England whose curly coat and arched back make it look like a little lamb.",
+    "origin": "England", "lifespan": "11–16 years", "weight": "17–23 lb", "group": "Terrier",
+    "temperament": ["Loyal", "Charming", "Frolicking"],
+    "funFacts": [
+      "Despite its looks, it was bred by miners to hunt rats and badgers.",
+      "It's often described as \"a lamb with the heart of a lion.\""
+    ]
+  },
+  "Belgian Malinois": {
+    "summary": "A short-coated Belgian shepherd that's intense, athletic and highly trainable, now a top choice for police and military work worldwide.",
+    "origin": "Belgium", "lifespan": "14–16 years", "weight": "40–80 lb", "group": "Herding",
+    "temperament": ["Confident", "Smart", "Hardworking"],
+    "funFacts": [
+      "A Malinois named Cairo took part in the 2011 raid on Osama bin Laden's compound.",
+      "It's named after the Belgian city of Malines (Mechelen)."
+    ]
+  },
+  "Belgian Sheepdog": {
+    "summary": "The long-haired, all-black variety of Belgian shepherd, also called the Groenendael, bred to herd and guard sheep.",
+    "origin": "Belgium", "lifespan": "12–14 years", "weight": "45–75 lb", "group": "Herding",
+    "temperament": ["Bright", "Watchful", "Serious"],
+    "funFacts": [
+      "It's named after the village of Groenendael near Brussels, where it was developed.",
+      "Belgian Sheepdogs served as messenger and ambulance dogs in World War I."
+    ]
+  },
+  "Belgian Tervuren": {
+    "summary": "The long-coated, fawn-to-mahogany variety of Belgian shepherd, elegant and energetic, named for the village of Tervuren.",
+    "origin": "Belgium", "lifespan": "12–14 years", "weight": "45–75 lb", "group": "Herding",
+    "temperament": ["Intelligent", "Alert", "Devoted"],
+    "funFacts": [
+      "Its coat darkens with age, often with black tips called an \"overlay.\"",
+      "Tervurens excel at agility, obedience and herding trials."
+    ]
+  },
+  "Bernedoodle": {
+    "summary": "A cross between a Bernese Mountain Dog and a Poodle, combining the Bernese's tricolor looks and gentle nature with the Poodle's lower-shedding coat.",
+    "origin": "Canada", "lifespan": "12–15 years", "weight": "10–90 lb (tiny to standard)", "group": "Designer crossbreed",
+    "temperament": ["Playful", "Goofy", "Affectionate"],
+    "funFacts": [
+      "The first intentional Bernedoodles were bred in 2003 by Sherry Rupke in Ontario, Canada.",
+      "They come in tiny, miniature and standard sizes, depending on the Poodle parent."
+    ]
+  },
+  "Bernese Mountain Dog": {
+    "summary": "A large tricolor Swiss farm dog bred to pull carts, drive cattle and watch over farms in the canton of Bern. Gentle and good-natured.",
+    "origin": "Switzerland", "lifespan": "7–10 years", "weight": "70–115 lb", "group": "Working",
+    "temperament": ["Good-natured", "Calm", "Strong"],
+    "funFacts": [
+      "It's the only one of the four Swiss mountain dog breeds with a long coat.",
+      "Berners pulled carts of milk and cheese to market."
+    ]
+  },
+  "Bichon Frise": {
+    "summary": "A cheerful little white dog with a powder-puff coat, once a favorite of European royalty and later a street and circus performer.",
+    "origin": "Mediterranean (developed in France and Belgium)", "lifespan": "14–15 years", "weight": "12–18 lb", "group": "Non-Sporting",
+    "temperament": ["Playful", "Curious", "Peppy"],
+    "funFacts": [
+      "Its name is French for \"curly lap dog.\"",
+      "Bichons traveled with sailors and were reportedly used as barter on trade voyages.",
+      "Their coat sheds very little."
+    ]
+  },
+  "Black Russian Terrier": {
+    "summary": "A large, powerful guard dog created by the Soviet Army's Red Star Kennel in the 1950s. Calm and confident, it's devoted to its family.",
+    "origin": "Russia", "lifespan": "10–12 years", "weight": "80–130 lb", "group": "Working",
+    "temperament": ["Confident", "Brave", "Calm"],
+    "funFacts": [
+      "It isn't a true terrier: about 17 breeds, including the Giant Schnauzer and Rottweiler, went into it.",
+      "It was bred to guard military installations."
+    ]
+  },
+  "Black and Tan Coonhound": {
+    "summary": "A big American scent hound bred to trail raccoons at night and \"tree\" them, baying until the hunter arrives.",
+    "origin": "United States", "lifespan": "10–12 years", "weight": "65–110 lb", "group": "Hound",
+    "temperament": ["Easygoing", "Bright", "Brave"],
+    "funFacts": [
+      "It was the first coonhound breed recognized by the AKC, in 1945.",
+      "Hunters can recognize their own coonhound's bay from far away."
+    ]
+  },
+  "Bloodhound": {
+    "summary": "The scent-tracking champion of the dog world, descended from hounds kept by monks at the Abbey of Saint-Hubert in Belgium.",
+    "origin": "Belgium and France", "lifespan": "10–12 years", "weight": "80–110 lb", "group": "Hound",
+    "temperament": ["Inquisitive", "Independent", "Friendly"],
+    "funFacts": [
+      "Bloodhound tracking evidence has been accepted in U.S. courts.",
+      "Its long ears and loose skin help trap scent around its face.",
+      "A Bloodhound named Tigger held the record for the longest dog ears, over 13 inches each."
+    ]
+  },
+  "Bluetick Coonhound": {
+    "summary": "A speckled-blue coonhound from the American South with a big voice and a cold-trailing nose.",
+    "origin": "United States", "lifespan": "11–12 years", "weight": "45–80 lb", "group": "Hound",
+    "temperament": ["Smart", "Devoted", "Tenacious"],
+    "funFacts": [
+      "Its \"blue ticked\" look comes from black ticking over a white coat.",
+      "Smokey, the University of Tennessee's mascot, is a Bluetick Coonhound."
+    ]
+  },
+  "Border Collie": {
+    "summary": "Widely considered the most intelligent dog breed, bred on the border between Scotland and England to herd sheep with an intense stare.",
+    "origin": "Scotland and England", "lifespan": "12–15 years", "weight": "30–55 lb", "group": "Herding",
+    "temperament": ["Smart", "Energetic", "Affectionate"],
+    "funFacts": [
+      "A Border Collie named Chaser learned the names of more than 1,000 toys.",
+      "They control sheep with an intense stare called \"the eye.\""
+    ]
+  },
+  "Border Terrier": {
+    "summary": "A scrappy working terrier from the Cheviot Hills, small enough to follow foxes underground but leggy enough to keep up with horses.",
+    "origin": "Scotland and England", "lifespan": "12–15 years", "weight": "11–16 lb", "group": "Terrier",
+    "temperament": ["Affectionate", "Happy", "Plucky"],
+    "funFacts": [
+      "Its head is often described as \"otter-like.\"",
+      "Border Terriers ran with foxhounds and bolted foxes from their dens."
+    ]
+  },
+  "Borzoi": {
+    "summary": "A tall, elegant Russian sighthound once kept by the aristocracy to hunt wolves. Calm and quiet indoors, lightning fast outside.",
+    "origin": "Russia", "lifespan": "9–14 years", "weight": "60–105 lb", "group": "Hound",
+    "temperament": ["Affectionate", "Loyal", "Athletic"],
+    "funFacts": [
+      "\"Borzoi\" means \"swift\" in Russian.",
+      "The breed used to be called the Russian Wolfhound."
+    ]
+  },
+  "Boston Terrier": {
+    "summary": "A compact, tuxedo-coated companion developed in Boston in the late 1800s from bulldog and terrier crosses.",
+    "origin": "United States", "lifespan": "11–13 years", "weight": "12–25 lb", "group": "Non-Sporting",
+    "temperament": ["Friendly", "Bright", "Amusing"],
+    "funFacts": [
+      "Its black-and-white markings earned it the nickname \"the American Gentleman.\"",
+      "It's the state dog of Massachusetts.",
+      "It was one of the first American breeds recognized by the AKC, in 1893."
+    ]
+  },
+  "Bouvier des Flandres": {
+    "summary": "A big, rough-coated Belgian farm dog bred to herd cattle, pull carts and guard the farm.",
+    "origin": "Belgium", "lifespan": "10–12 years", "weight": "70–110 lb", "group": "Herding",
+    "temperament": ["Brave", "Loyal", "Rational"],
+    "funFacts": [
+      "Its name means \"cow herder of Flanders.\"",
+      "President Ronald Reagan had a Bouvier named Lucky."
+    ]
+  },
+  "Boxer": {
+    "summary": "A muscular, playful German breed descended from mastiff-type hunting dogs, known for its exuberance and patience with children.",
+    "origin": "Germany", "lifespan": "10–12 years", "weight": "50–80 lb", "group": "Working",
+    "temperament": ["Fun-loving", "Bright", "Loyal"],
+    "funFacts": [
+      "Boxers often stand on their hind legs and bat with their front paws when they play.",
+      "The Boxer was one of the first breeds used as a police dog in Germany."
+    ]
+  },
+  "Boykin Spaniel": {
+    "summary": "A small brown hunting spaniel developed in South Carolina to retrieve turkeys and ducks from small boats.",
+    "origin": "United States (South Carolina)", "lifespan": "10–15 years", "weight": "25–40 lb", "group": "Sporting",
+    "temperament": ["Friendly", "Eager", "Lovable"],
+    "funFacts": [
+      "It's the state dog of South Carolina.",
+      "The breed traces back to a stray spaniel named Dumpy, found near a church in Spartanburg in the early 1900s."
+    ]
+  },
+  "Briard": {
+    "summary": "An ancient French herding dog with a long, wavy coat, often described as \"a heart wrapped in fur.\"",
+    "origin": "France", "lifespan": "12 years", "weight": "55–100 lb", "group": "Herding",
+    "temperament": ["Confident", "Smart", "Faithful"],
+    "funFacts": [
+      "Like the Beauceron, it has double dewclaws on its hind legs.",
+      "Briards served with the French army in World War I as sentries and in searching for the wounded."
+    ]
+  },
+  "Brittany": {
+    "summary": "An athletic, leggy bird dog from northwest France that both points and retrieves. Bright, upbeat and full of energy.",
+    "origin": "France", "lifespan": "12–14 years", "weight": "30–40 lb", "group": "Sporting",
+    "temperament": ["Bright", "Fun-loving", "Upbeat"],
+    "funFacts": [
+      "Many Brittanys are born with a naturally short tail or none at all.",
+      "The AKC dropped \"Spaniel\" from its name in 1982 because it hunts more like a pointer."
+    ]
+  },
+  "Brussels Griffon": {
+    "summary": "A tiny Belgian toy dog with an almost human expression, originally kept by cab drivers to keep rats out of their stables.",
+    "origin": "Belgium", "lifespan": "12–15 years", "weight": "8–10 lb", "group": "Toy",
+    "temperament": ["Loyal", "Alert", "Curious"],
+    "funFacts": [
+      "Verdell, the dog in As Good as It Gets (1997), was a Brussels Griffon.",
+      "Its expressive face is often said to have inspired the look of Star Wars' Ewoks."
+    ]
+  },
+  "Bull Terrier": {
+    "summary": "A muscular English terrier famous for its unique egg-shaped head and clownish, mischievous personality.",
+    "origin": "England", "lifespan": "12–13 years", "weight": "50–70 lb", "group": "Terrier",
+    "temperament": ["Playful", "Charming", "Mischievous"],
+    "funFacts": [
+      "Bullseye, Target's mascot, is a Bull Terrier.",
+      "General George S. Patton's Bull Terrier was named Willie."
+    ]
+  },
+  "Bullmastiff": {
+    "summary": "A powerful English guardian created in the 1800s by crossing Mastiffs and Bulldogs to stop poachers on large estates.",
+    "origin": "England", "lifespan": "7–9 years", "weight": "100–130 lb", "group": "Working",
+    "temperament": ["Affectionate", "Loyal", "Brave"],
+    "funFacts": [
+      "Gamekeepers called it the \"gamekeeper's night dog.\"",
+      "Bullmastiffs were trained to pin poachers down rather than bite them."
+    ]
+  },
+  "Cairn Terrier": {
+    "summary": "A shaggy little working terrier from the Scottish Highlands, bred to hunt foxes and rodents among piles of stones called cairns.",
+    "origin": "Scotland", "lifespan": "13–15 years", "weight": "13–14 lb", "group": "Terrier",
+    "temperament": ["Alert", "Cheerful", "Busy"],
+    "funFacts": [
+      "Toto in The Wizard of Oz (1939) was played by a Cairn Terrier named Terry.",
+      "Cairns love to dig, a leftover from hunting among the rocks."
+    ]
+  }
+}

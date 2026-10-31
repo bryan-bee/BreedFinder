@@ -2,6 +2,7 @@ import SwiftUI
 
 struct CameraScreen: View {
     @ObservedObject var camera: CameraController
+    let onClose: () -> Void
     let onRecorded: (Result<URL, Error>) -> Void
 
     var body: some View {
@@ -22,6 +23,26 @@ struct CameraScreen: View {
                     description: Text("Breed Finder needs an iPhone with a back camera.")
                 )
             }
+
+            VStack {
+                HStack {
+                    // Disabled mid-recording so a finished clip can't arrive after leaving.
+                    Button(action: onClose) {
+                        Image(systemName: "xmark")
+                            .font(.headline)
+                            .foregroundStyle(.white)
+                            .frame(width: 40, height: 40)
+                            .background(.ultraThinMaterial, in: Circle())
+                    }
+                    .disabled(camera.isRecording)
+                    .opacity(camera.isRecording ? 0.4 : 1)
+                    .accessibilityLabel("Close camera")
+                    Spacer()
+                }
+                Spacer()
+            }
+            .padding(.horizontal, 16)
+            .padding(.top, 8)
         }
         .environment(\.colorScheme, .dark)
         .onAppear { camera.start() }
@@ -36,7 +57,7 @@ struct CameraScreen: View {
                 .padding(.horizontal, 16)
                 .padding(.vertical, 10)
                 .background(.ultraThinMaterial, in: Capsule())
-                .padding(.top, 12)
+                .padding(.top, 60)
 
             Spacer()
 

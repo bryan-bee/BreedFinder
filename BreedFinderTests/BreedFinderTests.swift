@@ -1,4 +1,5 @@
 import CoreGraphics
+import CoreML
 import XCTest
 @testable import BreedFinder
 
@@ -67,5 +68,35 @@ final class SquareRegionTests: XCTestCase {
 
         XCTAssertEqual(region.width, 1, accuracy: 0.0001)
         XCTAssertEqual(region.height * 1920, 1080, accuracy: 1)
+    }
+
+    func testCenterSquareIsCenteredAndSquareInPixels() {
+        let region = DogAnalyzer.centerSquare(imageWidth: 1080, imageHeight: 1920)
+
+        XCTAssertEqual(region.width, 1, accuracy: 0.0001)
+        XCTAssertEqual(region.height * 1920, 1080, accuracy: 1)
+        XCTAssertEqual(region.midY, 0.5, accuracy: 0.0001)
+    }
+}
+
+final class BreedContentTests: XCTestCase {
+    /// The model and breeds.json are built separately; this catches them drifting apart.
+    func testEveryBreedTheModelKnowsHasAProfile() throws {
+        let model = try DogBreedClassifier(configuration: MLModelConfiguration()).model
+        let labels = model.modelDescription.classLabels as? [String] ?? []
+        XCTAssertFalse(labels.isEmpty)
+
+        for label in labels where label != DogAnalyzer.notADogLabel {
+            XCTAssertNotNil(BreedLibrary.shared.profile(for: label), "No profile for \(label)")
+        }
+    }
+
+    func testProfilesWithPhotoCreditsHaveTheirPhotoBundled() throws {
+        let model = try DogBreedClassifier(configuration: MLModelConfiguration()).model
+        let labels = model.modelDescription.classLabels as? [String] ?? []
+
+        for label in labels where BreedLibrary.shared.profile(for: label)?.photo != nil {
+            XCTAssertNotNil(BreedLibrary.shared.photo(for: label), "Photo file missing for \(label)")
+        }
     }
 }

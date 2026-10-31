@@ -1,0 +1,447 @@
+{
+  "Nova Scotia Duck Tolling Retriever": {
+    "summary": "The smallest retriever, a red Canadian dog that lures ducks within range by playing at the water's edge.",
+    "origin": "Canada", "lifespan": "12–14 years", "weight": "35–50 lb", "group": "Sporting",
+    "temperament": ["Affectionate", "Intelligent", "Outgoing"],
+    "funFacts": [
+      "\"Tolling\" means luring: the dog's playful splashing draws curious ducks closer.",
+      "It's the provincial dog of Nova Scotia."
+    ]
+  },
+  "Old English Sheepdog": {
+    "summary": "A big, shaggy English drover's dog famous for its profuse coat and rolling, bear-like gait.",
+    "origin": "England", "lifespan": "10–12 years", "weight": "60–100 lb", "group": "Herding",
+    "temperament": ["Adaptable", "Gentle", "Smart"],
+    "funFacts": [
+      "Drovers' dogs traditionally had docked tails, which earned the breed the nickname \"bobtail.\"",
+      "Paul McCartney's Old English Sheepdog, Martha, inspired the Beatles song \"Martha My Dear.\""
+    ]
+  },
+  "Otterhound": {
+    "summary": "A large, shaggy British scent hound bred to hunt otters, now one of the world's rarest breeds.",
+    "origin": "England", "lifespan": "10–13 years", "weight": "80–115 lb", "group": "Hound",
+    "temperament": ["Amiable", "Boisterous", "Even-tempered"],
+    "funFacts": [
+      "There are thought to be fewer than 1,000 Otterhounds in the world.",
+      "Otter hunting was banned in England in 1978, leaving the breed without its job."
+    ]
+  },
+  "Papillon": {
+    "summary": "A dainty toy spaniel named for its butterfly-wing ears, a favorite of European royalty for centuries.",
+    "origin": "France and Belgium", "lifespan": "14–16 years", "weight": "5–10 lb", "group": "Toy",
+    "temperament": ["Happy", "Alert", "Friendly"],
+    "funFacts": [
+      "\"Papillon\" is French for butterfly.",
+      "Papillons appear in many Renaissance paintings, often on the laps of noblewomen."
+    ]
+  },
+  "Pekingese": {
+    "summary": "A lion-like toy breed that was once reserved for the Chinese imperial court.",
+    "origin": "China", "lifespan": "12–14 years", "weight": "Up to 14 lb", "group": "Toy",
+    "temperament": ["Affectionate", "Loyal", "Regal"],
+    "funFacts": [
+      "A Pekingese named Sun Yat-sen was one of three dogs to survive the sinking of the Titanic.",
+      "Legend says stealing one from the imperial palace was punishable by death."
+    ]
+  },
+  "Pembroke Welsh Corgi": {
+    "summary": "A short-legged Welsh cattle herder with a foxy face, famous as Queen Elizabeth II's favorite breed.",
+    "origin": "Wales", "lifespan": "12–13 years", "weight": "Up to 30 lb", "group": "Herding",
+    "temperament": ["Affectionate", "Smart", "Alert"],
+    "funFacts": [
+      "Queen Elizabeth II owned more than 30 Pembroke Corgis during her reign.",
+      "Welsh legend says fairies rode corgis, leaving a \"saddle\" mark on their coats."
+    ]
+  },
+  "Petit Basset Griffon Vendeen": {
+    "summary": "A small, rough-coated French scent hound bred to hunt rabbits in the rugged Vendée region.",
+    "origin": "France", "lifespan": "14–16 years", "weight": "25–40 lb", "group": "Hound",
+    "temperament": ["Happy", "Curious", "Vivacious"],
+    "funFacts": [
+      "Its name describes it: small (petit), low (basset), rough-coated (griffon), from the Vendée.",
+      "A PBGV named Buddy Holly won Best in Show at Westminster in 2023."
+    ]
+  },
+  "Pharaoh Hound": {
+    "summary": "An elegant rabbit-hunting hound from Malta, known for its amber eyes and glowing red coat.",
+    "origin": "Malta", "lifespan": "12–14 years", "weight": "45–55 lb", "group": "Hound",
+    "temperament": ["Friendly", "Smart", "Noble"],
+    "funFacts": [
+      "When excited, its nose and ears flush pink — it \"blushes.\"",
+      "It's the national dog of Malta, where it's called Kelb tal-Fenek, \"rabbit dog.\""
+    ]
+  },
+  "Plott Hound": {
+    "summary": "A brindle American hound descended from German boar-hunting dogs brought over by the Plott family in 1750.",
+    "origin": "United States (North Carolina)", "lifespan": "12–14 years", "weight": "40–60 lb", "group": "Hound",
+    "temperament": ["Loyal", "Alert", "Intelligent"],
+    "funFacts": [
+      "It's the state dog of North Carolina.",
+      "Unlike most American hounds, it descends from German rather than British dogs."
+    ]
+  },
+  "Pointer": {
+    "summary": "The classic English bird dog that freezes in a \"point\" to show hunters where game is hiding.",
+    "origin": "England", "lifespan": "12–17 years", "weight": "45–75 lb", "group": "Sporting",
+    "temperament": ["Even-tempered", "Hard-driving", "Loyal"],
+    "funFacts": [
+      "Many Pointer puppies point instinctively at a few weeks old, with no training.",
+      "The dog in the Westminster Kennel Club's logo is a Pointer named Sensation."
+    ]
+  },
+  "Pomeranian": {
+    "summary": "A tiny, fluffy spitz bred down from larger sled-type dogs and made popular by Queen Victoria.",
+    "origin": "Pomerania (Germany and Poland)", "lifespan": "12–16 years", "weight": "3–7 lb", "group": "Toy",
+    "temperament": ["Inquisitive", "Bold", "Lively"],
+    "funFacts": [
+      "Queen Victoria's love of small Pomeranians helped shrink the breed to its modern size.",
+      "Two Pomeranians survived the sinking of the Titanic."
+    ]
+  },
+  "Pomsky": {
+    "summary": "A cross between a Pomeranian and a Siberian Husky, bred to look like a miniature husky.",
+    "origin": "United States", "lifespan": "12–15 years", "weight": "15–35 lb", "group": "Designer crossbreed",
+    "temperament": ["Playful", "Energetic", "Curious"],
+    "funFacts": [
+      "Pomskies are usually bred by artificial insemination, with the Husky as the mother.",
+      "The mix shot to fame through viral photos online in the early 2010s."
+    ]
+  },
+  "Poodle": {
+    "summary": "A highly intelligent breed in three sizes, originally a German water retriever and now the national dog of France.",
+    "origin": "Germany and France", "lifespan": "10–18 years", "weight": "4–70 lb (toy to standard)", "group": "Non-Sporting (Standard, Miniature) and Toy",
+    "temperament": ["Intelligent", "Active", "Proud"],
+    "funFacts": [
+      "The fancy show clip started as a practical cut to lighten the coat for swimming while keeping joints warm.",
+      "\"Poodle\" comes from the German \"Pudel,\" related to splashing in water.",
+      "Poodles are widely ranked as the second most intelligent breed, after the Border Collie."
+    ]
+  },
+  "Portuguese Water Dog": {
+    "summary": "A curly-coated Portuguese fisherman's dog that herded fish into nets and carried messages between boats.",
+    "origin": "Portugal", "lifespan": "11–13 years", "weight": "35–60 lb", "group": "Working",
+    "temperament": ["Affectionate", "Adventurous", "Athletic"],
+    "funFacts": [
+      "Bo and Sunny, the Obama family's dogs, were Portuguese Water Dogs.",
+      "Webbed feet and a waterproof coat make them excellent swimmers."
+    ]
+  },
+  "Pug": {
+    "summary": "An ancient Chinese toy breed with a wrinkled face and curled tail, loved for its comedic personality.",
+    "origin": "China", "lifespan": "13–15 years", "weight": "14–18 lb", "group": "Toy",
+    "temperament": ["Charming", "Mischievous", "Loving"],
+    "funFacts": [
+      "A Pug named Pompey is said to have saved William of Orange from assassins in 1572.",
+      "The breed's motto is \"Multum in parvo\" — a lot in a little."
+    ]
+  },
+  "Redbone Coonhound": {
+    "summary": "A sleek, solid-red American coonhound, a fast hunter in rough terrain and an easygoing family dog.",
+    "origin": "United States", "lifespan": "12–15 years", "weight": "45–70 lb", "group": "Hound",
+    "temperament": ["Even-tempered", "Amiable", "Eager"],
+    "funFacts": [
+      "Old Dan and Little Ann in Where the Red Fern Grows were Redbone Coonhounds.",
+      "Redbones are nimble enough to hunt in swamps and mountains alike."
+    ]
+  },
+  "Rhodesian Ridgeback": {
+    "summary": "A muscular African hound developed in Rhodesia (now Zimbabwe) to track lions and hold them at bay.",
+    "origin": "Southern Africa (Zimbabwe)", "lifespan": "10–12 years", "weight": "70–85 lb", "group": "Hound",
+    "temperament": ["Dignified", "Even-tempered", "Affectionate"],
+    "funFacts": [
+      "The ridge along its back is hair growing in the opposite direction from the rest of the coat.",
+      "It was nicknamed the \"African Lion Hound.\""
+    ]
+  },
+  "Rottweiler": {
+    "summary": "A powerful German breed descended from Roman drover dogs, used to herd cattle and pull butchers' carts in the town of Rottweil.",
+    "origin": "Germany", "lifespan": "9–10 years", "weight": "80–135 lb", "group": "Working",
+    "temperament": ["Loyal", "Loving", "Confident"],
+    "funFacts": [
+      "Butchers in Rottweil are said to have tied money pouches to their dogs' collars to keep the money safe.",
+      "Rottweilers were among the first police dogs."
+    ]
+  },
+  "Saint Bernard": {
+    "summary": "A giant Alpine rescue dog bred by monks at the Great St Bernard Hospice to find travelers lost in the snow.",
+    "origin": "Switzerland and Italy", "lifespan": "8–10 years", "weight": "120–180 lb", "group": "Working",
+    "temperament": ["Playful", "Charming", "Inquisitive"],
+    "funFacts": [
+      "A St. Bernard named Barry is credited with saving more than 40 people in the early 1800s.",
+      "The famous brandy barrel around the neck is mostly a myth, popularized by a painting.",
+      "Beethoven, star of the 1992 family movie, is a St. Bernard."
+    ]
+  },
+  "Saluki": {
+    "summary": "One of the oldest dog breeds, a graceful desert sighthound bred to hunt gazelles across the Middle East.",
+    "origin": "Middle East", "lifespan": "10–17 years", "weight": "40–65 lb", "group": "Hound",
+    "temperament": ["Gentle", "Dignified", "Independent"],
+    "funFacts": [
+      "Saluki-like dogs appear in ancient Egyptian tomb paintings.",
+      "Bedouin tribes prized Salukis so highly they called them el hor, \"the noble one.\""
+    ]
+  },
+  "Samoyed": {
+    "summary": "A fluffy white Siberian spitz bred by the Samoyedic peoples to herd reindeer, pull sleds and keep them warm at night.",
+    "origin": "Russia (Siberia)", "lifespan": "12–14 years", "weight": "35–65 lb", "group": "Working",
+    "temperament": ["Adaptable", "Friendly", "Gentle"],
+    "funFacts": [
+      "The upturned corners of its mouth, the \"Sammy smile,\" are said to keep drool from freezing into icicles.",
+      "Samoyeds pulled sleds on early polar expeditions, including Roald Amundsen's."
+    ]
+  },
+  "Schipperke": {
+    "summary": "A small black Belgian dog that guarded canal barges and caught rats, nicknamed the \"little captain.\"",
+    "origin": "Belgium", "lifespan": "13–15 years", "weight": "10–16 lb", "group": "Non-Sporting",
+    "temperament": ["Confident", "Alert", "Curious"],
+    "funFacts": [
+      "Its name is Flemish for \"little boatman\" or \"little captain.\"",
+      "Its ruff and tailless rear give it a distinctive fox-like silhouette."
+    ]
+  },
+  "Scottish Deerhound": {
+    "summary": "A tall, rough-coated Scottish sighthound bred to hunt red deer, once owned only by nobility.",
+    "origin": "Scotland", "lifespan": "8–11 years", "weight": "75–110 lb", "group": "Hound",
+    "temperament": ["Dignified", "Gentle", "Polite"],
+    "funFacts": [
+      "In the Middle Ages, no one below the rank of earl was allowed to own one.",
+      "A Deerhound named Hickory won Best in Show at Westminster in 2011."
+    ]
+  },
+  "Scottish Terrier": {
+    "summary": "A sturdy, bearded Highland terrier bred to hunt foxes and badgers, nicknamed the \"Diehard.\"",
+    "origin": "Scotland", "lifespan": "11–13 years", "weight": "18–22 lb", "group": "Terrier",
+    "temperament": ["Confident", "Independent", "Spirited"],
+    "funFacts": [
+      "Franklin D. Roosevelt's Scottie, Fala, is part of his memorial in Washington, D.C.",
+      "The Scottie is one of the playing pieces in Monopoly."
+    ]
+  },
+  "Sealyham Terrier": {
+    "summary": "A sturdy white Welsh terrier bred to hunt otters, badgers and foxes, now a rare breed.",
+    "origin": "Wales", "lifespan": "12–14 years", "weight": "23–24 lb", "group": "Terrier",
+    "temperament": ["Alert", "Outgoing", "Funny"],
+    "funFacts": [
+      "Alfred Hitchcock walks his own two Sealyhams in his cameo in The Birds (1963).",
+      "It was developed by Captain John Edwardes on his Sealyham estate in the 1800s."
+    ]
+  },
+  "Shar-Pei": {
+    "summary": "An ancient Chinese guard dog famous for its deep wrinkles, hippo-shaped muzzle and blue-black tongue.",
+    "origin": "China", "lifespan": "8–12 years", "weight": "45–60 lb", "group": "Non-Sporting",
+    "temperament": ["Loyal", "Independent", "Calm"],
+    "funFacts": [
+      "In 1978 Guinness listed it as the world's rarest dog breed.",
+      "\"Shar-Pei\" means \"sand skin,\" for its rough, bristly coat."
+    ]
+  },
+  "Shetland Sheepdog": {
+    "summary": "A small, agile herding dog from Scotland's Shetland Islands that looks like a miniature Rough Collie.",
+    "origin": "Scotland (Shetland Islands)", "lifespan": "12–14 years", "weight": "15–25 lb", "group": "Herding",
+    "temperament": ["Playful", "Energetic", "Bright"],
+    "funFacts": [
+      "Shelties were bred to keep sheep, ponies and birds out of crofters' gardens.",
+      "They're consistently among the top breeds in obedience and agility competitions."
+    ]
+  },
+  "Shiba Inu": {
+    "summary": "Japan's oldest and smallest native spitz, a bold, fox-like hunting dog with a famously independent streak.",
+    "origin": "Japan", "lifespan": "13–16 years", "weight": "17–23 lb", "group": "Non-Sporting",
+    "temperament": ["Alert", "Active", "Attentive"],
+    "funFacts": [
+      "The \"Doge\" meme and the Dogecoin cryptocurrency feature a Shiba Inu named Kabosu.",
+      "Shibas are known for the \"Shiba scream,\" a dramatic high-pitched protest."
+    ]
+  },
+  "Shih Tzu": {
+    "summary": "A \"little lion dog\" bred as a palace companion for Chinese royalty, with a flowing coat and a sweet nature.",
+    "origin": "China (Tibetan roots)", "lifespan": "10–18 years", "weight": "9–16 lb", "group": "Toy",
+    "temperament": ["Affectionate", "Playful", "Outgoing"],
+    "funFacts": [
+      "\"Shih Tzu\" means \"little lion\" in Mandarin.",
+      "Nearly all modern Shih Tzus descend from 14 dogs used to rebuild the breed in the 20th century."
+    ]
+  },
+  "Siberian Husky": {
+    "summary": "A medium-sized sled dog bred by the Chukchi people of Siberia for endurance in extreme cold.",
+    "origin": "Russia (Siberia)", "lifespan": "12–14 years", "weight": "35–60 lb", "group": "Working",
+    "temperament": ["Loyal", "Outgoing", "Mischievous"],
+    "funFacts": [
+      "Huskies including Balto and Togo relayed diphtheria medicine to Nome, Alaska, in the 1925 \"Great Race of Mercy.\"",
+      "Many Huskies have blue eyes, or one blue and one brown."
+    ]
+  },
+  "Silky Terrier": {
+    "summary": "A small Australian terrier with a glossy blue-and-tan coat, bred from Yorkshire and Australian Terriers.",
+    "origin": "Australia", "lifespan": "13–15 years", "weight": "About 10 lb", "group": "Toy",
+    "temperament": ["Friendly", "Quick", "Alert"],
+    "funFacts": [
+      "It's often mistaken for a Yorkie but is a bit larger, with a more wedge-shaped head.",
+      "Despite its Toy-group size, it was bred to hunt snakes and rodents."
+    ]
+  },
+  "Smooth Fox Terrier": {
+    "summary": "A lively, smooth-coated English terrier bred to chase foxes out of their dens during hunts.",
+    "origin": "England", "lifespan": "12–15 years", "weight": "15–19 lb", "group": "Terrier",
+    "temperament": ["Friendly", "Alert", "Playful"],
+    "funFacts": [
+      "The AKC showed Smooth and Wire Fox Terriers as one breed until 1985.",
+      "Nipper, the dog in the \"His Master's Voice\" logo, is often said to have been part Smooth Fox Terrier."
+    ]
+  },
+  "Soft Coated Wheaten Terrier": {
+    "summary": "A cheerful Irish farm terrier with a silky, wheat-colored coat and a famously enthusiastic greeting.",
+    "origin": "Ireland", "lifespan": "12–14 years", "weight": "30–40 lb", "group": "Terrier",
+    "temperament": ["Happy", "Friendly", "Devoted"],
+    "funFacts": [
+      "Wheatens greet people by bouncing up joyfully — fans call it the \"Wheaten greetin'.\"",
+      "Puppies are born dark; the coat lightens to wheaten by about age two."
+    ]
+  },
+  "Staffordshire Bull Terrier": {
+    "summary": "A muscular, affectionate English terrier from Staffordshire, one of the UK's most popular family dogs.",
+    "origin": "England", "lifespan": "12–14 years", "weight": "24–38 lb", "group": "Terrier",
+    "temperament": ["Clever", "Brave", "Tenacious"],
+    "funFacts": [
+      "In the UK it's nicknamed the \"nanny dog\" for its fondness for children.",
+      "It's one of the most popular breeds in the United Kingdom."
+    ]
+  },
+  "Standard Schnauzer": {
+    "summary": "The original schnauzer, a bearded German farm dog that guarded property and caught vermin.",
+    "origin": "Germany", "lifespan": "13–16 years", "weight": "30–50 lb", "group": "Working",
+    "temperament": ["Fearless", "Smart", "Spirited"],
+    "funFacts": [
+      "The Miniature and Giant Schnauzers were both developed from it.",
+      "Standard Schnauzers appear in paintings by Albrecht Dürer from around 1500."
+    ]
+  },
+  "Sussex Spaniel": {
+    "summary": "A low, golden-liver spaniel from Sussex, bred to flush game in dense undergrowth while barking.",
+    "origin": "England", "lifespan": "13–15 years", "weight": "35–45 lb", "group": "Sporting",
+    "temperament": ["Friendly", "Merry", "Sociable"],
+    "funFacts": [
+      "Unlike most spaniels, it barks while hunting, which hunters call \"giving tongue.\"",
+      "A Sussex named Stump won Westminster in 2009 at age 10, the oldest winner ever."
+    ]
+  },
+  "Tibetan Mastiff": {
+    "summary": "An ancient Himalayan guardian with a lion-like mane, bred to protect monasteries and nomads' flocks.",
+    "origin": "Tibet", "lifespan": "10–12 years", "weight": "70–150 lb", "group": "Working",
+    "temperament": ["Independent", "Reserved", "Intelligent"],
+    "funFacts": [
+      "A Tibetan Mastiff puppy was reportedly sold in China for about $1.5 million in 2011.",
+      "Its thick double coat lets it shrug off Himalayan winters."
+    ]
+  },
+  "Tibetan Terrier": {
+    "summary": "A shaggy Tibetan companion dog — not actually a terrier — kept by monks as a good-luck charm.",
+    "origin": "Tibet", "lifespan": "15–16 years", "weight": "18–30 lb", "group": "Non-Sporting",
+    "temperament": ["Affectionate", "Loyal", "Gentle"],
+    "funFacts": [
+      "Its large, flat \"snowshoe\" feet help it travel over snow.",
+      "Tibetans considered them bringers of luck and gave them as gifts rather than selling them."
+    ]
+  },
+  "Toy Terrier": {
+    "summary": "A small, sleek black-and-tan terrier, essentially a toy-sized Manchester Terrier, bred as a ratter and companion.",
+    "origin": "England", "lifespan": "12–15 years", "weight": "6–8 lb", "group": "Toy variety of the Manchester Terrier",
+    "temperament": ["Alert", "Lively", "Loyal"],
+    "funFacts": [
+      "In the U.S., it's shown as the Toy variety of the Manchester Terrier.",
+      "Its upright, candle-flame-shaped ears are a breed signature."
+    ]
+  },
+  "Treeing Walker Coonhound": {
+    "summary": "A fast, tricolor American coonhound descended from English Foxhounds, bred to chase raccoons up trees.",
+    "origin": "United States", "lifespan": "12–13 years", "weight": "50–70 lb", "group": "Hound",
+    "temperament": ["Smart", "Brave", "Sociable"],
+    "funFacts": [
+      "It descends in part from a stolen dog named Tennessee Lead, bred into Walker foxhounds in the 1800s.",
+      "Coonhound fans call it \"the people's choice.\""
+    ]
+  },
+  "Vizsla": {
+    "summary": "A sleek, golden-rust Hungarian pointer bred for falconry and bird hunting, famous for its affectionate nature.",
+    "origin": "Hungary", "lifespan": "12–14 years", "weight": "44–60 lb", "group": "Sporting",
+    "temperament": ["Affectionate", "Gentle", "Energetic"],
+    "funFacts": [
+      "Vizslas are nicknamed \"Velcro dogs\" because they stick so close to their owners.",
+      "A Vizsla named Chartay was the first dog to earn AKC championships in five different sports."
+    ]
+  },
+  "Weimaraner": {
+    "summary": "A sleek, silver-gray German hunting dog bred by nobles of the Weimar court to hunt big game.",
+    "origin": "Germany", "lifespan": "10–13 years", "weight": "55–90 lb", "group": "Sporting",
+    "temperament": ["Friendly", "Fearless", "Obedient"],
+    "funFacts": [
+      "Its silvery coat and light eyes earned it the nickname \"Gray Ghost.\"",
+      "Photographer William Wegman's Weimaraners have appeared on Sesame Street."
+    ]
+  },
+  "Welsh Springer Spaniel": {
+    "summary": "A red-and-white Welsh gundog, a little smaller than the English Springer, bred to flush birds in rough country.",
+    "origin": "Wales", "lifespan": "12–15 years", "weight": "35–55 lb", "group": "Sporting",
+    "temperament": ["Upbeat", "Loyal", "Hardworking"],
+    "funFacts": [
+      "It only comes in one color combination: red and white.",
+      "Welshies are known for the stamina to hunt all day in rugged terrain."
+    ]
+  },
+  "West Highland White Terrier": {
+    "summary": "A plucky white Scottish terrier bred to hunt rats, foxes and badgers among the Highland rocks.",
+    "origin": "Scotland", "lifespan": "13–15 years", "weight": "15–20 lb", "group": "Terrier",
+    "temperament": ["Loyal", "Happy", "Entertaining"],
+    "funFacts": [
+      "Legend says Colonel Edward Malcolm started breeding white terriers after mistaking his reddish terrier for a fox.",
+      "A Westie is the face of Cesar dog food."
+    ]
+  },
+  "Whippet": {
+    "summary": "A lightning-fast English sighthound bred by miners for racing and rabbit coursing, calm and cuddly at home.",
+    "origin": "England", "lifespan": "12–15 years", "weight": "25–40 lb", "group": "Hound",
+    "temperament": ["Calm", "Affectionate", "Playful"],
+    "funFacts": [
+      "Whippets can reach about 35 mph and are known for incredible acceleration.",
+      "They were nicknamed \"the poor man's racehorse.\""
+    ]
+  },
+  "Wire Fox Terrier": {
+    "summary": "A jaunty, wire-coated English fox terrier and the most successful breed in Westminster Best in Show history.",
+    "origin": "England", "lifespan": "12–15 years", "weight": "15–19 lb", "group": "Terrier",
+    "temperament": ["Confident", "Gregarious", "Alert"],
+    "funFacts": [
+      "Wire Fox Terriers have won Best in Show at Westminster 15 times, more than any other breed.",
+      "Snowy, Tintin's faithful companion, is a Wire Fox Terrier.",
+      "Asta in The Thin Man films was a Wire Fox Terrier."
+    ]
+  },
+  "Wirehaired Pointing Griffon": {
+    "summary": "A shaggy, bearded all-purpose gundog developed in the late 1800s by Dutch breeder Eduard Korthals.",
+    "origin": "France and the Netherlands", "lifespan": "12–15 years", "weight": "35–70 lb", "group": "Sporting",
+    "temperament": ["Friendly", "Devoted", "Trainable"],
+    "funFacts": [
+      "In Europe it's known as the Korthals Griffon.",
+      "Its harsh coat protects it in thick brush and cold water."
+    ]
+  },
+  "Xoloitzcuintli": {
+    "summary": "An ancient Mexican breed, mostly hairless, revered by the Aztecs and named after the god Xolotl.",
+    "origin": "Mexico", "lifespan": "13–18 years", "weight": "10–55 lb (toy to standard)", "group": "Non-Sporting",
+    "temperament": ["Loyal", "Alert", "Calm"],
+    "funFacts": [
+      "The Aztecs believed Xolos guided souls through the underworld.",
+      "Dante in Pixar's Coco is a Xoloitzcuintli.",
+      "It's the national dog of Mexico."
+    ]
+  },
+  "Yorkshire Terrier": {
+    "summary": "A tiny, glamorous terrier with a silky blue-and-tan coat, originally bred to catch rats in Yorkshire mills.",
+    "origin": "England", "lifespan": "11–15 years", "weight": "About 7 lb", "group": "Toy",
+    "temperament": ["Sprightly", "Tomboyish", "Affectionate"],
+    "funFacts": [
+      "A Yorkie named Smoky served in World War II and is considered one of the first therapy dogs.",
+      "A Yorkie's coat is closer in texture to human hair than to typical dog fur."
+    ]
+  }
+}

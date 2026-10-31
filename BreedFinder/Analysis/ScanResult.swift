@@ -18,6 +18,9 @@ struct FramePrediction {
 
 struct FrameAnalysis {
     let image: CGImage
+    /// Where the animal detector found the dog: normalized, origin at the bottom-left
+    /// (Vision's convention). Nil when it found none.
+    let dogBox: CGRect?
     let prediction: FramePrediction
 }
 
@@ -33,4 +36,6 @@ struct ScanResult {
     let frames: [FrameAnalysis]
     /// Up to three guesses, best first. Empty when no frame contained a dog.
     let guesses: [BreedGuess]
+    /// The frame that most resembles the top guess, cropped to the dog, for the result card.
+    let dogPhoto: CGImage?
 }

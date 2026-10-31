@@ -1,0 +1,363 @@
+{
+  "Gordon Setter": {
+    "summary": "The heaviest of the setters, a black-and-tan Scottish bird dog made famous by the 4th Duke of Gordon.",
+    "origin": "Scotland", "lifespan": "12–13 years", "weight": "45–80 lb", "group": "Sporting",
+    "temperament": ["Confident", "Bold", "Alert"],
+    "funFacts": [
+      "The breed was developed at Gordon Castle in the 1820s.",
+      "It's the only black-and-tan setter breed."
+    ]
+  },
+  "Great Dane": {
+    "summary": "A giant German breed once used to hunt wild boar, now known as the \"Apollo of dogs\" for its gentle, patient nature.",
+    "origin": "Germany", "lifespan": "7–10 years", "weight": "110–175 lb", "group": "Working",
+    "temperament": ["Friendly", "Patient", "Dependable"],
+    "funFacts": [
+      "A Great Dane named Zeus was the tallest dog on record, 44 inches at the shoulder.",
+      "Scooby-Doo and Marmaduke are both Great Danes."
+    ]
+  },
+  "Great Pyrenees": {
+    "summary": "A large, white livestock guardian from the Pyrenees mountains, bred to protect sheep from wolves and bears.",
+    "origin": "France and Spain", "lifespan": "10–12 years", "weight": "85–160 lb", "group": "Working",
+    "temperament": ["Smart", "Patient", "Calm"],
+    "funFacts": [
+      "King Louis XIV reportedly named it the Royal Dog of France in 1675.",
+      "Like the Beauceron and Briard, it has double dewclaws on its hind legs."
+    ]
+  },
+  "Greater Swiss Mountain Dog": {
+    "summary": "The largest and oldest of the Swiss mountain dogs, a strong tricolor drafter once called \"the poor man's horse.\"",
+    "origin": "Switzerland", "lifespan": "8–11 years", "weight": "85–140 lb", "group": "Working",
+    "temperament": ["Faithful", "Family-oriented", "Dependable"],
+    "funFacts": [
+      "It pulled heavy carts of meat and dairy for farmers and butchers.",
+      "It's the largest of the four Swiss Sennenhund breeds."
+    ]
+  },
+  "Greyhound": {
+    "summary": "The fastest dog breed, a sleek sighthound with ancient roots, often adopted today as a gentle retired racer.",
+    "origin": "England (ancient Middle Eastern roots)", "lifespan": "10–13 years", "weight": "60–70 lb", "group": "Hound",
+    "temperament": ["Gentle", "Independent", "Noble"],
+    "funFacts": [
+      "Greyhounds can reach about 45 mph.",
+      "Despite their speed, they're famous for lounging indoors — fans call them \"45-mph couch potatoes.\""
+    ]
+  },
+  "Havanese": {
+    "summary": "Cuba's national dog, a cheerful little companion with a silky coat, descended from the Bichon family.",
+    "origin": "Cuba", "lifespan": "14–16 years", "weight": "7–13 lb", "group": "Toy",
+    "temperament": ["Intelligent", "Outgoing", "Funny"],
+    "funFacts": [
+      "It's the national dog of Cuba.",
+      "Most modern Havanese descend from about 11 dogs brought out of Cuba after the revolution."
+    ]
+  },
+  "Ibizan Hound": {
+    "summary": "A lean, deer-like hound from the Spanish island of Ibiza, bred to hunt rabbits using sight, scent and hearing.",
+    "origin": "Spain (Balearic Islands)", "lifespan": "11–14 years", "weight": "45–50 lb", "group": "Hound",
+    "temperament": ["Even-tempered", "Loyal", "Athletic"],
+    "funFacts": [
+      "Ibizan Hounds can leap remarkably high from a standstill.",
+      "Their large, upright ears help them pinpoint prey hiding in brush."
+    ]
+  },
+  "Icelandic Sheepdog": {
+    "summary": "Iceland's only native dog, a cheerful spitz brought over by the Vikings more than 1,000 years ago.",
+    "origin": "Iceland", "lifespan": "12–14 years", "weight": "25–30 lb", "group": "Herding",
+    "temperament": ["Friendly", "Playful", "Inquisitive"],
+    "funFacts": [
+      "It arrived in Iceland with Viking settlers between 874 and 930 AD.",
+      "Many have double dewclaws on their hind legs."
+    ]
+  },
+  "Irish Red and White Setter": {
+    "summary": "The older of Ireland's two setters, a red-and-white bird dog that was nearly lost as the solid-red Irish Setter grew popular.",
+    "origin": "Ireland", "lifespan": "11–15 years", "weight": "50–70 lb", "group": "Sporting",
+    "temperament": ["Happy", "Athletic", "Good-natured"],
+    "funFacts": [
+      "It predates the all-red Irish Setter.",
+      "The breed was close to extinction by the early 1900s and was revived in the 1920s."
+    ]
+  },
+  "Irish Setter": {
+    "summary": "A glamorous mahogany-red bird dog from Ireland, known for its boundless energy and friendly nature.",
+    "origin": "Ireland", "lifespan": "12–15 years", "weight": "60–70 lb", "group": "Sporting",
+    "temperament": ["Outgoing", "Sweet-natured", "Active"],
+    "funFacts": [
+      "Disney's Big Red (1962) starred an Irish Setter.",
+      "Richard Nixon's Irish Setter, King Timahoe, lived in the White House."
+    ]
+  },
+  "Irish Terrier": {
+    "summary": "A fiery, red-coated Irish terrier nicknamed the \"Daredevil,\" used as a farm dog, guard and ratter.",
+    "origin": "Ireland", "lifespan": "13–15 years", "weight": "25–27 lb", "group": "Terrier",
+    "temperament": ["Bold", "Dashing", "Tenderhearted"],
+    "funFacts": [
+      "Irish Terriers carried messages for soldiers in World War I.",
+      "It's one of the oldest terrier breeds."
+    ]
+  },
+  "Irish Water Spaniel": {
+    "summary": "The tallest spaniel, a curly, liver-coated Irish water retriever with a distinctive smooth tail.",
+    "origin": "Ireland", "lifespan": "10–12 years", "weight": "45–68 lb", "group": "Sporting",
+    "temperament": ["Playful", "Brave", "Hardworking"],
+    "funFacts": [
+      "Its thin, smooth tail earned it the nickname \"rat tail.\"",
+      "It's often called the clown of the spaniel family."
+    ]
+  },
+  "Irish Wolfhound": {
+    "summary": "The tallest of all dog breeds, an ancient Irish sighthound once used to hunt wolves and in war, now a gentle giant.",
+    "origin": "Ireland", "lifespan": "6–8 years", "weight": "105–180 lb", "group": "Hound",
+    "temperament": ["Calm", "Dignified", "Courageous"],
+    "funFacts": [
+      "It's the tallest AKC breed; males stand at least 32 inches at the shoulder.",
+      "Despite their history as war dogs, Wolfhounds are famously gentle and easygoing."
+    ]
+  },
+  "Italian Greyhound": {
+    "summary": "A miniature sighthound beloved by Renaissance nobility, with all of a Greyhound's grace in a much smaller package.",
+    "origin": "Italy", "lifespan": "14–15 years", "weight": "7–14 lb", "group": "Toy",
+    "temperament": ["Playful", "Sensitive", "Affectionate"],
+    "funFacts": [
+      "Frederick the Great of Prussia loved his Italian Greyhounds and was buried near them.",
+      "Small greyhounds like these appear in art from ancient Rome and Pompeii."
+    ]
+  },
+  "Jack Russell Terrier": {
+    "summary": "A small, tireless fox-hunting terrier developed by the Reverend John \"Jack\" Russell in 19th-century England.",
+    "origin": "England", "lifespan": "13–16 years", "weight": "13–17 lb", "group": "Terrier",
+    "temperament": ["Energetic", "Clever", "Fearless"],
+    "funFacts": [
+      "Eddie on the TV show Frasier was played by a Jack Russell named Moose.",
+      "The AKC recognizes two related breeds: the Parson Russell Terrier and the Russell Terrier."
+    ]
+  },
+  "Japanese Chin": {
+    "summary": "An aristocratic toy breed long cherished by Japanese nobility, known for its cat-like grace and charm.",
+    "origin": "Japan", "lifespan": "10–12 years", "weight": "7–11 lb", "group": "Toy",
+    "temperament": ["Charming", "Noble", "Loving"],
+    "funFacts": [
+      "Many Chins do the \"Chin spin,\" twirling in circles when excited.",
+      "Commodore Perry is said to have brought Chins back from Japan in the 1850s, some as gifts for Queen Victoria."
+    ]
+  },
+  "Japanese Spitz": {
+    "summary": "A small, fluffy white spitz developed in Japan in the 1920s and 1930s from German Spitz ancestors.",
+    "origin": "Japan", "lifespan": "10–16 years", "weight": "11–20 lb", "group": "Not AKC-recognized",
+    "temperament": ["Playful", "Devoted", "Clever"],
+    "funFacts": [
+      "It looks like a miniature Samoyed but is a separate breed.",
+      "Its stand-off white coat is surprisingly good at shedding dirt."
+    ]
+  },
+  "Keeshond": {
+    "summary": "A fluffy Dutch spitz with distinctive \"spectacles\" around its eyes, once the watchdog of barges on Dutch canals.",
+    "origin": "Netherlands", "lifespan": "12–15 years", "weight": "35–45 lb", "group": "Non-Sporting",
+    "temperament": ["Friendly", "Lively", "Outgoing"],
+    "funFacts": [
+      "It was the symbol of the Dutch Patriot party in the 1780s, named after its leader Kees de Gyselaer.",
+      "The dark lines from its eyes to its ears look like spectacles."
+    ]
+  },
+  "Kerry Blue Terrier": {
+    "summary": "An Irish all-purpose farm terrier whose soft, wavy coat turns blue-gray as it matures.",
+    "origin": "Ireland", "lifespan": "12–15 years", "weight": "30–40 lb", "group": "Terrier",
+    "temperament": ["Alert", "Adaptable", "People-oriented"],
+    "funFacts": [
+      "Puppies are born black; the coat clears to blue between about 6 and 24 months.",
+      "It's often called the national terrier of Ireland."
+    ]
+  },
+  "Komondor": {
+    "summary": "A large Hungarian livestock guardian covered in white, corded \"dreadlocks\" that let it blend in with the flock.",
+    "origin": "Hungary", "lifespan": "10–12 years", "weight": "80–100+ lb", "group": "Working",
+    "temperament": ["Steady", "Fearless", "Affectionate"],
+    "funFacts": [
+      "A mature Komondor's cords can reach the ground and weigh around 15 pounds.",
+      "The coat camouflages it among sheep and protects it from wolf bites."
+    ]
+  },
+  "Kuvasz": {
+    "summary": "A large, white Hungarian guardian dog once kept by royalty to protect estates and livestock.",
+    "origin": "Hungary", "lifespan": "10–12 years", "weight": "70–115 lb", "group": "Working",
+    "temperament": ["Loyal", "Protective", "Patient"],
+    "funFacts": [
+      "King Matthias I of Hungary reportedly trusted his Kuvaszok more than his human bodyguards.",
+      "Its white coat helped shepherds tell it apart from wolves at night."
+    ]
+  },
+  "Labradoodle": {
+    "summary": "A cross between a Labrador Retriever and a Poodle, first bred in Australia in 1989 as a low-shedding guide dog.",
+    "origin": "Australia", "lifespan": "12–14 years", "weight": "15–65 lb", "group": "Designer crossbreed",
+    "temperament": ["Friendly", "Smart", "Energetic"],
+    "funFacts": [
+      "Wally Conron bred the first Labradoodle at Royal Guide Dogs Victoria for a blind woman whose husband was allergic to dogs.",
+      "Conron later said he regretted starting the \"designer dog\" craze."
+    ]
+  },
+  "Labrador Retriever": {
+    "summary": "A friendly, outgoing retriever from Newfoundland, refined in Britain, and for decades America's most popular dog breed.",
+    "origin": "Canada (Newfoundland)", "lifespan": "11–13 years", "weight": "55–80 lb", "group": "Sporting",
+    "temperament": ["Friendly", "Active", "Outgoing"],
+    "funFacts": [
+      "Labs were America's most popular breed for 31 years in a row (1991–2021).",
+      "Webbed toes and a thick \"otter tail\" that works like a rudder make them great swimmers."
+    ]
+  },
+  "Lakeland Terrier": {
+    "summary": "A compact, wire-coated terrier from England's Lake District, bred to protect sheep from foxes.",
+    "origin": "England", "lifespan": "12–16 years", "weight": "15–17 lb", "group": "Terrier",
+    "temperament": ["Friendly", "Bold", "Confident"],
+    "funFacts": [
+      "A Lakeland named Stingray won Best in Show at both Crufts (1967) and Westminster (1968).",
+      "It was bred to work in the rocky fells where foxes raided sheep."
+    ]
+  },
+  "Leonberger": {
+    "summary": "A giant, gentle German companion bred in the town of Leonberg, with a lion-like mane and a love of water.",
+    "origin": "Germany", "lifespan": "7–9 years", "weight": "90–170 lb", "group": "Working",
+    "temperament": ["Friendly", "Gentle", "Playful"],
+    "funFacts": [
+      "Breeder Heinrich Essig is said to have created it to resemble the lion on Leonberg's coat of arms.",
+      "Leonbergers have webbed feet and are used in water rescue."
+    ]
+  },
+  "Lhasa Apso": {
+    "summary": "An ancient Tibetan breed that guarded Buddhist monasteries from the inside, alerting monks to intruders.",
+    "origin": "Tibet", "lifespan": "12–15 years", "weight": "12–18 lb", "group": "Non-Sporting",
+    "temperament": ["Confident", "Smart", "Comical"],
+    "funFacts": [
+      "Tibetans called it \"Abso Seng Kye\" — the bark lion sentinel dog.",
+      "The Dalai Lama traditionally gave Lhasa Apsos as gifts to visiting dignitaries."
+    ]
+  },
+  "Lowchen": {
+    "summary": "A small, lively companion whose traditional \"lion trim\" earned it the nickname \"little lion dog.\"",
+    "origin": "France and Germany", "lifespan": "13–15 years", "weight": "8–18 lb", "group": "Non-Sporting",
+    "temperament": ["Lively", "Positive", "Affectionate"],
+    "funFacts": [
+      "\"Löwchen\" is German for \"little lion.\"",
+      "In 1973 it was listed as one of the rarest dog breeds in the world."
+    ]
+  },
+  "Maltese": {
+    "summary": "An ancient toy breed with a floor-length white coat, pampered as a lapdog since the days of ancient Greece and Rome.",
+    "origin": "Malta", "lifespan": "12–15 years", "weight": "Under 7 lb", "group": "Toy",
+    "temperament": ["Gentle", "Playful", "Charming"],
+    "funFacts": [
+      "The Maltese has been a pampered pet for more than 2,000 years.",
+      "It has no undercoat, so it sheds very little."
+    ]
+  },
+  "Maltipoo": {
+    "summary": "A cross between a Maltese and a toy or miniature Poodle, bred as a small, lower-shedding companion.",
+    "origin": "United States", "lifespan": "10–15 years", "weight": "5–20 lb", "group": "Designer crossbreed",
+    "temperament": ["Affectionate", "Gentle", "Playful"],
+    "funFacts": [
+      "Many Maltipoos keep a puppy-like look their whole lives.",
+      "Their small size makes them a popular choice for apartment living."
+    ]
+  },
+  "Manchester Terrier": {
+    "summary": "A sleek black-and-tan terrier developed in Manchester, England, to kill rats and chase rabbits.",
+    "origin": "England", "lifespan": "15–17 years", "weight": "12–22 lb", "group": "Terrier",
+    "temperament": ["Spirited", "Bright", "Discerning"],
+    "funFacts": [
+      "It comes in two varieties: Standard and Toy.",
+      "The tan markings on its front legs include black \"thumbprints.\""
+    ]
+  },
+  "Mastiff": {
+    "summary": "A massive, ancient English guardian, one of the heaviest dog breeds in the world, with a calm, dignified nature.",
+    "origin": "England", "lifespan": "6–10 years", "weight": "120–230 lb", "group": "Working",
+    "temperament": ["Courageous", "Dignified", "Good-natured"],
+    "funFacts": [
+      "An English Mastiff named Zorba weighed 343 pounds in 1989, a record for the heaviest dog.",
+      "Mastiffs are said to have come to America on the Mayflower."
+    ]
+  },
+  "Miniature Pinscher": {
+    "summary": "A small, sleek German toy dog nicknamed the \"King of Toys\" for its confident, high-stepping strut.",
+    "origin": "Germany", "lifespan": "12–16 years", "weight": "8–10 lb", "group": "Toy",
+    "temperament": ["Fearless", "Fun-loving", "Proud"],
+    "funFacts": [
+      "It isn't a mini Doberman: the Min Pin is the older breed.",
+      "Its high-stepping walk is called a \"hackney gait,\" like a carriage horse's."
+    ]
+  },
+  "Miniature Schnauzer": {
+    "summary": "The smallest schnauzer, a bearded German farm dog bred to catch rats, now a popular family companion.",
+    "origin": "Germany", "lifespan": "12–15 years", "weight": "11–20 lb", "group": "Terrier",
+    "temperament": ["Friendly", "Smart", "Obedient"],
+    "funFacts": [
+      "It was developed by crossing Standard Schnauzers with smaller breeds like the Affenpinscher.",
+      "Its bushy beard and eyebrows give it a wise old-man look."
+    ]
+  },
+  "Neapolitan Mastiff": {
+    "summary": "A massive Italian guardian with heavy wrinkles and loose skin, descended from the war dogs of ancient Rome.",
+    "origin": "Italy", "lifespan": "7–9 years", "weight": "110–150 lb", "group": "Working",
+    "temperament": ["Dignified", "Loyal", "Watchful"],
+    "funFacts": [
+      "Fang, Hagrid's dog in the Harry Potter films, was played by Neapolitan Mastiffs.",
+      "Its loose skin and folds were thought to protect it from bites."
+    ]
+  },
+  "Newfoundland": {
+    "summary": "A giant, sweet-natured Canadian working dog bred to help fishermen haul nets and rescue people from the sea.",
+    "origin": "Canada", "lifespan": "9–10 years", "weight": "100–150 lb", "group": "Working",
+    "temperament": ["Sweet", "Patient", "Devoted"],
+    "funFacts": [
+      "A Newfoundland named Seaman traveled with the Lewis and Clark expedition.",
+      "Nana, the nursemaid dog in Peter Pan, is a Newfoundland.",
+      "Webbed feet and a water-resistant coat make them powerful swimmers."
+    ]
+  },
+  "Norfolk Terrier": {
+    "summary": "One of the smallest working terriers, a sturdy little ratter from East Anglia with folded ears.",
+    "origin": "England", "lifespan": "12–16 years", "weight": "11–12 lb", "group": "Terrier",
+    "temperament": ["Fearless", "Alert", "Fun-loving"],
+    "funFacts": [
+      "It's nearly identical to the Norwich Terrier, except its ears fold down.",
+      "Norfolks and Norwiches were shown as one breed until 1964 in the UK."
+    ]
+  },
+  "Norwegian Buhund": {
+    "summary": "A Nordic spitz-type farm dog used for centuries to herd sheep and guard homesteads.",
+    "origin": "Norway", "lifespan": "12–15 years", "weight": "26–40 lb", "group": "Herding",
+    "temperament": ["Confident", "Smart", "Affectionate"],
+    "funFacts": [
+      "Remains of Buhund-type dogs have been found in Viking graves.",
+      "\"Bu\" refers to the farm or homestead in Norwegian."
+    ]
+  },
+  "Norwegian Elkhound": {
+    "summary": "An ancient Norwegian hunting spitz bred to track moose and hold them at bay with loud barking.",
+    "origin": "Norway", "lifespan": "12–15 years", "weight": "48–55 lb", "group": "Hound",
+    "temperament": ["Dignified", "Bold", "Friendly"],
+    "funFacts": [
+      "\"Elkhound\" comes from the Norwegian \"elghund\" — moose dog.",
+      "It's often called Norway's national dog."
+    ]
+  },
+  "Norwegian Lundehund": {
+    "summary": "A rare, flexible Norwegian spitz bred to climb sea cliffs and pull puffins from their nests.",
+    "origin": "Norway", "lifespan": "12–15 years", "weight": "20–30 lb", "group": "Non-Sporting",
+    "temperament": ["Alert", "Energetic", "Loyal"],
+    "funFacts": [
+      "It has six toes on each foot.",
+      "It can tip its head backward to touch its spine and spread its front legs straight out to the sides."
+    ]
+  },
+  "Norwich Terrier": {
+    "summary": "A tiny, prick-eared English terrier bred to hunt rats and foxes, known for its fearless, cheerful attitude.",
+    "origin": "England", "lifespan": "12–15 years", "weight": "About 12 lb", "group": "Terrier",
+    "temperament": ["Affectionate", "Alert", "Curious"],
+    "funFacts": [
+      "It's the prick-eared twin of the Norfolk Terrier.",
+      "A Norwich won Best in Show at Westminster in 1998."
+    ]
+  }
+}

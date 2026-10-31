@@ -27,6 +27,10 @@ targets:
       # code, and Xcode generates the DogBreedClassifier Swift class from it.
       - path: MLModels/DogBreedClassifier.mlpackage
         buildPhase: sources
+      # Breed profiles (built by tools/build_breed_content.py) and reference photos.
+      - path: Resources/breeds.json
+      - path: Resources/BreedPhotos
+        type: folder  # keeps the BreedPhotos/ subfolder inside the app bundle
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.bryanbee.breedfinder
