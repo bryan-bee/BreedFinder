@@ -16,6 +16,10 @@
    "The French call it the \"diablotin moustachu\" — the mustached little devil.",
    "An Affenpinscher named Banana Joe won Best in Show at Westminster in 2013."
   ],
+  "originCountries": [
+   "Germany"
+  ],
+  "groupKey": "Toy",
   "photo": {
    "file": "affenpinscher.jpg",
    "author": "Pleple2000",
@@ -41,6 +45,10 @@
    "Pablo Picasso had an Afghan Hound named Kabul who appears in some of his work.",
    "The ring curl at the tip of its tail is a breed hallmark."
   ],
+  "originCountries": [
+   "Afghanistan"
+  ],
+  "groupKey": "Hound",
   "photo": {
    "file": "afghan-hound.jpg",
    "author": "Weaveravel",
@@ -65,6 +73,10 @@
    "Airedales carried messages and stood sentry for soldiers in World War I.",
    "President Warren G. Harding's Airedale, Laddie Boy, reportedly had his own chair at Cabinet meetings."
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Terrier",
   "photo": {
    "file": "airedale-terrier.jpg",
    "author": "by Jane@rangeairevision.com",
@@ -89,6 +101,10 @@
    "Hachikō, the Akita who waited for his late owner at a Tokyo train station for nearly ten years, is Japan's symbol of loyalty.",
    "Helen Keller brought the first Akita to the United States in 1937."
   ],
+  "originCountries": [
+   "Japan"
+  ],
+  "groupKey": "Working",
   "photo": {
    "file": "akita.jpg",
    "author": "Azurfrog",
@@ -114,6 +130,10 @@
    "Malamutes were built for strength and endurance, hauling freight rather than racing.",
    "They're known for \"talking\" with woo-woo howls instead of barking."
   ],
+  "originCountries": [
+   "United States"
+  ],
+  "groupKey": "Working",
   "photo": {
    "file": "alaskan-malamute.jpg",
    "author": "SCMW",
@@ -138,6 +158,10 @@
    "The breed nearly vanished after World War II and was revived by breeders John D. Johnson and Alan Scott.",
    "Chance, the wisecracking dog in Homeward Bound (1993), was an American Bulldog."
   ],
+  "originCountries": [
+   "United States"
+  ],
+  "groupKey": "Other",
   "photo": {
    "file": "american-bulldog.jpg",
    "author": "Photo by sannse",
@@ -162,6 +186,10 @@
    "It has nothing to do with the Inuit: it was renamed from \"American Spitz\" after World War I to avoid anti-German sentiment.",
    "Traveling circuses featured Eskies doing tricks like walking a tightrope."
   ],
+  "originCountries": [
+   "United States"
+  ],
+  "groupKey": "Non-Sporting",
   "photo": {
    "file": "american-eskimo-dog.jpg",
    "author": "Christmas w/a K",
@@ -186,6 +214,10 @@
    "George Washington bred foxhounds and is often called a founder of the breed.",
    "It's the state dog of Virginia."
   ],
+  "originCountries": [
+   "United States"
+  ],
+  "groupKey": "Hound",
   "photo": {
    "file": "american-foxhound.jpg",
    "author": "Unknown",
@@ -210,6 +242,10 @@
    "With no coat, it needs sunscreen in summer and a sweater in winter.",
    "It's often suggested for people with dog allergies because it sheds so little."
   ],
+  "originCountries": [
+   "United States"
+  ],
+  "groupKey": "Terrier",
   "photo": {
    "file": "american-hairless-terrier.jpg",
    "author": "Nyaah",
@@ -234,6 +270,10 @@
    "Pete the Pup, with the ring around his eye in the Our Gang (Little Rascals) comedies, was an American Pit Bull Terrier.",
    "Pit bull–type dogs were popular American family dogs and mascots in the early 1900s."
   ],
+  "originCountries": [
+   "United States"
+  ],
+  "groupKey": "Other",
   "photo": {
    "file": "american-pit-bull-terrier.jpg",
    "author": "https://www.flickr.com/people/geoggirl/",
@@ -258,6 +298,10 @@
    "\"American\" was added to its name in 1972 to tell it apart from the smaller Staffordshire Bull Terrier.",
    "The AKC and UKC registered the same original dogs under different names."
   ],
+  "originCountries": [
+   "United States"
+  ],
+  "groupKey": "Terrier",
   "photo": {
    "file": "american-staffordshire-terrier.jpg",
    "author": "Svenska Mässan from Sweden",
@@ -282,6 +326,10 @@
    "It's the state dog of Wisconsin.",
    "Its dense, curly coat sheds water, keeping it warm in cold lakes."
   ],
+  "originCountries": [
+   "United States"
+  ],
+  "groupKey": "Sporting",
   "photo": {
    "file": "american-water-spaniel.jpg",
    "author": "Awsguy1",
@@ -306,6 +354,10 @@
    "In Namibia, Anatolians guard livestock from cheetahs, which helps protect the cheetahs from farmers.",
    "It's built to cover huge distances patrolling a flock's territory."
   ],
+  "originCountries": [
+   "Turkey"
+  ],
+  "groupKey": "Working",
   "photo": {
    "file": "anatolian-shepherd-dog.jpg",
    "author": "Kangalshepherddog",
@@ -330,6 +382,10 @@
    "It's one of four Swiss Sennenhund breeds, along with the Bernese, Entlebucher and Greater Swiss Mountain Dog.",
    "Its tail curls tightly over its back, unlike the other Swiss mountain dogs."
   ],
+  "originCountries": [
+   "Switzerland"
+  ],
+  "groupKey": "Other",
   "photo": {
    "file": "appenzeller-sennenhund.jpg",
    "author": "Appenzeller Blaess",
@@ -355,6 +411,10 @@
    "Puppies are born white; the blue or red speckled coat develops as they grow.",
    "They're also called Blue Heelers or Red Heelers because they nip cattle's heels."
   ],
+  "originCountries": [
+   "Australia"
+  ],
+  "groupKey": "Herding",
   "photo": {
    "file": "australian-cattle-dog.jpg",
    "author": "Zingpix",
@@ -379,6 +439,10 @@
    "Kelpies are famous for running across the backs of packed sheep to reach the other side of the flock.",
    "The breed is named after a 19th-century dog called Kelpie, itself named for a Scottish water spirit."
   ],
+  "originCountries": [
+   "Australia"
+  ],
+  "groupKey": "Other",
   "photo": {
    "file": "australian-kelpie.jpg",
    "author": "Pertti Kärppä",
@@ -404,6 +468,10 @@
    "Many Aussies have two different-colored eyes.",
    "The breed became popular through rodeos and horse shows in the 1950s."
   ],
+  "originCountries": [
+   "United States"
+  ],
+  "groupKey": "Herding",
   "photo": {
    "file": "australian-shepherd.jpg",
    "author": "Trickdog-Fina",
@@ -428,6 +496,10 @@
    "It was the first breed developed in Australia to be recognized and shown there.",
    "The soft topknot of hair on its head is a breed signature."
   ],
+  "originCountries": [
+   "Australia"
+  ],
+  "groupKey": "Terrier",
   "photo": {
    "file": "australian-terrier.jpg",
    "author": "Chuck in MA",
@@ -453,6 +525,10 @@
    "They groom themselves like cats and have very little doggy odor.",
    "Like wolves, females come into heat only once a year."
   ],
+  "originCountries": [
+   "Congo"
+  ],
+  "groupKey": "Hound",
   "photo": {
    "file": "basenji.jpg",
    "author": "fugzu",
@@ -478,6 +554,10 @@
    "Its long ears help sweep scents up toward its nose.",
    "A Basset Hound is the mascot of Hush Puppies shoes."
   ],
+  "originCountries": [
+   "France"
+  ],
+  "groupKey": "Hound",
   "photo": {
    "file": "basset-hound.jpg",
    "author": "Cali1008",
@@ -503,6 +583,10 @@
    "The USDA's \"Beagle Brigade\" sniffs out banned food and plants at U.S. airports.",
    "A Beagle's nose has around 220 million scent receptors."
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Hound",
   "photo": {
    "file": "beagle.jpg",
    "author": "Unknown",
@@ -527,6 +611,10 @@
    "\"Beardies\" bounce while herding to see over the flock, and many still bounce when excited.",
    "A Beardie's coat often lightens as a puppy and darkens again as it matures."
   ],
+  "originCountries": [
+   "Scotland"
+  ],
+  "groupKey": "Herding",
   "photo": {
    "file": "bearded-collie.jpg",
    "author": "Unknown",
@@ -551,6 +639,10 @@
    "Double dewclaws on the hind legs are a required breed trait.",
    "Beaucerons served as messengers and sentries for the French army in both World Wars."
   ],
+  "originCountries": [
+   "France"
+  ],
+  "groupKey": "Herding",
   "photo": {
    "file": "beauceron.jpg",
    "author": "Stefan Schmitz",
@@ -575,6 +667,10 @@
    "Despite its looks, it was bred by miners to hunt rats and badgers.",
    "It's often described as \"a lamb with the heart of a lion.\""
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Terrier",
   "photo": {
    "file": "bedlington-terrier.jpg",
    "author": "David Owsiany",
@@ -599,6 +695,10 @@
    "A Malinois named Cairo took part in the 2011 raid on Osama bin Laden's compound.",
    "It's named after the Belgian city of Malines (Mechelen)."
   ],
+  "originCountries": [
+   "Belgium"
+  ],
+  "groupKey": "Herding",
   "photo": {
    "file": "belgian-malinois.jpg",
    "author": "wim harwig",
@@ -623,6 +723,10 @@
    "It's named after the village of Groenendael near Brussels, where it was developed.",
    "Belgian Sheepdogs served as messenger and ambulance dogs in World War I."
   ],
+  "originCountries": [
+   "Belgium"
+  ],
+  "groupKey": "Herding",
   "photo": {
    "file": "belgian-sheepdog.jpg",
    "author": "Bloody-libu",
@@ -647,6 +751,10 @@
    "Its coat darkens with age, often with black tips called an \"overlay.\"",
    "Tervurens excel at agility, obedience and herding trials."
   ],
+  "originCountries": [
+   "Belgium"
+  ],
+  "groupKey": "Herding",
   "photo": {
    "file": "belgian-tervuren.jpg",
    "author": "Pets Adviser from Brooklyn, USA",
@@ -671,6 +779,10 @@
    "The first intentional Bernedoodles were bred in 2003 by Sherry Rupke in Ontario, Canada.",
    "They come in tiny, miniature and standard sizes, depending on the Poodle parent."
   ],
+  "originCountries": [
+   "Canada"
+  ],
+  "groupKey": "Designer crossbreed",
   "photo": {
    "file": "bernedoodle.jpg",
    "author": "Jsinghmpls",
@@ -695,6 +807,10 @@
    "It's the only one of the four Swiss mountain dog breeds with a long coat.",
    "Berners pulled carts of milk and cheese to market."
   ],
+  "originCountries": [
+   "Switzerland"
+  ],
+  "groupKey": "Working",
   "photo": {
    "file": "bernese-mountain-dog.jpg",
    "author": "FriendlyToaster",
@@ -720,6 +836,11 @@
    "Bichons traveled with sailors and were reportedly used as barter on trade voyages.",
    "Their coat sheds very little."
   ],
+  "originCountries": [
+   "France",
+   "Belgium"
+  ],
+  "groupKey": "Non-Sporting",
   "photo": {
    "file": "bichon-frise.jpg",
    "author": "Heike Andres",
@@ -744,6 +865,10 @@
    "It isn't a true terrier: about 17 breeds, including the Giant Schnauzer and Rottweiler, went into it.",
    "It was bred to guard military installations."
   ],
+  "originCountries": [
+   "Russia"
+  ],
+  "groupKey": "Working",
   "photo": {
    "file": "black-russian-terrier.jpg",
    "author": "Pleple2000",
@@ -768,6 +893,10 @@
    "It was the first coonhound breed recognized by the AKC, in 1945.",
    "Hunters can recognize their own coonhound's bay from far away."
   ],
+  "originCountries": [
+   "United States"
+  ],
+  "groupKey": "Hound",
   "photo": {
    "file": "black-and-tan-coonhound.jpg",
    "author": "Steffen Heinz (Caronna)",
@@ -793,6 +922,11 @@
    "Its long ears and loose skin help trap scent around its face.",
    "A Bloodhound named Tigger held the record for the longest dog ears, over 13 inches each."
   ],
+  "originCountries": [
+   "Belgium",
+   "France"
+  ],
+  "groupKey": "Hound",
   "photo": {
    "file": "bloodhound.jpg",
    "author": "User:Erland22",
@@ -817,6 +951,10 @@
    "Its \"blue ticked\" look comes from black ticking over a white coat.",
    "Smokey, the University of Tennessee's mascot, is a Bluetick Coonhound."
   ],
+  "originCountries": [
+   "United States"
+  ],
+  "groupKey": "Hound",
   "photo": {
    "file": "bluetick-coonhound.jpg",
    "author": "Unknown",
@@ -841,6 +979,11 @@
    "A Border Collie named Chaser learned the names of more than 1,000 toys.",
    "They control sheep with an intense stare called \"the eye.\""
   ],
+  "originCountries": [
+   "Scotland",
+   "England"
+  ],
+  "groupKey": "Herding",
   "photo": {
    "file": "border-collie.jpg",
    "author": "Unknown",
@@ -865,6 +1008,11 @@
    "Its head is often described as \"otter-like.\"",
    "Border Terriers ran with foxhounds and bolted foxes from their dens."
   ],
+  "originCountries": [
+   "Scotland",
+   "England"
+  ],
+  "groupKey": "Terrier",
   "photo": {
    "file": "border-terrier.jpg",
    "author": "Marilyn Peddle",
@@ -889,6 +1037,10 @@
    "\"Borzoi\" means \"swift\" in Russian.",
    "The breed used to be called the Russian Wolfhound."
   ],
+  "originCountries": [
+   "Russia"
+  ],
+  "groupKey": "Hound",
   "photo": {
    "file": "borzoi.jpg",
    "author": "Pleple2000",
@@ -914,6 +1066,10 @@
    "It's the state dog of Massachusetts.",
    "It was one of the first American breeds recognized by the AKC, in 1893."
   ],
+  "originCountries": [
+   "United States"
+  ],
+  "groupKey": "Non-Sporting",
   "photo": {
    "file": "boston-terrier.jpg",
    "author": "Andreas Schlaugat",
@@ -938,6 +1094,10 @@
    "Its name means \"cow herder of Flanders.\"",
    "President Ronald Reagan had a Bouvier named Lucky."
   ],
+  "originCountries": [
+   "Belgium"
+  ],
+  "groupKey": "Herding",
   "photo": {
    "file": "bouvier-des-flandres.jpg",
    "author": "Basco at Dutch Wikipedia (Original text: annekedirven@tiscali.nl)",
@@ -962,6 +1122,10 @@
    "Boxers often stand on their hind legs and bat with their front paws when they play.",
    "The Boxer was one of the first breeds used as a police dog in Germany."
   ],
+  "originCountries": [
+   "Germany"
+  ],
+  "groupKey": "Working",
   "photo": {
    "file": "boxer.jpg",
    "author": "Mood210",
@@ -986,6 +1150,10 @@
    "It's the state dog of South Carolina.",
    "The breed traces back to a stray spaniel named Dumpy, found near a church in Spartanburg in the early 1900s."
   ],
+  "originCountries": [
+   "United States"
+  ],
+  "groupKey": "Sporting",
   "photo": {
    "file": "boykin-spaniel.jpg",
    "author": "jetsonphoto",
@@ -1010,6 +1178,10 @@
    "Like the Beauceron, it has double dewclaws on its hind legs.",
    "Briards served with the French army in World War I as sentries and in searching for the wounded."
   ],
+  "originCountries": [
+   "France"
+  ],
+  "groupKey": "Herding",
   "photo": {
    "file": "briard.jpg",
    "author": "Birgit Balzer, Deutschland (uploaded by Caronna 17:00, 10 Feb 2005 (UTC))",
@@ -1034,6 +1206,10 @@
    "Many Brittanys are born with a naturally short tail or none at all.",
    "The AKC dropped \"Spaniel\" from its name in 1982 because it hunts more like a pointer."
   ],
+  "originCountries": [
+   "France"
+  ],
+  "groupKey": "Sporting",
   "photo": {
    "file": "brittany.jpg",
    "author": "Olatz / souligne",
@@ -1058,6 +1234,10 @@
    "Verdell, the dog in As Good as It Gets (1997), was a Brussels Griffon.",
    "Its expressive face is often said to have inspired the look of Star Wars' Ewoks."
   ],
+  "originCountries": [
+   "Belgium"
+  ],
+  "groupKey": "Toy",
   "photo": {
    "file": "brussels-griffon.jpg",
    "author": "Arne Fagerholt",
@@ -1082,6 +1262,10 @@
    "Bullseye, Target's mascot, is a Bull Terrier.",
    "General George S. Patton's Bull Terrier was named Willie."
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Terrier",
   "photo": {
    "file": "bull-terrier.jpg",
    "author": "Pixabay User TC-TORRES",
@@ -1106,6 +1290,10 @@
    "Gamekeepers called it the \"gamekeeper's night dog.\"",
    "Bullmastiffs were trained to pin poachers down rather than bite them."
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Working",
   "photo": {
    "file": "bullmastiff.jpg",
    "author": "Fausto Moreno",
@@ -1130,6 +1318,10 @@
    "Toto in The Wizard of Oz (1939) was played by a Cairn Terrier named Terry.",
    "Cairns love to dig, a leftover from hunting among the rocks."
   ],
+  "originCountries": [
+   "Scotland"
+  ],
+  "groupKey": "Terrier",
   "photo": {
    "file": "cairn-terrier.jpg",
    "author": "Ronald Müller-Hagen (Ketterechts)",
@@ -1154,6 +1346,10 @@
    "It's the national dog of Israel.",
    "Dogs of this type have survived on their own in the Negev desert for thousands of years."
   ],
+  "originCountries": [
+   "Israel"
+  ],
+  "groupKey": "Herding",
   "photo": {
    "file": "canaan-dog.jpg",
    "author": "Canaan Dog, Hodowla Samorodok Hanaana http://www.ruscanaan.ru",
@@ -1178,6 +1374,10 @@
    "Its name roughly means \"bodyguard dog,\" from the Latin \"cohors\" (guardian).",
    "The breed nearly vanished in the 20th century and was revived by Italian enthusiasts in the 1970s."
   ],
+  "originCountries": [
+   "Italy"
+  ],
+  "groupKey": "Working",
   "photo": {
    "file": "cane-corso.jpg",
    "author": "Claudio Domiziani",
@@ -1202,6 +1402,10 @@
    "Unlike the Pembroke, the Cardigan has a long tail and larger, rounder ears.",
    "\"Corgi\" is usually translated from Welsh as \"dwarf dog.\""
   ],
+  "originCountries": [
+   "Wales"
+  ],
+  "groupKey": "Herding",
   "photo": {
    "file": "cardigan-welsh-corgi.jpg",
    "author": "FatFairfax",
@@ -1226,6 +1430,10 @@
    "King Charles II was said to take his spaniels almost everywhere, even to council meetings.",
    "The red-and-white \"Blenheim\" color is named after Blenheim Palace."
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Toy",
   "photo": {
    "file": "cavalier-king-charles-spaniel.jpg",
    "author": "Andreweatock",
@@ -1250,6 +1458,10 @@
    "In Australia it's called the Cavoodle and is one of the country's most popular dogs.",
    "Its coat can be wavy or tightly curled, depending on which parent it takes after."
   ],
+  "originCountries": [
+   "Australia"
+  ],
+  "groupKey": "Designer crossbreed",
   "photo": {
    "file": "cavapoo.jpg",
    "author": "BAVhah",
@@ -1275,6 +1487,10 @@
    "Its oily, wavy double coat is almost waterproof.",
    "It's the state dog of Maryland."
   ],
+  "originCountries": [
+   "United States"
+  ],
+  "groupKey": "Sporting",
   "photo": {
    "file": "chesapeake-bay-retriever.jpg",
    "author": "George Makatura",
@@ -1299,6 +1515,10 @@
    "Chihuahuas have the largest brain relative to body size of any dog breed.",
    "Many are born with a soft spot on the skull, called a molera, like a human baby."
   ],
+  "originCountries": [
+   "Mexico"
+  ],
+  "groupKey": "Toy",
   "photo": {
    "file": "chihuahua.jpg",
    "author": "Bonnie van den Born, http://www.bonfoto.nl. The original uploader was Cwazi at Dutch Wikipedia.",
@@ -1323,6 +1543,10 @@
    "Hairless and Powderpuff puppies can be born in the same litter.",
    "Chinese Cresteds have won the World's Ugliest Dog Contest several times."
   ],
+  "originCountries": [
+   "China"
+  ],
+  "groupKey": "Toy",
   "photo": {
    "file": "chinese-crested.jpg",
    "author": "Tommy Gildseth",
@@ -1347,6 +1571,10 @@
    "Chow Chows have blue-black tongues.",
    "Sigmund Freud's Chow, Jofi, often sat in on his therapy sessions."
   ],
+  "originCountries": [
+   "China"
+  ],
+  "groupKey": "Non-Sporting",
   "photo": {
    "file": "chow-chow.jpg",
    "author": "Томасина",
@@ -1371,6 +1599,10 @@
    "It's named after Clumber Park in Nottinghamshire.",
    "King Edward VII kept Clumbers at the royal Sandringham estate."
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Sporting",
   "photo": {
    "file": "clumber-spaniel.jpg",
    "author": "Pleple2000",
@@ -1395,6 +1627,10 @@
    "It's considered one of the first popular designer crossbreeds.",
    "In the UK, Cockapoos regularly rank among the most popular dogs."
   ],
+  "originCountries": [
+   "United States"
+  ],
+  "groupKey": "Designer crossbreed",
   "photo": {
    "file": "cockapoo.jpg",
    "author": "No machine-readable author provided. BetacommandBot assumed (based on copyright claims).",
@@ -1419,6 +1655,10 @@
    "Lady in Disney's Lady and the Tramp is an American Cocker Spaniel.",
    "\"Cocker\" comes from their use in hunting woodcock."
   ],
+  "originCountries": [
+   "United States"
+  ],
+  "groupKey": "Sporting",
   "photo": {
    "file": "cocker-spaniel.jpg",
    "author": "Kulala",
@@ -1443,6 +1683,10 @@
    "Lassie was played by male Collies, starting with a dog named Pal.",
    "Queen Victoria helped make Collies fashionable in the 1860s."
   ],
+  "originCountries": [
+   "Scotland"
+  ],
+  "groupKey": "Herding",
   "photo": {
    "file": "collie.jpg",
    "author": "Yasu w",
@@ -1467,6 +1711,10 @@
    "It's the tallest of the retriever breeds.",
    "Its tight curls protect it in icy water and thick cover."
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Sporting",
   "photo": {
    "file": "curly-coated-retriever.jpg",
    "author": "Unknown",
@@ -1492,6 +1740,10 @@
    "A Dachshund named Waldi was the first official Olympic mascot (Munich, 1972).",
    "They come in three coat types: smooth, wirehaired and longhaired."
   ],
+  "originCountries": [
+   "Germany"
+  ],
+  "groupKey": "Hound",
   "photo": {
    "file": "dachshund.jpg",
    "author": "Katemil94",
@@ -1516,6 +1768,10 @@
    "Dalmatian puppies are born pure white; their spots appear as they grow.",
    "They became firehouse mascots because they guarded and calmed the horses that pulled fire wagons."
   ],
+  "originCountries": [
+   "Croatia"
+  ],
+  "groupKey": "Non-Sporting",
   "photo": {
    "file": "dalmatian.jpg",
    "author": "Bradlien",
@@ -1540,6 +1796,10 @@
    "It's the only breed named after a fictional character: Dandie Dinmont in Sir Walter Scott's 1815 novel Guy Mannering.",
    "It's one of the rarest terrier breeds today."
   ],
+  "originCountries": [
+   "Scotland"
+  ],
+  "groupKey": "Terrier",
   "photo": {
    "file": "dandie-dinmont-terrier.jpg",
    "author": "en:User:Sannse",
@@ -1564,6 +1824,10 @@
    "The Dingo Fence, built to keep dingoes away from sheep, stretches about 5,600 km across Australia.",
    "Dingoes have unusually flexible joints and can rotate their wrists and climb."
   ],
+  "originCountries": [
+   "Australia"
+  ],
+  "groupKey": "Other",
   "photo": {
    "file": "dingo.jpg",
    "author": "Charles J. Sharp",
@@ -1588,6 +1852,10 @@
    "Tax collector Louis Dobermann bred the first Dobermans to protect him on his rounds.",
    "A Doberman named Kurt is honored at the U.S. War Dog Cemetery on Guam after dying in the 1944 battle there."
   ],
+  "originCountries": [
+   "Germany"
+  ],
+  "groupKey": "Working",
   "photo": {
    "file": "doberman-pinscher.jpg",
    "author": "Miroslav Cacik",
@@ -1612,6 +1880,10 @@
    "Hooch, Tom Hanks's co-star in Turner & Hooch (1989), was a Dogue de Bordeaux.",
    "It has one of the largest heads relative to its body of any breed."
   ],
+  "originCountries": [
+   "France"
+  ],
+  "groupKey": "Working",
   "photo": {
    "file": "dogue-de-bordeaux.jpg",
    "author": "Canarian",
@@ -1636,6 +1908,10 @@
    "The Bulldog is the mascot of the U.S. Marine Corps and many universities, including Yale.",
    "Because of their large heads, most Bulldog puppies are born by C-section."
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Non-Sporting",
   "photo": {
    "file": "english-bulldog.jpg",
    "author": "SheltieBoy",
@@ -1660,6 +1936,10 @@
    "The AKC split the English and American Cocker into separate breeds in 1946.",
    "Its constantly wagging tail earned it the nickname \"merry cocker.\""
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Sporting",
   "photo": {
    "file": "english-cocker-spaniel.jpg",
    "author": "Jean-Pol GRANDMONT",
@@ -1684,6 +1964,10 @@
    "Some English Foxhound packs have stud books dating back to the 1700s.",
    "It's one of the least common breeds registered with the AKC."
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Hound",
   "photo": {
    "file": "english-foxhound.jpg",
    "author": "Flickr user Thowra_uk",
@@ -1708,6 +1992,10 @@
    "Its speckled coat pattern is called \"belton,\" after a village in Northumberland.",
    "Setters got their name from crouching low to show hunters where birds were hiding."
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Sporting",
   "photo": {
    "file": "english-setter.jpg",
    "author": "Elf at English Wikipedia",
@@ -1732,6 +2020,10 @@
    "Millie, George H. W. Bush's Springer, \"wrote\" a bestselling book about life in the White House.",
    "Springers are widely used as detection dogs by police and customs agencies."
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Sporting",
   "photo": {
    "file": "english-springer-spaniel.jpg",
    "author": "Ratsniffer",
@@ -1756,6 +2048,10 @@
    "In the 1920s, breeders recreated the longer-nosed spaniels in old paintings, giving rise to the Cavalier King Charles Spaniel.",
    "Legend says Mary, Queen of Scots had her toy spaniel with her at her execution."
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Toy",
   "photo": {
    "file": "english-toy-spaniel.jpg",
    "author": "Pleple2000 10:18, 5 April 2006 (UTC)",
@@ -1780,6 +2076,10 @@
    "It's the smallest of the four Swiss Sennenhund breeds.",
    "The AKC recognized it only in 2011."
   ],
+  "originCountries": [
+   "Switzerland"
+  ],
+  "groupKey": "Herding",
   "photo": {
    "file": "entlebucher-mountain-dog.jpg",
    "author": "Serge Renggli",
@@ -1804,6 +2104,10 @@
    "The breed nearly disappeared in the early 1900s after being bred for exaggerated length.",
    "It's one of the rarest sporting breeds registered with the AKC."
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Sporting",
   "photo": {
    "file": "field-spaniel.jpg",
    "author": "Pleple2000",
@@ -1828,6 +2132,10 @@
    "It moves both legs on one side at the same time, a \"camel pace\" that's unusual in dogs.",
    "It's banned or restricted in several countries, including the UK."
   ],
+  "originCountries": [
+   "Brazil"
+  ],
+  "groupKey": "Other",
   "photo": {
    "file": "fila-brasileiro.jpg",
    "author": "Pleple2000",
@@ -1852,6 +2160,10 @@
    "Finland holds barking contests for the breed; top barkers can bark more than 100 times a minute.",
    "It's the national dog of Finland."
   ],
+  "originCountries": [
+   "Finland"
+  ],
+  "groupKey": "Non-Sporting",
   "photo": {
    "file": "finnish-spitz.jpg",
    "author": "Unknown",
@@ -1876,6 +2188,10 @@
    "Owners call it the \"Peter Pan\" of retrievers because it never seems to grow up.",
    "It was England's most popular retriever before the Labrador and Golden took over."
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Sporting",
   "photo": {
    "file": "flat-coated-retriever.jpg",
    "author": "Gunnandreassen",
@@ -1900,6 +2216,10 @@
    "In 2022 it became America's most popular breed, ending the Labrador's 31-year run.",
    "Most Frenchies can't swim well because of their heavy front ends."
   ],
+  "originCountries": [
+   "France"
+  ],
+  "groupKey": "Non-Sporting",
   "photo": {
    "file": "french-bulldog.jpg",
    "author": "Ildar Sagdejev (Specious)",
@@ -1924,6 +2244,10 @@
    "It helped create both the Doberman Pinscher and the Miniature Pinscher.",
    "The breed nearly disappeared after the two World Wars."
   ],
+  "originCountries": [
+   "Germany"
+  ],
+  "groupKey": "Working",
   "photo": {
    "file": "german-pinscher.jpg",
    "author": "Bonnie van den Born, http://www.bonfoto.nl",
@@ -1949,6 +2273,10 @@
    "Rin Tin Tin, rescued from a World War I battlefield, became a Hollywood star.",
    "The first U.S. guide dog for the blind, Buddy, was a German Shepherd."
   ],
+  "originCountries": [
+   "Germany"
+  ],
+  "groupKey": "Herding",
   "photo": {
    "file": "german-shepherd.jpg",
    "author": "gomagoti",
@@ -1973,6 +2301,10 @@
    "A GSP named CJ won Best in Show at Westminster in 2016.",
    "Their webbed feet make them strong swimmers."
   ],
+  "originCountries": [
+   "Germany"
+  ],
+  "groupKey": "Sporting",
   "photo": {
    "file": "german-shorthaired-pointer.jpg",
    "author": "Bonnie van den Born, http://www.bonfoto.nl",
@@ -1997,6 +2329,10 @@
    "In Germany it's called the Deutsch Drahthaar and is one of the most popular hunting dogs.",
    "Its harsh coat protects it from brambles and icy water."
   ],
+  "originCountries": [
+   "Germany"
+  ],
+  "groupKey": "Sporting",
   "photo": {
    "file": "german-wirehaired-pointer.jpg",
    "author": "JainaKo",
@@ -2021,6 +2357,10 @@
    "It was once known as the Munich Schnauzer.",
    "\"Schnauzer\" comes from the German word for snout."
   ],
+  "originCountries": [
+   "Germany"
+  ],
+  "groupKey": "Working",
   "photo": {
    "file": "giant-schnauzer.jpg",
    "author": "Petrucha",
@@ -2045,6 +2385,10 @@
    "Glens were reportedly used as \"turnspit dogs,\" running in wheels to turn meat roasting over a fire.",
    "It's one of the rarest terrier breeds in the world."
   ],
+  "originCountries": [
+   "Ireland"
+  ],
+  "groupKey": "Terrier",
   "photo": {
    "file": "glen-of-imaal-terrier.jpg",
    "author": "Irish-Terrier-2023",
@@ -2069,6 +2413,10 @@
    "The breed was developed by Lord Tweedmouth in the Scottish Highlands in the mid-1800s.",
    "Goldens have such a \"soft mouth\" that many can carry a raw egg without breaking it."
   ],
+  "originCountries": [
+   "Scotland"
+  ],
+  "groupKey": "Sporting",
   "photo": {
    "file": "golden-retriever.jpg",
    "author": "Dukedestiny01.jpg: \"Janneke Vreugdenhil\" derivative work: Anka Friedrich ([[User talk:Ankaaswe Trix Friedrich|talk]])",
@@ -2093,6 +2441,10 @@
    "Breeders use labels like F1 (Golden × Poodle) and F1B (F1 × Poodle) to describe the mix.",
    "Goldendoodles come in toy, miniature, medium and standard sizes."
   ],
+  "originCountries": [
+   "United States"
+  ],
+  "groupKey": "Designer crossbreed",
   "photo": {
    "file": "goldendoodle.jpg",
    "author": "Gullpavon",
@@ -2117,6 +2469,10 @@
    "The breed was developed at Gordon Castle in the 1820s.",
    "It's the only black-and-tan setter breed."
   ],
+  "originCountries": [
+   "Scotland"
+  ],
+  "groupKey": "Sporting",
   "photo": {
    "file": "gordon-setter.jpg",
    "author": "Unknown",
@@ -2141,6 +2497,10 @@
    "A Great Dane named Zeus was the tallest dog on record, 44 inches at the shoulder.",
    "Scooby-Doo and Marmaduke are both Great Danes."
   ],
+  "originCountries": [
+   "Germany"
+  ],
+  "groupKey": "Working",
   "photo": {
    "file": "great-dane.jpg",
    "author": "Lilly M",
@@ -2165,6 +2525,11 @@
    "King Louis XIV reportedly named it the Royal Dog of France in 1675.",
    "Like the Beauceron and Briard, it has double dewclaws on its hind legs."
   ],
+  "originCountries": [
+   "France",
+   "Spain"
+  ],
+  "groupKey": "Working",
   "photo": {
    "file": "great-pyrenees.jpg",
    "author": "HeartSpoon",
@@ -2189,6 +2554,10 @@
    "It pulled heavy carts of meat and dairy for farmers and butchers.",
    "It's the largest of the four Swiss Sennenhund breeds."
   ],
+  "originCountries": [
+   "Switzerland"
+  ],
+  "groupKey": "Working",
   "photo": {
    "file": "greater-swiss-mountain-dog.jpg",
    "author": "Canarian",
@@ -2213,6 +2582,10 @@
    "Greyhounds can reach about 45 mph.",
    "Despite their speed, they're famous for lounging indoors — fans call them \"45-mph couch potatoes.\""
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Hound",
   "photo": {
    "file": "greyhound.jpg",
    "author": "Neurodoc",
@@ -2237,6 +2610,10 @@
    "It's the national dog of Cuba.",
    "Most modern Havanese descend from about 11 dogs brought out of Cuba after the revolution."
   ],
+  "originCountries": [
+   "Cuba"
+  ],
+  "groupKey": "Toy",
   "photo": {
    "file": "havanese.jpg",
    "author": "audrey_sel",
@@ -2261,6 +2638,10 @@
    "Ibizan Hounds can leap remarkably high from a standstill.",
    "Their large, upright ears help them pinpoint prey hiding in brush."
   ],
+  "originCountries": [
+   "Spain"
+  ],
+  "groupKey": "Hound",
   "photo": {
    "file": "ibizan-hound.jpg",
    "author": "Jan Eduard, corrected by Pleple2000",
@@ -2285,6 +2666,10 @@
    "It arrived in Iceland with Viking settlers between 874 and 930 AD.",
    "Many have double dewclaws on their hind legs."
   ],
+  "originCountries": [
+   "Iceland"
+  ],
+  "groupKey": "Herding",
   "photo": {
    "file": "icelandic-sheepdog.jpg",
    "author": "Veronica Druk",
@@ -2309,6 +2694,10 @@
    "It predates the all-red Irish Setter.",
    "The breed was close to extinction by the early 1900s and was revived in the 1920s."
   ],
+  "originCountries": [
+   "Ireland"
+  ],
+  "groupKey": "Sporting",
   "photo": {
    "file": "irish-red-and-white-setter.jpg",
    "author": "Missledwidge",
@@ -2333,6 +2722,10 @@
    "Disney's Big Red (1962) starred an Irish Setter.",
    "Richard Nixon's Irish Setter, King Timahoe, lived in the White House."
   ],
+  "originCountries": [
+   "Ireland"
+  ],
+  "groupKey": "Sporting",
   "photo": {
    "file": "irish-setter.jpg",
    "author": "Luis Miguel Bugallo Sánchez (Lmbuga Commons)(Lmbuga Galipedia) Publicada por/Publish by: Luis Miguel Bugallo Sánchez",
@@ -2357,6 +2750,10 @@
    "Irish Terriers carried messages for soldiers in World War I.",
    "It's one of the oldest terrier breeds."
   ],
+  "originCountries": [
+   "Ireland"
+  ],
+  "groupKey": "Terrier",
   "photo": {
    "file": "irish-terrier.jpg",
    "author": "Andrew Clark",
@@ -2381,6 +2778,10 @@
    "Its thin, smooth tail earned it the nickname \"rat tail.\"",
    "It's often called the clown of the spaniel family."
   ],
+  "originCountries": [
+   "Ireland"
+  ],
+  "groupKey": "Sporting",
   "photo": {
    "file": "irish-water-spaniel.jpg",
    "author": "Roete002",
@@ -2405,6 +2806,10 @@
    "It's the tallest AKC breed; males stand at least 32 inches at the shoulder.",
    "Despite their history as war dogs, Wolfhounds are famously gentle and easygoing."
   ],
+  "originCountries": [
+   "Ireland"
+  ],
+  "groupKey": "Hound",
   "photo": {
    "file": "irish-wolfhound.jpg",
    "author": "Dux",
@@ -2429,6 +2834,10 @@
    "Frederick the Great of Prussia loved his Italian Greyhounds and was buried near them.",
    "Small greyhounds like these appear in art from ancient Rome and Pompeii."
   ],
+  "originCountries": [
+   "Italy"
+  ],
+  "groupKey": "Toy",
   "photo": {
    "file": "italian-greyhound.jpg",
    "author": "christina",
@@ -2453,6 +2862,10 @@
    "Eddie on the TV show Frasier was played by a Jack Russell named Moose.",
    "The AKC recognizes two related breeds: the Parson Russell Terrier and the Russell Terrier."
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Terrier",
   "photo": {
    "file": "jack-russell-terrier.jpg",
    "author": "Plank",
@@ -2477,6 +2890,10 @@
    "Many Chins do the \"Chin spin,\" twirling in circles when excited.",
    "Commodore Perry is said to have brought Chins back from Japan in the 1850s, some as gifts for Queen Victoria."
   ],
+  "originCountries": [
+   "Japan"
+  ],
+  "groupKey": "Toy",
   "photo": {
    "file": "japanese-chin.jpg",
    "author": "Joliot",
@@ -2501,6 +2918,10 @@
    "It looks like a miniature Samoyed but is a separate breed.",
    "Its stand-off white coat is surprisingly good at shedding dirt."
   ],
+  "originCountries": [
+   "Japan"
+  ],
+  "groupKey": "Other",
   "photo": {
    "file": "japanese-spitz.jpg",
    "author": "Svenska Mässan from Sweden",
@@ -2525,6 +2946,10 @@
    "It was the symbol of the Dutch Patriot party in the 1780s, named after its leader Kees de Gyselaer.",
    "The dark lines from its eyes to its ears look like spectacles."
   ],
+  "originCountries": [
+   "Netherlands"
+  ],
+  "groupKey": "Non-Sporting",
   "photo": {
    "file": "keeshond.jpg",
    "author": "dancing with wolves",
@@ -2549,6 +2974,10 @@
    "Puppies are born black; the coat clears to blue between about 6 and 24 months.",
    "It's often called the national terrier of Ireland."
   ],
+  "originCountries": [
+   "Ireland"
+  ],
+  "groupKey": "Terrier",
   "photo": {
    "file": "kerry-blue-terrier.jpg",
    "author": "Peter Kumpert, Germany",
@@ -2573,6 +3002,10 @@
    "A mature Komondor's cords can reach the ground and weigh around 15 pounds.",
    "The coat camouflages it among sheep and protects it from wolf bites."
   ],
+  "originCountries": [
+   "Hungary"
+  ],
+  "groupKey": "Working",
   "photo": {
    "file": "komondor.jpg",
    "author": "Nikki68 at Russian Wikipedia",
@@ -2597,6 +3030,10 @@
    "King Matthias I of Hungary reportedly trusted his Kuvaszok more than his human bodyguards.",
    "Its white coat helped shepherds tell it apart from wolves at night."
   ],
+  "originCountries": [
+   "Hungary"
+  ],
+  "groupKey": "Working",
   "photo": {
    "file": "kuvasz.jpg",
    "author": "Erdelyi kopo",
@@ -2621,6 +3058,10 @@
    "Wally Conron bred the first Labradoodle at Royal Guide Dogs Victoria for a blind woman whose husband was allergic to dogs.",
    "Conron later said he regretted starting the \"designer dog\" craze."
   ],
+  "originCountries": [
+   "Australia"
+  ],
+  "groupKey": "Designer crossbreed",
   "photo": {
    "file": "labradoodle.jpg",
    "author": "Anton Porsche",
@@ -2645,6 +3086,10 @@
    "Labs were America's most popular breed for 31 years in a row (1991–2021).",
    "Webbed toes and a thick \"otter tail\" that works like a rudder make them great swimmers."
   ],
+  "originCountries": [
+   "Canada"
+  ],
+  "groupKey": "Sporting",
   "photo": {
    "file": "labrador-retriever.jpg",
    "author": "IDS.photos from Tiverton, UK",
@@ -2669,6 +3114,10 @@
    "A Lakeland named Stingray won Best in Show at both Crufts (1967) and Westminster (1968).",
    "It was bred to work in the rocky fells where foxes raided sheep."
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Terrier",
   "photo": {
    "file": "lakeland-terrier.jpg",
    "author": "sannse",
@@ -2693,6 +3142,10 @@
    "Breeder Heinrich Essig is said to have created it to resemble the lion on Leonberg's coat of arms.",
    "Leonbergers have webbed feet and are used in water rescue."
   ],
+  "originCountries": [
+   "Germany"
+  ],
+  "groupKey": "Working",
   "photo": {
    "file": "leonberger.jpg",
    "author": "Kurre92",
@@ -2717,6 +3170,10 @@
    "Tibetans called it \"Abso Seng Kye\" — the bark lion sentinel dog.",
    "The Dalai Lama traditionally gave Lhasa Apsos as gifts to visiting dignitaries."
   ],
+  "originCountries": [
+   "Tibet"
+  ],
+  "groupKey": "Non-Sporting",
   "photo": {
    "file": "lhasa-apso.jpg",
    "author": "Elminjas at Dutch Wikipedia",
@@ -2741,6 +3198,11 @@
    "\"Löwchen\" is German for \"little lion.\"",
    "In 1973 it was listed as one of the rarest dog breeds in the world."
   ],
+  "originCountries": [
+   "France",
+   "Germany"
+  ],
+  "groupKey": "Non-Sporting",
   "photo": {
    "file": "lowchen.jpg",
    "author": "Jk9dat",
@@ -2765,6 +3227,10 @@
    "The Maltese has been a pampered pet for more than 2,000 years.",
    "It has no undercoat, so it sheds very little."
   ],
+  "originCountries": [
+   "Malta"
+  ],
+  "groupKey": "Toy",
   "photo": {
    "file": "maltese.jpg",
    "author": "Sannse",
@@ -2789,6 +3255,10 @@
    "Many Maltipoos keep a puppy-like look their whole lives.",
    "Their small size makes them a popular choice for apartment living."
   ],
+  "originCountries": [
+   "United States"
+  ],
+  "groupKey": "Designer crossbreed",
   "photo": {
    "file": "maltipoo.jpg",
    "author": "Rhododendrites",
@@ -2813,6 +3283,10 @@
    "It comes in two varieties: Standard and Toy.",
    "The tan markings on its front legs include black \"thumbprints.\""
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Terrier",
   "photo": {
    "file": "manchester-terrier.jpg",
    "author": "Roger Ahlbrand",
@@ -2837,6 +3311,10 @@
    "An English Mastiff named Zorba weighed 343 pounds in 1989, a record for the heaviest dog.",
    "Mastiffs are said to have come to America on the Mayflower."
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Working",
   "photo": {
    "file": "mastiff.jpg",
    "author": "Radovan Rohovsky",
@@ -2861,6 +3339,10 @@
    "It isn't a mini Doberman: the Min Pin is the older breed.",
    "Its high-stepping walk is called a \"hackney gait,\" like a carriage horse's."
   ],
+  "originCountries": [
+   "Germany"
+  ],
+  "groupKey": "Toy",
   "photo": {
    "file": "miniature-pinscher.jpg",
    "author": "Sebastian Wallin. Sebastian Wallin. Sebwal",
@@ -2885,6 +3367,10 @@
    "It was developed by crossing Standard Schnauzers with smaller breeds like the Affenpinscher.",
    "Its bushy beard and eyebrows give it a wise old-man look."
   ],
+  "originCountries": [
+   "Germany"
+  ],
+  "groupKey": "Terrier",
   "photo": {
    "file": "miniature-schnauzer.jpg",
    "author": "Canarian",
@@ -2909,6 +3395,10 @@
    "Fang, Hagrid's dog in the Harry Potter films, was played by Neapolitan Mastiffs.",
    "Its loose skin and folds were thought to protect it from bites."
   ],
+  "originCountries": [
+   "Italy"
+  ],
+  "groupKey": "Working",
   "photo": {
    "file": "neapolitan-mastiff.jpg",
    "author": "Philip Thompson",
@@ -2934,6 +3424,10 @@
    "Nana, the nursemaid dog in Peter Pan, is a Newfoundland.",
    "Webbed feet and a water-resistant coat make them powerful swimmers."
   ],
+  "originCountries": [
+   "Canada"
+  ],
+  "groupKey": "Working",
   "photo": {
    "file": "newfoundland.jpg",
    "author": "Flickr user DanDee Shots",
@@ -2958,6 +3452,10 @@
    "It's nearly identical to the Norwich Terrier, except its ears fold down.",
    "Norfolks and Norwiches were shown as one breed until 1964 in the UK."
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Terrier",
   "photo": {
    "file": "norfolk-terrier.jpg",
    "author": "Nutak at Dutch Wikipedia (Original text: NTCN, mw.G. Hajnova)",
@@ -2982,6 +3480,10 @@
    "Remains of Buhund-type dogs have been found in Viking graves.",
    "\"Bu\" refers to the farm or homestead in Norwegian."
   ],
+  "originCountries": [
+   "Norway"
+  ],
+  "groupKey": "Herding",
   "photo": {
    "file": "norwegian-buhund.jpg",
    "author": "Unknown",
@@ -3006,6 +3508,10 @@
    "\"Elkhound\" comes from the Norwegian \"elghund\" — moose dog.",
    "It's often called Norway's national dog."
   ],
+  "originCountries": [
+   "Norway"
+  ],
+  "groupKey": "Hound",
   "photo": {
    "file": "norwegian-elkhound.jpg",
    "author": "HawkNightingale175",
@@ -3030,6 +3536,10 @@
    "It has six toes on each foot.",
    "It can tip its head backward to touch its spine and spread its front legs straight out to the sides."
   ],
+  "originCountries": [
+   "Norway"
+  ],
+  "groupKey": "Non-Sporting",
   "photo": {
    "file": "norwegian-lundehund.jpg",
    "author": "Karen Elise Dahlmo",
@@ -3054,6 +3564,10 @@
    "It's the prick-eared twin of the Norfolk Terrier.",
    "A Norwich won Best in Show at Westminster in 1998."
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Terrier",
   "photo": {
    "file": "norwich-terrier.jpg",
    "author": "H. Gisin",
@@ -3078,6 +3592,10 @@
    "\"Tolling\" means luring: the dog's playful splashing draws curious ducks closer.",
    "It's the provincial dog of Nova Scotia."
   ],
+  "originCountries": [
+   "Canada"
+  ],
+  "groupKey": "Sporting",
   "photo": {
    "file": "nova-scotia-duck-tolling-retriever.jpg",
    "author": "Cal119 at English Wikipedia",
@@ -3102,6 +3620,10 @@
    "Drovers' dogs traditionally had docked tails, which earned the breed the nickname \"bobtail.\"",
    "Paul McCartney's Old English Sheepdog, Martha, inspired the Beatles song \"Martha My Dear.\""
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Herding",
   "photo": {
    "file": "old-english-sheepdog.jpg",
    "author": "AKS.9955",
@@ -3126,6 +3648,10 @@
    "There are thought to be fewer than 1,000 Otterhounds in the world.",
    "Otter hunting was banned in England in 1978, leaving the breed without its job."
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Hound",
   "photo": {
    "file": "otterhound.jpg",
    "author": "No machine-readable author provided. Machinecha~commonswiki assumed (based on copyright claims).",
@@ -3150,6 +3676,11 @@
    "\"Papillon\" is French for butterfly.",
    "Papillons appear in many Renaissance paintings, often on the laps of noblewomen."
   ],
+  "originCountries": [
+   "France",
+   "Belgium"
+  ],
+  "groupKey": "Toy",
   "photo": {
    "file": "papillon.jpg",
    "author": "Gvdmoort",
@@ -3174,6 +3705,10 @@
    "A Pekingese named Sun Yat-sen was one of three dogs to survive the sinking of the Titanic.",
    "Legend says stealing one from the imperial palace was punishable by death."
   ],
+  "originCountries": [
+   "China"
+  ],
+  "groupKey": "Toy",
   "photo": {
    "file": "pekingese.jpg",
    "author": "SheltieBoy",
@@ -3198,6 +3733,10 @@
    "Queen Elizabeth II owned more than 30 Pembroke Corgis during her reign.",
    "Welsh legend says fairies rode corgis, leaving a \"saddle\" mark on their coats."
   ],
+  "originCountries": [
+   "Wales"
+  ],
+  "groupKey": "Herding",
   "photo": {
    "file": "pembroke-welsh-corgi.jpg",
    "author": "Dog breed facts",
@@ -3222,6 +3761,10 @@
    "Its name describes it: small (petit), low (basset), rough-coated (griffon), from the Vendée.",
    "A PBGV named Buddy Holly won Best in Show at Westminster in 2023."
   ],
+  "originCountries": [
+   "France"
+  ],
+  "groupKey": "Hound",
   "photo": {
    "file": "petit-basset-griffon-vendeen.jpg",
    "author": "Sannse",
@@ -3246,6 +3789,10 @@
    "When excited, its nose and ears flush pink — it \"blushes.\"",
    "It's the national dog of Malta, where it's called Kelb tal-Fenek, \"rabbit dog.\""
   ],
+  "originCountries": [
+   "Malta"
+  ],
+  "groupKey": "Hound",
   "photo": {
    "file": "pharaoh-hound.jpg",
    "author": "Pleple2000",
@@ -3270,6 +3817,10 @@
    "It's the state dog of North Carolina.",
    "Unlike most American hounds, it descends from German rather than British dogs."
   ],
+  "originCountries": [
+   "United States"
+  ],
+  "groupKey": "Hound",
   "photo": {
    "file": "plott-hound.jpg",
    "author": "Plotthund",
@@ -3294,6 +3845,10 @@
    "Many Pointer puppies point instinctively at a few weeks old, with no training.",
    "The dog in the Westminster Kennel Club's logo is a Pointer named Sensation."
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Sporting",
   "photo": {
    "file": "pointer.jpg",
    "author": "Canarian",
@@ -3318,6 +3873,11 @@
    "Queen Victoria's love of small Pomeranians helped shrink the breed to its modern size.",
    "Two Pomeranians survived the sinking of the Titanic."
   ],
+  "originCountries": [
+   "Germany",
+   "Poland"
+  ],
+  "groupKey": "Toy",
   "photo": {
    "file": "pomeranian.jpg",
    "author": "Blackoranges",
@@ -3342,6 +3902,10 @@
    "Pomskies are usually bred by artificial insemination, with the Husky as the mother.",
    "The mix shot to fame through viral photos online in the early 2010s."
   ],
+  "originCountries": [
+   "United States"
+  ],
+  "groupKey": "Designer crossbreed",
   "photo": {
    "file": "pomsky.jpg",
    "author": "Paul Hermans",
@@ -3367,6 +3931,11 @@
    "\"Poodle\" comes from the German \"Pudel,\" related to splashing in water.",
    "Poodles are widely ranked as the second most intelligent breed, after the Border Collie."
   ],
+  "originCountries": [
+   "Germany",
+   "France"
+  ],
+  "groupKey": "Non-Sporting",
   "photo": {
    "file": "poodle.jpg",
    "author": "Tim Wilson from Blaine, MN, USA",
@@ -3391,6 +3960,10 @@
    "Bo and Sunny, the Obama family's dogs, were Portuguese Water Dogs.",
    "Webbed feet and a waterproof coat make them excellent swimmers."
   ],
+  "originCountries": [
+   "Portugal"
+  ],
+  "groupKey": "Working",
   "photo": {
    "file": "portuguese-water-dog.jpg",
    "author": "Silke Hollje-Schumacher",
@@ -3415,6 +3988,10 @@
    "A Pug named Pompey is said to have saved William of Orange from assassins in 1572.",
    "The breed's motto is \"Multum in parvo\" — a lot in a little."
   ],
+  "originCountries": [
+   "China"
+  ],
+  "groupKey": "Toy",
   "photo": {
    "file": "pug.jpg",
    "author": "Mops_oct09.jpg: Dagur Brynjólfsson from Hafnarfjordur, Iceland; derivative work: Anka Friedrich",
@@ -3439,6 +4016,10 @@
    "Old Dan and Little Ann in Where the Red Fern Grows were Redbone Coonhounds.",
    "Redbones are nimble enough to hunt in swamps and mountains alike."
   ],
+  "originCountries": [
+   "United States"
+  ],
+  "groupKey": "Hound",
   "photo": {
    "file": "redbone-coonhound.jpg",
    "author": "127177p",
@@ -3463,6 +4044,10 @@
    "The ridge along its back is hair growing in the opposite direction from the rest of the coat.",
    "It was nicknamed the \"African Lion Hound.\""
   ],
+  "originCountries": [
+   "Zimbabwe"
+  ],
+  "groupKey": "Hound",
   "photo": {
    "file": "rhodesian-ridgeback.jpg",
    "author": "Bonnie van den Born, http://www.bonfoto.nl",
@@ -3487,6 +4072,10 @@
    "Butchers in Rottweil are said to have tied money pouches to their dogs' collars to keep the money safe.",
    "Rottweilers were among the first police dogs."
   ],
+  "originCountries": [
+   "Germany"
+  ],
+  "groupKey": "Working",
   "photo": {
    "file": "rottweiler.jpg",
    "author": "Dr. Manfred Herrmann Allgemeiner Deutscher Rottweiler-Klub (ADRK) e.V. http://www.ADRK.de",
@@ -3512,6 +4101,11 @@
    "The famous brandy barrel around the neck is mostly a myth, popularized by a painting.",
    "Beethoven, star of the 1992 family movie, is a St. Bernard."
   ],
+  "originCountries": [
+   "Switzerland",
+   "Italy"
+  ],
+  "groupKey": "Working",
   "photo": {
    "file": "saint-bernard.jpg",
    "author": "Blanky",
@@ -3536,6 +4130,10 @@
    "Saluki-like dogs appear in ancient Egyptian tomb paintings.",
    "Bedouin tribes prized Salukis so highly they called them el hor, \"the noble one.\""
   ],
+  "originCountries": [
+   "Middle East"
+  ],
+  "groupKey": "Hound",
   "photo": {
    "file": "saluki.jpg",
    "author": "r.",
@@ -3560,6 +4158,10 @@
    "The upturned corners of its mouth, the \"Sammy smile,\" are said to keep drool from freezing into icicles.",
    "Samoyeds pulled sleds on early polar expeditions, including Roald Amundsen's."
   ],
+  "originCountries": [
+   "Russia"
+  ],
+  "groupKey": "Working",
   "photo": {
    "file": "samoyed.jpg",
    "author": "No machine-readable author provided. Pleple2000 assumed (based on copyright claims).",
@@ -3584,6 +4186,10 @@
    "Its name is Flemish for \"little boatman\" or \"little captain.\"",
    "Its ruff and tailless rear give it a distinctive fox-like silhouette."
   ],
+  "originCountries": [
+   "Belgium"
+  ],
+  "groupKey": "Non-Sporting",
   "photo": {
    "file": "schipperke.jpg",
    "author": "No machine-readable author provided. 鏑木對馬守 assumed (based on copyright claims).",
@@ -3608,6 +4214,10 @@
    "In the Middle Ages, no one below the rank of earl was allowed to own one.",
    "A Deerhound named Hickory won Best in Show at Westminster in 2011."
   ],
+  "originCountries": [
+   "Scotland"
+  ],
+  "groupKey": "Hound",
   "photo": {
    "file": "scottish-deerhound.jpg",
    "author": "Sisteskrik",
@@ -3632,6 +4242,10 @@
    "Franklin D. Roosevelt's Scottie, Fala, is part of his memorial in Washington, D.C.",
    "The Scottie is one of the playing pieces in Monopoly."
   ],
+  "originCountries": [
+   "Scotland"
+  ],
+  "groupKey": "Terrier",
   "photo": {
    "file": "scottish-terrier.jpg",
    "author": "Elise Carroll",
@@ -3656,6 +4270,10 @@
    "Alfred Hitchcock walks his own two Sealyhams in his cameo in The Birds (1963).",
    "It was developed by Captain John Edwardes on his Sealyham estate in the 1800s."
   ],
+  "originCountries": [
+   "Wales"
+  ],
+  "groupKey": "Terrier",
   "photo": {
    "file": "sealyham-terrier.jpg",
    "author": "Dr. Sabine Schumann",
@@ -3680,6 +4298,10 @@
    "In 1978 Guinness listed it as the world's rarest dog breed.",
    "\"Shar-Pei\" means \"sand skin,\" for its rough, bristly coat."
   ],
+  "originCountries": [
+   "China"
+  ],
+  "groupKey": "Non-Sporting",
   "photo": {
    "file": "shar-pei.jpg",
    "author": "Yan Mis/&Den Rakov",
@@ -3704,6 +4326,10 @@
    "Shelties were bred to keep sheep, ponies and birds out of crofters' gardens.",
    "They're consistently among the top breeds in obedience and agility competitions."
   ],
+  "originCountries": [
+   "Scotland"
+  ],
+  "groupKey": "Herding",
   "photo": {
    "file": "shetland-sheepdog.jpg",
    "author": "Flickr user nickobec (Nick Cowie)",
@@ -3728,6 +4354,10 @@
    "The \"Doge\" meme and the Dogecoin cryptocurrency feature a Shiba Inu named Kabosu.",
    "Shibas are known for the \"Shiba scream,\" a dramatic high-pitched protest."
   ],
+  "originCountries": [
+   "Japan"
+  ],
+  "groupKey": "Non-Sporting",
   "photo": {
    "file": "shiba-inu.jpg",
    "author": "Takashiba at English Wikipedia",
@@ -3752,6 +4382,10 @@
    "\"Shih Tzu\" means \"little lion\" in Mandarin.",
    "Nearly all modern Shih Tzus descend from 14 dogs used to rebuild the breed in the 20th century."
   ],
+  "originCountries": [
+   "China"
+  ],
+  "groupKey": "Toy",
   "photo": {
    "file": "shih-tzu.jpg",
    "author": "Canino21",
@@ -3776,6 +4410,10 @@
    "Huskies including Balto and Togo relayed diphtheria medicine to Nome, Alaska, in the 1925 \"Great Race of Mercy.\"",
    "Many Huskies have blue eyes, or one blue and one brown."
   ],
+  "originCountries": [
+   "Russia"
+  ],
+  "groupKey": "Working",
   "photo": {
    "file": "siberian-husky.jpg",
    "author": "xJaM (talk · contribs)",
@@ -3800,6 +4438,10 @@
    "It's often mistaken for a Yorkie but is a bit larger, with a more wedge-shaped head.",
    "Despite its Toy-group size, it was bred to hunt snakes and rodents."
   ],
+  "originCountries": [
+   "Australia"
+  ],
+  "groupKey": "Toy",
   "photo": {
    "file": "silky-terrier.jpg",
    "author": "Ofsilkysdream",
@@ -3824,6 +4466,10 @@
    "The AKC showed Smooth and Wire Fox Terriers as one breed until 1985.",
    "Nipper, the dog in the \"His Master's Voice\" logo, is often said to have been part Smooth Fox Terrier."
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Terrier",
   "photo": {
    "file": "smooth-fox-terrier.jpg",
    "author": "Tialin at English Wikipedia",
@@ -3848,6 +4494,10 @@
    "Wheatens greet people by bouncing up joyfully — fans call it the \"Wheaten greetin'.\"",
    "Puppies are born dark; the coat lightens to wheaten by about age two."
   ],
+  "originCountries": [
+   "Ireland"
+  ],
+  "groupKey": "Terrier",
   "photo": {
    "file": "soft-coated-wheaten-terrier.jpg",
    "author": "Terrierkännaren",
@@ -3872,6 +4522,10 @@
    "In the UK it's nicknamed the \"nanny dog\" for its fondness for children.",
    "It's one of the most popular breeds in the United Kingdom."
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Terrier",
   "photo": {
    "file": "staffordshire-bull-terrier.jpg",
    "author": "Or Logassi",
@@ -3896,6 +4550,10 @@
    "The Miniature and Giant Schnauzers were both developed from it.",
    "Standard Schnauzers appear in paintings by Albrecht Dürer from around 1500."
   ],
+  "originCountries": [
+   "Germany"
+  ],
+  "groupKey": "Working",
   "photo": {
    "file": "standard-schnauzer.jpg",
    "author": "Tamorlan",
@@ -3920,6 +4578,10 @@
    "Unlike most spaniels, it barks while hunting, which hunters call \"giving tongue.\"",
    "A Sussex named Stump won Westminster in 2009 at age 10, the oldest winner ever."
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Sporting",
   "photo": {
    "file": "sussex-spaniel.jpg",
    "author": "Pleple2000",
@@ -3944,6 +4606,10 @@
    "A Tibetan Mastiff puppy was reportedly sold in China for about $1.5 million in 2011.",
    "Its thick double coat lets it shrug off Himalayan winters."
   ],
+  "originCountries": [
+   "Tibet"
+  ],
+  "groupKey": "Working",
   "photo": {
    "file": "tibetan-mastiff.jpg",
    "author": "Svenska Mässan from Sweden",
@@ -3968,6 +4634,10 @@
    "Its large, flat \"snowshoe\" feet help it travel over snow.",
    "Tibetans considered them bringers of luck and gave them as gifts rather than selling them."
   ],
+  "originCountries": [
+   "Tibet"
+  ],
+  "groupKey": "Non-Sporting",
   "photo": {
    "file": "tibetan-terrier.jpg",
    "author": "Mr407SW",
@@ -3992,6 +4662,10 @@
    "In the U.S., it's shown as the Toy variety of the Manchester Terrier.",
    "Its upright, candle-flame-shaped ears are a breed signature."
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Toy",
   "photo": {
    "file": "toy-terrier.jpg",
    "author": "Svenska Mässan from Sweden",
@@ -4016,6 +4690,10 @@
    "It descends in part from a stolen dog named Tennessee Lead, bred into Walker foxhounds in the 1800s.",
    "Coonhound fans call it \"the people's choice.\""
   ],
+  "originCountries": [
+   "United States"
+  ],
+  "groupKey": "Hound",
   "photo": {
    "file": "treeing-walker-coonhound.jpg",
    "author": "Kingkong954",
@@ -4040,6 +4718,10 @@
    "Vizslas are nicknamed \"Velcro dogs\" because they stick so close to their owners.",
    "A Vizsla named Chartay was the first dog to earn AKC championships in five different sports."
   ],
+  "originCountries": [
+   "Hungary"
+  ],
+  "groupKey": "Sporting",
   "photo": {
    "file": "vizsla.jpg",
    "author": "Pleple2000",
@@ -4064,6 +4746,10 @@
    "Its silvery coat and light eyes earned it the nickname \"Gray Ghost.\"",
    "Photographer William Wegman's Weimaraners have appeared on Sesame Street."
   ],
+  "originCountries": [
+   "Germany"
+  ],
+  "groupKey": "Sporting",
   "photo": {
    "file": "weimaraner.jpg",
    "author": "Rufus46",
@@ -4088,6 +4774,10 @@
    "It only comes in one color combination: red and white.",
    "Welshies are known for the stamina to hunt all day in rugged terrain."
   ],
+  "originCountries": [
+   "Wales"
+  ],
+  "groupKey": "Sporting",
   "photo": {
    "file": "welsh-springer-spaniel.jpg",
    "author": "Udo Tjalsma",
@@ -4112,6 +4802,10 @@
    "Legend says Colonel Edward Malcolm started breeding white terriers after mistaking his reddish terrier for a fox.",
    "A Westie is the face of Cesar dog food."
   ],
+  "originCountries": [
+   "Scotland"
+  ],
+  "groupKey": "Terrier",
   "photo": {
    "file": "west-highland-white-terrier.jpg",
    "author": "Christopher Walker from Krakow, Poland",
@@ -4136,6 +4830,10 @@
    "Whippets can reach about 35 mph and are known for incredible acceleration.",
    "They were nicknamed \"the poor man's racehorse.\""
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Hound",
   "photo": {
    "file": "whippet.jpg",
    "author": "Canarian",
@@ -4161,6 +4859,10 @@
    "Snowy, Tintin's faithful companion, is a Wire Fox Terrier.",
    "Asta in The Thin Man films was a Wire Fox Terrier."
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Terrier",
   "photo": {
    "file": "wire-fox-terrier.jpg",
    "author": "Simona Nováková, owner",
@@ -4185,6 +4887,11 @@
    "In Europe it's known as the Korthals Griffon.",
    "Its harsh coat protects it in thick brush and cold water."
   ],
+  "originCountries": [
+   "France",
+   "Netherlands"
+  ],
+  "groupKey": "Sporting",
   "photo": {
    "file": "wirehaired-pointing-griffon.jpg",
    "author": "CarolPtak",
@@ -4210,6 +4917,10 @@
    "Dante in Pixar's Coco is a Xoloitzcuintli.",
    "It's the national dog of Mexico."
   ],
+  "originCountries": [
+   "Mexico"
+  ],
+  "groupKey": "Non-Sporting",
   "photo": {
    "file": "xoloitzcuintli.jpg",
    "author": "Svenska Mässan from Sweden",
@@ -4234,6 +4945,10 @@
    "A Yorkie named Smoky served in World War II and is considered one of the first therapy dogs.",
    "A Yorkie's coat is closer in texture to human hair than to typical dog fur."
   ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Toy",
   "photo": {
    "file": "yorkshire-terrier.jpg",
    "author": "Svenska Mässan from Sweden",

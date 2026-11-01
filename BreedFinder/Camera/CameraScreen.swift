@@ -7,6 +7,8 @@ struct CameraScreen: View {
 
     /// The zoom when the current pinch began; the pinch scales from there.
     @State private var zoomAtPinchStart: CGFloat?
+    /// Light the dog with the flashlight while recording (like the Camera app's video flash).
+    @State private var flashOn = false
 
     var body: some View {
         ZStack {
@@ -31,17 +33,18 @@ struct CameraScreen: View {
             VStack {
                 HStack {
                     // Disabled mid-recording so a finished clip can't arrive after leaving.
-                    Button(action: onClose) {
-                        Image(systemName: "xmark")
-                            .font(.headline)
-                            .foregroundStyle(.white)
-                            .frame(width: 40, height: 40)
-                            .background(.ultraThinMaterial, in: Circle())
-                    }
-                    .disabled(camera.isRecording)
-                    .opacity(camera.isRecording ? 0.4 : 1)
-                    .accessibilityLabel("Close camera")
+                    CircleButton(systemImage: "xmark", label: "Close camera", action: onClose)
+                        .disabled(camera.isRecording)
+                        .opacity(camera.isRecording ? 0.4 : 1)
                     Spacer()
+                    if camera.hasFlash, camera.status == .ready {
+                        CircleButton(systemImage: flashOn ? "bolt.fill" : "bolt.slash.fill",
+                                     label: flashOn ? "Flash on" : "Flash off",
+                                     tint: flashOn ? .yellow : .white) {
+                            flashOn.toggle()
+                        }
+                        .disabled(camera.isRecording)
+                    }
                 }
                 Spacer()
             }
@@ -71,7 +74,7 @@ struct CameraScreen: View {
             }
 
             RecordButton(isRecording: camera.isRecording, duration: CameraController.clipDuration) {
-                camera.recordClip(completion: onRecorded)
+                camera.recordClip(withFlash: flashOn, completion: onRecorded)
             }
             .disabled(camera.status != .ready || camera.isRecording)
             .padding(.bottom, 24)
@@ -120,6 +123,24 @@ private struct ZoomButtons: View {
     /// The highest button at or below the current zoom.
     private var currentPreset: CGFloat? {
         presets.last { $0 <= zoom + 0.05 }
+    }
+}
+
+private struct CircleButton: View {
+    let systemImage: String
+    let label: String
+    var tint: Color = .white
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            Image(systemName: systemImage)
+                .font(.headline)
+                .foregroundStyle(tint)
+                .frame(width: 40, height: 40)
+                .background(.ultraThinMaterial, in: Circle())
+        }
+        .accessibilityLabel(label)
     }
 }
 

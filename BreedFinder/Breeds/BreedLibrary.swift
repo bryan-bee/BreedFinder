@@ -8,9 +8,9 @@ struct BreedPhotoCredit: Decodable {
     let sourceURL: String?
 }
 
-/// Everything the result screen shows about a breed. Loaded from breeds.json, which
+/// Everything the app shows about a breed. Loaded from breeds.json, which
 /// tools/build_breed_content.py generates from content/breeds/*.json.
-struct BreedProfile: Decodable, Identifiable {
+struct BreedProfile: Decodable, Identifiable, Hashable {
     let name: String
     let summary: String
     let origin: String
@@ -20,29 +20,48 @@ struct BreedProfile: Decodable, Identifiable {
     let temperament: [String]
     let funFacts: [String]
     let photo: BreedPhotoCredit?
+    /// Countries for grouping, e.g. "Scotland and England" → ["Scotland", "England"].
+    let originCountries: [String]
+    /// The AKC group, "Designer crossbreed" or "Other".
+    let groupKey: String
 
     var id: String { name }
+
+    static func == (lhs: BreedProfile, rhs: BreedProfile) -> Bool { lhs.name == rhs.name }
+    func hash(into hasher: inout Hasher) { hasher.combine(name) }
 }
 
 final class BreedLibrary {
     static let shared = BreedLibrary()
 
+    /// Every breed, A–Z.
+    let allProfiles: [BreedProfile]
     private let profiles: [String: BreedProfile]
+    private let dexNumbers: [String: Int]
+    private let thumbnails = NSCache<NSString, UIImage>()
 
     init(bundle: Bundle = .main) {
+        var loaded: [String: BreedProfile] = [:]
         do {
             guard let url = bundle.url(forResource: "breeds", withExtension: "json") else {
                 throw CocoaError(.fileNoSuchFile)
             }
-            profiles = try JSONDecoder().decode([String: BreedProfile].self, from: Data(contentsOf: url))
+            loaded = try JSONDecoder().decode([String: BreedProfile].self, from: Data(contentsOf: url))
         } catch {
             assertionFailure("Couldn't load breeds.json: \(error)")
-            profiles = [:]
         }
+        profiles = loaded
+        allProfiles = loaded.values.sorted { $0.name.localizedStandardCompare($1.name) == .orderedAscending }
+        dexNumbers = Dictionary(uniqueKeysWithValues: allProfiles.enumerated().map { ($1.name, $0 + 1) })
     }
 
     func profile(for breed: String) -> BreedProfile? {
         profiles[breed]
+    }
+
+    /// The breed's number in the Breeds list ("No. 042"), by alphabetical position.
+    func dexNumber(for breed: String) -> Int? {
+        dexNumbers[breed]
     }
 
     /// The bundled reference photo for a breed, from Resources/BreedPhotos.
@@ -54,5 +73,17 @@ final class BreedLibrary {
                                       subdirectory: "BreedPhotos")
         else { return nil }
         return UIImage(contentsOfFile: url.path)
+    }
+
+    /// A small, cached version of the reference photo for list rows.
+    func thumbnail(for breed: String) -> UIImage? {
+        if let cached = thumbnails.object(forKey: breed as NSString) { return cached }
+        guard let photo = photo(for: breed), photo.size.width > 0, photo.size.height > 0 else { return nil }
+        // Short side 160 px, same proportions as the photo.
+        let scale = 160 / min(photo.size.width, photo.size.height)
+        let size = CGSize(width: photo.size.width * scale, height: photo.size.height * scale)
+        guard let thumbnail = photo.preparingThumbnail(of: size) else { return nil }
+        thumbnails.setObject(thumbnail, forKey: breed as NSString)
+        return thumbnail
     }
 }

@@ -4,7 +4,30 @@ An iPhone app that guesses a dog's breed from a 5-second video. Point the camera
 
 ## How it works
 
-**Home → Camera → Scanning → Result.** Tap *Scan a Dog*, record 5 seconds (pinch or tap 1× / 2× / 5× to zoom in on a dog that's far away), watch the 5 frames get scanned (so you can see if the video was usable), then get the result: your dog and the best-matching breed side by side as fanned cards, the top 3 guesses (tap one to compare), and a profile of the breed with its origin, lifespan, size, temperament and fun facts.
+Three tabs:
+
+- **Scan:** tap *Scan a Dog* and record 5 seconds (pinch or tap 0.5× / 1× / 2× / 5× to zoom; optional flash), or *Choose Photos* to pick up to 5. Watch the frames or photos get scanned, then get the result: your dog and the best-matching breed as fanned cards, the top 3 guesses (tap one to compare) and the breed's profile. Every scan is saved to your collection; *Wrong breed?* recounts it as the right breed or removes it.
+- **Breeds:** a Pokédex of all 176 breeds with how many times you've scanned each, your own dog photos for the ones you've collected, search, and grouping A–Z / by origin / by breed group / collected.
+- **Support:** report a problem, how the app works, photo credits, training-data credits.
+
+The collection (scan records and dog photos) is stored only on the device, in Application Support.
+
+### Problem reports
+
+*Report a Problem* (Support tab, or *Report a problem with this scan* on a result) opens a form:
+
+| Field | Notes |
+|---|---|
+| Problem type | Wrong breed · App crashed · Something didn't work · Suggestion |
+| Scan | One of the last 10 scans (thumbnail + what the app said); preselected for wrong-breed reports |
+| What breed is it really? | Wrong-breed reports: pick a breed and/or describe it ("Lab × Poodle mix") |
+| Details | Free text; required for bugs and suggestions |
+| Attach photos | The scan's frames/photos, previewed in the form |
+| Included automatically | App version, breed-model version, iOS version, iPhone model, plus the scan's top 3 guesses, frames with a dog, and what it counts as in the collection |
+
+It becomes an email to breedfinder123@gmail.com that the user reviews before sending. Without the Mail app set up, it falls back to the share sheet (photos attached, address copied) or the default mail app (text only). The last 10 scans' frames live in the Caches folder ([Analysis/RecentScans.swift](BreedFinder/Analysis/RecentScans.swift)): they survive crashes and restarts, and the oldest is deleted as each new scan arrives.
+
+Crash logs from users who allow sharing with developers appear in Xcode under **Window → Organizer → Crashes**.
 
 ```
 record 5 s video ──► pull 5 frames ──► for each frame:                       ──► combine ──► top 3
@@ -15,20 +38,26 @@ record 5 s video ──► pull 5 frames ──► for each frame:              
 ```
 
 - **The breed model** is a ConvNeXt-Tiny fine-tuned on ~96k photos covering 176 breeds plus "Not a dog" (see [Train the breed model](#train-the-breed-model)).
-- **Combining frames:** each frame where a dog was found adds its breed probabilities to a running total, and the totals are rescaled to 100%. Blurry or unsure frames give lower probabilities, so they count for less. If no frame contains a dog, the app says so instead of guessing.
+- **Combining frames:** a frame counts only when the classifier is at least 80% sure it shows a dog (real dogs score above 99%; empty rooms don't). Counting frames add their breed probabilities to a running total, rescaled to 100%, so unsure frames count for less. A video needs at least 2 counting frames and uploaded photos at least 1; otherwise the app says it found no dog instead of guessing.
 
 | File | What it does |
 |---|---|
-| [Home/HomeView.swift](BreedFinder/Home/HomeView.swift) | Start screen with the *Scan a Dog* button |
-| [Camera/CameraController.swift](BreedFinder/Camera/CameraController.swift) | Capture session and zoom; records exactly 5 s of portrait video |
-| [Camera/ZoomScale.swift](BreedFinder/Camera/ZoomScale.swift) | Turns the Camera app's zoom numbers (1×, 2×, 5×) into the camera's own zoom factors |
-| [Scanning/ScanningView.swift](BreedFinder/Scanning/ScanningView.swift) | The 5 frames with a scanner sweep while the model runs |
-| [Results/ResultView.swift](BreedFinder/Results/ResultView.swift) | Card fan, top 3 guesses, breed profile, frames used |
+| [ContentView.swift](BreedFinder/ContentView.swift) | The three tabs; the Scan tab's screens |
+| [Home/HomeView.swift](BreedFinder/Home/HomeView.swift) | Start screen: *Scan a Dog* and *Choose Photos* |
+| [Camera/CameraController.swift](BreedFinder/Camera/CameraController.swift) | Capture session, zoom and flash; records exactly 5 s of portrait video |
+| [Camera/ZoomScale.swift](BreedFinder/Camera/ZoomScale.swift) | Turns the Camera app's zoom numbers (0.5×, 1×, 2×, 5×) into the camera's own zoom factors |
+| [Scanning/ScanningView.swift](BreedFinder/Scanning/ScanningView.swift) | The frames/photos with a scanner sweep while the model runs |
+| [Results/ResultView.swift](BreedFinder/Results/ResultView.swift) | Card fan, top 3, collection status, breed profile |
+| [Results/BreedPickerSheet.swift](BreedFinder/Results/BreedPickerSheet.swift) | *Wrong breed?* correction list |
 | [Analysis/FrameExtractor.swift](BreedFinder/Analysis/FrameExtractor.swift) | Pulls 5 evenly spaced frames out of the clip |
+| [Analysis/PhotoLoader.swift](BreedFinder/Analysis/PhotoLoader.swift) | Loads picked photos the right way up |
 | [Analysis/DogAnalyzer.swift](BreedFinder/Analysis/DogAnalyzer.swift) | Per frame: find the dog, crop, classify |
-| [Analysis/BreedAggregator.swift](BreedFinder/Analysis/BreedAggregator.swift) | Combines the 5 frames into the top 3 |
+| [Analysis/BreedAggregator.swift](BreedFinder/Analysis/BreedAggregator.swift) | Combines the frames into the top 3 |
 | [Breeds/BreedLibrary.swift](BreedFinder/Breeds/BreedLibrary.swift) | Loads breed profiles and reference photos |
-| [ScanModel.swift](BreedFinder/ScanModel.swift) | App state: home → camera → scanning → result |
+| [Breeds/BreedCollection.swift](BreedFinder/Breeds/BreedCollection.swift) | The user's saved scans (on-device JSON + photos) |
+| [Breeds/BreedsView.swift](BreedFinder/Breeds/BreedsView.swift), [BreedGrouping.swift](BreedFinder/Breeds/BreedGrouping.swift) | The Breeds tab and its groupings |
+| [Support/SupportView.swift](BreedFinder/Support/SupportView.swift) | Support tab, problem reports, credits |
+| [ScanModel.swift](BreedFinder/ScanModel.swift) | Scan tab state: home → camera → scanning → result |
 | [MLModels/DogBreedClassifier.mlpackage](MLModels/) | The Core ML breed model, generated by `ml/convert_model.py` |
 
 ## Breed profiles and photos
@@ -120,6 +149,13 @@ Measured on 9,629 held-out test photos (`ml/evaluate.py`), 176 breeds plus "Not 
 
 The Swift code doesn't depend on where the model comes from: any Core ML image classifier named `DogBreedClassifier` whose labels are breed names plus `Not a dog` works, as long as `Resources/breeds.json` has a profile for each breed (a unit test checks this).
 
+## Before release
+
+- [x] Support email (`SupportInfo.reportEmail`): breedfinder123@gmail.com.
+- [ ] Set `DEVELOPMENT_TEAM` (and if needed `PRODUCT_BUNDLE_IDENTIFIER`) in `project.yml`.
+- [ ] Replace the placeholder app icon.
+- [ ] Publish a privacy policy page (see below).
+
 ## Ship it to the App Store
 
 1. **Create the app record.** In [App Store Connect](https://appstoreconnect.apple.com) go to Apps → + → New App, choose iOS, and select the bundle ID. The name must be unique on the store. If the bundle ID isn't listed yet, run the app on your phone from Xcode once, or register it under Certificates, Identifiers & Profiles.
@@ -128,6 +164,6 @@ The Swift code doesn't depend on where the model comes from: any Core ML image c
 4. **Fill in the listing:**
    - Screenshots for the iPhone size App Store Connect asks for (currently 6.9-inch). Take them on your phone.
    - A **privacy policy URL**, which every app needs. A short page saying the camera video is analyzed on the device and nothing is collected is enough; GitHub Pages works.
-   - App Privacy questionnaire: **Data Not Collected**.
+   - App Privacy questionnaire: **Data Not Collected**. Problem reports are emails the user writes, reviews and sends themselves, which likely fall under Apple's "optional disclosure" exemption for user-initiated feedback; check its criteria when you fill in the questionnaire.
    - Description, keywords, support URL, category (Reference or Lifestyle), age rating.
 5. **Submit for review.**

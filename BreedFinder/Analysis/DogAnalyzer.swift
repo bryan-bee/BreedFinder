@@ -12,17 +12,23 @@ actor DogAnalyzer {
     static let framesPerClip = 5
 
     private var model: VNCoreMLModel?
+    /// The "source" metadata convert_model.py writes into the Core ML model, e.g.
+    /// "convnext_tiny… fine-tuned (epoch 11, temperature 0.73)". Goes into problem reports.
+    private(set) var modelVersion = "not loaded"
 
     /// Loading the Core ML model takes a second or two the first time (Core ML
     /// compiles it for the Neural Engine), so ScanModel calls this at launch.
-    func warmUp() {
+    @discardableResult
+    func warmUp() -> String {
         _ = try? loadedModel()
+        return modelVersion
     }
 
-    func analyze(frames images: [CGImage]) throws -> ScanResult {
+    func analyze(frames images: [CGImage], source: ScanSource) throws -> ScanResult {
         let model = try loadedModel()
         let frames = try images.map { try analyze($0, model: model) }
-        let guesses = BreedAggregator.topGuesses(from: frames.map(\.prediction))
+        let guesses = BreedAggregator.topGuesses(from: frames.map(\.prediction),
+                                                 requiredDogFrames: BreedAggregator.requiredDogFrames(for: source))
 
         // For the result card: the frame where the top breed is most visible.
         let bestFrame = guesses.first.flatMap { top in
@@ -30,7 +36,8 @@ actor DogAnalyzer {
                 ($0.prediction.breedProbabilities[top.breed] ?? 0) < ($1.prediction.breedProbabilities[top.breed] ?? 0)
             }
         }
-        return ScanResult(frames: frames, guesses: guesses, dogPhoto: bestFrame.map(Self.cropToDog))
+        return ScanResult(source: source, frames: frames, guesses: guesses,
+                          dogPhoto: bestFrame.map(Self.cropToDog), modelVersion: modelVersion)
     }
 
     private func loadedModel() throws -> VNCoreMLModel {
@@ -38,7 +45,10 @@ actor DogAnalyzer {
         let configuration = MLModelConfiguration()
         configuration.computeUnits = .all
         // DogBreedClassifier is the class Xcode generates from DogBreedClassifier.mlpackage.
-        let loaded = try VNCoreMLModel(for: DogBreedClassifier(configuration: configuration).model)
+        let classifier = try DogBreedClassifier(configuration: configuration).model
+        let metadata = classifier.modelDescription.metadata[.creatorDefinedKey] as? [String: String]
+        modelVersion = metadata?["source"] ?? "unknown"
+        let loaded = try VNCoreMLModel(for: classifier)
         model = loaded
         return loaded
     }

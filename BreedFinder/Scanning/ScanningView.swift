@@ -5,13 +5,16 @@ import SwiftUI
 /// (and notice if the video was blurry or the dog was out of frame).
 struct ScanningView: View {
     let frames: [CGImage]
+    let source: ScanSource
 
     var body: some View {
         VStack(spacing: 28) {
             VStack(spacing: 6) {
                 Text("Scanning your dog")
                     .font(.title2.bold())
-                Text("These are the \(frames.count) frames we're checking.")
+                Text(frames.count == 1
+                     ? "This is the \(source.itemName) we're checking."
+                     : "These are the \(frames.count) \(source.itemName)s we're checking.")
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
             }

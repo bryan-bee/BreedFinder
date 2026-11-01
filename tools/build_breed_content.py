@@ -11,6 +11,7 @@ origin" and prints disagreements for a human to review.
 
 import argparse
 import json
+import re
 import sys
 import urllib.parse
 import urllib.request
@@ -20,6 +21,31 @@ ROOT = Path(__file__).resolve().parent.parent
 REQUIRED = {"summary": str, "origin": str, "lifespan": str, "weight": str, "group": str,
             "temperament": list, "funFacts": list}
 USER_AGENT = "BreedFinder/0.1 (iOS dog breed app; github.com/bryan-bee/BreedFinder)"
+
+# Origins whose parenthetical holds the countries the Breeds tab should group by.
+ORIGIN_COUNTRIES = {
+    "Pomerania (Germany and Poland)": ["Germany", "Poland"],
+    "Mediterranean (developed in France and Belgium)": ["France", "Belgium"],
+    "Central Africa (Congo)": ["Congo"],
+    "Southern Africa (Zimbabwe)": ["Zimbabwe"],
+}
+AKC_GROUPS = ["Sporting", "Hound", "Working", "Terrier", "Toy", "Non-Sporting", "Herding"]
+
+
+def origin_countries(origin: str) -> list[str]:
+    """'Scotland and England' -> both; 'United States (Alaska)' -> 'United States'."""
+    if origin in ORIGIN_COUNTRIES:
+        return ORIGIN_COUNTRIES[origin]
+    base = re.sub(r"\s*\(.*\)$", "", origin)
+    return [part.strip().removeprefix("the ") for part in re.split(r",| and ", base) if part.strip()]
+
+
+def group_key(group: str) -> str:
+    """Normalize the display group to an AKC group, 'Designer crossbreed' or 'Other'."""
+    for akc in sorted(AKC_GROUPS, key=len, reverse=True):  # "Non-Sporting" before "Sporting"
+        if group == akc or group.startswith(akc + " "):
+            return akc
+    return "Designer crossbreed" if group == "Designer crossbreed" else "Other"
 
 
 def load_profiles() -> dict:
@@ -88,7 +114,9 @@ def main() -> None:
 
     out = {}
     for name in breeds:
-        entry = {"name": name, **profiles[name]}
+        entry = {"name": name, **profiles[name],
+                 "originCountries": origin_countries(profiles[name]["origin"]),
+                 "groupKey": group_key(profiles[name]["group"])}
         if name in credits:
             c = credits[name]
             entry["photo"] = {k: c.get(k) for k in ("file", "author", "license", "licenseURL", "sourceURL")}
@@ -96,6 +124,10 @@ def main() -> None:
     (ROOT / "Resources" / "breeds.json").write_text(json.dumps(out, indent=1, ensure_ascii=False), encoding="utf-8")
     unused = sorted(set(profiles) - set(breeds))
     print(f"Wrote Resources/breeds.json: {len(out)} breeds, {sum('photo' in e for e in out.values())} with photos")
+    countries = sorted({c for e in out.values() for c in e["originCountries"]})
+    groups = sorted({e["groupKey"] for e in out.values()})
+    print(f"Origin countries ({len(countries)}): {countries}")
+    print(f"Groups: {groups}")
     print(f"Without photos: {[b for b in breeds if b not in credits]}")
     if unused:
         print(f"Profiles not in the model (ignored): {unused}")

@@ -1,7 +1,8 @@
 import AVFoundation
 import Combine
 
-/// Owns the capture session, zooms, and records fixed-length clips from the back camera.
+/// Owns the capture session, zooms, lights the dog, and records fixed-length clips from
+/// the back camera.
 ///
 /// All AVCaptureSession work happens on `sessionQueue`: starting a session blocks
 /// for a noticeable moment, and Apple asks that it never run on the main thread.
@@ -15,10 +16,12 @@ final class CameraController: NSObject, ObservableObject {
 
     @Published private(set) var status: Status = .unknown
     @Published private(set) var isRecording = false
-    /// The zoom in the Camera app's numbers, where 1× is the main lens.
+    /// The zoom in the Camera app's numbers, where 1× is the main lens and 0.5× the ultra-wide.
     @Published private(set) var zoom: CGFloat = 1
     /// How far this phone's camera zooms, and its zoom buttons. Nil until the camera is set up.
     @Published private(set) var zoomScale: ZoomScale?
+    /// Whether the back camera has a flashlight to light the dog while recording.
+    @Published private(set) var hasFlash = false
 
     let session = AVCaptureSession()
     private let movieOutput = AVCaptureMovieFileOutput()
@@ -45,17 +48,21 @@ final class CameraController: NSObject, ObservableObject {
     }
 
     func stop() {
-        sessionQueue.async { [session] in
+        sessionQueue.async { [self] in
+            setTorch(on: false)
             if session.isRunning { session.stopRunning() }
         }
     }
 
     /// Records a `clipDuration`-second clip and calls `completion` on the main
     /// thread with the file URL. The caller is responsible for deleting the file.
-    func recordClip(completion: @escaping (Result<URL, Error>) -> Void) {
+    /// With `flash`, the flashlight lights the dog for the recording, like the Camera
+    /// app's video flash.
+    func recordClip(withFlash flash: Bool = false, completion: @escaping (Result<URL, Error>) -> Void) {
         sessionQueue.async { [self] in
             guard session.isRunning, !movieOutput.isRecording else { return }
             onFinish = completion
+            if flash { setTorch(on: true) }
             let url = FileManager.default.temporaryDirectory
                 .appendingPathComponent(UUID().uuidString)
                 .appendingPathExtension("mov")
@@ -68,7 +75,7 @@ final class CameraController: NSObject, ObservableObject {
     /// Call on the main thread.
     func setZoom(_ zoom: CGFloat, animated: Bool = false) {
         guard let zoomScale else { return }
-        let zoom = min(max(zoom, 1), zoomScale.maxZoom)
+        let zoom = min(max(zoom, zoomScale.minZoom), zoomScale.maxZoom)
         self.zoom = zoom
         let factor = zoomScale.deviceFactor(for: zoom)
         sessionQueue.async { [self] in setDeviceZoomFactor(factor, animated: animated) }
@@ -125,12 +132,13 @@ final class CameraController: NSObject, ObservableObject {
     }
 
     /// Opens the camera at 1× (on phones with an ultra-wide lens, the combined camera would
-    /// otherwise start on it) and publishes how far it zooms. Runs once, before the session
-    /// first starts: after that the zoom stays wherever the user left it, scan after scan.
-    /// Call on `sessionQueue`.
+    /// otherwise start on it) and publishes how far it zooms and whether it has a flash.
+    /// Runs once, before the session first starts: after that the zoom stays wherever the
+    /// user left it, scan after scan. Call on `sessionQueue`.
     private func setUpZoom() {
         guard let camera else { return }
         let zoomScale = ZoomScale(camera: camera)
+        let hasFlash = camera.hasTorch
         do { try camera.lockForConfiguration() } catch { return }
         // Change lenses only when the user zooms, not by itself when the dog comes close or
         // the light drops, so the picture doesn't jump in the middle of a recording.
@@ -144,6 +152,7 @@ final class CameraController: NSObject, ObservableObject {
 
         DispatchQueue.main.async { [self] in
             self.zoomScale = zoomScale
+            self.hasFlash = hasFlash
             zoom = 1
         }
     }
@@ -160,6 +169,14 @@ final class CameraController: NSObject, ObservableObject {
         } else {
             camera.videoZoomFactor = factor
         }
+    }
+
+    /// Call on `sessionQueue`.
+    private func setTorch(on: Bool) {
+        guard let camera, camera.hasTorch, camera.isTorchModeSupported(on ? .on : .off) else { return }
+        do { try camera.lockForConfiguration() } catch { return }
+        camera.torchMode = on ? .on : .off
+        camera.unlockForConfiguration()
     }
 
     private func setStatus(_ status: Status) {
@@ -193,6 +210,7 @@ extension CameraController: AVCaptureFileOutputRecordingDelegate {
         }
 
         sessionQueue.async { [self] in
+            setTorch(on: false)
             let completion = onFinish
             onFinish = nil
             DispatchQueue.main.async { [self] in

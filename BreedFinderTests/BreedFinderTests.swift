@@ -1,6 +1,7 @@
 import AVFoundation
 import CoreGraphics
 import CoreML
+import UIKit
 import XCTest
 @testable import BreedFinder
 
@@ -64,6 +65,17 @@ final class BreedAggregatorTests: XCTestCase {
         XCTAssertTrue(BreedAggregator.topGuesses(from: frames).isEmpty)
     }
 
+    /// Uploaded photos were each chosen on purpose, so one photo of a dog is enough,
+    /// while one dog frame in a video still isn't.
+    func testOneUploadedPhotoIsEnough() {
+        let frames = [FramePrediction(dogDetected: true, breedProbabilities: ["Pug": 0.95])]
+        let forPhotos = BreedAggregator.requiredDogFrames(for: .photos)
+        let forVideo = BreedAggregator.requiredDogFrames(for: .video)
+
+        XCTAssertEqual(BreedAggregator.topGuesses(from: frames, requiredDogFrames: forPhotos).map(\.breed), ["Pug"])
+        XCTAssertTrue(BreedAggregator.topGuesses(from: frames, requiredDogFrames: forVideo).isEmpty)
+    }
+
     func testNoDogInAnyFrameMeansNoGuesses() {
         let frames = Array(
             repeating: FramePrediction(dogDetected: false, breedProbabilities: ["Pug": 0.1, "Beagle": 0.05]),
@@ -117,10 +129,12 @@ final class ZoomScaleTests: XCTestCase {
         )
 
         XCTAssertEqual(scale.mainLensFactor, 2)
+        XCTAssertEqual(scale.minZoom, 0.5)
+        XCTAssertEqual(scale.deviceFactor(for: 0.5), 1)  // the ultra-wide lens
         XCTAssertEqual(scale.deviceFactor(for: 1), 2)
         XCTAssertEqual(scale.deviceFactor(for: 5), 10)
         XCTAssertEqual(scale.maxZoom, ZoomScale.limit)
-        XCTAssertEqual(scale.presets, [1, 2, 5])
+        XCTAssertEqual(scale.presets, [0.5, 1, 2, 5])
     }
 
     /// iPhone 15 Pro: 3× telephoto.
@@ -131,7 +145,7 @@ final class ZoomScaleTests: XCTestCase {
             maxDeviceFactor: 100
         )
 
-        XCTAssertEqual(scale.presets, [1, 2, 3])
+        XCTAssertEqual(scale.presets, [0.5, 1, 2, 3])
     }
 
     /// iPhone 16: ultra-wide and main lenses, no telephoto.
@@ -141,16 +155,18 @@ final class ZoomScaleTests: XCTestCase {
         )
 
         XCTAssertEqual(scale.mainLensFactor, 2)
-        XCTAssertEqual(scale.presets, [1, 2])
+        XCTAssertEqual(scale.presets, [0.5, 1, 2])
     }
 
-    /// iPhone XS: main lens and 2× telephoto, so the telephoto's button is the 2× one.
+    /// iPhone XS: main lens and 2× telephoto, so the telephoto's button is the 2× one,
+    /// and there's no ultra-wide lens for 0.5×.
     func testMainLensAndTwoTimesTelephoto() {
         let scale = ZoomScale(
             lenses: [.builtInWideAngleCamera, .builtInTelephotoCamera], switchOverFactors: [2], maxDeviceFactor: 16
         )
 
         XCTAssertEqual(scale.mainLensFactor, 1)
+        XCTAssertEqual(scale.minZoom, 1)
         XCTAssertEqual(scale.presets, [1, 2])
     }
 
@@ -159,6 +175,7 @@ final class ZoomScaleTests: XCTestCase {
         let scale = ZoomScale(lenses: [], switchOverFactors: [], maxDeviceFactor: 16)
 
         XCTAssertEqual(scale.mainLensFactor, 1)
+        XCTAssertEqual(scale.minZoom, 1)
         XCTAssertEqual(scale.maxZoom, ZoomScale.limit)
         XCTAssertEqual(scale.presets, [1, 2])
     }
@@ -171,6 +188,7 @@ final class ZoomScaleTests: XCTestCase {
     }
 
     func testLabelsAreWrittenLikeTheCameraApp() {
+        XCTAssertEqual(ZoomScale.label(for: 0.5), "0.5")
         XCTAssertEqual(ZoomScale.label(for: 1), "1")
         XCTAssertEqual(ZoomScale.label(for: 2.43), "2.4")
         XCTAssertEqual(ZoomScale.label(for: 4.98), "5")
@@ -182,11 +200,164 @@ final class ZoomScaleTests: XCTestCase {
         guard let camera = CameraController.backCamera() else { throw XCTSkip("No camera in the Simulator") }
         let scale = ZoomScale(camera: camera)
 
-        XCTAssertEqual(scale.presets.first, 1)
-        for zoom in scale.presets + [scale.maxZoom] {
+        XCTAssertTrue(scale.presets.contains(1))
+        for zoom in scale.presets + [scale.minZoom, scale.maxZoom] {
             XCTAssertGreaterThanOrEqual(scale.deviceFactor(for: zoom), camera.minAvailableVideoZoomFactor)
             XCTAssertLessThanOrEqual(scale.deviceFactor(for: zoom), camera.activeFormat.videoMaxZoomFactor)
         }
+    }
+}
+
+final class BreedCollectionTests: XCTestCase {
+    private func temporaryDirectory() -> URL {
+        FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString, isDirectory: true)
+    }
+
+    @MainActor
+    func testCountsFollowCorrectionsAndRemovals() {
+        let collection = BreedCollection(directory: temporaryDirectory())
+        let first = collection.add(breed: "Beagle", predictedBreed: "Beagle", confidence: 0.9, photo: nil)
+        collection.add(breed: "Beagle", predictedBreed: "Beagle", confidence: 0.8, photo: nil)
+        collection.add(breed: "Pug", predictedBreed: "Pug", confidence: 0.7, photo: nil)
+        XCTAssertEqual(collection.count(for: "Beagle"), 2)
+
+        // The model said Beagle, but it was really a Pug.
+        collection.correct(first, to: "Pug")
+        XCTAssertEqual(collection.count(for: "Beagle"), 1)
+        XCTAssertEqual(collection.count(for: "Pug"), 2)
+        XCTAssertEqual(collection.record(id: first)?.wasCorrected, true)
+
+        collection.remove(first)
+        XCTAssertEqual(collection.count(for: "Pug"), 1)
+        XCTAssertEqual(collection.collectedBreeds, ["Beagle", "Pug"])
+    }
+
+    @MainActor
+    func testScansAndPhotosSurviveARestart() throws {
+        let directory = temporaryDirectory()
+        let photo = try XCTUnwrap(UIGraphicsImageRenderer(size: CGSize(width: 40, height: 30)).image { context in
+            UIColor.orange.setFill()
+            context.fill(CGRect(x: 0, y: 0, width: 40, height: 30))
+        }.cgImage)
+        let id = BreedCollection(directory: directory)
+            .add(breed: "Vizsla", predictedBreed: "Weimaraner", confidence: 0.6, photo: photo)
+
+        let reopened = BreedCollection(directory: directory)
+        let record = try XCTUnwrap(reopened.record(id: id))
+        XCTAssertEqual(record.breed, "Vizsla")
+        XCTAssertEqual(record.predictedBreed, "Weimaraner")
+        XCTAssertNotNil(reopened.photo(for: record))
+    }
+}
+
+final class RecentScansTests: XCTestCase {
+    private func makeResult(frames: Int, top: String?) throws -> ScanResult {
+        let image = try XCTUnwrap(UIGraphicsImageRenderer(size: CGSize(width: 30, height: 40)).image { context in
+            UIColor.brown.setFill()
+            context.fill(CGRect(x: 0, y: 0, width: 30, height: 40))
+        }.cgImage)
+        let prediction = FramePrediction(dogDetected: top != nil, breedProbabilities: top.map { [$0: 0.9] } ?? [:])
+        return ScanResult(source: .video,
+                          frames: Array(repeating: FrameAnalysis(image: image, dogBox: nil, prediction: prediction), count: frames),
+                          guesses: top.map { [BreedGuess(breed: $0, confidence: 0.9)] } ?? [],
+                          dogPhoto: nil, modelVersion: "test-model")
+    }
+
+    @MainActor
+    func testKeepsOnlyTheNewestScansAndDeletesOldFiles() async throws {
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        let store = RecentScansStore(directory: directory)
+        var ids: [UUID] = []
+        for _ in 0..<(RecentScansStore.limit + 2) {
+            let id = UUID()
+            ids.append(id)
+            let result = try makeResult(frames: 2, top: "Beagle")
+            await store.add(id: id, result: result, recordID: nil)
+        }
+
+        XCTAssertEqual(store.scans.count, RecentScansStore.limit)
+        XCTAssertEqual(store.scans.first?.id, ids.last)  // newest first
+        XCTAssertNil(store.scan(id: ids[0]))
+        XCTAssertFalse(FileManager.default.fileExists(atPath: directory.appendingPathComponent(ids[0].uuidString).path))
+
+        let newest = try XCTUnwrap(store.scans.first)
+        XCTAssertEqual(store.attachments(for: newest).count, 2)
+
+        // Survives the app restarting.
+        XCTAssertEqual(RecentScansStore(directory: directory).scans.map(\.id), store.scans.map(\.id))
+    }
+}
+
+final class ProblemReportTests: XCTestCase {
+    private func report(kind: ProblemKind, scan: RecentScan?) -> ProblemReport {
+        ProblemReport(kind: kind, details: "  It's my neighbor's dog.  ", actualBreed: "Labrador Retriever",
+                      scan: scan, countedAs: "Labrador Retriever", appVersion: "1.1.0 (7)",
+                      modelVersion: "current-model", systemVersion: "18.1", deviceModel: "iPhone16,1")
+    }
+
+    func testWrongBreedReportIncludesWhatTheAppSaidAndWhatItReallyIs() {
+        let scan = RecentScan(id: UUID(), date: .now, source: .video,
+                              guesses: [BreedGuess(breed: "Golden Retriever", confidence: 0.72),
+                                        BreedGuess(breed: "Labrador Retriever", confidence: 0.2)],
+                              framesWithDog: [true, true, false, true, true], frameFiles: [],
+                              modelVersion: "scan-model", recordID: nil)
+        let body = report(kind: .wrongBreed, scan: scan).body
+
+        XCTAssertTrue(body.contains("What it really is: Labrador Retriever"))
+        XCTAssertTrue(body.contains("It's my neighbor's dog."))
+        XCTAssertTrue(body.contains("App said #1: Golden Retriever"))
+        XCTAssertTrue(body.contains("App said #2: Labrador Retriever"))
+        XCTAssertTrue(body.contains("5 frames, dog found in 4"))
+        XCTAssertTrue(body.contains("Breed model: scan-model"))  // the model that made the guess
+        XCTAssertTrue(body.contains("iPhone: iPhone16,1"))
+    }
+
+    func testReportWithoutAScanStillNamesTheModel() {
+        let body = report(kind: .crash, scan: nil).body
+
+        XCTAssertFalse(body.contains("What it really is"))  // only for wrong-breed reports
+        XCTAssertTrue(body.contains("No scan attached"))
+        XCTAssertTrue(body.contains("Breed model: current-model"))
+    }
+}
+
+final class BreedGroupingTests: XCTestCase {
+    private func profile(_ name: String, countries: [String], group: String) -> BreedProfile {
+        BreedProfile(name: name, summary: "", origin: countries.joined(separator: " and "), lifespan: "",
+                     weight: "", group: group, temperament: [], funFacts: [], photo: nil,
+                     originCountries: countries, groupKey: group)
+    }
+
+    private lazy var profiles = [
+        profile("Beagle", countries: ["England"], group: "Hound"),
+        profile("Border Collie", countries: ["Scotland", "England"], group: "Herding"),
+        profile("Cockapoo", countries: ["United States"], group: "Designer crossbreed"),
+        profile("Dingo", countries: ["Australia"], group: "Other"),
+    ]
+
+    func testAlphabeticalIsOneUntitledSection() {
+        let sections = BreedGrouping.alphabetical.sections(of: profiles, collected: [])
+        XCTAssertEqual(sections.count, 1)
+        XCTAssertNil(sections[0].title)
+        XCTAssertEqual(sections[0].breeds.count, 4)
+    }
+
+    func testOriginListsMultiCountryBreedsUnderEachCountry() {
+        let sections = BreedGrouping.origin.sections(of: profiles, collected: [])
+        XCTAssertEqual(sections.map(\.title), ["Australia", "England", "Scotland", "United States"])
+        XCTAssertEqual(sections[1].breeds.map(\.name), ["Beagle", "Border Collie"])
+        XCTAssertEqual(sections[2].breeds.map(\.name), ["Border Collie"])
+    }
+
+    func testGroupsFollowAKCOrderWithOthersLast() {
+        let titles = BreedGrouping.group.sections(of: profiles, collected: []).map(\.title)
+        XCTAssertEqual(titles, ["Hound", "Herding", "Designer crossbreed", "Other breeds"])
+    }
+
+    func testCollectedSplitsCaughtFromNotYet() {
+        let sections = BreedGrouping.collected.sections(of: profiles, collected: ["Dingo"])
+        XCTAssertEqual(sections.map(\.title), ["Collected", "Not yet"])
+        XCTAssertEqual(sections[0].breeds.map(\.name), ["Dingo"])
     }
 }
 

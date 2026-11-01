@@ -31,7 +31,7 @@ struct FrameAnalysis {
     let prediction: FramePrediction
 }
 
-struct BreedGuess: Hashable, Identifiable {
+struct BreedGuess: Hashable, Identifiable, Codable {
     let breed: String
     /// 0...1, this breed's share of the combined dog probability across frames.
     let confidence: Double
@@ -39,10 +39,20 @@ struct BreedGuess: Hashable, Identifiable {
     var id: String { breed }
 }
 
+enum ScanSource: String, Codable {
+    case video, photos
+
+    /// "frame" or "photo", for labels like "Frames analyzed".
+    var itemName: String { self == .video ? "frame" : "photo" }
+}
+
 struct ScanResult {
+    let source: ScanSource
     let frames: [FrameAnalysis]
     /// Up to three guesses, best first. Empty when no frame contained a dog.
     let guesses: [BreedGuess]
     /// The frame that most resembles the top guess, cropped to the dog, for the result card.
     let dogPhoto: CGImage?
+    /// Which breed model produced this result (from the Core ML model's metadata).
+    let modelVersion: String
 }
