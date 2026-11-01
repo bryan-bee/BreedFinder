@@ -22,9 +22,10 @@
   "groupKey": "Toy",
   "photo": {
    "file": "affenpinscher.jpg",
+   "title": "Pinczer małpi 756",
    "author": "Pleple2000",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Pinczer_ma%C5%82pi_756.jpg"
   }
  },
@@ -51,6 +52,7 @@
   "groupKey": "Hound",
   "photo": {
    "file": "afghan-hound.jpg",
+   "title": "Afghan dog - cropped",
    "author": "Weaveravel",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -79,6 +81,7 @@
   "groupKey": "Terrier",
   "photo": {
    "file": "airedale-terrier.jpg",
+   "title": "Airedale Terrier",
    "author": "by Jane@rangeairevision.com",
    "license": "Copyrighted free use",
    "licenseURL": null,
@@ -107,6 +110,7 @@
   "groupKey": "Working",
   "photo": {
    "file": "akita.jpg",
+   "title": "Akita Inu (male)",
    "author": "Azurfrog",
    "license": "CC BY 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by/4.0",
@@ -136,6 +140,7 @@
   "groupKey": "Working",
   "photo": {
    "file": "alaskan-malamute.jpg",
+   "title": "Alaskan Malamute",
    "author": "SCMW",
    "license": "CC BY 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by/3.0",
@@ -164,9 +169,10 @@
   "groupKey": "Other",
   "photo": {
    "file": "american-bulldog.jpg",
+   "title": "American Bulldog 600",
    "author": "Photo by sannse",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:American_Bulldog_600.jpg"
   }
  },
@@ -192,6 +198,7 @@
   "groupKey": "Non-Sporting",
   "photo": {
    "file": "american-eskimo-dog.jpg",
+   "title": "American Eskimo Dog 1",
    "author": "Christmas w/a K",
    "license": "CC BY-SA 2.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -220,10 +227,11 @@
   "groupKey": "Hound",
   "photo": {
    "file": "american-foxhound.jpg",
-   "author": "Unknown",
-   "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
-   "sourceURL": "https://commons.wikimedia.org/wiki/File:AmericanFoxhound2.jpg"
+   "title": "American Foxhound",
+   "author": "Canarian",
+   "license": "CC BY-SA 4.0",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:American_Foxhound.jpg"
   }
  },
  "American Hairless Terrier": {
@@ -248,6 +256,7 @@
   "groupKey": "Terrier",
   "photo": {
    "file": "american-hairless-terrier.jpg",
+   "title": "American Hairless Terrier Adelor",
    "author": "Nyaah",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -276,6 +285,7 @@
   "groupKey": "Other",
   "photo": {
    "file": "american-pit-bull-terrier.jpg",
+   "title": "001 American Pit Bull Terrier",
    "author": "https://www.flickr.com/people/geoggirl/",
    "license": "CC BY 2.0",
    "licenseURL": "https://creativecommons.org/licenses/by/2.0",
@@ -304,6 +314,7 @@
   "groupKey": "Terrier",
   "photo": {
    "file": "american-staffordshire-terrier.jpg",
+   "title": "AMERICAN STAFFORDSHIRE TERRIER, Zican’s Bz Ez Dragon (24208348891).2",
    "author": "Svenska Mässan from Sweden",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -332,6 +343,7 @@
   "groupKey": "Sporting",
   "photo": {
    "file": "american-water-spaniel.jpg",
+   "title": "Chien d'eau americain champion 1",
    "author": "Awsguy1",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -360,6 +372,7 @@
   "groupKey": "Working",
   "photo": {
    "file": "anatolian-shepherd-dog.jpg",
+   "title": "Kangal front on",
    "author": "Kangalshepherddog",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -388,6 +401,7 @@
   "groupKey": "Other",
   "photo": {
    "file": "appenzeller-sennenhund.jpg",
+   "title": "Eisa Kessy v Brünggberg",
    "author": "Appenzeller Blaess",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -417,6 +431,7 @@
   "groupKey": "Herding",
   "photo": {
    "file": "australian-cattle-dog.jpg",
+   "title": "ACD-blue-spud",
    "author": "Zingpix",
    "license": "CC BY 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by/3.0",
@@ -445,6 +460,7 @@
   "groupKey": "Other",
   "photo": {
    "file": "australian-kelpie.jpg",
+   "title": "Hilu the Australian Kelpie dog",
    "author": "Pertti Kärppä",
    "license": "Public domain",
    "licenseURL": null,
@@ -474,6 +490,7 @@
   "groupKey": "Herding",
   "photo": {
    "file": "australian-shepherd.jpg",
+   "title": "Australian Shepherd red bi",
    "author": "Trickdog-Fina",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -502,6 +519,7 @@
   "groupKey": "Terrier",
   "photo": {
    "file": "australian-terrier.jpg",
+   "title": "Australian Terrier adult male",
    "author": "Chuck in MA",
    "license": "Public domain",
    "licenseURL": null,
@@ -531,6 +549,7 @@
   "groupKey": "Hound",
   "photo": {
    "file": "basenji.jpg",
+   "title": "Basenji Profile (loosercrop)",
    "author": "fugzu",
    "license": "CC BY 2.0",
    "licenseURL": "https://creativecommons.org/licenses/by/2.0",
@@ -560,6 +579,7 @@
   "groupKey": "Hound",
   "photo": {
    "file": "basset-hound.jpg",
+   "title": "BassetHound profil",
    "author": "Cali1008",
    "license": "Public domain",
    "licenseURL": null,
@@ -589,10 +609,11 @@
   "groupKey": "Hound",
   "photo": {
    "file": "beagle.jpg",
-   "author": "Unknown",
-   "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
-   "sourceURL": "https://commons.wikimedia.org/wiki/File:Beagle_600.jpg"
+   "title": "A Beagle standing on the beach",
+   "author": "Slyronit",
+   "license": "CC BY-SA 4.0",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:A_Beagle_standing_on_the_beach.jpg"
   }
  },
  "Bearded Collie": {
@@ -617,10 +638,11 @@
   "groupKey": "Herding",
   "photo": {
    "file": "bearded-collie.jpg",
-   "author": "Unknown",
-   "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
-   "sourceURL": "https://commons.wikimedia.org/wiki/File:Bearded_Collie_600.jpg"
+   "title": "Bearded Collie",
+   "author": "marbla123",
+   "license": "CC BY 2.0",
+   "licenseURL": "https://creativecommons.org/licenses/by/2.0",
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:Bearded_Collie.jpg"
   }
  },
  "Beauceron": {
@@ -645,6 +667,7 @@
   "groupKey": "Herding",
   "photo": {
    "file": "beauceron.jpg",
+   "title": "BeauceronStand",
    "author": "Stefan Schmitz",
    "license": "CC BY-SA 3.0 de",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
@@ -673,6 +696,7 @@
   "groupKey": "Terrier",
   "photo": {
    "file": "bedlington-terrier.jpg",
+   "title": "Boutchie apres championnat 004",
    "author": "David Owsiany",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -701,6 +725,7 @@
   "groupKey": "Herding",
   "photo": {
    "file": "belgian-malinois.jpg",
+   "title": "Belgian Shepherd Malinois grass",
    "author": "wim harwig",
    "license": "CC BY 2.0",
    "licenseURL": "https://creativecommons.org/licenses/by/2.0",
@@ -729,9 +754,10 @@
   "groupKey": "Herding",
   "photo": {
    "file": "belgian-sheepdog.jpg",
+   "title": "Berge Belge Groenendael",
    "author": "Bloody-libu",
    "license": "CC0",
-   "licenseURL": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Berge_Belge_Groenendael.JPG"
   }
  },
@@ -757,6 +783,7 @@
   "groupKey": "Herding",
   "photo": {
    "file": "belgian-tervuren.jpg",
+   "title": "Belgian Tervuren-7-Ch-Sidekicks Masters Di Villa Roma CB RN BN 02 (16397932470)",
    "author": "Pets Adviser from Brooklyn, USA",
    "license": "CC BY 2.0",
    "licenseURL": "https://creativecommons.org/licenses/by/2.0",
@@ -785,6 +812,7 @@
   "groupKey": "Designer crossbreed",
   "photo": {
    "file": "bernedoodle.jpg",
+   "title": "Bernedoodle Adolescent",
    "author": "Jsinghmpls",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -813,6 +841,7 @@
   "groupKey": "Working",
   "photo": {
    "file": "bernese-mountain-dog.jpg",
+   "title": "3-BerneseMountainDogInGrass",
    "author": "FriendlyToaster",
    "license": "CC BY 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by/4.0",
@@ -843,6 +872,7 @@
   "groupKey": "Non-Sporting",
   "photo": {
    "file": "bichon-frise.jpg",
+   "title": "Bichon Frisé - studdogbichon",
    "author": "Heike Andres",
    "license": "CC BY-SA 3.0 de",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
@@ -871,6 +901,7 @@
   "groupKey": "Working",
   "photo": {
    "file": "black-russian-terrier.jpg",
+   "title": "Wystawa Rybnik 02.10.2011 czarny terier rosyjski 2pl",
    "author": "Pleple2000",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -899,6 +930,7 @@
   "groupKey": "Hound",
   "photo": {
    "file": "black-and-tan-coonhound.jpg",
+   "title": "Black and Tan Coonhound",
    "author": "Steffen Heinz (Caronna)",
    "license": "CC BY-SA 2.5",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/2.5",
@@ -929,6 +961,7 @@
   "groupKey": "Hound",
   "photo": {
    "file": "bloodhound.jpg",
+   "title": "Bloodhound Erland22",
    "author": "User:Erland22",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -957,6 +990,7 @@
   "groupKey": "Hound",
   "photo": {
    "file": "bluetick-coonhound.jpg",
+   "title": "BluetickCoonhound",
    "author": "Unknown",
    "license": "Public domain",
    "licenseURL": null,
@@ -986,10 +1020,11 @@
   "groupKey": "Herding",
   "photo": {
    "file": "border-collie.jpg",
-   "author": "Unknown",
-   "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
-   "sourceURL": "https://commons.wikimedia.org/wiki/File:Border_Collie_600.jpg"
+   "title": "Black and white Border Collies",
+   "author": "nomorepal",
+   "license": "CC BY 2.0",
+   "licenseURL": "https://creativecommons.org/licenses/by/2.0",
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:Black_and_white_Border_Collies.jpg"
   }
  },
  "Border Terrier": {
@@ -1015,6 +1050,7 @@
   "groupKey": "Terrier",
   "photo": {
    "file": "border-terrier.jpg",
+   "title": "Border Terrier 2",
    "author": "Marilyn Peddle",
    "license": "CC BY 2.0",
    "licenseURL": "https://creativecommons.org/licenses/by/2.0",
@@ -1043,6 +1079,7 @@
   "groupKey": "Hound",
   "photo": {
    "file": "borzoi.jpg",
+   "title": "Chart rosyjski borzoj rybnik-kamien pl",
    "author": "Pleple2000",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -1072,6 +1109,7 @@
   "groupKey": "Non-Sporting",
   "photo": {
    "file": "boston-terrier.jpg",
+   "title": "Boston-terrier-carlos-de",
    "author": "Andreas Schlaugat",
    "license": "CC BY 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by/3.0",
@@ -1100,9 +1138,10 @@
   "groupKey": "Herding",
   "photo": {
    "file": "bouvier-des-flandres.jpg",
+   "title": "Bouvier",
    "author": "Basco at Dutch Wikipedia (Original text: annekedirven@tiscali.nl)",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Bouvier.JPG"
   }
  },
@@ -1128,6 +1167,7 @@
   "groupKey": "Working",
   "photo": {
    "file": "boxer.jpg",
+   "title": "Male fawn Boxer undocked",
    "author": "Mood210",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -1156,6 +1196,7 @@
   "groupKey": "Sporting",
   "photo": {
    "file": "boykin-spaniel.jpg",
+   "title": "Boykin Spaniel April Jet",
    "author": "jetsonphoto",
    "license": "CC BY-SA 2.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -1184,9 +1225,10 @@
   "groupKey": "Herding",
   "photo": {
    "file": "briard.jpg",
+   "title": "Briard fauve",
    "author": "Birgit Balzer, Deutschland (uploaded by Caronna 17:00, 10 Feb 2005 (UTC))",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Briard_fauve.JPG"
   }
  },
@@ -1212,6 +1254,7 @@
   "groupKey": "Sporting",
   "photo": {
    "file": "brittany.jpg",
+   "title": "Zuri txakurra 1 (cropped)",
    "author": "Olatz / souligne",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -1240,6 +1283,7 @@
   "groupKey": "Toy",
   "photo": {
    "file": "brussels-griffon.jpg",
+   "title": "Monkey Bizniz Drama Queen",
    "author": "Arne Fagerholt",
    "license": "CC BY 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by/3.0",
@@ -1268,9 +1312,10 @@
   "groupKey": "Terrier",
   "photo": {
    "file": "bull-terrier.jpg",
+   "title": "Bullterrier-3453301920",
    "author": "Pixabay User TC-TORRES",
    "license": "CC0",
-   "licenseURL": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Bullterrier-3453301920.jpg"
   }
  },
@@ -1296,9 +1341,10 @@
   "groupKey": "Working",
   "photo": {
    "file": "bullmastiff.jpg",
+   "title": "Bullmastiff edited",
    "author": "Fausto Moreno",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Bullmastiff_edited.JPG"
   }
  },
@@ -1324,9 +1370,10 @@
   "groupKey": "Terrier",
   "photo": {
    "file": "cairn-terrier.jpg",
+   "title": "Cairn-Terrier-Garten1",
    "author": "Ronald Müller-Hagen (Ketterechts)",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Cairn-Terrier-Garten1.jpg"
   }
  },
@@ -1352,6 +1399,7 @@
   "groupKey": "Herding",
   "photo": {
    "file": "canaan-dog.jpg",
+   "title": "CanaanDogChakede",
    "author": "Canaan Dog, Hodowla Samorodok Hanaana http://www.ruscanaan.ru",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -1380,6 +1428,7 @@
   "groupKey": "Working",
   "photo": {
    "file": "cane-corso.jpg",
+   "title": "Cane corso temi 1 1024x768x24 (cropped)",
    "author": "Claudio Domiziani",
    "license": "CC BY-SA 2.5",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/2.5",
@@ -1408,6 +1457,7 @@
   "groupKey": "Herding",
   "photo": {
    "file": "cardigan-welsh-corgi.jpg",
+   "title": "Cardigan Welsh Corgi, Profile",
    "author": "FatFairfax",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -1436,6 +1486,7 @@
   "groupKey": "Toy",
   "photo": {
    "file": "cavalier-king-charles-spaniel.jpg",
+   "title": "CarterBIS.Tiki.13.6.09",
    "author": "Andreweatock",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -1464,6 +1515,7 @@
   "groupKey": "Designer crossbreed",
   "photo": {
    "file": "cavapoo.jpg",
+   "title": "JArabright",
    "author": "BAVhah",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -1493,6 +1545,7 @@
   "groupKey": "Sporting",
   "photo": {
    "file": "chesapeake-bay-retriever.jpg",
+   "title": "CH Chesapeake",
    "author": "George Makatura",
    "license": "Public domain",
    "licenseURL": null,
@@ -1521,9 +1574,10 @@
   "groupKey": "Toy",
   "photo": {
    "file": "chihuahua.jpg",
+   "title": "Chihuahua1 bvdb",
    "author": "Bonnie van den Born, http://www.bonfoto.nl. The original uploader was Cwazi at Dutch Wikipedia.",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Chihuahua1_bvdb.jpg"
   }
  },
@@ -1549,6 +1603,7 @@
   "groupKey": "Toy",
   "photo": {
    "file": "chinese-crested.jpg",
+   "title": "IndyStands",
    "author": "Tommy Gildseth",
    "license": "CC BY 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by/3.0",
@@ -1577,6 +1632,7 @@
   "groupKey": "Non-Sporting",
   "photo": {
    "file": "chow-chow.jpg",
+   "title": "Chow-chow in Tallinn",
    "author": "Томасина",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -1605,6 +1661,7 @@
   "groupKey": "Sporting",
   "photo": {
    "file": "clumber-spaniel.jpg",
+   "title": "Clumber spaniel rybnik kamien pppl",
    "author": "Pleple2000",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -1633,7 +1690,8 @@
   "groupKey": "Designer crossbreed",
   "photo": {
    "file": "cockapoo.jpg",
-   "author": "No machine-readable author provided. BetacommandBot assumed (based on copyright claims).",
+   "title": "Cockapoo apricot standing",
+   "author": "BetacommandBot (assumed)",
    "license": "CC BY 2.5",
    "licenseURL": "https://creativecommons.org/licenses/by/2.5",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Cockapoo_apricot_standing.jpg"
@@ -1661,6 +1719,7 @@
   "groupKey": "Sporting",
   "photo": {
    "file": "cocker-spaniel.jpg",
+   "title": "PointbreakHoneyimHome",
    "author": "Kulala",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -1689,6 +1748,7 @@
   "groupKey": "Herding",
   "photo": {
    "file": "collie.jpg",
+   "title": "Rough-Collie-japan08 (cropped)",
    "author": "Yasu w",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -1717,10 +1777,11 @@
   "groupKey": "Sporting",
   "photo": {
    "file": "curly-coated-retriever.jpg",
-   "author": "Unknown",
-   "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
-   "sourceURL": "https://commons.wikimedia.org/wiki/File:Curly_Coated_Retriever.jpg"
+   "title": "Curly coated retriever",
+   "author": "Naturialae",
+   "license": "CC BY-SA 4.0",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:Curly_coated_retriever.JPG"
   }
  },
  "Dachshund": {
@@ -1746,6 +1807,7 @@
   "groupKey": "Hound",
   "photo": {
    "file": "dachshund.jpg",
+   "title": "닥스훈트(단모종) (Dachshund (Short))",
    "author": "Katemil94",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -1774,6 +1836,7 @@
   "groupKey": "Non-Sporting",
   "photo": {
    "file": "dalmatian.jpg",
+   "title": "Sun Dog Dalmatian",
    "author": "Bradlien",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -1802,9 +1865,10 @@
   "groupKey": "Terrier",
   "photo": {
    "file": "dandie-dinmont-terrier.jpg",
+   "title": "Dandie Dinmont Terrier 600",
    "author": "en:User:Sannse",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Dandie_Dinmont_Terrier_600.jpg"
   }
  },
@@ -1830,6 +1894,7 @@
   "groupKey": "Other",
   "photo": {
    "file": "dingo.jpg",
+   "title": "Dingo (Canis lupus dingo) Kakadu 2",
    "author": "Charles J. Sharp",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -1858,6 +1923,7 @@
   "groupKey": "Working",
   "photo": {
    "file": "doberman-pinscher.jpg",
+   "title": "Dobermann handling",
    "author": "Miroslav Cacik",
    "license": "Copyrighted free use",
    "licenseURL": null,
@@ -1886,6 +1952,7 @@
   "groupKey": "Working",
   "photo": {
    "file": "dogue-de-bordeaux.jpg",
+   "title": "French Mastiff female 4",
    "author": "Canarian",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -1914,6 +1981,7 @@
   "groupKey": "Non-Sporting",
   "photo": {
    "file": "english-bulldog.jpg",
+   "title": "AKC English Bulldog Great Falls June 2011",
    "author": "SheltieBoy",
    "license": "CC BY 2.0",
    "licenseURL": "https://creativecommons.org/licenses/by/2.0",
@@ -1942,6 +2010,7 @@
   "groupKey": "Sporting",
   "photo": {
    "file": "english-cocker-spaniel.jpg",
+   "title": "\"Bill\" - Cocker spaniel anglais 2",
    "author": "Jean-Pol GRANDMONT",
    "license": "CC BY 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by/4.0",
@@ -1970,6 +2039,7 @@
   "groupKey": "Hound",
   "photo": {
    "file": "english-foxhound.jpg",
+   "title": "English Foxhound portrait",
    "author": "Flickr user Thowra_uk",
    "license": "CC BY 2.0",
    "licenseURL": "https://creativecommons.org/licenses/by/2.0",
@@ -1998,9 +2068,10 @@
   "groupKey": "Sporting",
   "photo": {
    "file": "english-setter.jpg",
+   "title": "EnglishSetter9 fx wb",
    "author": "Elf at English Wikipedia",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:EnglishSetter9_fx_wb.jpg"
   }
  },
@@ -2026,9 +2097,10 @@
   "groupKey": "Sporting",
   "photo": {
    "file": "english-springer-spaniel.jpg",
+   "title": "Springer Spaniel Wide Shot",
    "author": "Ratsniffer",
    "license": "CC0",
-   "licenseURL": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Springer_Spaniel_Wide_Shot.jpg"
   }
  },
@@ -2054,9 +2126,10 @@
   "groupKey": "Toy",
   "photo": {
    "file": "english-toy-spaniel.jpg",
+   "title": "King Charles Spaniel 200",
    "author": "Pleple2000 10:18, 5 April 2006 (UTC)",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:King_Charles_Spaniel_200.jpg"
   }
  },
@@ -2082,6 +2155,7 @@
   "groupKey": "Herding",
   "photo": {
    "file": "entlebucher-mountain-dog.jpg",
+   "title": "Elio v Schaerlig im Juni 2007 klein",
    "author": "Serge Renggli",
    "license": "CC BY-SA 2.0 de",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/2.0/de/deed.en",
@@ -2110,9 +2184,10 @@
   "groupKey": "Sporting",
   "photo": {
    "file": "field-spaniel.jpg",
+   "title": "Field spaniel 581",
    "author": "Pleple2000",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Field_spaniel_581.jpg"
   }
  },
@@ -2138,9 +2213,10 @@
   "groupKey": "Other",
   "photo": {
    "file": "fila-brasileiro.jpg",
+   "title": "Fila brasileiro ppk9",
    "author": "Pleple2000",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Fila_brasileiro_ppk9.jpg"
   }
  },
@@ -2166,10 +2242,11 @@
   "groupKey": "Non-Sporting",
   "photo": {
    "file": "finnish-spitz.jpg",
-   "author": "Unknown",
-   "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
-   "sourceURL": "https://commons.wikimedia.org/wiki/File:Finnish_Spitz_600.jpg"
+   "title": "Finnish Spitz",
+   "author": "PrzemekL (assumed)",
+   "license": "Public domain",
+   "licenseURL": null,
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:Finnish_Spitz.jpg"
   }
  },
  "Flat-Coated Retriever": {
@@ -2194,9 +2271,10 @@
   "groupKey": "Sporting",
   "photo": {
    "file": "flat-coated-retriever.jpg",
+   "title": "Flat Coated Retriever - black",
    "author": "Gunnandreassen",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Flat_Coated_Retriever_-_black.jpg"
   }
  },
@@ -2222,6 +2300,7 @@
   "groupKey": "Non-Sporting",
   "photo": {
    "file": "french-bulldog.jpg",
+   "title": "2008-07-28 Dog at Frolick Field",
    "author": "Ildar Sagdejev (Specious)",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -2250,9 +2329,10 @@
   "groupKey": "Working",
   "photo": {
    "file": "german-pinscher.jpg",
+   "title": "Bvdb-duitse pincher",
    "author": "Bonnie van den Born, http://www.bonfoto.nl",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Bvdb-duitse_pincher.jpg"
   }
  },
@@ -2279,6 +2359,7 @@
   "groupKey": "Herding",
   "photo": {
    "file": "german-shepherd.jpg",
+   "title": "German Shepherd - DSC 0346 (10096362833)",
    "author": "gomagoti",
    "license": "CC BY-SA 2.5",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/2.5",
@@ -2307,9 +2388,10 @@
   "groupKey": "Sporting",
   "photo": {
    "file": "german-shorthaired-pointer.jpg",
+   "title": "Duitse staande korthaar 10-10-2",
    "author": "Bonnie van den Born, http://www.bonfoto.nl",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Duitse_staande_korthaar_10-10-2.jpg"
   }
  },
@@ -2335,6 +2417,7 @@
   "groupKey": "Sporting",
   "photo": {
    "file": "german-wirehaired-pointer.jpg",
+   "title": "Dan vom hardenberg (cropped)",
    "author": "JainaKo",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -2363,6 +2446,7 @@
   "groupKey": "Working",
   "photo": {
    "file": "giant-schnauzer.jpg",
+   "title": "Nev Lemar Barbara1",
    "author": "Petrucha",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -2391,6 +2475,7 @@
   "groupKey": "Terrier",
   "photo": {
    "file": "glen-of-imaal-terrier.jpg",
+   "title": "Blue Brindle Adult Glen of Imaal Terrier",
    "author": "Irish-Terrier-2023",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -2419,7 +2504,8 @@
   "groupKey": "Sporting",
   "photo": {
    "file": "golden-retriever.jpg",
-   "author": "Dukedestiny01.jpg: \"Janneke Vreugdenhil\" derivative work: Anka Friedrich ([[User talk:Ankaaswe Trix Friedrich|talk]])",
+   "title": "Golden Retriever Dukedestiny01 drvd",
+   "author": "Janneke Vreugdenhil; derivative work: Anka Friedrich",
    "license": "Public domain",
    "licenseURL": null,
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Golden_Retriever_Dukedestiny01_drvd.jpg"
@@ -2447,6 +2533,7 @@
   "groupKey": "Designer crossbreed",
   "photo": {
    "file": "goldendoodle.jpg",
+   "title": "Golden Doodle Standing (HD)",
    "author": "Gullpavon",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -2475,10 +2562,11 @@
   "groupKey": "Sporting",
   "photo": {
    "file": "gordon-setter.jpg",
-   "author": "Unknown",
-   "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
-   "sourceURL": "https://commons.wikimedia.org/wiki/File:Orrvilas_enska_w800px.jpg"
+   "title": "Nike the Gordon Setter (18 June 2005)",
+   "author": "Markgrogers",
+   "license": "Public domain",
+   "licenseURL": null,
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:Nike_the_Gordon_Setter_(18_June_2005).jpg"
   }
  },
  "Great Dane": {
@@ -2503,6 +2591,7 @@
   "groupKey": "Working",
   "photo": {
    "file": "great-dane.jpg",
+   "title": "Dog niemiecki żółty LM980",
    "author": "Lilly M",
    "license": "CC BY-SA 2.5",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/2.5",
@@ -2532,6 +2621,7 @@
   "groupKey": "Working",
   "photo": {
    "file": "great-pyrenees.jpg",
+   "title": "Great Pyrenees Mountain Dog 2",
    "author": "HeartSpoon",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -2560,6 +2650,7 @@
   "groupKey": "Working",
   "photo": {
    "file": "greater-swiss-mountain-dog.jpg",
+   "title": "Greater Swiss Mountain Dog 2018",
    "author": "Canarian",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -2588,9 +2679,10 @@
   "groupKey": "Hound",
   "photo": {
    "file": "greyhound.jpg",
+   "title": "GraceTheGreyhound",
    "author": "Neurodoc",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:GraceTheGreyhound.jpg"
   }
  },
@@ -2616,6 +2708,7 @@
   "groupKey": "Toy",
   "photo": {
    "file": "havanese.jpg",
+   "title": "A Havanese judging",
    "author": "audrey_sel",
    "license": "CC BY-SA 2.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -2644,9 +2737,10 @@
   "groupKey": "Hound",
   "photo": {
    "file": "ibizan-hound.jpg",
+   "title": "Podenco z ibizy 645",
    "author": "Jan Eduard, corrected by Pleple2000",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Podenco_z_ibizy_645.jpg"
   }
  },
@@ -2672,6 +2766,7 @@
   "groupKey": "Herding",
   "photo": {
    "file": "icelandic-sheepdog.jpg",
+   "title": "Icelandic Sheepdog Alisa von Lehenberg",
    "author": "Veronica Druk",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -2700,6 +2795,7 @@
   "groupKey": "Sporting",
   "photo": {
    "file": "irish-red-and-white-setter.jpg",
+   "title": "Irish Red And White Setter 2005",
    "author": "Missledwidge",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -2728,9 +2824,10 @@
   "groupKey": "Sporting",
   "photo": {
    "file": "irish-setter.jpg",
+   "title": "Can Setter dog GFDL",
    "author": "Luis Miguel Bugallo Sánchez (Lmbuga Commons)(Lmbuga Galipedia) Publicada por/Publish by: Luis Miguel Bugallo Sánchez",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Can_Setter_dog_GFDL.jpg"
   }
  },
@@ -2756,6 +2853,7 @@
   "groupKey": "Terrier",
   "photo": {
    "file": "irish-terrier.jpg",
+   "title": "IrishTerrierSydenhamHillWoods",
    "author": "Andrew Clark",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -2784,6 +2882,7 @@
   "groupKey": "Sporting",
   "photo": {
    "file": "irish-water-spaniel.jpg",
+   "title": "Ierse Water Spaniel",
    "author": "Roete002",
    "license": "CC BY 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by/4.0",
@@ -2812,6 +2911,7 @@
   "groupKey": "Hound",
   "photo": {
    "file": "irish-wolfhound.jpg",
+   "title": "(2) Irish Wolfhound 4",
    "author": "Dux",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -2840,6 +2940,7 @@
   "groupKey": "Toy",
   "photo": {
    "file": "italian-greyhound.jpg",
+   "title": "Italian Greyhound standing gray (cropped)",
    "author": "christina",
    "license": "CC BY 2.0",
    "licenseURL": "https://creativecommons.org/licenses/by/2.0",
@@ -2868,6 +2969,7 @@
   "groupKey": "Terrier",
   "photo": {
    "file": "jack-russell-terrier.jpg",
+   "title": "Jack Russell Terrier 1",
    "author": "Plank",
    "license": "CC BY 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by/3.0",
@@ -2896,6 +2998,7 @@
   "groupKey": "Toy",
   "photo": {
    "file": "japanese-chin.jpg",
+   "title": "Chin posing",
    "author": "Joliot",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -2924,6 +3027,7 @@
   "groupKey": "Other",
   "photo": {
    "file": "japanese-spitz.jpg",
+   "title": "BIR Grupp 5- JAPANSK SPETS, Chezzay’s Nice N’Easy (23938629860)",
    "author": "Svenska Mässan from Sweden",
    "license": "CC BY 2.0",
    "licenseURL": "https://creativecommons.org/licenses/by/2.0",
@@ -2952,6 +3056,7 @@
   "groupKey": "Non-Sporting",
   "photo": {
    "file": "keeshond.jpg",
+   "title": "Keeshond Majic standing cropped",
    "author": "dancing with wolves",
    "license": "CC BY 2.0",
    "licenseURL": "https://creativecommons.org/licenses/by/2.0",
@@ -2980,6 +3085,7 @@
   "groupKey": "Terrier",
   "photo": {
    "file": "kerry-blue-terrier.jpg",
+   "title": "Kerry Blue Terrier",
    "author": "Peter Kumpert, Germany",
    "license": "CC BY-SA 3.0 de",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
@@ -3008,6 +3114,7 @@
   "groupKey": "Working",
   "photo": {
    "file": "komondor.jpg",
+   "title": "Komondor delvin",
    "author": "Nikki68 at Russian Wikipedia",
    "license": "CC BY 2.5",
    "licenseURL": "https://creativecommons.org/licenses/by/2.5",
@@ -3036,6 +3143,7 @@
   "groupKey": "Working",
   "photo": {
    "file": "kuvasz.jpg",
+   "title": "Kuvasz named Kan",
    "author": "Erdelyi kopo",
    "license": "Public domain",
    "licenseURL": null,
@@ -3064,6 +3172,7 @@
   "groupKey": "Designer crossbreed",
   "photo": {
    "file": "labradoodle.jpg",
+   "title": "Labradoodle-Brown-Male-SideFace",
    "author": "Anton Porsche",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -3092,6 +3201,7 @@
   "groupKey": "Sporting",
   "photo": {
    "file": "labrador-retriever.jpg",
+   "title": "Labrador on Quantock (2175262184)",
    "author": "IDS.photos from Tiverton, UK",
    "license": "CC BY-SA 2.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -3120,9 +3230,10 @@
   "groupKey": "Terrier",
   "photo": {
    "file": "lakeland-terrier.jpg",
+   "title": "Lakeland Terrier",
    "author": "sannse",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Lakeland_Terrier.jpg"
   }
  },
@@ -3148,6 +3259,7 @@
   "groupKey": "Working",
   "photo": {
    "file": "leonberger.jpg",
+   "title": "Leonberger male",
    "author": "Kurre92",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -3176,9 +3288,10 @@
   "groupKey": "Non-Sporting",
   "photo": {
    "file": "lhasa-apso.jpg",
+   "title": "Aishia",
    "author": "Elminjas at Dutch Wikipedia",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Aishia.jpg"
   }
  },
@@ -3205,6 +3318,7 @@
   "groupKey": "Non-Sporting",
   "photo": {
    "file": "lowchen.jpg",
+   "title": "Adult Lowchen Gaiting",
    "author": "Jk9dat",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -3233,9 +3347,10 @@
   "groupKey": "Toy",
   "photo": {
    "file": "maltese.jpg",
+   "title": "Maltese 600",
    "author": "Sannse",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Maltese_600.jpg"
   }
  },
@@ -3261,6 +3376,7 @@
   "groupKey": "Designer crossbreed",
   "photo": {
    "file": "maltipoo.jpg",
+   "title": "Maltipoo dog running to return a tennis ball (12012)",
    "author": "Rhododendrites",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -3289,6 +3405,7 @@
   "groupKey": "Terrier",
   "photo": {
    "file": "manchester-terrier.jpg",
+   "title": "Anchor, the Manchester Terrier3",
    "author": "Roger Ahlbrand",
    "license": "CC BY 2.0",
    "licenseURL": "https://creativecommons.org/licenses/by/2.0",
@@ -3317,6 +3434,7 @@
   "groupKey": "Working",
   "photo": {
    "file": "mastiff.jpg",
+   "title": "Westgort Anticipation 17 months",
    "author": "Radovan Rohovsky",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -3345,6 +3463,7 @@
   "groupKey": "Toy",
   "photo": {
    "file": "miniature-pinscher.jpg",
+   "title": "Miniature pinscher",
    "author": "Sebastian Wallin. Sebastian Wallin. Sebwal",
    "license": "CC BY 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by/3.0",
@@ -3373,6 +3492,7 @@
   "groupKey": "Terrier",
   "photo": {
    "file": "miniature-schnauzer.jpg",
+   "title": "Miniature Schnauzer salt & pepper (cropped)",
    "author": "Canarian",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -3401,6 +3521,7 @@
   "groupKey": "Working",
   "photo": {
    "file": "neapolitan-mastiff.jpg",
+   "title": "5 Year old male in Napoli Stance (2)",
    "author": "Philip Thompson",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -3430,6 +3551,7 @@
   "groupKey": "Working",
   "photo": {
    "file": "newfoundland.jpg",
+   "title": "Newfoundland dog Smoky",
    "author": "Flickr user DanDee Shots",
    "license": "CC BY 2.0",
    "licenseURL": "https://creativecommons.org/licenses/by/2.0",
@@ -3458,9 +3580,10 @@
   "groupKey": "Terrier",
   "photo": {
    "file": "norfolk-terrier.jpg",
+   "title": "Norfolk terrier CAC",
    "author": "Nutak at Dutch Wikipedia (Original text: NTCN, mw.G. Hajnova)",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Norfolk_terrier_CAC.jpg"
   }
  },
@@ -3486,10 +3609,11 @@
   "groupKey": "Herding",
   "photo": {
    "file": "norwegian-buhund.jpg",
-   "author": "Unknown",
-   "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
-   "sourceURL": "https://commons.wikimedia.org/wiki/File:Norwegian_Buhund_600.jpg"
+   "title": "Buhunden",
+   "author": "Canossa",
+   "license": "CC BY-SA 4.0",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:Buhunden.jpg"
   }
  },
  "Norwegian Elkhound": {
@@ -3514,6 +3638,7 @@
   "groupKey": "Hound",
   "photo": {
    "file": "norwegian-elkhound.jpg",
+   "title": "Elkhound2020 (cropped)",
    "author": "HawkNightingale175",
    "license": "CC BY 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by/4.0",
@@ -3542,9 +3667,10 @@
   "groupKey": "Non-Sporting",
   "photo": {
    "file": "norwegian-lundehund.jpg",
+   "title": "Lundehund-2003",
    "author": "Karen Elise Dahlmo",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Lundehund-2003.jpg"
   }
  },
@@ -3570,9 +3696,10 @@
   "groupKey": "Terrier",
   "photo": {
    "file": "norwich-terrier.jpg",
+   "title": "Norwichterrier",
    "author": "H. Gisin",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Norwichterrier.jpg"
   }
  },
@@ -3598,6 +3725,7 @@
   "groupKey": "Sporting",
   "photo": {
    "file": "nova-scotia-duck-tolling-retriever.jpg",
+   "title": "Duck Toller",
    "author": "Cal119 at English Wikipedia",
    "license": "Public domain",
    "licenseURL": null,
@@ -3626,6 +3754,7 @@
   "groupKey": "Herding",
   "photo": {
    "file": "old-english-sheepdog.jpg",
+   "title": "Old English Sheepdog (side)",
    "author": "AKS.9955",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -3654,7 +3783,8 @@
   "groupKey": "Hound",
   "photo": {
    "file": "otterhound.jpg",
-   "author": "No machine-readable author provided. Machinecha~commonswiki assumed (based on copyright claims).",
+   "title": "Two otterhounds",
+   "author": "Machinecha~commonswiki (assumed)",
    "license": "Public domain",
    "licenseURL": null,
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Two_otterhounds.jpg"
@@ -3683,6 +3813,7 @@
   "groupKey": "Toy",
   "photo": {
    "file": "papillon.jpg",
+   "title": "Outdoor Continental Toy Spaniel Papillon",
    "author": "Gvdmoort",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -3711,6 +3842,7 @@
   "groupKey": "Toy",
   "photo": {
    "file": "pekingese.jpg",
+   "title": "1AKC Pekingese Dog Show 2011",
    "author": "SheltieBoy",
    "license": "CC BY 2.0",
    "licenseURL": "https://creativecommons.org/licenses/by/2.0",
@@ -3739,6 +3871,7 @@
   "groupKey": "Herding",
   "photo": {
    "file": "pembroke-welsh-corgi.jpg",
+   "title": "Welsh Pembroke Corgi",
    "author": "Dog breed facts",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -3767,9 +3900,10 @@
   "groupKey": "Hound",
   "photo": {
    "file": "petit-basset-griffon-vendeen.jpg",
+   "title": "P Basset Griffon Vendeen 600",
    "author": "Sannse",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:P_Basset_Griffon_Vendeen_600.jpg"
   }
  },
@@ -3795,9 +3929,10 @@
   "groupKey": "Hound",
   "photo": {
    "file": "pharaoh-hound.jpg",
+   "title": "Pies faraona e34",
    "author": "Pleple2000",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Pies_faraona_e34.jpg"
   }
  },
@@ -3823,6 +3958,7 @@
   "groupKey": "Hound",
   "photo": {
    "file": "plott-hound.jpg",
+   "title": "Plotthund Kynnagardens Ziggy Lundamo",
    "author": "Plotthund",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -3851,6 +3987,7 @@
   "groupKey": "Sporting",
   "photo": {
    "file": "pointer.jpg",
+   "title": "English Pointer orange-white",
    "author": "Canarian",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -3880,6 +4017,7 @@
   "groupKey": "Toy",
   "photo": {
    "file": "pomeranian.jpg",
+   "title": "Pomeranian",
    "author": "Blackoranges",
    "license": "Public domain",
    "licenseURL": null,
@@ -3908,6 +4046,7 @@
   "groupKey": "Designer crossbreed",
   "photo": {
    "file": "pomsky.jpg",
+   "title": "Pomsky - Gentbrugge 17-12-2019 13-50-41",
    "author": "Paul Hermans",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -3938,6 +4077,7 @@
   "groupKey": "Non-Sporting",
   "photo": {
    "file": "poodle.jpg",
+   "title": "Full attention (8067543690)",
    "author": "Tim Wilson from Blaine, MN, USA",
    "license": "CC BY 2.0",
    "licenseURL": "https://creativecommons.org/licenses/by/2.0",
@@ -3966,9 +4106,10 @@
   "groupKey": "Working",
   "photo": {
    "file": "portuguese-water-dog.jpg",
+   "title": "Cão de agua Português 2",
    "author": "Silke Hollje-Schumacher",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:C%C3%A3o_de_agua_Portugu%C3%AAs_2.jpg"
   }
  },
@@ -3994,7 +4135,8 @@
   "groupKey": "Toy",
   "photo": {
    "file": "pug.jpg",
-   "author": "Mops_oct09.jpg: Dagur Brynjólfsson from Hafnarfjordur, Iceland; derivative work: Anka Friedrich",
+   "title": "Mops oct09 cropped2",
+   "author": "Dagur Brynjólfsson from Hafnarfjordur, Iceland; derivative work: Anka Friedrich",
    "license": "CC BY-SA 2.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/2.0",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Mops_oct09_cropped2.jpg"
@@ -4022,6 +4164,7 @@
   "groupKey": "Hound",
   "photo": {
    "file": "redbone-coonhound.jpg",
+   "title": "Redbone-coonhound-detail",
    "author": "127177p",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -4050,9 +4193,10 @@
   "groupKey": "Hound",
   "photo": {
    "file": "rhodesian-ridgeback.jpg",
+   "title": "Rhodesian ridgeback",
    "author": "Bonnie van den Born, http://www.bonfoto.nl",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Rhodesian_ridgeback.jpg"
   }
  },
@@ -4078,9 +4222,10 @@
   "groupKey": "Working",
   "photo": {
    "file": "rottweiler.jpg",
+   "title": "Rottweiler standing facing left",
    "author": "Dr. Manfred Herrmann Allgemeiner Deutscher Rottweiler-Klub (ADRK) e.V. http://www.ADRK.de",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Rottweiler_standing_facing_left.jpg"
   }
  },
@@ -4108,6 +4253,7 @@
   "groupKey": "Working",
   "photo": {
    "file": "saint-bernard.jpg",
+   "title": "Hummel Vedor vd Robandahoeve",
    "author": "Blanky",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -4136,6 +4282,7 @@
   "groupKey": "Hound",
   "photo": {
    "file": "saluki.jpg",
+   "title": "Red Smooth Saluki",
    "author": "r.",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -4164,9 +4311,10 @@
   "groupKey": "Working",
   "photo": {
    "file": "samoyed.jpg",
-   "author": "No machine-readable author provided. Pleple2000 assumed (based on copyright claims).",
+   "title": "Samojed00",
+   "author": "Pleple2000 (assumed)",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Samojed00.jpg"
   }
  },
@@ -4192,7 +4340,8 @@
   "groupKey": "Non-Sporting",
   "photo": {
    "file": "schipperke.jpg",
-   "author": "No machine-readable author provided. 鏑木對馬守 assumed (based on copyright claims).",
+   "title": "Schipperke0001",
+   "author": "鏑木對馬守 (assumed)",
    "license": "Public domain",
    "licenseURL": null,
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Schipperke0001.jpg"
@@ -4220,6 +4369,7 @@
   "groupKey": "Hound",
   "photo": {
    "file": "scottish-deerhound.jpg",
+   "title": "Karrie",
    "author": "Sisteskrik",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -4248,6 +4398,7 @@
   "groupKey": "Terrier",
   "photo": {
    "file": "scottish-terrier.jpg",
+   "title": "Scottish Terrier Photo of Face",
    "author": "Elise Carroll",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -4276,6 +4427,7 @@
   "groupKey": "Terrier",
   "photo": {
    "file": "sealyham-terrier.jpg",
+   "title": "SealyhamTerrier01",
    "author": "Dr. Sabine Schumann",
    "license": "Public domain",
    "licenseURL": null,
@@ -4304,6 +4456,7 @@
   "groupKey": "Non-Sporting",
   "photo": {
    "file": "shar-pei.jpg",
+   "title": "Adult sharpei",
    "author": "Yan Mis/&Den Rakov",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -4332,6 +4485,7 @@
   "groupKey": "Herding",
   "photo": {
    "file": "shetland-sheepdog.jpg",
+   "title": "Shetland Sheepdog sable",
    "author": "Flickr user nickobec (Nick Cowie)",
    "license": "CC BY-SA 2.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -4360,6 +4514,7 @@
   "groupKey": "Non-Sporting",
   "photo": {
    "file": "shiba-inu.jpg",
+   "title": "Taka Shiba",
    "author": "Takashiba at English Wikipedia",
    "license": "Public domain",
    "licenseURL": null,
@@ -4388,6 +4543,7 @@
   "groupKey": "Toy",
   "photo": {
    "file": "shih-tzu.jpg",
+   "title": "Shihtzu (cropped)",
    "author": "Canino21",
    "license": "Public domain",
    "licenseURL": null,
@@ -4416,9 +4572,10 @@
   "groupKey": "Working",
   "photo": {
    "file": "siberian-husky.jpg",
+   "title": "Husky L",
    "author": "xJaM (talk · contribs)",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Husky_L.jpg"
   }
  },
@@ -4444,6 +4601,7 @@
   "groupKey": "Toy",
   "photo": {
    "file": "silky-terrier.jpg",
+   "title": "Australian Silky Terrier Alana Of Silky's Dream",
    "author": "Ofsilkysdream",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -4472,9 +4630,10 @@
   "groupKey": "Terrier",
   "photo": {
    "file": "smooth-fox-terrier.jpg",
+   "title": "Patrick the Smooth Fox Terrier",
    "author": "Tialin at English Wikipedia",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Patrick_the_Smooth_Fox_Terrier.jpg"
   }
  },
@@ -4500,6 +4659,7 @@
   "groupKey": "Terrier",
   "photo": {
    "file": "soft-coated-wheaten-terrier.jpg",
+   "title": "Soft-Coated Wheaten Terrier",
    "author": "Terrierkännaren",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -4528,6 +4688,7 @@
   "groupKey": "Terrier",
   "photo": {
    "file": "staffordshire-bull-terrier.jpg",
+   "title": "סאטף אנגלי",
    "author": "Or Logassi",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -4556,6 +4717,7 @@
   "groupKey": "Working",
   "photo": {
    "file": "standard-schnauzer.jpg",
+   "title": "Standard Grey Schnauzer (cropped)",
    "author": "Tamorlan",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -4584,9 +4746,10 @@
   "groupKey": "Sporting",
   "photo": {
    "file": "sussex-spaniel.jpg",
+   "title": "Sussex spaniel t43",
    "author": "Pleple2000",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Sussex_spaniel_t43.jpg"
   }
  },
@@ -4612,6 +4775,7 @@
   "groupKey": "Working",
   "photo": {
    "file": "tibetan-mastiff.jpg",
+   "title": "BIR Grupp 2- TIBETANSK MASTIFF, Legenda Tibeta Temudzhin (23938629470)",
    "author": "Svenska Mässan from Sweden",
    "license": "CC BY 2.0",
    "licenseURL": "https://creativecommons.org/licenses/by/2.0",
@@ -4640,6 +4804,7 @@
   "groupKey": "Non-Sporting",
   "photo": {
    "file": "tibetan-terrier.jpg",
+   "title": "Tibet Terrier Bennie (cropped)",
    "author": "Mr407SW",
    "license": "Public domain",
    "licenseURL": null,
@@ -4668,6 +4833,7 @@
   "groupKey": "Toy",
   "photo": {
    "file": "toy-terrier.jpg",
+   "title": "ENGLISH TOY TERRIER, NO JV-14 NO UCH X-Pected Dine Mites X-Factor (23995274170)",
    "author": "Svenska Mässan from Sweden",
    "license": "CC BY 2.0",
    "licenseURL": "https://creativecommons.org/licenses/by/2.0",
@@ -4696,6 +4862,7 @@
   "groupKey": "Hound",
   "photo": {
    "file": "treeing-walker-coonhound.jpg",
+   "title": "Treeing-walker-coonhound-standing",
    "author": "Kingkong954",
    "license": "Public domain",
    "licenseURL": null,
@@ -4724,9 +4891,10 @@
   "groupKey": "Sporting",
   "photo": {
    "file": "vizsla.jpg",
+   "title": "Wyżeł węgierski gładkowłosy 500",
    "author": "Pleple2000",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Wy%C5%BCe%C5%82_w%C4%99gierski_g%C5%82adkow%C5%82osy_500.jpg"
   }
  },
@@ -4752,6 +4920,7 @@
   "groupKey": "Sporting",
   "photo": {
    "file": "weimaraner.jpg",
+   "title": "Weimaraner Freika-2",
    "author": "Rufus46",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -4780,9 +4949,10 @@
   "groupKey": "Sporting",
   "photo": {
    "file": "welsh-springer-spaniel.jpg",
+   "title": "Welsh Springer Spaniel 1",
    "author": "Udo Tjalsma",
    "license": "CC0",
-   "licenseURL": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Welsh_Springer_Spaniel_1.jpg"
   }
  },
@@ -4808,6 +4978,7 @@
   "groupKey": "Terrier",
   "photo": {
    "file": "west-highland-white-terrier.jpg",
+   "title": "West Highland White Terrier Krakow",
    "author": "Christopher Walker from Krakow, Poland",
    "license": "CC BY 2.0",
    "licenseURL": "https://creativecommons.org/licenses/by/2.0",
@@ -4836,6 +5007,7 @@
   "groupKey": "Hound",
   "photo": {
    "file": "whippet.jpg",
+   "title": "Whippet 2018 6",
    "author": "Canarian",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -4865,6 +5037,7 @@
   "groupKey": "Terrier",
   "photo": {
    "file": "wire-fox-terrier.jpg",
+   "title": "Elias1červen2006",
    "author": "Simona Nováková, owner",
    "license": "Public domain",
    "licenseURL": null,
@@ -4894,6 +5067,7 @@
   "groupKey": "Sporting",
   "photo": {
    "file": "wirehaired-pointing-griffon.jpg",
+   "title": "GCH Int Ch UCH Zerubbabel von Herrenhausen CGC MHA",
    "author": "CarolPtak",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -4923,6 +5097,7 @@
   "groupKey": "Non-Sporting",
   "photo": {
    "file": "xoloitzcuintli.jpg",
+   "title": "BIR Grupp 5- MEXIKANSK NAKENHUND, Lokal Hero’s King Og Hart’s Istas (23607403303)",
    "author": "Svenska Mässan from Sweden",
    "license": "CC BY 2.0",
    "licenseURL": "https://creativecommons.org/licenses/by/2.0",
@@ -4951,6 +5126,7 @@
   "groupKey": "Toy",
   "photo": {
    "file": "yorkshire-terrier.jpg",
+   "title": "(2 version) Grupp 3, YORKSHIRETERRIER, NO UCH SE UCH Oxzar Amazing Bel’s Toffy (24310212305)",
    "author": "Svenska Mässan from Sweden",
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",

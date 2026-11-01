@@ -30,6 +30,19 @@ COMMONS_API = "https://commons.wikimedia.org/w/api.php"
 OUT_DIR = Path(__file__).resolve().parent.parent / "Resources" / "BreedPhotos"
 MAX_SIDE = 800
 FREE_LICENSE = re.compile(r"^(public domain|pd\b|cc0|cc[ -]by(-sa)?[ -]\d|copyrighted free use|attribution$)", re.I)
+# Licenses that don't require crediting an author.
+NO_ATTRIBUTION = re.compile(r"^(public domain|pd\b|cc0|copyrighted free use)", re.I)
+
+
+def artist(info: dict) -> str:
+    raw = info.get("extmetadata", {}).get("Artist", {}).get("value", "")
+    return " ".join(html.unescape(re.sub(r"<[^>]+>", "", raw)).split())
+
+
+def usable(info: dict) -> bool:
+    """Freely licensed, and if the license requires credit, the author is known."""
+    license_name = info.get("extmetadata", {}).get("LicenseShortName", {}).get("value", "")
+    return bool(FREE_LICENSE.search(license_name)) and (bool(NO_ATTRIBUTION.search(license_name)) or bool(artist(info)))
 
 # Breeds with no Wikipedia article of their own (or whose lead image isn't usable):
 # pick a photo from this Commons category instead.
@@ -43,13 +56,20 @@ CATEGORIES = {
     "Belgian Sheepdog": "Belgian Shepherd Groenendael",
 }
 
-# Hand-picked Commons files, where the automatic choice was wrong for a card
-# (a collage, a drawing, a skull).
+# Hand-picked Commons files, checked by eye, where the automatic choice was wrong for a
+# card (a collage, a drawing, a skull, a plaque) or its author wasn't recorded.
 FILES = {
     "Affenpinscher": "Pinczer małpi 756.jpg",
     "Akita": "Akita Inu (male).jpg",
+    "American Foxhound": "American Foxhound.jpg",
+    "Beagle": "A Beagle standing on the beach.jpg",
+    "Bearded Collie": "Bearded Collie.jpg",
     "Belgian Tervuren": "Belgian Tervuren-7-Ch-Sidekicks Masters Di Villa Roma CB RN BN 02 (16397932470).jpg",
+    "Border Collie": "Black and white Border Collies.jpg",
+    "Curly-Coated Retriever": "Curly coated retriever.JPG",
     "English Bulldog": "AKC English Bulldog Great Falls June 2011.jpg",
+    "Gordon Setter": "Nike the Gordon Setter (18 June 2005).jpg",
+    "Norwegian Buhund": "Buhunden.jpg",
 }
 
 # Breed name -> Wikipedia article, where the plain name is ambiguous or titled differently.
@@ -163,8 +183,7 @@ def category_photo(category: str) -> tuple[str, dict] | None:
         info = (page.get("imageinfo") or [None])[0]
         if not info or info.get("mime") != "image/jpeg" or info.get("width", 0) < 800:
             continue
-        license_name = info.get("extmetadata", {}).get("LicenseShortName", {}).get("value", "")
-        if not FREE_LICENSE.search(license_name) or re.search(r"puppy|puppies|logo|drawing", page["title"], re.I):
+        if not usable(info) or re.search(r"puppy|puppies|logo|drawing|skull|illustr", page["title"], re.I):
             continue
         aspect = info["width"] / max(info["height"], 1)
         candidates.append((abs(aspect - 1.33), page["title"].removeprefix("File:"), info))
@@ -219,8 +238,8 @@ def main() -> None:
             info = infos.get(file_name.replace(" ", "_"))
             if info is None:
                 print(f"  {breed}: lead image {file_name} isn't on Commons (likely non-free)")
-            elif not FREE_LICENSE.search(info.get("extmetadata", {}).get("LicenseShortName", {}).get("value", "")):
-                print(f"  {breed}: lead image {file_name} isn't freely licensed")
+            elif not usable(info):
+                print(f"  {breed}: lead image {file_name} isn't freely licensed or has no author to credit")
                 info = None
         if info is None:
             # Fall back to a photo from the breed's Commons category.
@@ -240,10 +259,10 @@ def main() -> None:
         image.thumbnail((MAX_SIDE, MAX_SIDE), Image.LANCZOS)
         file = f"{slug(breed)}.jpg"
         image.save(OUT_DIR / file, "JPEG", quality=82, optimize=True)
-        artist = html.unescape(re.sub(r"<[^>]+>", "", meta.get("Artist", {}).get("value", ""))).strip()
         credits[breed] = {
             "file": file,
-            "author": " ".join(artist.split()) or "Unknown",
+            "title": re.sub(r"\.(jpe?g|png)$", "", file_name.replace("_", " "), flags=re.I),
+            "author": artist(info) or "Unknown",
             "license": license_name,
             "licenseURL": meta.get("LicenseUrl", {}).get("value"),
             "sourceURL": info.get("descriptionurl"),

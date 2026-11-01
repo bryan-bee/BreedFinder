@@ -93,20 +93,24 @@ private struct InfoRow: View {
     }
 }
 
-/// Every breed photo's author and license, as their Creative Commons licenses require.
+/// Every breed photo's title, author, source and license, as their licenses require.
 private struct PhotoCreditsView: View {
     var body: some View {
-        List(BreedLibrary.shared.allProfiles) { profile in
-            if let credit = profile.photo {
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(profile.name)
-                        .font(.headline)
-                    Text("\(credit.author) · \(credit.license)")
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
-                    if let source = credit.sourceURL.flatMap(URL.init(string:)) {
-                        Link("View on Wikimedia Commons", destination: source)
-                            .font(.caption)
+        List {
+            Section {
+                Text("Every breed photo comes from Wikimedia Commons. Tap a photo's title to see it there, or its license to read the license. In the app, photos are resized, and may be shown cropped or on a blurred copy of themselves.")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+            }
+            ForEach(BreedLibrary.shared.allProfiles) { profile in
+                if let credit = profile.photo {
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(profile.name)
+                            .font(.headline)
+                        Text(credit.attribution)
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                            .tint(Color.accentColor)
                     }
                 }
             }

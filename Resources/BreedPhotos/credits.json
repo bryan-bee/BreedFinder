@@ -56,12 +56,13 @@
   "sourceURL": "https://commons.wikimedia.org/wiki/File:American_Eskimo_Dog_1.jpg"
  },
  "American Foxhound": {
-  "article": "American Foxhound",
-  "author": "Unknown",
+  "article": null,
+  "author": "Canarian",
   "file": "american-foxhound.jpg",
-  "license": "CC BY-SA 3.0",
-  "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
-  "sourceURL": "https://commons.wikimedia.org/wiki/File:AmericanFoxhound2.jpg"
+  "license": "CC BY-SA 4.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceURL": "https://commons.wikimedia.org/wiki/File:American_Foxhound.jpg",
+  "title": "American Foxhound"
  },
  "American Hairless Terrier": {
   "article": "American Hairless Terrier",
@@ -160,20 +161,22 @@
   "sourceURL": "https://commons.wikimedia.org/wiki/File:BassetHound_profil.jpg"
  },
  "Beagle": {
-  "article": "Beagle",
-  "author": "Unknown",
+  "article": null,
+  "author": "Slyronit",
   "file": "beagle.jpg",
-  "license": "CC BY-SA 3.0",
-  "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
-  "sourceURL": "https://commons.wikimedia.org/wiki/File:Beagle_600.jpg"
+  "license": "CC BY-SA 4.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceURL": "https://commons.wikimedia.org/wiki/File:A_Beagle_standing_on_the_beach.jpg",
+  "title": "A Beagle standing on the beach"
  },
  "Bearded Collie": {
-  "article": "Bearded Collie",
-  "author": "Unknown",
+  "article": null,
+  "author": "marbla123",
   "file": "bearded-collie.jpg",
-  "license": "CC BY-SA 3.0",
-  "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
-  "sourceURL": "https://commons.wikimedia.org/wiki/File:Bearded_Collie_600.jpg"
+  "license": "CC BY 2.0",
+  "licenseURL": "https://creativecommons.org/licenses/by/2.0",
+  "sourceURL": "https://commons.wikimedia.org/wiki/File:Bearded_Collie.jpg",
+  "title": "Bearded Collie"
  },
  "Beauceron": {
   "article": "Beauceron",
@@ -272,12 +275,13 @@
   "sourceURL": "https://commons.wikimedia.org/wiki/File:BluetickCoonhound.jpg"
  },
  "Border Collie": {
-  "article": "Border Collie",
-  "author": "Unknown",
+  "article": null,
+  "author": "nomorepal",
   "file": "border-collie.jpg",
-  "license": "CC BY-SA 3.0",
-  "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
-  "sourceURL": "https://commons.wikimedia.org/wiki/File:Border_Collie_600.jpg"
+  "license": "CC BY 2.0",
+  "licenseURL": "https://creativecommons.org/licenses/by/2.0",
+  "sourceURL": "https://commons.wikimedia.org/wiki/File:Black_and_white_Border_Collies.jpg",
+  "title": "Black and white Border Collies"
  },
  "Border Terrier": {
   "article": "Border Terrier",
@@ -480,12 +484,13 @@
   "sourceURL": "https://commons.wikimedia.org/wiki/File:Rough-Collie-japan08_(cropped).jpg"
  },
  "Curly-Coated Retriever": {
-  "article": "Curly-coated Retriever",
-  "author": "Unknown",
+  "article": null,
+  "author": "Naturialae",
   "file": "curly-coated-retriever.jpg",
-  "license": "CC BY-SA 3.0",
-  "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
-  "sourceURL": "https://commons.wikimedia.org/wiki/File:Curly_Coated_Retriever.jpg"
+  "license": "CC BY-SA 4.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceURL": "https://commons.wikimedia.org/wiki/File:Curly_coated_retriever.JPG",
+  "title": "Curly coated retriever"
  },
  "Dachshund": {
   "article": "Dachshund",
@@ -609,11 +614,12 @@
  },
  "Finnish Spitz": {
   "article": "Finnish Spitz",
-  "author": "Unknown",
+  "author": "No machine-readable author provided. PrzemekL assumed (based on copyright claims).",
   "file": "finnish-spitz.jpg",
-  "license": "CC BY-SA 3.0",
-  "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
-  "sourceURL": "https://commons.wikimedia.org/wiki/File:Finnish_Spitz_600.jpg"
+  "license": "Public domain",
+  "licenseURL": null,
+  "sourceURL": "https://commons.wikimedia.org/wiki/File:Finnish_Spitz.jpg",
+  "title": "Finnish Spitz"
  },
  "Flat-Coated Retriever": {
   "article": "Flat-coated Retriever",
@@ -696,12 +702,13 @@
   "sourceURL": "https://commons.wikimedia.org/wiki/File:Golden_Doodle_Standing_(HD).jpg"
  },
  "Gordon Setter": {
-  "article": "Gordon Setter",
-  "author": "Unknown",
+  "article": null,
+  "author": "Markgrogers",
   "file": "gordon-setter.jpg",
-  "license": "CC BY-SA 3.0",
-  "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
-  "sourceURL": "https://commons.wikimedia.org/wiki/File:Orrvilas_enska_w800px.jpg"
+  "license": "Public domain",
+  "licenseURL": null,
+  "sourceURL": "https://commons.wikimedia.org/wiki/File:Nike_the_Gordon_Setter_(18_June_2005).jpg",
+  "title": "Nike the Gordon Setter (18 June 2005)"
  },
  "Great Dane": {
   "article": "Great Dane",
@@ -984,12 +991,13 @@
   "sourceURL": "https://commons.wikimedia.org/wiki/File:Norfolk_terrier_CAC.jpg"
  },
  "Norwegian Buhund": {
-  "article": "Norwegian Buhund",
-  "author": "Unknown",
+  "article": null,
+  "author": "Canossa",
   "file": "norwegian-buhund.jpg",
-  "license": "CC BY-SA 3.0",
-  "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
-  "sourceURL": "https://commons.wikimedia.org/wiki/File:Norwegian_Buhund_600.jpg"
+  "license": "CC BY-SA 4.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceURL": "https://commons.wikimedia.org/wiki/File:Buhunden.jpg",
+  "title": "Buhunden"
  },
  "Norwegian Elkhound": {
   "article": "Norwegian Elkhound",

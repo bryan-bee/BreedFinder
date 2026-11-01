@@ -40,6 +40,27 @@ def origin_countries(origin: str) -> list[str]:
     return [part.strip().removeprefix("the ") for part in re.split(r",| and ", base) if part.strip()]
 
 
+def clean_author(author: str) -> str:
+    """Commons author fields can contain wiki markup and boilerplate; keep the readable part."""
+    author = re.sub(r"\(\s*\[\[[^\]]*\|\s*talk\s*\]\]\s*\)", "", author)          # "([[User talk:X|talk]])"
+    author = re.sub(r"\[\[(?:[^\]|]*\|)?([^\]]*)\]\]", r"\1", author)              # [[target|label]] -> label
+    assumed = re.match(r"No machine-readable author provided\.\s*(.+?) assumed", author)
+    if assumed:
+        return f"{assumed.group(1)} (assumed)"
+    # Derivative works name their source file first: 'Original.jpg: "Jane Doe" derivative work: X'.
+    author = re.sub(r"^[^:]+\.(jpe?g|png):\s*", "", author, flags=re.I).replace('"', "")
+    author = re.sub(r"\s*;?\s*derivative work:", "; derivative work:", author)
+    return " ".join(author.split()).strip(" ;,") or "Unknown"
+
+
+def photo_title(credit: dict) -> str:
+    """The Commons file name without "File:" or the extension, e.g. "Akita Inu (male)"."""
+    if credit.get("title"):
+        return credit["title"]
+    name = urllib.parse.unquote((credit.get("sourceURL") or "").rsplit("/", 1)[-1]).removeprefix("File:")
+    return re.sub(r"\.(jpe?g|png)$", "", name.replace("_", " "), flags=re.I) or "Photo"
+
+
 def group_key(group: str) -> str:
     """Normalize the display group to an AKC group, 'Designer crossbreed' or 'Other'."""
     for akc in sorted(AKC_GROUPS, key=len, reverse=True):  # "Non-Sporting" before "Sporting"
@@ -119,8 +140,22 @@ def main() -> None:
                  "groupKey": group_key(profiles[name]["group"])}
         if name in credits:
             c = credits[name]
-            entry["photo"] = {k: c.get(k) for k in ("file", "author", "license", "licenseURL", "sourceURL")}
+            license_url = c.get("licenseURL")
+            entry["photo"] = {
+                "file": c["file"],
+                "title": photo_title(c),
+                "author": clean_author(c.get("author") or ""),
+                "license": c["license"],
+                "licenseURL": license_url.replace("http://", "https://") if license_url else None,
+                "sourceURL": c.get("sourceURL"),
+            }
+            # CC BY and CC BY-SA require crediting the author and linking the license.
+            if c["license"].upper().startswith("CC BY"):
+                if entry["photo"]["author"] == "Unknown" or not entry["photo"]["licenseURL"]:
+                    problems.append(f"{name}: {c['license']} photo needs an author and a license link")
         out[name] = entry
+    if problems:
+        sys.exit("\n".join(problems))
     (ROOT / "Resources" / "breeds.json").write_text(json.dumps(out, indent=1, ensure_ascii=False), encoding="utf-8")
     unused = sorted(set(profiles) - set(breeds))
     print(f"Wrote Resources/breeds.json: {len(out)} breeds, {sum('photo' in e for e in out.values())} with photos")

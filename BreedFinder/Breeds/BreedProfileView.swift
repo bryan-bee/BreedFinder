@@ -77,19 +77,16 @@ struct FactTile: View {
     }
 }
 
-/// Attribution required by the photo's Creative Commons license.
+/// Attribution required by the photo's Creative Commons license. The title and license
+/// are links (to the photo's Commons page and the license text).
 struct PhotoCreditView: View {
     let credit: BreedPhotoCredit
 
     var body: some View {
-        let text = Text("Breed photo: \(credit.author) · \(credit.license) · Wikimedia Commons")
+        (Text("Breed photo: ") + Text(credit.attribution))
             .font(.caption2)
             .foregroundStyle(.secondary)
-        if let source = credit.sourceURL.flatMap(URL.init(string:)) {
-            Link(destination: source) { text }
-        } else {
-            text
-        }
+            .tint(Color.accentColor)
     }
 }
 

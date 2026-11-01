@@ -387,6 +387,18 @@ final class BreedContentTests: XCTestCase {
         }
     }
 
+    /// CC BY and CC BY-SA photos must credit their author and link their license, and every
+    /// credit shown in the app must name the license.
+    func testPhotoCreditsMeetTheirLicenses() {
+        for profile in BreedLibrary.shared.allProfiles {
+            guard let credit = profile.photo else { continue }
+            XCTAssertTrue(String(credit.attribution.characters).contains(credit.license), profile.name)
+            guard credit.license.uppercased().hasPrefix("CC BY") else { continue }
+            XCTAssertNotEqual(credit.author, "Unknown", "\(profile.name)'s photo needs an author")
+            XCTAssertNotNil(credit.licenseURL.flatMap(URL.init(string:)), "\(profile.name)'s photo needs a license link")
+        }
+    }
+
     func testProfilesWithPhotoCreditsHaveTheirPhotoBundled() throws {
         let model = try DogBreedClassifier(configuration: MLModelConfiguration()).model
         let labels = model.modelDescription.classLabels as? [String] ?? []

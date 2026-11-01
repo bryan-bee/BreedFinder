@@ -2,10 +2,32 @@ import UIKit
 
 struct BreedPhotoCredit: Decodable {
     let file: String
+    /// The Commons file name, e.g. "Akita Inu (male)".
+    let title: String?
     let author: String
     let license: String
     let licenseURL: String?
     let sourceURL: String?
+
+    /// The credit the photo's license asks for: its title (linked to its Commons page),
+    /// author, license (linked to the license text) and source, and a note that the app
+    /// changed it, since CC licenses ask you to say so.
+    var attribution: AttributedString {
+        var text = AttributedString("“")
+        var title = AttributedString(self.title ?? "Photo")
+        title.link = sourceURL.flatMap(URL.init(string:))
+        text += title
+        text += AttributedString("”")
+        if !author.isEmpty, author != "Unknown" {
+            text += AttributedString(" by \(author)")
+        }
+        text += AttributedString(", ")
+        var license = AttributedString(self.license)
+        license.link = licenseURL.flatMap(URL.init(string:))
+        text += license
+        text += AttributedString(", via Wikimedia Commons. Resized and cropped for display.")
+        return text
+    }
 }
 
 /// Everything the app shows about a breed. Loaded from breeds.json, which
