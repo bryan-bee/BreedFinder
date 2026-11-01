@@ -53,6 +53,13 @@ struct BreedProfile: Decodable, Identifiable, Hashable {
     func hash(into hasher: inout Hasher) { hasher.combine(name) }
 }
 
+/// "a Beagle", "an Akita". Every breed name that starts with a vowel letter also starts
+/// with a vowel sound (no "Eurasier"-style exceptions in the list), so the letter decides.
+func withArticle(_ breed: String) -> String {
+    let startsWithVowel = breed.first.map { "AEIOU".contains($0) } ?? false
+    return (startsWithVowel ? "an " : "a ") + breed
+}
+
 final class BreedLibrary {
     static let shared = BreedLibrary()
 

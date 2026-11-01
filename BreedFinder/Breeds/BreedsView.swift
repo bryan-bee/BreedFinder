@@ -81,6 +81,8 @@ private struct CollectionProgress: View {
                 .tint(Color.accentColor)
         }
         .padding(.vertical, 4)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("\(collected) of \(total) breeds collected")
     }
 }
 
@@ -126,8 +128,10 @@ private struct BreedRow: View {
                     .background(Color.accentColor, in: Capsule())
             }
         }
-        .accessibilityElement(children: .combine)
-        .accessibilityHint(count > 0 ? "Scanned \(count) times" : "Not collected yet")
+        // One element: "Beagle, number 25, England", then "Scanned 2 times" as its value.
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("\(profile.name), \(dexAccessibilityLabel(for: profile.name)), \(profile.origin)")
+        .accessibilityValue(count > 0 ? "Scanned \(count) \(count == 1 ? "time" : "times")" : "Not collected yet")
     }
 }
 
@@ -135,4 +139,9 @@ private struct BreedRow: View {
 func dexLabel(for breed: String) -> String {
     guard let number = BreedLibrary.shared.dexNumber(for: breed) else { return "No. —" }
     return "No. " + String(format: "%03d", number)
+}
+
+/// "number 42": "No. 042" spoken the way it's meant, for VoiceOver.
+func dexAccessibilityLabel(for breed: String) -> String {
+    BreedLibrary.shared.dexNumber(for: breed).map { "number \($0)" } ?? ""
 }

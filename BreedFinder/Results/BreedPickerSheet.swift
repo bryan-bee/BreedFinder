@@ -82,7 +82,8 @@ struct BreedPickerSheet: View {
     }
 }
 
-/// A breed's reference photo as a small rounded square.
+/// A breed's reference photo as a small rounded square. Hidden from VoiceOver: it's
+/// always shown next to the breed's name.
 struct BreedThumbnail: View {
     let breed: String
     var size: CGFloat = 52
@@ -97,5 +98,6 @@ struct BreedThumbnail: View {
         }
         .frame(width: size, height: size)
         .clipShape(RoundedRectangle(cornerRadius: size * 0.22))
+        .accessibilityHidden(true)
     }
 }

@@ -159,7 +159,10 @@ struct ReportProblemView: View {
                 MailComposer(recipient: SupportInfo.reportEmail, subject: report.subject,
                              messageBody: report.body, attachments: attachments) { result in
                     showingMail = false
-                    if result == .sent { dismiss() }
+                    if result == .sent {
+                        Analytics.send(.reportSent(report, via: "mail"))
+                        dismiss()
+                    }
                 }
                 .ignoresSafeArea()
             }
@@ -177,7 +180,10 @@ struct ReportProblemView: View {
             .sheet(isPresented: $showingShareSheet) {
                 ActivityView(items: shareItems) { completed in
                     showingShareSheet = false
-                    if completed { dismiss() }
+                    if completed {
+                        Analytics.send(.reportSent(report, via: "share sheet"))
+                        dismiss()
+                    }
                 }
                 .presentationDetents([.medium, .large])
             }
@@ -235,6 +241,8 @@ struct ReportProblemView: View {
     private func openMailto() {
         guard let url = SupportInfo.mailtoURL(subject: report.subject, body: report.body) else { return }
         openURL(url)
+        // Handed to the default mail app; whether it was actually sent isn't known.
+        Analytics.send(.reportSent(report, via: "mail app"))
         dismiss()
     }
 
@@ -266,6 +274,7 @@ private struct RecentScanCard: View {
                 RoundedRectangle(cornerRadius: 10)
                     .strokeBorder(Color.accentColor, lineWidth: isSelected ? 3 : 0)
             }
+            .accessibilityHidden(true)  // the breed and date below describe the scan
             Text(scan.guesses.first?.breed ?? "No dog found")
                 .font(.caption.weight(.semibold))
                 .lineLimit(1)
@@ -301,6 +310,8 @@ private struct FrameThumbnails: View {
                 }
             }
         }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("\(scan.frameFiles.count) \(scan.source.itemName)\(scan.frameFiles.count == 1 ? "" : "s") to attach")
     }
 }
 

@@ -9,8 +9,9 @@ struct BreedDetailView: View {
         let records = collection.records(for: profile.name)
         ScrollView {
             VStack(spacing: 20) {
+                let photo = BreedLibrary.shared.photo(for: profile.name)
                 Group {
-                    if let photo = BreedLibrary.shared.photo(for: profile.name) {
+                    if let photo {
                         WholePhoto(image: Image(uiImage: photo))
                     } else {
                         PhotoPlaceholder()
@@ -19,6 +20,10 @@ struct BreedDetailView: View {
                 .frame(height: 260)
                 .frame(maxWidth: .infinity)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel("Photo of \(withArticle(profile.name))")
+                .accessibilityAddTraits(.isImage)
+                .accessibilityHidden(photo == nil)
 
                 HStack {
                     Text(dexLabel(for: profile.name))
@@ -68,6 +73,10 @@ private struct YourScans: View {
                                         withAnimation { collection.remove(record.id) }
                                     }
                                 }
+                                // The same for VoiceOver, in its Actions rotor.
+                                .accessibilityAction(named: "Remove from Breeds") {
+                                    withAnimation { collection.remove(record.id) }
+                                }
                         }
                     }
                 }
@@ -75,7 +84,7 @@ private struct YourScans: View {
                     .font(.caption)
                     .foregroundStyle(.secondary)
             } else {
-                Text("You haven't scanned a \(breed) yet. Scan one to add it to your collection.")
+                Text("You haven't scanned \(withArticle(breed)) yet. Scan one to add it to your collection.")
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
             }
@@ -105,5 +114,8 @@ private struct ScanThumbnail: View {
                 .font(.caption2)
                 .foregroundStyle(.secondary)
         }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("Your scan from \(record.date.formatted(date: .long, time: .omitted))")
+        .accessibilityAddTraits(.isImage)
     }
 }

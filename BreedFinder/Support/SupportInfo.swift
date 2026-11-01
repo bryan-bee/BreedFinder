@@ -10,6 +10,10 @@ enum SupportInfo {
     /// privacy policy link inside the app as well as in the App Store listing.
     static let privacyPolicyURL = URL(string: "https://bryan-bee.github.io/BreedFinder/privacy.html")!
 
+    /// docs/support.html: contact details and answers to common questions. Also the
+    /// Support URL in the App Store listing.
+    static let helpURL = URL(string: "https://bryan-bee.github.io/BreedFinder/support.html")!
+
     static var appVersion: String {
         let info = Bundle.main.infoDictionary
         let version = info?["CFBundleShortVersionString"] as? String ?? "?"

@@ -74,6 +74,7 @@ struct CameraScreen: View {
             }
 
             RecordButton(isRecording: camera.isRecording, duration: CameraController.clipDuration) {
+                Analytics.send(.recordingStarted(zoom: camera.zoom, flash: flashOn))
                 camera.recordClip(withFlash: flashOn, completion: onRecorded)
             }
             .disabled(camera.status != .ready || camera.isRecording)
@@ -159,6 +160,7 @@ private struct CameraPermissionView: View {
                 }
             }
             .buttonStyle(.borderedProminent)
+            .bold()  // the camera screen is always dark: white on orange needs bold text
         }
     }
 }

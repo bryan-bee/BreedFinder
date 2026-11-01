@@ -408,3 +408,121 @@ final class BreedContentTests: XCTestCase {
         }
     }
 }
+
+final class FeedbackTests: XCTestCase {
+    private let guesses = [BreedGuess(breed: "Golden Retriever", confidence: 0.72),
+                           BreedGuess(breed: "Labrador Retriever", confidence: 0.2),
+                           BreedGuess(breed: "Flat-Coated Retriever", confidence: 0.05)]
+
+    func testPickedBreedIsRankedAgainstTheTopGuesses() {
+        XCTAssertEqual(ScanFeedback(breed: "Golden Retriever", guesses: guesses), .correct)
+        XCTAssertEqual(ScanFeedback(breed: "Flat-Coated Retriever", guesses: guesses),
+                       .otherBreed("Flat-Coated Retriever", rank: 3))
+        XCTAssertEqual(ScanFeedback(breed: "Beagle", guesses: guesses), .otherBreed("Beagle", rank: nil))
+    }
+
+    /// The accuracy stats are counted from these: top-1 is "top1" out of every answer but
+    /// "unsure", top-3 is "top1" to "top3" out of the answers that name the breed.
+    func testAnswersAreRecordedByRank() {
+        XCTAssertEqual(ScanFeedback.correct.statsAnswer, "top1")
+        XCTAssertEqual(ScanFeedback.otherBreed("Labrador Retriever", rank: 2).statsAnswer, "top2")
+        XCTAssertEqual(ScanFeedback.otherBreed("Beagle", rank: nil).statsAnswer, "notInTop3")
+        XCTAssertEqual(ScanFeedback.notTopGuess.statsAnswer, "notTop1")
+        XCTAssertEqual(ScanFeedback.unsure.statsAnswer, "unsure")
+    }
+
+    func testQuestionUsesTheRightArticle() {
+        XCTAssertEqual(withArticle("Akita"), "an Akita")
+        XCTAssertEqual(withArticle("Old English Sheepdog"), "an Old English Sheepdog")
+        XCTAssertEqual(withArticle("Beagle"), "a Beagle")
+    }
+}
+
+final class AnalyticsEventTests: XCTestCase {
+    private let guesses = [BreedGuess(breed: "Golden Retriever", confidence: 0.72),
+                           BreedGuess(breed: "Labrador Retriever", confidence: 0.2),
+                           BreedGuess(breed: "Flat-Coated Retriever", confidence: 0.05)]
+
+    /// A video scan of `frames` frames, the first `dogFrames` of them with a dog.
+    private func makeResult(guesses: [BreedGuess], dogFrames: Int, frames: Int = 5) throws -> ScanResult {
+        let image = try XCTUnwrap(UIGraphicsImageRenderer(size: CGSize(width: 30, height: 40)).image { context in
+            UIColor.brown.setFill()
+            context.fill(CGRect(x: 0, y: 0, width: 30, height: 40))
+        }.cgImage)
+        let dog = FramePrediction(dogDetected: true, breedProbabilities: ["Golden Retriever": 0.95])
+        let empty = FramePrediction(dogDetected: false, breedProbabilities: [:])
+        let analyses = (0..<frames).map { index in
+            FrameAnalysis(image: image, dogBox: nil, prediction: index < dogFrames ? dog : empty)
+        }
+        return ScanResult(source: .video, frames: analyses, guesses: guesses, dogPhoto: nil, modelVersion: "test-model")
+    }
+
+    func testCompletedScanSendsTheGuessConfidenceAndAnalysisTime() throws {
+        let scan = try makeResult(guesses: guesses, dogFrames: 4)
+        let event = AnalyticsEvent.scanFinished(scan, analysisTime: .milliseconds(420), collectedBreeds: 7)
+
+        XCTAssertEqual(event.name, "Scan.completed")
+        XCTAssertEqual(event.parameters["source"], "video")
+        XCTAssertEqual(event.parameters["frames"], "5")
+        XCTAssertEqual(event.parameters["dogFrames"], "4")
+        XCTAssertEqual(event.parameters["topBreed"], "Golden Retriever")
+        XCTAssertEqual(event.parameters["confidence"], "70-80%")
+        XCTAssertEqual(event.parameters["collectedBreeds"], "7")
+        XCTAssertEqual(event.parameters["modelVersion"], "test-model")
+        XCTAssertEqual(try XCTUnwrap(event.floatValue), 420, accuracy: 0.001)  // milliseconds
+    }
+
+    func testScanWithoutADogIsItsOwnSignal() throws {
+        let scan = try makeResult(guesses: [], dogFrames: 1)
+        let event = AnalyticsEvent.scanFinished(scan, analysisTime: .milliseconds(300), collectedBreeds: 0)
+
+        XCTAssertEqual(event.name, "Scan.noDogFound")
+        XCTAssertEqual(event.parameters["dogFrames"], "1")
+        XCTAssertNil(event.parameters["topBreed"])
+    }
+
+    func testFeedbackNamesWhatTheAppSaidAndWhatItReallyIs() throws {
+        let scan = try makeResult(guesses: guesses, dogFrames: 5)
+        let corrected = AnalyticsEvent.feedback(.otherBreed("Labrador Retriever", rank: 2), on: scan)
+
+        XCTAssertEqual(corrected.name, "Scan.feedback")
+        XCTAssertEqual(corrected.parameters["answer"], "top2")
+        XCTAssertEqual(corrected.parameters["topBreed"], "Golden Retriever")
+        XCTAssertEqual(corrected.parameters["actualBreed"], "Labrador Retriever")
+        XCTAssertEqual(corrected.parameters["confidence"], "70-80%")
+        XCTAssertEqual(try XCTUnwrap(corrected.floatValue), 0.72, accuracy: 0.0001)
+
+        XCTAssertEqual(AnalyticsEvent.feedback(.correct, on: scan).parameters["actualBreed"], "Golden Retriever")
+        XCTAssertNil(AnalyticsEvent.feedback(.unsure, on: scan).parameters["actualBreed"])
+    }
+
+    func testConfidenceIsGroupedInTenPointRanges() {
+        XCTAssertEqual(AnalyticsEvent.confidenceBin(0.05), "0-10%")
+        XCTAssertEqual(AnalyticsEvent.confidenceBin(0.72), "70-80%")
+        XCTAssertEqual(AnalyticsEvent.confidenceBin(0.999), "90-100%")
+        XCTAssertEqual(AnalyticsEvent.confidenceBin(1), "90-100%")
+        XCTAssertEqual(AnalyticsEvent.confidenceBin(.nan), "unknown")
+    }
+
+    func testReportSendsItsKindButNeverItsText() {
+        var report = ProblemReport(kind: .wrongBreed, details: "It's my neighbor's dog.", actualBreed: "Pug",
+                                   scan: nil, countedAs: nil, appVersion: "1.0.0 (2)", modelVersion: "model",
+                                   systemVersion: "26.0", deviceModel: "iPhone17,1")
+        report.photosAttached = true
+        let event = AnalyticsEvent.reportSent(report, via: "mail")
+
+        XCTAssertEqual(event.name, "Report.sent")
+        XCTAssertEqual(event.parameters["kind"], "Wrong breed")
+        XCTAssertEqual(event.parameters["photosAttached"], "yes")
+        XCTAssertFalse(event.parameters.values.contains { $0.contains("neighbor") || $0 == "Pug" })
+    }
+
+    /// With no TelemetryDeck App ID the SDK never starts, so sending has to do nothing.
+    /// (TelemetryDeck halts Debug builds that send a signal before it's initialized.)
+    @MainActor
+    func testSendingWithoutAnAppIDDoesNothing() throws {
+        try XCTSkipIf(Analytics.isConfigured, "A TelemetryDeck App ID is set")
+        Analytics.start()
+        Analytics.send(.scanFailed(step: "test"))
+    }
+}

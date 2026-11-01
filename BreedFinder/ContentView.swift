@@ -51,6 +51,7 @@ private struct ScanTab: View {
                 } actions: {
                     Button("Try again") { model.startScan() }
                         .buttonStyle(.borderedProminent)
+                        .bold()  // white on orange is 3.6:1 in dark mode, enough only for bold text
                     Button("Home") { model.goHome() }
                 }
                 .transition(.opacity)

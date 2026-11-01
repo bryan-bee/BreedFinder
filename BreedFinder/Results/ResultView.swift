@@ -7,6 +7,7 @@ struct ResultView: View {
 
     @EnvironmentObject private var model: ScanModel
     @EnvironmentObject private var collection: BreedCollection
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     /// The breed picked for comparison (tapping a guess); nil shows the counted breed.
     @State private var comparing: String?
@@ -28,7 +29,11 @@ struct ResultView: View {
                     header(for: shownBreed)
                     CardFan(dogPhoto: result.dogPhoto, breed: shownBreed,
                             confidence: confidence(of: shownBreed), dealt: cardsDealt)
-                    collectionStatus
+                    FeedbackCard(guesses: result.guesses, feedback: model.feedback,
+                                 countedAs: record?.breed,
+                                 timesCounted: record.map { collection.count(for: $0.breed) } ?? 0,
+                                 onAnswer: { submit($0) },
+                                 onPickBreed: { showingPicker = true })
                     guessList
                     if let profile = BreedLibrary.shared.profile(for: shownBreed) {
                         BreedProfileView(profile: profile)
@@ -49,16 +54,28 @@ struct ResultView: View {
         .sensoryFeedback(.success, trigger: cardsDealt)
         .sheet(isPresented: $showingPicker) {
             BreedPickerSheet(suggestions: result.guesses, current: record?.breed,
-                             onPick: { breed in
-                                 model.countCurrentScan(as: breed)
-                                 withAnimation(.snappy) { comparing = nil }
-                             },
+                             onPick: { submit(ScanFeedback(breed: $0, guesses: result.guesses)) },
                              onUncount: { model.uncountCurrentScan() })
         }
         .onAppear {
-            withAnimation(.spring(response: 0.6, dampingFraction: 0.7).delay(0.15)) {
-                cardsDealt = true
+            if reduceMotion {
+                cardsDealt = true  // the cards appear already fanned out
+            } else {
+                withAnimation(.spring(response: 0.6, dampingFraction: 0.7).delay(0.15)) {
+                    cardsDealt = true
+                }
             }
+        }
+    }
+
+    /// An answer that names the breed brings the cards back to the breed it now counts as.
+    private func submit(_ answer: ScanFeedback) {
+        model.answer(answer)
+        switch answer {
+        case .correct, .otherBreed:
+            withAnimation(.snappy) { comparing = nil }
+        case .notTopGuess, .unsure:
+            break  // they may be comparing guesses to work out the breed
         }
     }
 
@@ -87,40 +104,6 @@ struct ResultView: View {
         }
         .frame(maxWidth: .infinity)
         .padding(.top, 8)
-    }
-
-    /// Whether (and as what) this scan counts in the Breeds collection, with a way to fix it.
-    private var collectionStatus: some View {
-        HStack(spacing: 12) {
-            if let record {
-                Image(systemName: "checkmark.seal.fill")
-                    .font(.title2)
-                    .foregroundStyle(Color.accentColor)
-                VStack(alignment: .leading, spacing: 2) {
-                    Text("Saved to your Breeds")
-                        .font(.subheadline.weight(.semibold))
-                    Text("as \(record.breed) · ×\(collection.count(for: record.breed))")
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                }
-                Spacer()
-                Button("Wrong breed?") { showingPicker = true }
-                    .buttonStyle(.bordered)
-                    .controlSize(.small)
-            } else {
-                Image(systemName: "seal")
-                    .font(.title2)
-                    .foregroundStyle(.secondary)
-                Text("Not counted in your Breeds")
-                    .font(.subheadline.weight(.semibold))
-                Spacer()
-                Button("Choose breed") { showingPicker = true }
-                    .buttonStyle(.bordered)
-                    .controlSize(.small)
-            }
-        }
-        .padding(14)
-        .background(Color(.secondarySystemBackground), in: RoundedRectangle(cornerRadius: 14))
     }
 
     private var guessList: some View {
@@ -156,6 +139,7 @@ struct ResultView: View {
             .buttonStyle(.borderedProminent)
         }
         .controlSize(.large)
+        .bold()  // white on orange is 3.6:1 in dark mode, enough only for bold text
         .padding()
         .background(.bar)
     }
@@ -235,7 +219,7 @@ private struct CardFan: View {
         .frame(height: 300)
         .frame(maxWidth: .infinity)
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel("Your dog next to a photo of a \(breed)")
+        .accessibilityLabel("Your dog next to a photo of \(withArticle(breed))")
     }
 }
 
@@ -332,5 +316,7 @@ private struct FrameStrip: View {
             .frame(maxWidth: CGFloat(frames.count) * 72, alignment: .leading)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("\(title): \(frames.count). A dog was found in \(frames.filter(\.prediction.containsDog).count).")
     }
 }

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Breed Finder Support</title>
+<style>
+  /* Same look as privacy.html. The accent meets 4.5:1 contrast on both backgrounds. */
+  :root { color-scheme: light dark; --text: #1d1d1f; --muted: #6e6e73; --bg: #ffffff; --card: #f5f5f7; --accent: #c2410c; }
+  @media (prefers-color-scheme: dark) { :root { --text: #f5f5f7; --muted: #a1a1a6; --bg: #111111; --card: #1c1c1e; --accent: #ff9a4d; } }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  main { max-width: 640px; margin: 0 auto; padding: 48px 20px 64px; }
+  h1 { font-size: 32px; line-height: 1.2; margin: 0 0 12px; }
+  h2 { font-size: 20px; margin: 36px 0 8px; }
+  p, li { margin: 0 0 12px; }
+  ul { padding-left: 22px; }
+  a { color: var(--accent); }
+  .contact { background: var(--card); border-radius: 14px; padding: 16px 20px; margin: 24px 0 8px; }
+  .contact p:last-child { margin-bottom: 0; }
+  footer { color: var(--muted); font-size: 15px; margin-top: 48px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Breed Finder Support</h1>
+  <p>Answers to common questions are below. If something isn't covered, get in touch.</p>
+
+  <div class="contact">
+    <p><strong>Email:</strong> <a href="mailto:breedfinder123@gmail.com">breedfinder123@gmail.com</a></p>
+    <p><strong>In the app:</strong> open the <em>Support</em> tab and tap <em>Report a Problem</em>. You can attach one of your recent scans, and you'll see the whole email before it's sent.</p>
+  </div>
+
+  <h2>How does Breed Finder work?</h2>
+  <p>Tap <strong>Scan a Dog</strong> and record 5 seconds of video, or tap <strong>Choose Photos</strong> and pick up to 5 photos. Breed Finder takes 5 frames from the video, finds the dog in each one, and a breed-recognition model on your iPhone guesses the breed. You get the top 3 guesses, how sure the app is about each, and facts about the breed. Nothing is uploaded.</p>
+
+  <h2>How accurate is it?</h2>
+  <p>On 9,629 test photos, the right breed was the app's first guess 92% of the time and in its top 3 98% of the time. Real scans are harder, with blur, poor light and mixed breeds, which is why the app asks <em>Is it a …?</em> after each scan. The percentages are calibrated: when the app says 90%, it's right about 9 times out of 10.</p>
+
+  <h2>It says "No dog found"</h2>
+  <ul>
+    <li>Scan in good light, with the dog filling more of the picture.</li>
+    <li>Keep the dog in view for the whole 5 seconds: at least 2 of the 5 frames need to show it.</li>
+    <li>If the dog is too close to fit, tap <strong>0.5×</strong> to zoom out (on iPhones with an ultra-wide camera).</li>
+    <li>Or use <strong>Choose Photos</strong> with a clear photo of the dog.</li>
+  </ul>
+  <p>The result shows which frames had a dog in them, so you can see what went wrong.</p>
+
+  <h2>It guessed the wrong breed</h2>
+  <p>Under the cards, answer <strong>No</strong> to <em>Is it a …?</em> and pick the right breed: the app's other two guesses come first, or tap <em>Another breed…</em> for the full list. Your Breeds collection then counts the scan as the breed you picked. Your answers also help us measure how accurate the app is.</p>
+  <p>To help improve the breed model, tap <em>Send this correction to help improve Breed Finder</em> on the result. You choose whether the photos may be used for training.</p>
+
+  <h2>My dog is a mixed breed</h2>
+  <p>Breed Finder knows 176 breeds, including popular doodles and other designer crossbreeds. For other mixes, the top 3 often shows the parent breeds. It's a best guess from how the dog looks, not a DNA test.</p>
+
+  <h2>My dog's breed isn't in the app</h2>
+  <p>Some breeds don't have enough freely licensed photos to learn from yet, so the app names the closest breed it knows. Let us know which breed through <em>Report a Problem</em>, and we'll try to add it.</p>
+
+  <h2>How do I remove a scan from my Breeds?</h2>
+  <p>On the result, tap <strong>Change</strong>, then <strong>Don't count this scan</strong>. Later on, open the breed in the <em>Breeds</em> tab, touch and hold the scan's photo, and choose <strong>Remove from Breeds</strong>.</p>
+
+  <h2>The camera doesn't open</h2>
+  <p>Breed Finder needs permission to use the camera. Open the iPhone's <strong>Settings</strong>, tap <strong>Breed Finder</strong>, and turn on <strong>Camera</strong>.</p>
+
+  <h2>Are my photos or videos uploaded?</h2>
+  <p>No. Scans are analyzed on your iPhone, and your photos and collection stay there. The app sends anonymous usage stats, such as how many scans find a dog and how often the top guess is right, which you can turn off under <strong>Support → Share anonymous usage stats</strong>. The <a href="privacy.html">privacy policy</a> has the details.</p>
+
+  <h2>Which iPhones does it work on?</h2>
+  <p>Any iPhone with iOS 17 or later.</p>
+
+  <h2>Where do the breed photos come from?</h2>
+  <p>From Wikimedia Commons, used under each photo's license. The photographer and license are credited under every breed's profile, and all together under <strong>Support → Photo credits</strong>.</p>
+
+  <footer>
+    <p><a href="privacy.html">Privacy Policy</a> · © 2026 Bryan Bee</p>
+  </footer>
+</main>
+</body>
+</html>

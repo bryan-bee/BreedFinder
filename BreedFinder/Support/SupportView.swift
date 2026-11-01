@@ -2,6 +2,7 @@ import SwiftUI
 
 struct SupportView: View {
     @State private var showingReport = false
+    @AppStorage(Analytics.sharingKey) private var shareUsageStats = true
 
     var body: some View {
         NavigationStack {
@@ -13,6 +14,7 @@ struct SupportView: View {
                             .foregroundStyle(.white)
                             .frame(width: 56, height: 56)
                             .background(Color.accentColor, in: RoundedRectangle(cornerRadius: 14))
+                            .accessibilityHidden(true)
                         VStack(alignment: .leading, spacing: 2) {
                             Text("Breed Finder")
                                 .font(.headline)
@@ -28,6 +30,9 @@ struct SupportView: View {
                     Button { showingReport = true } label: {
                         Label("Report a Problem", systemImage: "exclamationmark.bubble")
                     }
+                    Link(destination: SupportInfo.helpURL) {
+                        Label("Help & FAQ", systemImage: "questionmark.circle")
+                    }
                     Link(destination: SupportInfo.privacyPolicyURL) {
                         Label("Privacy Policy", systemImage: "hand.raised")
                     }
@@ -35,8 +40,18 @@ struct SupportView: View {
                     Text("Tell us about a wrong breed, a crash, a bug or an idea. You can attach one of your recent scans, and you'll see the whole email before it's sent. If Share With App Developers is on (Settings → Privacy & Security → Analytics & Improvements), crash logs also reach us automatically.")
                 }
 
+                if Analytics.isConfigured {
+                    Section {
+                        Toggle(isOn: $shareUsageStats) {
+                            Label("Share anonymous usage stats", systemImage: "chart.bar")
+                        }
+                    } footer: {
+                        Text("Counts like how many scans find a dog, how long they take, and your answers to \"Is it a …?\", which show how accurate Breed Finder is on real dogs. No photos, and nothing that identifies you.")
+                    }
+                }
+
                 Section("How Breed Finder works") {
-                    InfoRow(icon: "lock.iphone", title: "Everything stays on your iPhone",
+                    InfoRow(icon: "lock.iphone", title: "Your photos stay on your iPhone",
                             text: "Videos and photos are analyzed on the device and never uploaded. Your Breeds collection, your dog photos and the frames from your last \(RecentScansStore.limit) scans are stored only on this iPhone. They leave it only if you attach them to a problem report.")
                     InfoRow(icon: "brain", title: "The breed model",
                             text: "A neural network trained on about 96,000 dog photos recognizes 176 breeds. It's a best guess, not a DNA test: mixed-breed dogs often show their parent breeds in the top 3.")
@@ -67,6 +82,9 @@ struct SupportView: View {
             .sheet(isPresented: $showingReport) {
                 ReportProblemView()
             }
+            .onChange(of: shareUsageStats) { _, share in
+                Analytics.setSharing(share)
+            }
         }
     }
 }
@@ -81,6 +99,7 @@ private struct InfoRow: View {
             Image(systemName: icon)
                 .foregroundStyle(Color.accentColor)
                 .frame(width: 24)
+                .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: 4) {
                 Text(title)
                     .font(.subheadline.weight(.semibold))
@@ -90,6 +109,7 @@ private struct InfoRow: View {
             }
         }
         .padding(.vertical, 2)
+        .accessibilityElement(children: .combine)
     }
 }
 

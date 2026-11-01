@@ -43,7 +43,7 @@ struct HomeView: View {
                 PhotosPicker(selection: $pickedPhotos, maxSelectionCount: PhotoLoader.maxPhotos,
                              selectionBehavior: .ordered, matching: .images) {
                     Label("Choose Photos", systemImage: "photo.on.rectangle.angled")
-                        .font(.headline)
+                        .font(.headline.bold())  // orange on light orange is under 4.5:1, fine for bold text
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 6)
                 }

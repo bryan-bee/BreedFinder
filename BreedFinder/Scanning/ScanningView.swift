@@ -69,12 +69,23 @@ private struct ScanningFrame: View {
 }
 
 /// A glowing line that sweeps top to bottom on a loop, with a fading trail behind it.
+/// With Reduce Motion on, a steady tint instead (the spinner below still shows progress).
 private struct ScannerSweep: View {
     let delay: Double
     private let period = 1.8
     private let trail: CGFloat = 36
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     var body: some View {
+        if reduceMotion {
+            Color.accentColor.opacity(0.15)
+                .allowsHitTesting(false)
+        } else {
+            sweep
+        }
+    }
+
+    private var sweep: some View {
         TimelineView(.animation) { context in
             let elapsed = context.date.timeIntervalSinceReferenceDate + delay
             let progress = elapsed.truncatingRemainder(dividingBy: period) / period

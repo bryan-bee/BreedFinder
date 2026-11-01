@@ -37,6 +37,7 @@ struct BreedProfileView: View {
                     HStack(alignment: .firstTextBaseline, spacing: 10) {
                         Image(systemName: "sparkles")
                             .foregroundStyle(Color.accentColor)
+                            .accessibilityHidden(true)
                         Text(fact)
                             .fixedSize(horizontal: false, vertical: true)
                     }
@@ -63,6 +64,7 @@ struct FactTile: View {
             Image(systemName: icon)
                 .foregroundStyle(Color.accentColor)
                 .frame(width: 22)
+                .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: 2) {
                 Text(title)
                     .font(.caption)

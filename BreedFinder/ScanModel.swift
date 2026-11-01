@@ -36,12 +36,16 @@ final class ScanModel: ObservableObject {
     @Published private(set) var currentRecordID: UUID?
     /// The result on screen in RecentScansStore, for "Report a problem with this scan".
     @Published private(set) var currentScanID: UUID?
+    /// The user's answer to "Is it a …?" for the result on screen.
+    @Published private(set) var feedback: ScanFeedback?
     /// Which breed model is bundled, for problem reports.
     @Published private(set) var modelVersion = "loading…"
 
     private let analyzer = DogAnalyzer()
     private let collection: BreedCollection
     private let recentScans: RecentScansStore
+    /// Whether the answer for the result on screen has gone into the usage stats.
+    private var feedbackSent = false
 
     init(collection: BreedCollection, recentScans: RecentScansStore) {
         self.collection = collection
@@ -59,10 +63,12 @@ final class ScanModel: ObservableObject {
     }
 
     func startScan() {
+        sendFeedback()
         phase = .camera
     }
 
     func goHome() {
+        sendFeedback()
         phase = .home
     }
 
@@ -77,10 +83,12 @@ final class ScanModel: ObservableObject {
                     await scan(frames, source: .video)
                 } catch {
                     phase = .failed(error.localizedDescription)
+                    Analytics.send(.scanFailed(step: "frames", error: error))
                 }
             }
         case .failure(let error):
             phase = .failed(error.localizedDescription)
+            Analytics.send(.scanFailed(step: "recording", error: error))
         }
     }
 
@@ -90,19 +98,49 @@ final class ScanModel: ObservableObject {
             let images = await PhotoLoader.images(from: items)
             if images.isEmpty {
                 phase = .failed("Those photos couldn't be opened. Try different ones.")
+                Analytics.send(.scanFailed(step: "photos"))
             } else {
                 await scan(images, source: .photos)
             }
         }
     }
 
-    // MARK: Collection
+    // MARK: Feedback and the collection
 
-    /// Recounts the current scan as `breed`, or saves it if it wasn't counted.
-    func countCurrentScan(as breed: String) {
-        guard case .result(let result) = phase else { return }
+    /// Records the user's answer to "Is it a …?", or a breed they picked from the list.
+    /// "Yes" or a named breed counts the scan as that breed: it undoes an earlier
+    /// correction, or saves the scan again if the user had taken it out.
+    func answer(_ answer: ScanFeedback) {
+        guard case .result(let result) = phase, let top = result.guesses.first else { return }
+        feedback = answer
+        switch answer {
+        case .correct: countScan(result, as: top.breed)
+        case .otherBreed(let breed, _): countScan(result, as: breed)
+        case .notTopGuess, .unsure: break
+        }
+    }
+
+    /// Takes the current scan back out of the collection.
+    func uncountCurrentScan() {
+        guard let id = currentRecordID else { return }
+        collection.remove(id)
+        currentRecordID = nil
+    }
+
+    /// Sends the answer for the result on screen to the usage stats, once. Called when the
+    /// user leaves the result, or when the app goes to the background (where iOS may close
+    /// it), so an answer the user changes is counted once, as they left it.
+    func sendFeedback() {
+        guard case .result(let result) = phase, let feedback, !feedbackSent else { return }
+        feedbackSent = true
+        Analytics.send(.feedback(feedback, on: result))
+    }
+
+    private func countScan(_ result: ScanResult, as breed: String) {
         if let id = currentRecordID {
-            collection.correct(id, to: breed)
+            if collection.record(id: id)?.breed != breed {
+                collection.correct(id, to: breed)
+            }
         } else {
             let id = collection.add(breed: breed,
                                     predictedBreed: result.guesses.first?.breed ?? breed,
@@ -115,22 +153,19 @@ final class ScanModel: ObservableObject {
         }
     }
 
-    /// Takes the current scan back out of the collection.
-    func uncountCurrentScan() {
-        guard let id = currentRecordID else { return }
-        collection.remove(id)
-        currentRecordID = nil
-    }
-
     // MARK: Scanning
 
     private func scan(_ images: [CGImage], source: ScanSource) async {
         phase = .scanning(images, source)
         currentRecordID = nil
         currentScanID = nil
+        feedback = nil
+        feedbackSent = false
         let started = ContinuousClock.now
         do {
             let result = try await analyzer.analyze(frames: images, source: source)
+            // Finding the dog and classifying every frame, on the device.
+            let analysisTime = ContinuousClock.now - started
 
             var recordID: UUID?
             if let top = result.guesses.first {
@@ -151,8 +186,11 @@ final class ScanModel: ObservableObject {
             currentRecordID = recordID
             currentScanID = scanID
             phase = .result(result)
+            Analytics.send(.scanFinished(result, analysisTime: analysisTime,
+                                         collectedBreeds: collection.collectedBreeds.count))
         } catch {
             phase = .failed(error.localizedDescription)
+            Analytics.send(.scanFailed(step: "analysis", error: error))
         }
     }
 }
