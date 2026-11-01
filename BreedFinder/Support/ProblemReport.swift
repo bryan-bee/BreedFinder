@@ -39,6 +39,10 @@ struct ProblemReport {
     var scan: RecentScan?
     /// What the scan currently counts as in the user's collection, if anything.
     var countedAs: String?
+    /// Whether the scan's frames/photos are attached to the email.
+    var photosAttached = false
+    /// The user's explicit permission to use the attached photos to train the breed model.
+    var allowsTrainingUse = false
     var appVersion: String
     var modelVersion: String
     var systemVersion: String
@@ -68,6 +72,10 @@ struct ProblemReport {
             }
             lines.append("Counted in collection as: \(countedAs ?? "not counted")")
             lines.append("Breed model: \(scan.modelVersion)")
+            lines.append("Photos attached: \(photosAttached ? "yes" : "no")")
+            if photosAttached {
+                lines.append("OK to use these photos to improve breed recognition: \(allowsTrainingUse ? "yes" : "no")")
+            }
         } else {
             lines.append("No scan attached")
             lines.append("Breed model: \(modelVersion)")

@@ -16,6 +16,8 @@ struct ReportProblemView: View {
     @State private var describedBreed = ""
     @State private var details = ""
     @State private var attachPhotos = true
+    /// Explicit, opt-in permission to train the breed model on the attached photos.
+    @State private var allowTrainingUse = false
     @State private var showingBreedPicker = false
     @State private var showingMail = false
     @State private var showingNoMailOptions = false
@@ -56,6 +58,8 @@ struct ReportProblemView: View {
             actualBreed: kind == .wrongBreed ? actualBreed : nil,
             scan: scan,
             countedAs: scan?.recordID.flatMap { collection.record(id: $0)?.breed },
+            photosAttached: attachingPhotos,
+            allowsTrainingUse: attachingPhotos && allowTrainingUse,
             appVersion: SupportInfo.appVersion,
             modelVersion: scanModel.modelVersion,
             systemVersion: SupportInfo.systemVersion,
@@ -63,8 +67,12 @@ struct ReportProblemView: View {
         )
     }
 
+    private var attachingPhotos: Bool {
+        attachPhotos && !(selectedScan?.frameFiles.isEmpty ?? true)
+    }
+
     private var attachments: [ReportAttachment] {
-        guard attachPhotos, let scan = selectedScan else { return [] }
+        guard attachingPhotos, let scan = selectedScan else { return [] }
         return recentScans.attachments(for: scan)
     }
 
@@ -115,9 +123,11 @@ struct ReportProblemView: View {
                         Toggle("Attach this scan's \(scan.source.itemName)s", isOn: $attachPhotos)
                         if attachPhotos {
                             FrameThumbnails(scan: scan)
+                            Toggle("Breed Finder may use these \(scan.source.itemName)s to improve breed recognition",
+                                   isOn: $allowTrainingUse)
                         }
                     } footer: {
-                        Text("Nothing is sent until you send the email, and you'll see everything in it first.")
+                        Text("Nothing is sent until you send the email, and you'll see everything in it first. Photos are only used to train the breed model if you turn that on.")
                     }
                 }
 

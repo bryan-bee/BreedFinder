@@ -310,6 +310,20 @@ final class ProblemReportTests: XCTestCase {
         XCTAssertTrue(body.contains("5 frames, dog found in 4"))
         XCTAssertTrue(body.contains("Breed model: scan-model"))  // the model that made the guess
         XCTAssertTrue(body.contains("iPhone: iPhone16,1"))
+        XCTAssertTrue(body.contains("Photos attached: no"))
+    }
+
+    func testTrainingPermissionIsStatedOnlyWhenPhotosAreAttached() {
+        let scan = RecentScan(id: UUID(), date: .now, source: .photos,
+                              guesses: [BreedGuess(breed: "Pug", confidence: 0.9)],
+                              framesWithDog: [true], frameFiles: ["frame-1.jpg"],
+                              modelVersion: "scan-model", recordID: nil)
+        var withPhotos = report(kind: .wrongBreed, scan: scan)
+        withPhotos.photosAttached = true
+        withPhotos.allowsTrainingUse = true
+
+        XCTAssertTrue(withPhotos.body.contains("OK to use these photos to improve breed recognition: yes"))
+        XCTAssertFalse(report(kind: .wrongBreed, scan: scan).body.contains("improve breed recognition"))
     }
 
     func testReportWithoutAScanStillNamesTheModel() {

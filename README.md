@@ -154,7 +154,7 @@ The Swift code doesn't depend on where the model comes from: any Core ML image c
 - [x] Support email (`SupportInfo.reportEmail`): breedfinder123@gmail.com.
 - [ ] Set `DEVELOPMENT_TEAM` (and if needed `PRODUCT_BUNDLE_IDENTIFIER`) in `project.yml`.
 - [ ] Replace the placeholder app icon.
-- [ ] Publish a privacy policy page (see below).
+- [x] Privacy policy: [docs/privacy.html](docs/privacy.html), published at https://bryan-bee.github.io/BreedFinder/privacy.html and linked in the Support tab. Update it whenever the app starts handling data differently.
 
 ## Ship it to the App Store
 
@@ -163,7 +163,7 @@ The Swift code doesn't depend on where the model comes from: any Core ML image c
 3. **Test with TestFlight.** The build appears in TestFlight after processing. Install it and try it on as many different dogs as you can.
 4. **Fill in the listing:**
    - Screenshots for the iPhone size App Store Connect asks for (currently 6.9-inch). Take them on your phone.
-   - A **privacy policy URL**, which every app needs. A short page saying the camera video is analyzed on the device and nothing is collected is enough; GitHub Pages works.
+   - **Privacy policy URL:** https://bryan-bee.github.io/BreedFinder/privacy.html
    - App Privacy questionnaire: **Data Not Collected**. Problem reports are emails the user writes, reviews and sends themselves, which likely fall under Apple's "optional disclosure" exemption for user-initiated feedback; check its criteria when you fill in the questionnaire.
    - Description, keywords, support URL, category (Reference or Lifestyle), age rating.
 5. **Submit for review.**

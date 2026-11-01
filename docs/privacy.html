@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Breed Finder Privacy Policy</title>
 <style>
-  :root { color-scheme: light dark; --text: #1d1d1f; --muted: #6e6e73; --bg: #ffffff; --accent: #e8650f; }
+  /* Light-mode accent darkened from #e8650f to #c2410c so links meet 4.5:1 contrast on white. */
+  :root { color-scheme: light dark; --text: #1d1d1f; --muted: #6e6e73; --bg: #ffffff; --accent: #c2410c; }
   @media (prefers-color-scheme: dark) { :root { --text: #f5f5f7; --muted: #a1a1a6; --bg: #111111; --accent: #ff9a4d; } }
   body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
   main { max-width: 640px; margin: 0 auto; padding: 48px 20px 64px; }
@@ -21,33 +22,57 @@
 <body>
 <main>
   <h1>Breed Finder Privacy Policy</h1>
-  <p class="date">Effective October 31, 2026</p>
+  <p class="date">Effective November 1, 2026</p>
 
-  <p class="summary">Breed Finder does not collect, store, or share any of your data. Everything happens on your iPhone.</p>
+  <p class="summary">Breed Finder analyzes your dog on your iPhone and keeps what it saves on your iPhone. We only receive something if you choose to send us a problem report.</p>
 
   <h2>The camera</h2>
-  <p>Breed Finder uses your iPhone's camera only when you tap <strong>Scan a Dog</strong>, to record a 5-second video. It records video only, with no sound, and never uses the microphone.</p>
-  <p>The app pulls 5 still frames out of the video and analyzes them on your iPhone to guess the dog's breed. The video file is deleted from your phone as soon as the scan finishes. The frames shown on the result screen are held only in the app's memory and are cleared when you go back to the home screen or close the app. Nothing is saved to your photo library.</p>
+  <p>Breed Finder uses your iPhone's camera only when you tap <strong>Scan a Dog</strong>, to record a 5-second video. It records video only, with no sound, and never uses the microphone. If you turn on the flash, it lights the dog only while recording.</p>
+  <p>The app pulls 5 still frames out of the video and analyzes them on your iPhone to guess the dog's breed. The video file is deleted from your phone as soon as the scan finishes. Nothing is saved to your photo library.</p>
+
+  <h2>Photos you choose</h2>
+  <p>If you tap <strong>Choose Photos</strong>, the iPhone's own photo picker opens. Breed Finder only receives the photos you select (up to 5), not the rest of your library, and analyzes them on your iPhone the same way. The copies it keeps are re-saved images without the location or other details stored in the original photo files.</p>
+
+  <h2>What stays on your iPhone</h2>
+  <ul>
+    <li><strong>Your Breeds collection.</strong> For each scan that finds a dog, the app saves the breed it counts as, the date, the app's guess and how sure it was, and a small photo of your dog cropped from the scan. You can remove a scan in the Breeds tab (touch and hold its photo, or tap <em>Wrong breed?</em> then <em>Don't count this scan</em> on a result).</li>
+    <li><strong>Your last 10 scans.</strong> The frames or photos and the results of your 10 most recent scans are kept in the app's temporary storage so you can attach one to a problem report. Older ones are deleted automatically as you scan, and iOS may clear them when your iPhone needs space.</li>
+    <li><strong>A display setting:</strong> how you like the Breeds list grouped.</li>
+  </ul>
+  <p>None of this is sent anywhere. Deleting the app deletes all of it.</p>
+
+  <h2>Problem reports</h2>
+  <p>If you tap <strong>Report a Problem</strong> and send the email it prepares, we receive what you choose to send, through your own email app:</p>
+  <ul>
+    <li>your email address, and your name if your email app includes it;</li>
+    <li>what you wrote, the kind of problem, and the breed you said the dog is;</li>
+    <li>if you leave them attached, the frames or photos of the scan you picked, and what the app guessed for it;</li>
+    <li>your app version, breed model version, iOS version and iPhone model.</li>
+  </ul>
+  <p>You see the whole email, including any photos, before it's sent, and you can edit or cancel it. We use reports to reply to you and to fix problems. We use photos from a report to train Breed Finder's breed recognition only if you turned on <em>Breed Finder may use these photos to improve breed recognition</em> in that report. We don't sell or share reports. Ask us and we'll delete a report you sent.</p>
+
+  <h2>Crash reports</h2>
+  <p>If you've turned on <em>Share With App Developers</em> in your iPhone's settings (Privacy &amp; Security → Analytics &amp; Improvements), Apple may send us anonymous crash logs for Breed Finder. Apple's privacy policy covers that process.</p>
 
   <h2>What we don't do</h2>
   <ul>
     <li>No accounts or sign-in.</li>
     <li>No ads, analytics, or tracking.</li>
     <li>No third-party code that collects data.</li>
-    <li>The app doesn't connect to the internet, so your videos and frames never leave your iPhone.</li>
+    <li>The app itself doesn't connect to the internet. Links you tap, like photo credits, open in your browser, and problem reports go through your email app.</li>
   </ul>
 
   <h2>Breed photos</h2>
-  <p>The breed reference photos in the app are included with it when you download it. They come from Wikimedia Commons, and the app credits each photo's author and license.</p>
+  <p>The breed reference photos are included with the app when you download it. They come from Wikimedia Commons, and the app credits each photo's author and license.</p>
 
   <h2>Children</h2>
-  <p>Breed Finder collects no information from anyone, including children.</p>
+  <p>Breed Finder isn't directed at children under 13 and doesn't knowingly collect information from them. If a child sends us a problem report, we'll delete it.</p>
 
   <h2>Changes to this policy</h2>
   <p>If this policy changes, the new version will be posted on this page with a new effective date.</p>
 
   <h2>Contact</h2>
-  <p>Questions about this policy can be posted on the <a href="https://github.com/bryan-bee/BreedFinder/issues">Breed Finder GitHub page</a>.</p>
+  <p>Email <a href="mailto:breedfinder123@gmail.com">breedfinder123@gmail.com</a>, or post on the <a href="https://github.com/bryan-bee/BreedFinder/issues">Breed Finder GitHub page</a>.</p>
 </main>
 </body>
 </html>

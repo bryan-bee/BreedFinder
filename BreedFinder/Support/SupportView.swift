@@ -28,6 +28,9 @@ struct SupportView: View {
                     Button { showingReport = true } label: {
                         Label("Report a Problem", systemImage: "exclamationmark.bubble")
                     }
+                    Link(destination: SupportInfo.privacyPolicyURL) {
+                        Label("Privacy Policy", systemImage: "hand.raised")
+                    }
                 } footer: {
                     Text("Tell us about a wrong breed, a crash, a bug or an idea. You can attach one of your recent scans, and you'll see the whole email before it's sent. If Share With App Developers is on (Settings → Privacy & Security → Analytics & Improvements), crash logs also reach us automatically.")
                 }

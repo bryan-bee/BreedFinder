@@ -6,6 +6,10 @@ enum SupportInfo {
 
     static let copyrightHolder = "Bryan Bee"
 
+    /// docs/privacy.html in the repo, published by GitHub Pages. App Review requires a
+    /// privacy policy link inside the app as well as in the App Store listing.
+    static let privacyPolicyURL = URL(string: "https://bryan-bee.github.io/BreedFinder/privacy.html")!
+
     static var appVersion: String {
         let info = Bundle.main.infoDictionary
         let version = info?["CFBundleShortVersionString"] as? String ?? "?"
