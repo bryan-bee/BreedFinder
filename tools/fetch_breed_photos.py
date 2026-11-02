@@ -63,24 +63,35 @@ CATEGORIES = {
 
 # Hand-picked Commons files, checked by eye, where the automatic choice was wrong for a
 # card (a collage, a drawing, a skull, a plaque) or its author wasn't recorded.
+# "replaced": the photo before it was uploaded by someone other than its photographer
+# with no record of permission (or was a crop of a deleted file), so its license couldn't
+# be verified. Each replacement is the photographer's own upload or passed Flickr review.
 FILES = {
     "Affenpinscher": "Pinczer małpi 756.jpg",
     "Akita": "Akita Inu (male).jpg",
+    "American Bulldog": "American bulldog duke.JPG",  # replaced
     "American Foxhound": "American Foxhound.jpg",
     "Beagle": "A Beagle standing on the beach.jpg",
     "Bearded Collie": "Bearded Collie.jpg",
+    "Beauceron": "Owczarek francuski beauceron 009pl.jpg",  # replaced
     "Belgian Tervuren": "Belgian Tervuren-7-Ch-Sidekicks Masters Di Villa Roma CB RN BN 02 (16397932470).jpg",
     "Border Collie": "Black and white Border Collies.jpg",
+    "Bullmastiff": "Bulmastif 509.jpg",  # replaced
+    "Canaan Dog": "Canaan Dog (un maschio di 3 anni).jpg",  # replaced
+    "Chesapeake Bay Retriever": "Grupp 8 CHESAPEAKE BAY RETRIEVER, Ceslabben Cherry Blossom (23920278469).jpg",  # replaced
     "Curly-Coated Retriever": "Curly coated retriever.JPG",
-    # The previous photo's uploader wasn't its photographer and had no record of permission.
-    "Doberman Pinscher": "Doberman Pinscher aka Dobermann.jpg",
+    "Doberman Pinscher": "Doberman Pinscher aka Dobermann.jpg",  # replaced
     "English Bulldog": "AKC English Bulldog Great Falls June 2011.jpg",
     "Gordon Setter": "Nike the Gordon Setter (18 June 2005).jpg",
+    "Great Dane": "Dog niemiecki R 01.jpg",  # replaced
+    "Kerry Blue Terrier": "Kerry blue terier 545.jpg",  # replaced
+    "Mastiff": "Mastif angielski 51.jpg",  # replaced
+    "Norfolk Terrier": "Norfolkterrier.jpg",  # replaced
     "Norwegian Buhund": "Buhunden.jpg",
-    # The previous photos of these two were uploaded by someone other than the photographer,
-    # with no record of permission.
-    "Rottweiler": "Rottweiler net.jpg",
-    "Sealyham Terrier": "Sealyham terrier 230809.JPG",
+    "Norwegian Lundehund": "Lundehund 2008.jpg",  # replaced
+    "Rottweiler": "Rottweiler net.jpg",  # replaced
+    "Sealyham Terrier": "Sealyham terrier 230809.JPG",  # replaced
+    "Smooth Fox Terrier": "FoxSmooth2.jpg",  # replaced
 }
 
 # Breed name -> Wikipedia article, where the plain name is ambiguous or titled differently.

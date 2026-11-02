@@ -66,6 +66,10 @@ def clean_author(author: str) -> str:
     assumed = re.match(r"No machine-readable author provided\.\s*(.+?) assumed", author)
     if assumed:
         return f"{assumed.group(1)} (assumed)"
+    # Transfers from other wikis keep the original field as "(Original text: …)"; the license's
+    # own author line comes first. Drop it, along with any email address (personal data).
+    author = re.sub(r"\(\s*Original text:[^)]*\)", "", author, flags=re.I)
+    author = re.sub(r"\S+@\S+\.\w+", "", author)
     # Derivative works name their source file first: 'Original.jpg: "Jane Doe" derivative work: X'.
     author = re.sub(r"^[^:]+\.(jpe?g|png):\s*", "", author, flags=re.I).replace('"', "")
     author = re.sub(r"\s*;?\s*derivative work:", "; derivative work:", author)

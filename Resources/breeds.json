@@ -82,7 +82,7 @@
   "photo": {
    "file": "airedale-terrier.jpg",
    "title": "Airedale Terrier",
-   "author": "by Jane@rangeairevision.com",
+   "author": "by",
    "license": "Copyrighted free use",
    "licenseURL": null,
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Airedale_Terrier.jpg"
@@ -169,11 +169,11 @@
   "groupKey": "Other",
   "photo": {
    "file": "american-bulldog.jpg",
-   "title": "American Bulldog 600",
-   "author": "Photo by sannse",
-   "license": "CC BY-SA 3.0",
-   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
-   "sourceURL": "https://commons.wikimedia.org/wiki/File:American_Bulldog_600.jpg"
+   "title": "American bulldog duke",
+   "author": "Mike5p0",
+   "license": "Public domain",
+   "licenseURL": null,
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:American_bulldog_duke.JPG"
   }
  },
  "American Eskimo Dog": {
@@ -698,11 +698,11 @@
   "groupKey": "Herding",
   "photo": {
    "file": "beauceron.jpg",
-   "title": "BeauceronStand",
-   "author": "Stefan Schmitz",
-   "license": "CC BY-SA 3.0 de",
-   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
-   "sourceURL": "https://commons.wikimedia.org/wiki/File:BeauceronStand.jpg"
+   "title": "Owczarek francuski beauceron 009pl",
+   "author": "Pleple2000",
+   "license": "CC BY-SA 3.0",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:Owczarek_francuski_beauceron_009pl.jpg"
   }
  },
  "Bedlington Terrier": {
@@ -1171,7 +1171,7 @@
   "photo": {
    "file": "bouvier-des-flandres.jpg",
    "title": "Bouvier",
-   "author": "Basco at Dutch Wikipedia (Original text: annekedirven@tiscali.nl)",
+   "author": "Basco at Dutch Wikipedia",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Bouvier.JPG"
@@ -1373,11 +1373,11 @@
   "groupKey": "Working",
   "photo": {
    "file": "bullmastiff.jpg",
-   "title": "Bullmastiff edited",
-   "author": "Fausto Moreno",
+   "title": "Bulmastif 509",
+   "author": "Pleple2000",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
-   "sourceURL": "https://commons.wikimedia.org/wiki/File:Bullmastiff_edited.JPG"
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:Bulmastif_509.jpg"
   }
  },
  "Cairn Terrier": {
@@ -1431,11 +1431,11 @@
   "groupKey": "Herding",
   "photo": {
    "file": "canaan-dog.jpg",
-   "title": "CanaanDogChakede",
-   "author": "Canaan Dog, Hodowla Samorodok Hanaana http://www.ruscanaan.ru",
+   "title": "Canaan Dog (un maschio di 3 anni)",
+   "author": "Giora Sluzky",
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
-   "sourceURL": "https://commons.wikimedia.org/wiki/File:CanaanDogChakede.jpg"
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:Canaan_Dog_(un_maschio_di_3_anni).jpg"
   }
  },
  "Cane Corso": {
@@ -1606,11 +1606,11 @@
   "groupKey": "Sporting",
   "photo": {
    "file": "chesapeake-bay-retriever.jpg",
-   "title": "CH Chesapeake",
-   "author": "George Makatura",
-   "license": "Public domain",
-   "licenseURL": null,
-   "sourceURL": "https://commons.wikimedia.org/wiki/File:CH_Chesapeake.jpg"
+   "title": "Grupp 8 CHESAPEAKE BAY RETRIEVER, Ceslabben Cherry Blossom (23920278469)",
+   "author": "Svenska Mässan from Sweden",
+   "license": "CC BY 2.0",
+   "licenseURL": "https://creativecommons.org/licenses/by/2.0",
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:Grupp_8_CHESAPEAKE_BAY_RETRIEVER,_Ceslabben_Cherry_Blossom_(23920278469).jpg"
   }
  },
  "Chihuahua": {
@@ -2768,11 +2768,11 @@
   "groupKey": "Working",
   "photo": {
    "file": "great-dane.jpg",
-   "title": "Dog niemiecki żółty LM980",
+   "title": "Dog niemiecki R 01",
    "author": "Lilly M",
-   "license": "CC BY-SA 2.5",
-   "licenseURL": "https://creativecommons.org/licenses/by-sa/2.5",
-   "sourceURL": "https://commons.wikimedia.org/wiki/File:Dog_niemiecki_%C5%BC%C3%B3%C5%82ty_LM980.jpg"
+   "license": "CC BY-SA 3.0",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:Dog_niemiecki_R_01.jpg"
   }
  },
  "Great Pyrenees": {
@@ -3291,11 +3291,11 @@
   "groupKey": "Terrier",
   "photo": {
    "file": "kerry-blue-terrier.jpg",
-   "title": "Kerry Blue Terrier",
-   "author": "Peter Kumpert, Germany",
-   "license": "CC BY-SA 3.0 de",
-   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
-   "sourceURL": "https://commons.wikimedia.org/wiki/File:Kerry_Blue_Terrier.jpg"
+   "title": "Kerry blue terier 545",
+   "author": "Pleple2000",
+   "license": "CC BY-SA 3.0",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:Kerry_blue_terier_545.jpg"
   }
  },
  "Komondor": {
@@ -3640,11 +3640,11 @@
   "groupKey": "Working",
   "photo": {
    "file": "mastiff.jpg",
-   "title": "Westgort Anticipation 17 months",
-   "author": "Radovan Rohovsky",
+   "title": "Mastif angielski 51",
+   "author": "Pleple2000",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
-   "sourceURL": "https://commons.wikimedia.org/wiki/File:Westgort_Anticipation_17_months.JPG"
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:Mastif_angielski_51.jpg"
   }
  },
  "Miniature Bull Terrier": {
@@ -3844,11 +3844,11 @@
   "groupKey": "Terrier",
   "photo": {
    "file": "norfolk-terrier.jpg",
-   "title": "Norfolk terrier CAC",
-   "author": "Nutak at Dutch Wikipedia (Original text: NTCN, mw.G. Hajnova)",
-   "license": "CC BY-SA 3.0",
-   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
-   "sourceURL": "https://commons.wikimedia.org/wiki/File:Norfolk_terrier_CAC.jpg"
+   "title": "Norfolkterrier",
+   "author": "Flillia",
+   "license": "Public domain",
+   "licenseURL": null,
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:Norfolkterrier.jpg"
   }
  },
  "Norwegian Buhund": {
@@ -3931,11 +3931,11 @@
   "groupKey": "Non-Sporting",
   "photo": {
    "file": "norwegian-lundehund.jpg",
-   "title": "Lundehund-2003",
-   "author": "Karen Elise Dahlmo",
+   "title": "Lundehund 2008",
+   "author": "Andrva",
    "license": "CC BY-SA 3.0",
-   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
-   "sourceURL": "https://commons.wikimedia.org/wiki/File:Lundehund-2003.jpg"
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:Lundehund_2008.jpg"
   }
  },
  "Norwich Terrier": {
@@ -4981,11 +4981,11 @@
   "groupKey": "Terrier",
   "photo": {
    "file": "smooth-fox-terrier.jpg",
-   "title": "Patrick the Smooth Fox Terrier",
-   "author": "Tialin at English Wikipedia",
-   "license": "CC BY-SA 3.0",
-   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
-   "sourceURL": "https://commons.wikimedia.org/wiki/File:Patrick_the_Smooth_Fox_Terrier.jpg"
+   "title": "FoxSmooth2",
+   "author": "Canarian",
+   "license": "CC BY-SA 4.0",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:FoxSmooth2.jpg"
   }
  },
  "Soft Coated Wheaten Terrier": {

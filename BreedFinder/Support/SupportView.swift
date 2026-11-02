@@ -58,7 +58,7 @@ struct SupportView: View {
                 }
 
                 Section("Breed photos") {
-                    Text("Each breed's reference photo comes from Wikimedia Commons and is used under its license (public domain, CC0, CC BY or CC BY-SA). The photographer is credited on every breed's page.")
+                    Text("Each breed's reference photo comes from Wikimedia Commons and is used under its license (public domain, CC0, CC BY, CC BY-SA, or the photographer's own free-use permission). The photographer is credited on every breed's page.")
                         .font(.subheadline)
                     NavigationLink("Photo credits") { PhotoCreditsView() }
                 }
@@ -69,7 +69,9 @@ struct SupportView: View {
                 }
 
                 Section {
-                    Text("© \(Date.now.formatted(.dateTime.year())) \(SupportInfo.copyrightHolder). All rights reserved.")
+                    // Not "All rights reserved": the breed photos belong to their photographers, and
+                    // CC BY-SA forbids adding restrictions to them.
+                    Text("© \(Date.now.formatted(.dateTime.year())) \(SupportInfo.copyrightHolder). Breed photos are by their photographers and used under the licenses shown in Photo credits.")
                         .font(.footnote)
                         .foregroundStyle(.secondary)
                     Text("Support: \(SupportInfo.reportEmail)")
