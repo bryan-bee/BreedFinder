@@ -54,7 +54,7 @@ struct SupportView: View {
                     InfoRow(icon: "lock.iphone", title: "Your photos stay on your iPhone",
                             text: "Videos and photos are analyzed on the device and never uploaded. Your Breeds collection, your dog photos and the frames from your last \(RecentScansStore.limit) scans are stored only on this iPhone. They leave it only if you attach them to a problem report.")
                     InfoRow(icon: "brain", title: "The breed model",
-                            text: "A neural network trained on about 96,000 dog photos recognizes 176 breeds. It's a best guess, not a DNA test: mixed-breed dogs often show their parent breeds in the top 3.")
+                            text: "A neural network trained on about 107,000 dog photos recognizes 188 breeds. It's a best guess, not a DNA test: mixed-breed dogs often show their parent breeds in the top 3.")
                 }
 
                 Section("Breed photos") {
@@ -64,7 +64,7 @@ struct SupportView: View {
                 }
 
                 Section("Training data") {
-                    Text("The breed model was trained with Stanford Dogs, Tsinghua Dogs, the Oxford-IIIT Pet Dataset, Udacity's dog breed dataset, the Kaggle 70 Dog Breeds dataset, COCO, and Creative Commons photos from Wikimedia Commons and Flickr (via Openverse).")
+                    Text("The breed model was trained with Stanford Dogs, Tsinghua Dogs, the Oxford-IIIT Pet Dataset, Udacity's dog breed dataset, the Kaggle 70 Dog Breeds and Pet Classifier image sets, Dog CEO's dog photos, COCO, and Creative Commons photos from Wikimedia Commons and Flickr (via Openverse).")
                         .font(.subheadline)
                 }
 

@@ -526,6 +526,37 @@
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Australian_Terrier_adult_male.jpg"
   }
  },
+ "Azawakh": {
+  "name": "Azawakh",
+  "summary": "A tall, whisper-thin sighthound from the Sahel, bred by nomadic peoples of the southern Sahara to hunt gazelle and guard the camp.",
+  "origin": "Mali, Niger and Burkina Faso",
+  "lifespan": "12–15 years",
+  "weight": "33–55 lb",
+  "group": "Hound",
+  "temperament": [
+   "Loyal",
+   "Reserved",
+   "Independent"
+  ],
+  "funFacts": [
+   "It's named after the Azawagh, a dry region of Mali and Niger where the Tuareg and other nomadic peoples bred it.",
+   "The AKC only recognized it in 2019."
+  ],
+  "originCountries": [
+   "Mali",
+   "Niger",
+   "Burkina Faso"
+  ],
+  "groupKey": "Hound",
+  "photo": {
+   "file": "azawakh.jpg",
+   "title": "Bistrita 2015 (22)",
+   "author": "Cristian.vantu",
+   "license": "CC BY-SA 4.0",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:Bistrita_2015_(22).jpg"
+  }
+ },
  "Basenji": {
   "name": "Basenji",
   "summary": "An ancient hunting dog from Central Africa, known as the \"barkless dog.\" Basenjis are curious, independent and remarkably cat-like.",
@@ -1522,6 +1553,35 @@
    "sourceURL": "https://commons.wikimedia.org/wiki/File:JArabright.jpg"
   }
  },
+ "Cesky Terrier": {
+  "name": "Cesky Terrier",
+  "summary": "A calm, short-legged terrier created in Czechoslovakia in the 1940s, with a soft, wavy gray coat that's clipped rather than hand-stripped.",
+  "origin": "Czech Republic",
+  "lifespan": "12–15 years",
+  "weight": "14–24 lb",
+  "group": "Terrier",
+  "temperament": [
+   "Calm",
+   "Cheerful",
+   "Loyal"
+  ],
+  "funFacts": [
+   "Geneticist František Horák created it by crossing a Sealyham Terrier with a Scottish Terrier.",
+   "Puppies are born black and slowly turn gray as they grow up."
+  ],
+  "originCountries": [
+   "Czech Republic"
+  ],
+  "groupKey": "Terrier",
+  "photo": {
+   "file": "cesky-terrier.jpg",
+   "title": "Terier czeski suka 2009 pl2",
+   "author": "Pleple2000",
+   "license": "CC BY-SA 4.0",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:Terier_czeski_suka_2009_pl2.jpg"
+  }
+ },
  "Chesapeake Bay Retriever": {
   "name": "Chesapeake Bay Retriever",
   "summary": "A powerful American retriever bred to haul ducks out of the icy waters of the Chesapeake Bay.",
@@ -1608,6 +1668,35 @@
    "license": "CC BY 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by/3.0",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:IndyStands.jpg"
+  }
+ },
+ "Chinook": {
+  "name": "Chinook",
+  "summary": "A gentle, tawny sled dog developed in New Hampshire in the early 1900s, strong enough to haul freight and calm enough for family life.",
+  "origin": "United States (New Hampshire)",
+  "lifespan": "12–15 years",
+  "weight": "50–90 lb",
+  "group": "Working",
+  "temperament": [
+   "Gentle",
+   "Friendly",
+   "Eager to please"
+  ],
+  "funFacts": [
+   "It's the official state dog of New Hampshire.",
+   "Chinooks pulled sleds on Admiral Byrd's first expedition to Antarctica, in 1928–1930."
+  ],
+  "originCountries": [
+   "United States"
+  ],
+  "groupKey": "Working",
+  "photo": {
+   "file": "chinook.jpg",
+   "title": "Mountan Laurel Ajax the Chinook dog",
+   "author": "Unknown",
+   "license": "Copyrighted free use",
+   "licenseURL": null,
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:Mountan_Laurel_Ajax_the_Chinook_dog.jpg"
   }
  },
  "Chow Chow": {
@@ -1753,6 +1842,35 @@
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Rough-Collie-japan08_(cropped).jpg"
+  }
+ },
+ "Coton de Tulear": {
+  "name": "Coton de Tulear",
+  "summary": "A small, cheerful companion dog from Madagascar with a soft, fluffy white coat that feels like cotton.",
+  "origin": "Madagascar",
+  "lifespan": "15–19 years",
+  "weight": "8–15 lb",
+  "group": "Non-Sporting",
+  "temperament": [
+   "Happy",
+   "Gentle",
+   "Playful"
+  ],
+  "funFacts": [
+   "It's named after the port city of Toliara, once called Tuléar, in southern Madagascar.",
+   "\"Coton\" is French for cotton, after its coat."
+  ],
+  "originCountries": [
+   "Madagascar"
+  ],
+  "groupKey": "Non-Sporting",
+  "photo": {
+   "file": "coton-de-tulear.jpg",
+   "title": "Coton de Tular 1",
+   "author": "Uschi Goess (eingestellt von Caronna)",
+   "license": "CC BY-SA 3.0",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:Coton_de_Tular_1.jpg"
   }
  },
  "Curly-Coated Retriever": {
@@ -1957,6 +2075,35 @@
    "license": "CC BY-SA 4.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:French_Mastiff_female_4.jpg"
+  }
+ },
+ "Dutch Shepherd": {
+  "name": "Dutch Shepherd",
+  "summary": "A versatile Dutch farm dog that once herded sheep and guarded farms and now often works with police. Its coat is always brindle.",
+  "origin": "Netherlands",
+  "lifespan": "11–14 years",
+  "weight": "42–75 lb",
+  "group": "Herding",
+  "temperament": [
+   "Intelligent",
+   "Loyal",
+   "Energetic"
+  ],
+  "funFacts": [
+   "It comes in three coat types (short, long and rough), but always in gold or silver brindle, which sets it apart from Belgian and German shepherds.",
+   "The AKC recognized it in 2017."
+  ],
+  "originCountries": [
+   "Netherlands"
+  ],
+  "groupKey": "Herding",
+  "photo": {
+   "file": "dutch-shepherd.jpg",
+   "title": "Luna-orig-modified.Feb 2019.DSC 4339-SharpenAI-Softness",
+   "author": "CaroleField",
+   "license": "CC BY-SA 4.0",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:Luna-orig-modified.Feb_2019.DSC_4339-SharpenAI-Softness.jpg"
   }
  },
  "English Bulldog": {
@@ -2218,6 +2365,35 @@
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Fila_brasileiro_ppk9.jpg"
+  }
+ },
+ "Finnish Lapphund": {
+  "name": "Finnish Lapphund",
+  "summary": "A fluffy, friendly spitz that herded reindeer for the Sámi people of northern Finland.",
+  "origin": "Finland",
+  "lifespan": "12–15 years",
+  "weight": "33–53 lb",
+  "group": "Herding",
+  "temperament": [
+   "Friendly",
+   "Calm",
+   "Eager to please"
+  ],
+  "funFacts": [
+   "It's one of the most popular breeds in its home country, Finland.",
+   "Its thick double coat let it work all day in Arctic winters."
+  ],
+  "originCountries": [
+   "Finland"
+  ],
+  "groupKey": "Herding",
+  "photo": {
+   "file": "finnish-lapphund.jpg",
+   "title": "Finnish Lapphund Glenchess Revontuli",
+   "author": "Apdevries [2]",
+   "license": "CC BY-SA 2.5",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/2.5",
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:Finnish_Lapphund_Glenchess_Revontuli.jpg"
   }
  },
  "Finnish Spitz": {
@@ -2684,6 +2860,35 @@
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:GraceTheGreyhound.jpg"
+  }
+ },
+ "Harrier": {
+  "name": "Harrier",
+  "summary": "A cheerful English pack hound bred to hunt hares. It looks like a bigger Beagle or a smaller English Foxhound.",
+  "origin": "England",
+  "lifespan": "12–15 years",
+  "weight": "45–60 lb",
+  "group": "Hound",
+  "temperament": [
+   "Cheerful",
+   "Friendly",
+   "Outgoing"
+  ],
+  "funFacts": [
+   "It's one of the rarest breeds registered with the AKC.",
+   "Harriers hunted in packs, followed by hunters on foot or on horseback."
+  ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Hound",
+  "photo": {
+   "file": "harrier.jpg",
+   "title": "Harrier Hound -Pedigree Harrier",
+   "author": "Evforce",
+   "license": "CC BY-SA 4.0",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:Harrier_Hound_-Pedigree_Harrier.jpg"
   }
  },
  "Havanese": {
@@ -3441,6 +3646,35 @@
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Westgort_Anticipation_17_months.JPG"
   }
  },
+ "Miniature Bull Terrier": {
+  "name": "Miniature Bull Terrier",
+  "summary": "A smaller version of the Bull Terrier, with the same egg-shaped head and the same clownish, mischievous personality.",
+  "origin": "England",
+  "lifespan": "11–14 years",
+  "weight": "18–28 lb",
+  "group": "Terrier",
+  "temperament": [
+   "Playful",
+   "Mischievous",
+   "Affectionate"
+  ],
+  "funFacts": [
+   "The breed standard limits its height (10–14 inches at the shoulder), not its weight.",
+   "The AKC recognized it as a breed of its own in 1991."
+  ],
+  "originCountries": [
+   "England"
+  ],
+  "groupKey": "Terrier",
+  "photo": {
+   "file": "miniature-bull-terrier.jpg",
+   "title": "Minibull 2 Moletai May 2014",
+   "author": "Томасина",
+   "license": "CC BY-SA 4.0",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:Minibull_2_Moletai_May_2014.jpg"
+  }
+ },
  "Miniature Pinscher": {
   "name": "Miniature Pinscher",
   "summary": "A small, sleek German toy dog nicknamed the \"King of Toys\" for its confident, high-stepping strut.",
@@ -3497,6 +3731,35 @@
    "license": "CC BY-SA 3.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Miniature_Schnauzer_salt_%26_pepper_(cropped).jpg"
+  }
+ },
+ "Mudi": {
+  "name": "Mudi",
+  "summary": "A rare, quick-witted Hungarian farm dog with a wavy coat, used to herd livestock, guard the farm and catch rats.",
+  "origin": "Hungary",
+  "lifespan": "12–14 years",
+  "weight": "18–29 lb",
+  "group": "Herding",
+  "temperament": [
+   "Clever",
+   "Active",
+   "Alert"
+  ],
+  "funFacts": [
+   "Its name is pronounced \"moody\", though its personality is anything but.",
+   "The AKC recognized it in 2022."
+  ],
+  "originCountries": [
+   "Hungary"
+  ],
+  "groupKey": "Herding",
+  "photo": {
+   "file": "mudi.jpg",
+   "title": "Hondenras Mudi",
+   "author": "Vulpes at Dutch Wikipedia",
+   "license": "Public domain",
+   "licenseURL": null,
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:Hondenras_Mudi.jpg"
   }
  },
  "Neapolitan Mastiff": {
@@ -3994,6 +4257,35 @@
    "sourceURL": "https://commons.wikimedia.org/wiki/File:English_Pointer_orange-white.jpg"
   }
  },
+ "Polish Lowland Sheepdog": {
+  "name": "Polish Lowland Sheepdog",
+  "summary": "A shaggy, medium-sized herding dog from the plains of Poland, with hair falling over its eyes and a famously good memory.",
+  "origin": "Poland",
+  "lifespan": "12–14 years",
+  "weight": "30–35 lb",
+  "group": "Herding",
+  "temperament": [
+   "Self-confident",
+   "Lively",
+   "Clever"
+  ],
+  "funFacts": [
+   "In Poland it's called the Polski Owczarek Nizinny, or PON for short.",
+   "The breed nearly died out after World War II and was rebuilt from a few surviving dogs, including one named Smok."
+  ],
+  "originCountries": [
+   "Poland"
+  ],
+  "groupKey": "Herding",
+  "photo": {
+   "file": "polish-lowland-sheepdog.jpg",
+   "title": "Polski owczarek nizinny rybnik-kamien pl",
+   "author": "Pleple2000",
+   "license": "CC BY-SA 4.0",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:Polski_owczarek_nizinny_rybnik-kamien_pl.jpg"
+  }
+ },
  "Pomeranian": {
   "name": "Pomeranian",
   "summary": "A tiny, fluffy spitz bred down from larger sled-type dogs and made popular by Queen Victoria.",
@@ -4140,6 +4432,64 @@
    "license": "CC BY-SA 2.0",
    "licenseURL": "https://creativecommons.org/licenses/by-sa/2.0",
    "sourceURL": "https://commons.wikimedia.org/wiki/File:Mops_oct09_cropped2.jpg"
+  }
+ },
+ "Puli": {
+  "name": "Puli",
+  "summary": "A medium-sized Hungarian herding dog whose coat naturally forms long cords, so it looks like a walking mop.",
+  "origin": "Hungary",
+  "lifespan": "10–15 years",
+  "weight": "25–35 lb",
+  "group": "Herding",
+  "temperament": [
+   "Loyal",
+   "Clever",
+   "Energetic"
+  ],
+  "funFacts": [
+   "The cords form on their own as the soft undercoat tangles with the outer coat, and take years to reach full length.",
+   "Hungarian shepherds paired the nimble Puli, which herded the flock, with the much larger Komondor, which guarded it."
+  ],
+  "originCountries": [
+   "Hungary"
+  ],
+  "groupKey": "Herding",
+  "photo": {
+   "file": "puli.jpg",
+   "title": "PuliBlack wb",
+   "author": "Original uploader was Elf at en.wikipedia",
+   "license": "CC BY-SA 3.0",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:PuliBlack_wb.jpg"
+  }
+ },
+ "Pumi": {
+  "name": "Pumi",
+  "summary": "A lively Hungarian herding dog with a curly coat and perky, tipped ears that give it a permanently surprised look.",
+  "origin": "Hungary",
+  "lifespan": "12–14 years",
+  "weight": "22–29 lb",
+  "group": "Herding",
+  "temperament": [
+   "Lively",
+   "Alert",
+   "Vocal"
+  ],
+  "funFacts": [
+   "It developed in the 1600s and 1700s, probably from Pulis crossed with herding terriers from France and Germany.",
+   "The AKC recognized it in 2016."
+  ],
+  "originCountries": [
+   "Hungary"
+  ],
+  "groupKey": "Herding",
+  "photo": {
+   "file": "pumi.jpg",
+   "title": "Pumi 2",
+   "author": "Caronna (assumed)",
+   "license": "CC BY-SA 3.0",
+   "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+   "sourceURL": "https://commons.wikimedia.org/wiki/File:Pumi_2.jpg"
   }
  },
  "Redbone Coonhound": {

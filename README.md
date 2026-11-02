@@ -8,7 +8,7 @@ Three tabs:
 
 - **Scan:** tap *Scan a Dog* and record 5 seconds (pinch or tap 0.5× / 1× / 2× / 5× to zoom; optional flash), or *Choose Photos* to pick up to 5. Watch the frames or photos get scanned, then get the result: your dog and the best-matching breed as fanned cards, the top 3 guesses (tap one to compare) and the breed's profile. Every scan is saved to your collection.
 - **"Is it a …?"** under the cards: *Yes* / *No* / *Not sure*. *No* lists the other two guesses, then *Another breed…* (the full list) and *I don't know*. Naming a breed recounts the scan as that breed. *Change* fixes it later or takes the scan out of the collection. The answers are how the [usage stats](#usage-stats) measure real-world accuracy.
-- **Breeds:** a Pokédex of all 176 breeds with how many times you've scanned each, your own dog photos for the ones you've collected, search, and grouping A–Z / by origin / by breed group / collected.
+- **Breeds:** a Pokédex of all 188 breeds with how many times you've scanned each, your own dog photos for the ones you've collected, search, and grouping A–Z / by origin / by breed group / collected.
 - **Support:** report a problem, help & FAQ, privacy policy, the usage-stats switch, how the app works, photo credits, training-data credits.
 
 The collection (scan records and dog photos) is stored only on the device, in Application Support.
@@ -38,7 +38,7 @@ record 5 s video ──► pull 5 frames ──► for each frame:              
                                          3. classify the breed (our Core ML model)
 ```
 
-- **The breed model** is a ConvNeXt-Tiny fine-tuned on ~96k photos covering 176 breeds plus "Not a dog" (see [Train the breed model](#train-the-breed-model)).
+- **The breed model** is a ConvNeXt-Tiny fine-tuned on ~107k photos covering 188 breeds plus "Not a dog" (see [Train the breed model](#train-the-breed-model)).
 - **Combining frames:** a frame counts only when the classifier is at least 80% sure it shows a dog (real dogs score above 99%; empty rooms don't). Counting frames add their breed probabilities to a running total, rescaled to 100%, so unsure frames count for less. A video needs at least 2 counting frames and uploaded photos at least 1; otherwise the app says it found no dog instead of guessing.
 
 | File | What it does |
@@ -148,25 +148,16 @@ python ml/convert_model.py --checkpoint ~/breedfinder-data/runs/v3/best.pt
 
 ## Accuracy and limitations
 
-Measured on 9,629 held-out test photos (`ml/evaluate.py`), 176 breeds plus "Not a dog":
+The app ships the v3 model: 188 breeds plus "Not a dog", trained on 106,685 photos (after filtering and dedupe). Measured on 10,635 held-out test photos (`ml/evaluate.py`):
 
 | | Top-1 | Top-3 |
 |---|---|---|
-| All test photos | 92.2% | 98.3% |
-| Excluding Stanford Dogs (its photos come from ImageNet, which the backbone saw in pretraining) | 93.3% | 98.6% |
-| The 116 breeds the original ImageNet-only model knew, excluding Stanford: **original model** | 84.3% | — |
-| Same breeds and photos: **this model** | 93.5% | — |
+| All test photos | 91.8% | 98.1% |
+| Excluding Stanford Dogs (its photos come from ImageNet, which the backbone saw in pretraining) | 92.7% | 98.2% |
+| The 116 breeds the original ImageNet-only model knew, excluding Stanford: **original model** | 85.1% | — |
+| Same breeds and photos: **this model** | 93.4% | — |
 
-- **"Not a dog"** works: 0.1% of dog photos are rejected, and 1.1% of non-dog photos (people, cats, rooms) are given a breed.
-- **Confidence is calibrated** (`ml/calibrate.py`): when the app says 90%, it's right about 90% of the time.
-- **Hardest breeds:** look-alikes. Poodle vs. Bichon Frise (teddy-bear-clipped poodles), Pomeranian vs. Japanese Spitz, Husky vs. Malamute, Shih Tzu vs. Lhasa Apso, and the doodle mixes (65–75% top-1, though usually in the top 3). Mixed-breed dogs get their closest breeds, which is often useful but never a DNA test.
-- **Not covered:** breeds with too few freely available photos, including Miniature American Shepherd, Rat Terrier, American Bully, Catahoula, Coton de Tulear, Lagotto Romagnolo and smaller designer mixes (Aussiedoodle, Sheepadoodle, Yorkipoo, Morkie…). The app will name the closest breed it knows.
-
-### v3 (trained, not in the app yet)
-
-The app ships the v2 model above. v3 (`ml/data/build_dataset.py --name v3`) adds the Dog CEO and pet-classifier photos (106,685 photos after filtering and dedupe) and 12 breeds, for 188 breeds plus "Not a dog". The Core ML file is at `~/breedfinder-data/v3/DogBreedClassifier.mlpackage`.
-
-Both models scored on the same v3 test photos (`ml/compare_runs.py`), for the 176 breeds both know:
+**v3 vs. v2**, the previous model (176 breeds), scored on the same test photos (`ml/compare_runs.py`), for the 176 breeds both know:
 
 | | v2 top-1 | v2 top-3 | v3 top-1 | v3 top-3 |
 |---|---|---|---|---|
@@ -174,11 +165,12 @@ Both models scored on the same v3 test photos (`ml/compare_runs.py`), for the 17
 | New test photos (911) | 82.8% | 93.3% | 89.4% | 96.4% |
 | Breeds that had under 100 training photos (415) | 78.6% | 92.0% | 87.7% | 94.9% |
 
-- v3 is as accurate as v2 on the old photos, even though it chooses among 12 more breeds. It's clearly better on photos like the new sources (real-world, web-style photos) and on breeds that had few photos.
-- The new test photos went through the filter that drops photos v2 was sure were mislabeled, which flatters v2, so the real gap there is, if anything, larger.
+- v3 is as accurate as v2 on the old photos, even though it chooses among 12 more breeds. It's clearly better on web-style photos like the new sources and on breeds that had few photos. The new test photos went through the filter that drops photos v2 was sure were mislabeled, which flatters v2, so the real gap there is, if anything, larger.
 - **New breeds** (top-1 on 8–13 test photos each, so rough): Finnish Lapphund and Mudi 100%, Cesky Terrier and Miniature Bull Terrier 90%, Dutch Shepherd 88%, Polish Lowland Sheepdog 80%, Azawakh and Chinook 78%, Coton de Tulear and Pumi 75%, Puli 50% (of only 2), Harrier 33%.
-- **Hound look-alikes got harder:** Harrier sits between the Beagle and the two foxhounds, and American Foxhound fell to 30% (of 10). These need more, cleaner photos.
-- Calibrated with T = 0.727 (calibration error 0.021). Non-dog photos given a breed: 0.88% (v2: 1.13%).
+- **"Not a dog"** works: 0.13% of dog photos are rejected, and 0.88% of non-dog photos (people, cats, rooms) are given a breed (v2: 1.13%).
+- **Confidence is calibrated** (`ml/calibrate.py`, T = 0.727, calibration error 0.021): when the app says 90%, it's right about 90% of the time.
+- **Hardest breeds:** look-alikes. Poodle vs. Bichon Frise (teddy-bear-clipped poodles), Pomeranian vs. Japanese Spitz, Husky vs. Malamute, Shih Tzu vs. Lhasa Apso, the doodle mixes (65–75% top-1, though usually in the top 3), and the hounds around the new Harrier: Harrier 33% and American Foxhound 30% (of 10), mostly confused with the English Foxhound and Beagle. Mixed-breed dogs get their closest breeds, which is often useful but never a DNA test.
+- **Not covered:** breeds with too few freely available photos, including Miniature American Shepherd, Rat Terrier, American Bully, Catahoula, Lagotto Romagnolo and smaller designer mixes (Aussiedoodle, Sheepadoodle, Yorkipoo, Morkie…). The app will name the closest breed it knows.
 
 The Swift code doesn't depend on where the model comes from: any Core ML image classifier named `DogBreedClassifier` whose labels are breed names plus `Not a dog` works, as long as `Resources/breeds.json` has a profile for each breed (a unit test checks this).
 
