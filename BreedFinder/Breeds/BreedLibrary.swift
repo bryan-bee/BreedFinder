@@ -71,6 +71,8 @@ final class BreedLibrary {
     let allProfiles: [BreedProfile]
     private let profiles: [String: BreedProfile]
     private let dexNumbers: [String: Int]
+    /// Where the dog is in each reference photo, by file name (BreedPhotos/focus.json).
+    private let focus: [String: PhotoFocus]
     private let thumbnails = NSCache<NSString, UIImage>()
 
     init(bundle: Bundle = .main) {
@@ -86,6 +88,9 @@ final class BreedLibrary {
         profiles = loaded
         allProfiles = loaded.values.sorted { $0.name.localizedStandardCompare($1.name) == .orderedAscending }
         dexNumbers = Dictionary(uniqueKeysWithValues: allProfiles.enumerated().map { ($1.name, $0 + 1) })
+        focus = bundle.url(forResource: "focus", withExtension: "json", subdirectory: "BreedPhotos")
+            .flatMap { try? Data(contentsOf: $0) }
+            .flatMap { try? JSONDecoder().decode([String: PhotoFocus].self, from: $0) } ?? [:]
     }
 
     func profile(for breed: String) -> BreedProfile? {
@@ -108,14 +113,24 @@ final class BreedLibrary {
         return UIImage(contentsOfFile: url.path)
     }
 
-    /// A small, cached version of the reference photo for list rows.
+    /// A small, cached square of the reference photo for list rows, cut around the dog
+    /// rather than from the middle, which on side-on photos shows a body without a head.
     func thumbnail(for breed: String) -> UIImage? {
         if let cached = thumbnails.object(forKey: breed as NSString) { return cached }
         guard let photo = photo(for: breed), photo.size.width > 0, photo.size.height > 0 else { return nil }
-        // Short side 160 px, same proportions as the photo.
-        let scale = 160 / min(photo.size.width, photo.size.height)
-        let size = CGSize(width: photo.size.width * scale, height: photo.size.height * scale)
-        guard let thumbnail = photo.preparingThumbnail(of: size) else { return nil }
+        var square = photo
+        // Crop rects are in the photo's pixels as shown; the bundled photos are all upright.
+        if photo.imageOrientation == .up, let pixels = photo.cgImage {
+            let focus = profiles[breed]?.photo.flatMap { focus[$0.file] } ?? PhotoFocus()
+            let crop = focus.crop(of: CGSize(width: pixels.width, height: pixels.height), aspectRatio: 1)
+            if let cropped = pixels.cropping(to: crop.integral) {
+                square = UIImage(cgImage: cropped)
+            }
+        }
+        // Short side 160 px: a square after the crop, the photo's own shape if it couldn't crop.
+        let scale = 160 / min(square.size.width, square.size.height)
+        let size = CGSize(width: square.size.width * scale, height: square.size.height * scale)
+        guard let thumbnail = square.preparingThumbnail(of: size) else { return nil }
         thumbnails.setObject(thumbnail, forKey: breed as NSString)
         return thumbnail
     }

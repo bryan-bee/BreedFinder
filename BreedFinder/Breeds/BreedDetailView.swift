@@ -1,6 +1,7 @@
 import SwiftUI
 
 /// One breed's page in the Breeds tab: its photo, the user's scans of it, and its profile.
+/// Shown inside BreedPager, which sets the title as you swipe from breed to breed.
 struct BreedDetailView: View {
     let profile: BreedProfile
     @EnvironmentObject private var collection: BreedCollection
@@ -46,8 +47,6 @@ struct BreedDetailView: View {
             }
             .padding()
         }
-        .navigationTitle(profile.name)
-        .navigationBarTitleDisplayMode(.large)
     }
 }
 
@@ -65,7 +64,8 @@ private struct YourScans: View {
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
                 ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 10) {
+                    // Lazy, so a breed scanned many times only loads the photos in view.
+                    LazyHStack(spacing: 10) {
                         ForEach(records) { record in
                             ScanThumbnail(record: record)
                                 .contextMenu {

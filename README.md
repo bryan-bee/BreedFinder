@@ -57,7 +57,9 @@ record 5 s video ──► pull 5 frames ──► for each frame:              
 | [Analysis/BreedAggregator.swift](BreedFinder/Analysis/BreedAggregator.swift) | Combines the frames into the top 3 |
 | [Breeds/BreedLibrary.swift](BreedFinder/Breeds/BreedLibrary.swift) | Loads breed profiles and reference photos |
 | [Breeds/BreedCollection.swift](BreedFinder/Breeds/BreedCollection.swift) | The user's saved scans (on-device JSON + photos) |
-| [Breeds/BreedsView.swift](BreedFinder/Breeds/BreedsView.swift), [BreedGrouping.swift](BreedFinder/Breeds/BreedGrouping.swift) | The Breeds tab and its groupings |
+| [Breeds/BreedsView.swift](BreedFinder/Breeds/BreedsView.swift), [BreedGrouping.swift](BreedFinder/Breeds/BreedGrouping.swift) | The Breeds tab, its groupings and search (the text matches anywhere in a name; `*` stands for any characters) |
+| [Breeds/BreedPager.swift](BreedFinder/Breeds/BreedPager.swift) | Breed pages you swipe through, in the order the list showed them |
+| [Breeds/PhotoFocus.swift](BreedFinder/Breeds/PhotoFocus.swift) | Cuts list thumbnails around the dog instead of the middle of the photo |
 | [Support/SupportView.swift](BreedFinder/Support/SupportView.swift) | Support tab, problem reports, credits |
 | [Support/Analytics.swift](BreedFinder/Support/Analytics.swift) | Anonymous usage stats: the TelemetryDeck App ID and every signal the app sends |
 | [ScanModel.swift](BreedFinder/ScanModel.swift) | Scan tab state: home → camera → scanning → result, and the answer to "Is it a …?" |
@@ -69,9 +71,12 @@ record 5 s video ──► pull 5 frames ──► for each frame:              
 - **Profiles** are written in [content/breeds/](content/breeds/) (one JSON object per breed: summary, origin, lifespan, weight, group, temperament, fun facts). [tools/build_breed_content.py](tools/build_breed_content.py) merges them into `Resources/breeds.json` and fails if any breed the model knows has no profile; `--check-wikidata` flags origins that disagree with Wikidata.
 - **Reference photos** come from each breed's Wikipedia article (hosted on Wikimedia Commons), fetched by [tools/fetch_breed_photos.py](tools/fetch_breed_photos.py). Only licenses that allow redistribution with credit are used (public domain, CC0, CC BY, CC BY-SA); the app shows author and license under each breed's profile, as those licenses require. Where a photo's Commons page names the photographer only in its description (or its Author field is a bot's guess or a bare link), the credit is corrected by hand in `CREDIT_OVERRIDES` in [tools/build_breed_content.py](tools/build_breed_content.py). That's also where an author's requested link goes (`authorURL`; Pets Adviser asks for petsadviser.com). [Resources/BreedPhotos/README.md](Resources/BreedPhotos/README.md) explains the photos' terms for anyone browsing the repository, and [tools/audit_breed_photos.py](tools/audit_breed_photos.py) checks them all (see *Before release*).
 
+- **Where the dog is** in each photo, found with Apple's Vision by [tools/find_dogs_in_photos.swift](tools/find_dogs_in_photos.swift) and saved to `Resources/BreedPhotos/focus.json`, so list thumbnails are cut around the dog, head included, instead of from the middle. Run it on a Mac after adding or replacing photos; a unit test fails until you do.
+
 ```sh
 python tools/fetch_breed_photos.py --labels ~/breedfinder-data/v2/labels.json
 python tools/build_breed_content.py --labels ~/breedfinder-data/v2/labels.json --check-wikidata
+swift tools/find_dogs_in_photos.swift
 ```
 
 ## Run it on your iPhone

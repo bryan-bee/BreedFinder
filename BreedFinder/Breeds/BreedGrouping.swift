@@ -1,3 +1,5 @@
+import Foundation
+
 /// Ways to organize the Breeds list. Adding one means adding a case and its sections.
 enum BreedGrouping: String, CaseIterable, Identifiable {
     case alphabetical = "A–Z"
@@ -56,4 +58,22 @@ struct BreedSection: Identifiable {
     let breeds: [BreedProfile]
 
     var id: String { title ?? "all" }
+}
+
+/// The Breeds tab's search.
+enum BreedSearch {
+    /// Whether `name` matches what was typed. The text can be anywhere in the name, ignoring
+    /// case and accents: "c" finds every breed with a C in it, and "chi" finds Chihuahua,
+    /// Chinese Crested, Japanese Chin and Schipperke. A typed "*" stands for any number of
+    /// characters, so "g*doodle" finds Goldendoodle. Blank text matches every breed.
+    static func matches(_ name: String, query: String) -> Bool {
+        let pieces = query.trimmingCharacters(in: .whitespaces).split(separator: "*")
+        var searchFrom = name.startIndex
+        for piece in pieces {
+            guard let found = name.range(of: piece, options: [.caseInsensitive, .diacriticInsensitive],
+                                         range: searchFrom..<name.endIndex) else { return false }
+            searchFrom = found.upperBound
+        }
+        return true
+    }
 }

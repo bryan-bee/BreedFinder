@@ -1,5 +1,6 @@
 import AVFoundation
 import CoreGraphics
+import CryptoKit
 import CoreML
 import UIKit
 import XCTest
@@ -116,6 +117,134 @@ final class SquareRegionTests: XCTestCase {
         XCTAssertEqual(region.width, 1, accuracy: 0.0001)
         XCTAssertEqual(region.height * 1920, 1080, accuracy: 1)
         XCTAssertEqual(region.midY, 0.5, accuracy: 0.0001)
+    }
+}
+
+final class BreedSearchTests: XCTestCase {
+    func testTypedTextMatchesAnywhereInTheName() {
+        let names = ["Chihuahua", "Chinese Crested", "Japanese Chin", "Schipperke", "Beagle", "Cocker Spaniel"]
+
+        XCTAssertEqual(names.filter { BreedSearch.matches($0, query: "Chi") },
+                       ["Chihuahua", "Chinese Crested", "Japanese Chin", "Schipperke"])
+        XCTAssertEqual(names.filter { BreedSearch.matches($0, query: "C") },
+                       ["Chihuahua", "Chinese Crested", "Japanese Chin", "Schipperke", "Cocker Spaniel"])
+    }
+
+    func testCaseAndAccentsDontMatter() {
+        XCTAssertTrue(BreedSearch.matches("Chihuahua", query: "chi"))
+        XCTAssertTrue(BreedSearch.matches("Chihuahua", query: "HUAHUA"))
+        XCTAssertTrue(BreedSearch.matches("Bichon Frisé", query: "frise"))
+    }
+
+    func testStarStandsForAnyNumberOfCharacters() {
+        XCTAssertTrue(BreedSearch.matches("Goldendoodle", query: "g*doodle"))
+        XCTAssertTrue(BreedSearch.matches("Goldendoodle", query: "golden*doodle"))  // * can be nothing
+        XCTAssertFalse(BreedSearch.matches("Goldendoodle", query: "doodle*golden"))  // order matters
+        XCTAssertTrue(BreedSearch.matches("Beagle", query: "*"))
+    }
+
+    func testBlankSearchMatchesEveryBreed() {
+        XCTAssertTrue(BreedSearch.matches("Beagle", query: ""))
+        XCTAssertTrue(BreedSearch.matches("Beagle", query: "   "))
+        XCTAssertTrue(BreedSearch.matches("Beagle", query: " bea "))
+    }
+}
+
+final class PhotoFocusTests: XCTestCase {
+    let photo = CGSize(width: 800, height: 600)
+
+    /// A side-on dog longer than the biggest square the photo allows: its head stays in view.
+    func testLongDogKeepsItsHeadInView() {
+        let head = CGRect(x: 0.82, y: 0.15, width: 0.16, height: 0.25)
+        let focus = PhotoFocus(dog: CGRect(x: 0.02, y: 0.2, width: 0.96, height: 0.6), head: head)
+
+        let crop = focus.crop(of: photo, aspectRatio: 1)
+
+        XCTAssertEqual(crop, CGRect(x: 200, y: 0, width: 600, height: 600))
+        XCTAssertTrue(crop.contains(CGRect(x: 656, y: 90, width: 128, height: 150)))  // the head, in pixels
+    }
+
+    func testWholeDogThatFitsIsCenteredWithRoomAroundIt() {
+        let dog = CGRect(x: 80, y: 60, width: 400, height: 360)  // in pixels
+
+        let crop = PhotoFocus(dog: CGRect(x: 0.1, y: 0.1, width: 0.5, height: 0.6), head: nil)
+            .crop(of: photo, aspectRatio: 1)
+
+        XCTAssertTrue(crop.contains(dog))
+        XCTAssertGreaterThan(crop.width, dog.width)
+        XCTAssertEqual(crop.midX, dog.midX, accuracy: 0.5)
+    }
+
+    func testSmallDogIsZoomedInButNotTooFar() {
+        let crop = PhotoFocus(dog: CGRect(x: 0.45, y: 0.5, width: 0.1, height: 0.1), head: nil)
+            .crop(of: photo, aspectRatio: 1)
+
+        XCTAssertEqual(crop.width, 600 * PhotoFocus.tightestCrop, accuracy: 0.5)
+        XCTAssertTrue(crop.contains(CGRect(x: 360, y: 300, width: 80, height: 60)))
+    }
+
+    /// Only a head found: the biggest square, slid over to it, rather than a close-up of fur.
+    func testHeadWithoutTheDogsOutlineSlidesTheCropWithoutZooming() {
+        let crop = PhotoFocus(dog: nil, head: CGRect(x: 0.02, y: 0.1, width: 0.15, height: 0.2))
+            .crop(of: photo, aspectRatio: 1)
+
+        XCTAssertEqual(crop, CGRect(x: 0, y: 0, width: 600, height: 600))
+    }
+
+    func testNothingFoundMeansTheMiddle() {
+        XCTAssertEqual(PhotoFocus().crop(of: photo, aspectRatio: 1), CGRect(x: 100, y: 0, width: 600, height: 600))
+    }
+
+    func testCropsAreSquareAndStayInsideThePhoto() {
+        let cases: [(CGSize, CGRect)] = [
+            (CGSize(width: 800, height: 600), CGRect(x: 0.9, y: 0.85, width: 0.1, height: 0.15)),  // in a corner
+            (CGSize(width: 500, height: 900), CGRect(x: 0, y: 0, width: 1, height: 1)),  // a tall photo, all dog
+        ]
+        for (size, dog) in cases {
+            let crop = PhotoFocus(dog: dog, head: nil).crop(of: size, aspectRatio: 1)
+
+            XCTAssertTrue(CGRect(origin: .zero, size: size).insetBy(dx: -0.5, dy: -0.5).contains(crop), "\(crop) in \(size)")
+            XCTAssertEqual(crop.width, crop.height, accuracy: 0.5)
+        }
+    }
+
+    /// tools/find_dogs_in_photos.swift has to run again whenever a photo is added or
+    /// replaced, or its thumbnail gets cut around where the dog was in the old photo.
+    func testEveryBreedPhotoHasBeenAnalyzed() throws {
+        let url = try XCTUnwrap(Bundle.main.url(forResource: "focus", withExtension: "json", subdirectory: "BreedPhotos"))
+        let entries = try XCTUnwrap(JSONSerialization.jsonObject(with: Data(contentsOf: url)) as? [String: [String: Any]])
+
+        for profile in BreedLibrary.shared.allProfiles {
+            guard let file = profile.photo?.file else { continue }
+            let photo = try XCTUnwrap(Bundle.main.url(forResource: (file as NSString).deletingPathExtension,
+                                                      withExtension: (file as NSString).pathExtension,
+                                                      subdirectory: "BreedPhotos"))
+            let sha = SHA256.hash(data: try Data(contentsOf: photo)).map { String(format: "%02x", $0) }.joined().prefix(16)
+            XCTAssertEqual(entries[file]?["sha256"] as? String, String(sha),
+                           "\(file) is new or changed: run swift tools/find_dogs_in_photos.swift")
+        }
+    }
+}
+
+final class BreedPageTests: XCTestCase {
+    /// Origin grouping lists a breed under each of its countries; swiping goes on from the
+    /// row that was tapped.
+    func testPagesFollowTheListAsShownFromTheTappedRow() throws {
+        let library = BreedLibrary.shared
+        let beagle = try XCTUnwrap(library.profile(for: "Beagle"))
+        let collie = try XCTUnwrap(library.profile(for: "Border Collie"))
+        let chihuahua = try XCTUnwrap(library.profile(for: "Chihuahua"))
+        let sections = [
+            BreedSection(title: "England", breeds: [beagle, collie]),
+            BreedSection(title: "Scotland", breeds: [collie, chihuahua]),
+        ]
+
+        let pages = BreedPage.pages(for: sections)
+
+        XCTAssertEqual(pages.map(\.count), [2, 2])
+        XCTAssertEqual(pages[1][0].breeds, ["Beagle", "Border Collie", "Border Collie", "Chihuahua"])
+        XCTAssertEqual(pages[1][0].index, 2)  // the second Border Collie: next is Chihuahua
+        XCTAssertEqual(pages[0][1].index, 1)
     }
 }
 

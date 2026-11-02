@@ -5,30 +5,35 @@ import SwiftUI
 struct BreedsView: View {
     @EnvironmentObject private var collection: BreedCollection
     @AppStorage("breedGrouping") private var grouping: BreedGrouping = .alphabetical
+    /// Whether the search bar is open: the magnifying glass opens it, Cancel closes it.
+    @State private var isSearching = false
     @State private var search = ""
+    @FocusState private var searchFieldFocused: Bool
 
     private let library = BreedLibrary.shared
 
+    private var isFiltering: Bool { !search.trimmingCharacters(in: .whitespaces).isEmpty }
+
     private var sections: [BreedSection] {
-        let profiles = search.isEmpty
-            ? library.allProfiles
-            : library.allProfiles.filter { $0.name.localizedCaseInsensitiveContains(search) }
+        let profiles = library.allProfiles.filter { BreedSearch.matches($0.name, query: search) }
         return grouping.sections(of: profiles, collected: collection.collectedBreeds)
     }
 
     var body: some View {
+        let sections = self.sections
+        let pages = BreedPage.pages(for: sections)
         NavigationStack {
             List {
-                if search.isEmpty {
+                if !isFiltering {
                     Section {
                         CollectionProgress(collected: collection.collectedBreeds.count,
                                            total: library.allProfiles.count)
                     }
                 }
-                ForEach(sections) { section in
+                ForEach(Array(sections.enumerated()), id: \.element.id) { sectionIndex, section in
                     Section {
-                        ForEach(section.breeds) { profile in
-                            NavigationLink(value: profile.name) {
+                        ForEach(Array(section.breeds.enumerated()), id: \.element.id) { row, profile in
+                            NavigationLink(value: pages[sectionIndex][row]) {
                                 BreedRow(profile: profile)
                             }
                         }
@@ -40,10 +45,28 @@ struct BreedsView: View {
                     }
                 }
             }
+            .scrollDismissesKeyboard(.immediately)
+            .overlay {
+                if isFiltering, sections.isEmpty {
+                    ContentUnavailableView.search(text: search)
+                }
+            }
+            .safeAreaInset(edge: .top, spacing: 0) {
+                if isSearching {
+                    BreedSearchBar(text: $search, isFocused: $searchFieldFocused, onCancel: closeSearch)
+                        .transition(.move(edge: .top).combined(with: .opacity))
+                }
+            }
             .navigationTitle("Breeds")
-            .searchable(text: $search, prompt: "Search breeds")
             .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
+                ToolbarItemGroup(placement: .topBarTrailing) {
+                    if !isSearching {
+                        Button {
+                            withAnimation(.easeOut(duration: 0.2)) { isSearching = true }
+                        } label: {
+                            Label("Search breeds", systemImage: "magnifyingglass")
+                        }
+                    }
                     Menu {
                         Picker("Group by", selection: $grouping) {
                             ForEach(BreedGrouping.allCases) { option in
@@ -55,11 +78,64 @@ struct BreedsView: View {
                     }
                 }
             }
-            .navigationDestination(for: String.self) { name in
-                if let profile = library.profile(for: name) {
-                    BreedDetailView(profile: profile)
+            .navigationDestination(for: BreedPage.self) { page in
+                BreedPager(page: page)
+            }
+        }
+    }
+
+    private func closeSearch() {
+        searchFieldFocused = false
+        withAnimation(.easeOut(duration: 0.2)) {
+            isSearching = false
+            search = ""
+        }
+    }
+}
+
+/// The search field that opens under the title when the magnifying glass is tapped. The
+/// list filters as you type; Cancel closes the field and shows every breed again.
+private struct BreedSearchBar: View {
+    @Binding var text: String
+    let isFocused: FocusState<Bool>.Binding
+    let onCancel: () -> Void
+
+    var body: some View {
+        HStack(spacing: 12) {
+            HStack(spacing: 6) {
+                Image(systemName: "magnifyingglass")
+                    .foregroundStyle(.secondary)
+                    .accessibilityHidden(true)
+                TextField("Search breeds", text: $text)
+                    .focused(isFocused)
+                    // Typed text matches anywhere in a name, in any case, so don't capitalize it.
+                    .textInputAutocapitalization(.never)
+                    .autocorrectionDisabled()
+                    .submitLabel(.search)
+                    .onSubmit { isFocused.wrappedValue = false }
+                if !text.isEmpty {
+                    Button {
+                        text = ""
+                    } label: {
+                        Image(systemName: "xmark.circle.fill")
+                            .foregroundStyle(.secondary)
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityLabel("Clear search")
                 }
             }
+            .padding(.horizontal, 10)
+            .padding(.vertical, 8)
+            .background(Color(.tertiarySystemFill), in: RoundedRectangle(cornerRadius: 10))
+
+            Button("Cancel", action: onCancel)
+        }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 8)
+        .background(.bar)
+        .onAppear {
+            // Open the keyboard right away. The field has to be on screen before it can take focus.
+            DispatchQueue.main.async { isFocused.wrappedValue = true }
         }
     }
 }

@@ -26,8 +26,13 @@ final class BreedCollection: ObservableObject {
     @Published private(set) var records: [ScanRecord] = []
 
     private let directory: URL
-    /// Decoded dog photos, so list rows don't reread JPEGs from disk on every redraw.
-    private let photoCache = NSCache<NSString, UIImage>()
+    /// Decoded dog photos, so list rows don't reread JPEGs from disk on every redraw. Capped:
+    /// a decoded 600 × 600 photo takes about 1.4 MB of memory, however small its file.
+    private let photoCache: NSCache<NSString, UIImage> = {
+        let cache = NSCache<NSString, UIImage>()
+        cache.totalCostLimit = 64 * 1024 * 1024
+        return cache
+    }()
     private var photosDirectory: URL { directory.appendingPathComponent("Photos", isDirectory: true) }
     private var recordsFile: URL { directory.appendingPathComponent("records.json") }
 
@@ -64,7 +69,8 @@ final class BreedCollection: ObservableObject {
         guard let file = record.photoFile else { return nil }
         if let cached = photoCache.object(forKey: file as NSString) { return cached }
         guard let image = UIImage(contentsOfFile: photosDirectory.appendingPathComponent(file).path) else { return nil }
-        photoCache.setObject(image, forKey: file as NSString)
+        let bytes = Int(image.size.width * image.scale * image.size.height * image.scale) * 4
+        photoCache.setObject(image, forKey: file as NSString, cost: bytes)
         return image
     }
 
