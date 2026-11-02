@@ -74,10 +74,14 @@ struct CameraScreen: View {
             }
 
             RecordButton(isRecording: camera.isRecording, duration: CameraController.clipDuration) {
-                Analytics.send(.recordingStarted(zoom: camera.zoom, flash: flashOn))
-                camera.recordClip(withFlash: flashOn, completion: onRecorded)
+                if camera.isRecording {
+                    camera.cancelRecording()
+                } else {
+                    Analytics.send(.recordingStarted(zoom: camera.zoom, flash: flashOn))
+                    camera.recordClip(withFlash: flashOn, completion: onRecorded)
+                }
             }
-            .disabled(camera.status != .ready || camera.isRecording)
+            .disabled(camera.status != .ready)
             .padding(.bottom, 24)
         }
     }

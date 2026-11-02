@@ -1,7 +1,8 @@
 import SwiftUI
 
 /// A camera-style shutter button. While recording, a ring fills over `duration`
-/// seconds so the user knows how long to keep the dog in frame.
+/// seconds so the user knows how long to keep the dog in frame, and tapping the
+/// stop square cancels the recording, throwing the clip away.
 struct RecordButton: View {
     let isRecording: Bool
     let duration: TimeInterval
@@ -32,6 +33,6 @@ struct RecordButton: View {
                 withAnimation(.linear(duration: duration)) { progress = 1 }
             }
         }
-        .accessibilityLabel(isRecording ? "Recording" : "Record a 5-second clip")
+        .accessibilityLabel(isRecording ? "Cancel recording" : "Record a 5-second clip")
     }
 }

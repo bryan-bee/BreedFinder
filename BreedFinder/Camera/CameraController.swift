@@ -29,6 +29,8 @@ final class CameraController: NSObject, ObservableObject {
     private var camera: AVCaptureDevice?
     private var isConfigured = false
     private var onFinish: ((Result<URL, Error>) -> Void)?
+    /// Set when the user stops a recording, so the clip is thrown away. On `sessionQueue`.
+    private var discardsRecording = false
 
     func start() {
         switch AVCaptureDevice.authorizationStatus(for: .video) {
@@ -67,6 +69,16 @@ final class CameraController: NSObject, ObservableObject {
                 .appendingPathComponent(UUID().uuidString)
                 .appendingPathExtension("mov")
             movieOutput.startRecording(to: url, recordingDelegate: self)
+        }
+    }
+
+    /// Stops the recording early and throws the clip away. `recordClip`'s completion isn't
+    /// called: the camera is simply ready to record again.
+    func cancelRecording() {
+        sessionQueue.async { [self] in
+            guard movieOutput.isRecording else { return }
+            discardsRecording = true
+            movieOutput.stopRecording()
         }
     }
 
@@ -213,6 +225,12 @@ extension CameraController: AVCaptureFileOutputRecordingDelegate {
             setTorch(on: false)
             let completion = onFinish
             onFinish = nil
+            if discardsRecording {
+                discardsRecording = false
+                try? FileManager.default.removeItem(at: outputFileURL)
+                DispatchQueue.main.async { [self] in isRecording = false }
+                return
+            }
             DispatchQueue.main.async { [self] in
                 isRecording = false
                 completion?(result)
