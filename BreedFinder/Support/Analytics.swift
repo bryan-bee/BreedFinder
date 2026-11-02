@@ -15,7 +15,7 @@ import TelemetryDeck
 enum Analytics {
     /// The app's ID from the TelemetryDeck dashboard. While it's empty, the SDK is never
     /// started and nothing is sent.
-    static let appID = ""
+    static let appID = "7A653FA2-EAE2-451C-95B8-F258B704650E"
 
     /// UserDefaults key for the Support tab's "Share anonymous usage stats" switch (on by default).
     static let sharingKey = "shareUsageStats"
