@@ -1,0 +1,146 @@
+{
+ "Azawakh": {
+  "summary": "A tall, whisper-thin sighthound from the Sahel, bred by nomadic peoples of the southern Sahara to hunt gazelle and guard the camp.",
+  "origin": "Mali, Niger and Burkina Faso",
+  "lifespan": "12–15 years",
+  "weight": "33–55 lb",
+  "group": "Hound",
+  "temperament": ["Loyal", "Reserved", "Independent"],
+  "funFacts": [
+   "It's named after the Azawagh, a dry region of Mali and Niger where the Tuareg and other nomadic peoples bred it.",
+   "The AKC only recognized it in 2019."
+  ]
+ },
+ "Cesky Terrier": {
+  "summary": "A calm, short-legged terrier created in Czechoslovakia in the 1940s, with a soft, wavy gray coat that's clipped rather than hand-stripped.",
+  "origin": "Czech Republic",
+  "lifespan": "12–15 years",
+  "weight": "14–24 lb",
+  "group": "Terrier",
+  "temperament": ["Calm", "Cheerful", "Loyal"],
+  "funFacts": [
+   "Geneticist František Horák created it by crossing a Sealyham Terrier with a Scottish Terrier.",
+   "Puppies are born black and slowly turn gray as they grow up."
+  ]
+ },
+ "Chinook": {
+  "summary": "A gentle, tawny sled dog developed in New Hampshire in the early 1900s, strong enough to haul freight and calm enough for family life.",
+  "origin": "United States (New Hampshire)",
+  "lifespan": "12–15 years",
+  "weight": "50–90 lb",
+  "group": "Working",
+  "temperament": ["Gentle", "Friendly", "Eager to please"],
+  "funFacts": [
+   "It's the official state dog of New Hampshire.",
+   "Chinooks pulled sleds on Admiral Byrd's first expedition to Antarctica, in 1928–1930."
+  ]
+ },
+ "Coton de Tulear": {
+  "summary": "A small, cheerful companion dog from Madagascar with a soft, fluffy white coat that feels like cotton.",
+  "origin": "Madagascar",
+  "lifespan": "15–19 years",
+  "weight": "8–15 lb",
+  "group": "Non-Sporting",
+  "temperament": ["Happy", "Gentle", "Playful"],
+  "funFacts": [
+   "It's named after the port city of Toliara, once called Tuléar, in southern Madagascar.",
+   "\"Coton\" is French for cotton, after its coat."
+  ]
+ },
+ "Dutch Shepherd": {
+  "summary": "A versatile Dutch farm dog that once herded sheep and guarded farms and now often works with police. Its coat is always brindle.",
+  "origin": "Netherlands",
+  "lifespan": "11–14 years",
+  "weight": "42–75 lb",
+  "group": "Herding",
+  "temperament": ["Intelligent", "Loyal", "Energetic"],
+  "funFacts": [
+   "It comes in three coat types (short, long and rough), but always in gold or silver brindle, which sets it apart from Belgian and German shepherds.",
+   "The AKC recognized it in 2017."
+  ]
+ },
+ "Finnish Lapphund": {
+  "summary": "A fluffy, friendly spitz that herded reindeer for the Sámi people of northern Finland.",
+  "origin": "Finland",
+  "lifespan": "12–15 years",
+  "weight": "33–53 lb",
+  "group": "Herding",
+  "temperament": ["Friendly", "Calm", "Eager to please"],
+  "funFacts": [
+   "It's one of the most popular breeds in its home country, Finland.",
+   "Its thick double coat let it work all day in Arctic winters."
+  ]
+ },
+ "Harrier": {
+  "summary": "A cheerful English pack hound bred to hunt hares. It looks like a bigger Beagle or a smaller English Foxhound.",
+  "origin": "England",
+  "lifespan": "12–15 years",
+  "weight": "45–60 lb",
+  "group": "Hound",
+  "temperament": ["Cheerful", "Friendly", "Outgoing"],
+  "funFacts": [
+   "It's one of the rarest breeds registered with the AKC.",
+   "Harriers hunted in packs, followed by hunters on foot or on horseback."
+  ]
+ },
+ "Miniature Bull Terrier": {
+  "summary": "A smaller version of the Bull Terrier, with the same egg-shaped head and the same clownish, mischievous personality.",
+  "origin": "England",
+  "lifespan": "11–14 years",
+  "weight": "18–28 lb",
+  "group": "Terrier",
+  "temperament": ["Playful", "Mischievous", "Affectionate"],
+  "funFacts": [
+   "The breed standard limits its height (10–14 inches at the shoulder), not its weight.",
+   "The AKC recognized it as a breed of its own in 1991."
+  ]
+ },
+ "Mudi": {
+  "summary": "A rare, quick-witted Hungarian farm dog with a wavy coat, used to herd livestock, guard the farm and catch rats.",
+  "origin": "Hungary",
+  "lifespan": "12–14 years",
+  "weight": "18–29 lb",
+  "group": "Herding",
+  "temperament": ["Clever", "Active", "Alert"],
+  "funFacts": [
+   "Its name is pronounced \"moody\", though its personality is anything but.",
+   "The AKC recognized it in 2022."
+  ]
+ },
+ "Polish Lowland Sheepdog": {
+  "summary": "A shaggy, medium-sized herding dog from the plains of Poland, with hair falling over its eyes and a famously good memory.",
+  "origin": "Poland",
+  "lifespan": "12–14 years",
+  "weight": "30–35 lb",
+  "group": "Herding",
+  "temperament": ["Self-confident", "Lively", "Clever"],
+  "funFacts": [
+   "In Poland it's called the Polski Owczarek Nizinny, or PON for short.",
+   "The breed nearly died out after World War II and was rebuilt from a few surviving dogs, including one named Smok."
+  ]
+ },
+ "Puli": {
+  "summary": "A medium-sized Hungarian herding dog whose coat naturally forms long cords, so it looks like a walking mop.",
+  "origin": "Hungary",
+  "lifespan": "10–15 years",
+  "weight": "25–35 lb",
+  "group": "Herding",
+  "temperament": ["Loyal", "Clever", "Energetic"],
+  "funFacts": [
+   "The cords form on their own as the soft undercoat tangles with the outer coat, and take years to reach full length.",
+   "Hungarian shepherds paired the nimble Puli, which herded the flock, with the much larger Komondor, which guarded it."
+  ]
+ },
+ "Pumi": {
+  "summary": "A lively Hungarian herding dog with a curly coat and perky, tipped ears that give it a permanently surprised look.",
+  "origin": "Hungary",
+  "lifespan": "12–14 years",
+  "weight": "22–29 lb",
+  "group": "Herding",
+  "temperament": ["Lively", "Alert", "Vocal"],
+  "funFacts": [
+   "It developed in the 1600s and 1700s, probably from Pulis crossed with herding terriers from France and Germany.",
+   "The AKC recognized it in 2016."
+  ]
+ }
+}

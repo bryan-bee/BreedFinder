@@ -111,11 +111,20 @@ pip install -r ml/requirements-train.txt
 
 python ml/data/download.py        # datasets below (Kaggle needs ~/.kaggle/access_token)
 python ml/data/commons.py         # Wikimedia Commons photos; slow on purpose, resumable
-python ml/data/build_dataset.py   # merge labels, resize, dedupe, split  -> ~/breedfinder-data/dataset
-python ml/train.py                # fine-tune ConvNeXt-Tiny (~85 min)     -> ~/breedfinder-data/runs/convnext_tiny
-python ml/evaluate.py             # test-set report, incl. before/after vs. the ImageNet model
-python ml/calibrate.py            # temperature scaling so confidence % are honest
-python ml/convert_model.py --checkpoint ~/breedfinder-data/runs/convnext_tiny/best.pt
+python ml/data/build_dataset.py --name v3 --keep-splits-from v2 --teacher-run v2
+                                  # merge labels, resize, filter, dedupe, split -> ~/breedfinder-data/v3
+python ml/train.py --dataset v3 --run v3       # fine-tune ConvNeXt-Tiny (~1.5 h) -> runs/v3
+python ml/calibrate.py --dataset v3 --run v3   # temperature scaling so confidence % are honest
+python ml/evaluate.py --dataset v3 --run v3    # test-set report, incl. before/after vs. the ImageNet model
+python ml/compare_runs.py --dataset v3 --old-dataset v2 --old-run v2 --new-run v3   # old vs new model, same photos
+python ml/convert_model.py --checkpoint ~/breedfinder-data/runs/v3/best.pt
+```
+
+`build_dataset.py` options:
+- `--keep-splits-from v2`: photos that were in the v2 build keep their train/val/test split, so the old and new models are compared on test photos neither trained on (`compare_runs.py`). New photos are split by a hash of the photo, so they stay put in later builds too.
+- `--teacher-run v2`: checks the sources with unreliable labels (the image-search set and Dog CEO's community photos) against the v2 model. A photo is dropped when that model is at least 80% sure it shows a different breed, or no dog. The list goes to `teacher_rejected.csv` for spot checks. Unsure disagreements stay, because those are the look-alikes the new model needs to learn. Breeds the old model doesn't know only lose photos it's sure show no dog, since it would confidently call a new breed its closest look-alike (a Puli a Komondor).
+
+```sh
 ```
 
 | Source | Photos | Why it's here |
@@ -125,11 +134,13 @@ python ml/convert_model.py --checkpoint ~/breedfinder-data/runs/convnext_tiny/be
 | [133-breed AKC set](https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/dogImages.zip) | 8.4k | Dachshund, Bulldog, Akita, Havanese, many rarer breeds |
 | [Oxford-IIIT Pets](https://huggingface.co/datasets/timm/oxford-iiit-pet) (CC BY-SA 4.0) | 7.4k | Pit Bull, American Bulldog; its cats become "Not a dog" |
 | [Kaggle 70 Dog Breeds](https://www.kaggle.com/datasets/gpiosenka/70-dog-breedsimage-data-set) | 9.3k | Labradoodle, Cockapoo, American Hairless Terrier |
+| [Dog CEO](https://github.com/jigsawpieces/dog-api-images) photos (a Kaggle copy, unzipped into `raw/dogceo` by hand) | 17.5k, ~660 new | 94% are Stanford Dogs copies, which the dedupe removes. The rest add a little to thin breeds: Jack Russell, Australian Cattle Dog, Dachshund, Shiba Inu. Used from v3. |
 | [Wikimedia Commons](https://commons.wikimedia.org) | varies | Thin popular breeds (Dachshund, English Bulldog…); license and author per photo in each `meta.jsonl` |
 | Openverse (one-time, see below) | 1.8k | Doodle mixes: Goldendoodle, Labradoodle, Bernedoodle, Cockapoo, Cavapoo, Maltipoo, Pomsky |
+| "Pet classifier image directory" (Kaggle, unzipped into `raw/petclassifier` by hand) | 13.8k, ~11.5k new | About 100 image-search results for each of 142 breeds (A–P, plus Siberian Husky). Brings most thin breeds to 100+ photos and adds 12 breeds: Azawakh, Cesky Terrier, Chinook, Coton de Tulear, Dutch Shepherd, Finnish Lapphund, Harrier, Miniature Bull Terrier, Mudi, Polish Lowland Sheepdog, Puli, Pumi. Labels are noisy, so it goes through the not-a-dog and `--teacher-run` filters, and its Cocker Spaniel, Pointer and Mastiff folders are skipped (each name covers more than one of our breeds). |
 | [COCO val2017](https://cocodataset.org) photos without dogs | 4.8k | Everyday scenes and people for "Not a dog" |
 
-[ml/data/breeds.py](ml/data/breeds.py) maps every dataset's labels onto one breed list; an unmapped label stops the build. Ambiguous labels (Kaggle's "Corgi", ImageNet's husky-like "Eskimo dog") are dropped rather than guessed. Stanford Dogs and Tsinghua Dogs are licensed for non-commercial research, which fits a free app with no ads; revisit the data sources before ever charging for the app.
+[ml/data/breeds.py](ml/data/breeds.py) maps every dataset's labels onto one breed list; an unmapped label stops the build. Ambiguous labels (Kaggle's "Corgi", ImageNet's husky-like "Eskimo dog", "coonhound") are dropped rather than guessed. Stanford Dogs and Tsinghua Dogs are licensed for non-commercial research, which fits a free app with no ads; revisit the data sources before ever charging for the app. The Dog CEO photos count as the same: the Kaggle copy carries an MIT license whose copyright lines (Mark Otto 2013, Andrew Fong 2017) match the Hyde/Hydeout website theme, so it covers code, not photos its uploader didn't take, and the image repository credits Stanford Dogs for its originals and accepts community submissions with no stated license for the photos. The pet classifier set is image-search results, which belong to their photographers whatever a dataset page says, so the same applies.
 
 **About the doodle photos:** they're Creative Commons photos (mostly from Flickr) found through the [Openverse](https://openverse.org) API on 2026-10-31, with license and author recorded in `raw/openverse/<breed>/meta.jsonl`. Openverse's [terms](https://docs.openverse.org/terms_of_service.html) prohibit scraping its catalog, which bulk collection amounts to, so the collector was removed and no more photos will be gathered that way. More doodle photos should come from Wikimedia Commons, or from Openverse only with [expanded access granted by request](https://github.com/WordPress/openverse#keep-in-touch).
 
@@ -150,6 +161,24 @@ Measured on 9,629 held-out test photos (`ml/evaluate.py`), 176 breeds plus "Not 
 - **Confidence is calibrated** (`ml/calibrate.py`): when the app says 90%, it's right about 90% of the time.
 - **Hardest breeds:** look-alikes. Poodle vs. Bichon Frise (teddy-bear-clipped poodles), Pomeranian vs. Japanese Spitz, Husky vs. Malamute, Shih Tzu vs. Lhasa Apso, and the doodle mixes (65–75% top-1, though usually in the top 3). Mixed-breed dogs get their closest breeds, which is often useful but never a DNA test.
 - **Not covered:** breeds with too few freely available photos, including Miniature American Shepherd, Rat Terrier, American Bully, Catahoula, Coton de Tulear, Lagotto Romagnolo and smaller designer mixes (Aussiedoodle, Sheepadoodle, Yorkipoo, Morkie…). The app will name the closest breed it knows.
+
+### v3 (trained, not in the app yet)
+
+The app ships the v2 model above. v3 (`ml/data/build_dataset.py --name v3`) adds the Dog CEO and pet-classifier photos (106,685 photos after filtering and dedupe) and 12 breeds, for 188 breeds plus "Not a dog". The Core ML file is at `~/breedfinder-data/v3/DogBreedClassifier.mlpackage`.
+
+Both models scored on the same v3 test photos (`ml/compare_runs.py`), for the 176 breeds both know:
+
+| | v2 top-1 | v2 top-3 | v3 top-1 | v3 top-3 |
+|---|---|---|---|---|
+| v2's own test photos (9,615) | 92.2% | 98.3% | 92.1% | 98.3% |
+| New test photos (911) | 82.8% | 93.3% | 89.4% | 96.4% |
+| Breeds that had under 100 training photos (415) | 78.6% | 92.0% | 87.7% | 94.9% |
+
+- v3 is as accurate as v2 on the old photos, even though it chooses among 12 more breeds. It's clearly better on photos like the new sources (real-world, web-style photos) and on breeds that had few photos.
+- The new test photos went through the filter that drops photos v2 was sure were mislabeled, which flatters v2, so the real gap there is, if anything, larger.
+- **New breeds** (top-1 on 8–13 test photos each, so rough): Finnish Lapphund and Mudi 100%, Cesky Terrier and Miniature Bull Terrier 90%, Dutch Shepherd 88%, Polish Lowland Sheepdog 80%, Azawakh and Chinook 78%, Coton de Tulear and Pumi 75%, Puli 50% (of only 2), Harrier 33%.
+- **Hound look-alikes got harder:** Harrier sits between the Beagle and the two foxhounds, and American Foxhound fell to 30% (of 10). These need more, cleaner photos.
+- Calibrated with T = 0.727 (calibration error 0.021). Non-dog photos given a breed: 0.88% (v2: 1.13%).
 
 The Swift code doesn't depend on where the model comes from: any Core ML image classifier named `DogBreedClassifier` whose labels are breed names plus `Not a dog` works, as long as `Resources/breeds.json` has a profile for each breed (a unit test checks this).
 
