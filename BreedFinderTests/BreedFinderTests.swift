@@ -399,6 +399,14 @@ final class BreedContentTests: XCTestCase {
         }
     }
 
+    /// Pets Adviser, who took the Belgian Tervuren photo, asks credits to link to its website,
+    /// which CC BY 2.0 lets an author require.
+    func testCreditLinksTheAuthorWhenTheyAskForIt() throws {
+        let credit = try XCTUnwrap(BreedLibrary.shared.profile(for: "Belgian Tervuren")?.photo)
+        let links = credit.attribution.runs.compactMap { $0.link }
+        XCTAssertTrue(links.contains(URL(string: "https://www.petsadviser.com")!))
+    }
+
     func testProfilesWithPhotoCreditsHaveTheirPhotoBundled() throws {
         let model = try DogBreedClassifier(configuration: MLModelConfiguration()).model
         let labels = model.modelDescription.classLabels as? [String] ?? []

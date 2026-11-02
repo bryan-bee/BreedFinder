@@ -31,6 +31,25 @@ ORIGIN_COUNTRIES = {
 }
 AKC_GROUPS = ["Sporting", "Hound", "Working", "Terrier", "Toy", "Non-Sporting", "Herding"]
 
+# Credits corrected by hand from each photo's Commons page, where its machine-readable
+# Author field is missing, wrong or only "assumed".
+CREDIT_OVERRIDES = {
+    # Commons only "assumes" the bot that moved the file; the description and the original
+    # upload log name the photographer, who uploaded it as User:Clippclan.
+    "Cockapoo": {"author": "Karla Clippinger (Clippclan)"},
+    "Bluetick Coonhound": {"author": "Mark Riordan"},       # "Photo by Mark Riordan (me)… public domain"
+    "Chinook": {"author": "Chinookfan (English Wikipedia)"},  # "taken and copyright (2004) by uploader"
+    "Finnish Spitz": {"author": "PrzemekL"},                # "The picture was taken by PrzemekL"
+    "Otterhound": {"author": "Machinecha"},                 # the uploader's own public-domain release
+    "Puli": {"author": "Ellen Levy Finch (Elf)"},           # "Photo by Ellen Levy Finch (Elf)"
+    "Pumi": {"author": "Steffen Heinz (Caronna)"},          # "selbst fotografiert … von steffen heinz (caronna)"
+    "Samoyed": {"author": "Pleple2000"},                    # "author: Pleple2000", own upload
+    # The Author field is just a link; Flickr's license review names the account.
+    "American Pit Bull Terrier": {"author": "stacydubuc (Flickr)"},
+    # CC BY 2.0 lets the author name a link for credits; Pets Adviser asks for its website.
+    "Belgian Tervuren": {"author": "Pets Adviser", "authorURL": "https://www.petsadviser.com"},
+}
+
 
 def origin_countries(origin: str) -> list[str]:
     """'Scotland and England' -> both; 'United States (Alaska)' -> 'United States'."""
@@ -126,6 +145,7 @@ def main() -> None:
     credits = json.loads(credits_path.read_text(encoding="utf-8")) if credits_path.exists() else {}
 
     problems = [f"no profile for {b}" for b in breeds if b not in profiles]
+    problems += [f"CREDIT_OVERRIDES names {b}, which the model doesn't have" for b in CREDIT_OVERRIDES if b not in breeds]
     for name, profile in profiles.items():
         for field, kind in REQUIRED.items():
             if not isinstance(profile.get(field), kind) or not profile.get(field):
@@ -148,6 +168,7 @@ def main() -> None:
                 "license": c["license"],
                 "licenseURL": license_url.replace("http://", "https://") if license_url else None,
                 "sourceURL": c.get("sourceURL"),
+                **CREDIT_OVERRIDES.get(name, {}),
             }
             # CC BY and CC BY-SA require crediting the author and linking the license.
             if c["license"].upper().startswith("CC BY"):

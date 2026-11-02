@@ -5,6 +5,8 @@ struct BreedPhotoCredit: Decodable {
     /// The Commons file name, e.g. "Akita Inu (male)".
     let title: String?
     let author: String
+    /// Where the author asks credits to link (CC BY 2.0 lets them name one), e.g. their website.
+    let authorURL: String?
     let license: String
     let licenseURL: String?
     let sourceURL: String?
@@ -19,7 +21,9 @@ struct BreedPhotoCredit: Decodable {
         text += title
         text += AttributedString("”")
         if !author.isEmpty, author != "Unknown" {
-            text += AttributedString(" by \(author)")
+            var name = AttributedString(author)
+            name.link = authorURL.flatMap(URL.init(string:))
+            text += AttributedString(" by ") + name
         }
         text += AttributedString(", ")
         var license = AttributedString(self.license)

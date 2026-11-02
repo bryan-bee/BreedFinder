@@ -40,9 +40,14 @@ def artist(info: dict) -> str:
 
 
 def usable(info: dict) -> bool:
-    """Freely licensed, and if the license requires credit, the author is known."""
+    """Freely licensed, and if the license requires credit, the author is known. An author
+    Commons only "assumes" to be a bot (the one that moved the file) isn't known: the
+    Cockapoo photo credited "BetacommandBot" that way."""
     license_name = info.get("extmetadata", {}).get("LicenseShortName", {}).get("value", "")
-    return bool(FREE_LICENSE.search(license_name)) and (bool(NO_ATTRIBUTION.search(license_name)) or bool(artist(info)))
+    author = artist(info)
+    bot_guess = re.search(r"bot\s+assumed", author, re.I)  # "… BetacommandBot assumed (based on …)"
+    return bool(FREE_LICENSE.search(license_name)) and (
+        bool(NO_ATTRIBUTION.search(license_name)) or (bool(author) and not bot_guess))
 
 # Breeds with no Wikipedia article of their own (or whose lead image isn't usable):
 # pick a photo from this Commons category instead.
@@ -67,9 +72,15 @@ FILES = {
     "Belgian Tervuren": "Belgian Tervuren-7-Ch-Sidekicks Masters Di Villa Roma CB RN BN 02 (16397932470).jpg",
     "Border Collie": "Black and white Border Collies.jpg",
     "Curly-Coated Retriever": "Curly coated retriever.JPG",
+    # The previous photo's uploader wasn't its photographer and had no record of permission.
+    "Doberman Pinscher": "Doberman Pinscher aka Dobermann.jpg",
     "English Bulldog": "AKC English Bulldog Great Falls June 2011.jpg",
     "Gordon Setter": "Nike the Gordon Setter (18 June 2005).jpg",
     "Norwegian Buhund": "Buhunden.jpg",
+    # The previous photos of these two were uploaded by someone other than the photographer,
+    # with no record of permission.
+    "Rottweiler": "Rottweiler net.jpg",
+    "Sealyham Terrier": "Sealyham terrier 230809.JPG",
 }
 
 # Breed name -> Wikipedia article, where the plain name is ambiguous or titled differently.

@@ -80,14 +80,16 @@ struct FactTile: View {
 }
 
 /// Attribution required by the photo's Creative Commons license. The title and license
-/// are links (to the photo's Commons page and the license text).
+/// are links (to the photo's Commons page and the license text), and so is the author's
+/// name when they ask for a link. Full-contrast text: the gray secondary style is under
+/// the 4.5:1 that small text needs, and this credit is legally required.
 struct PhotoCreditView: View {
     let credit: BreedPhotoCredit
 
     var body: some View {
         (Text("Breed photo: ") + Text(credit.attribution))
-            .font(.caption2)
-            .foregroundStyle(.secondary)
+            .font(.caption)
+            .foregroundStyle(.primary)
             .tint(Color.accentColor)
     }
 }

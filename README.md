@@ -67,7 +67,7 @@ record 5 s video ──► pull 5 frames ──► for each frame:              
 ## Breed profiles and photos
 
 - **Profiles** are written in [content/breeds/](content/breeds/) (one JSON object per breed: summary, origin, lifespan, weight, group, temperament, fun facts). [tools/build_breed_content.py](tools/build_breed_content.py) merges them into `Resources/breeds.json` and fails if any breed the model knows has no profile; `--check-wikidata` flags origins that disagree with Wikidata.
-- **Reference photos** come from each breed's Wikipedia article (hosted on Wikimedia Commons), fetched by [tools/fetch_breed_photos.py](tools/fetch_breed_photos.py). Only licenses that allow redistribution with credit are used (public domain, CC0, CC BY, CC BY-SA); the app shows author and license under each breed's profile, as those licenses require.
+- **Reference photos** come from each breed's Wikipedia article (hosted on Wikimedia Commons), fetched by [tools/fetch_breed_photos.py](tools/fetch_breed_photos.py). Only licenses that allow redistribution with credit are used (public domain, CC0, CC BY, CC BY-SA); the app shows author and license under each breed's profile, as those licenses require. Where a photo's Commons page names the photographer only in its description (or its Author field is a bot's guess or a bare link), the credit is corrected by hand in `CREDIT_OVERRIDES` in [tools/build_breed_content.py](tools/build_breed_content.py). That's also where an author's requested link goes (`authorURL`; Pets Adviser asks for petsadviser.com).
 
 ```sh
 python tools/fetch_breed_photos.py --labels ~/breedfinder-data/v2/labels.json
@@ -248,6 +248,7 @@ Xcode merges it with TelemetryDeck's own manifest. To see the combined report, c
 - [ ] TelemetryDeck App ID in `Analytics.appID` (see [Usage stats](#usage-stats)). If you ship without it, nothing is collected, and the App Privacy answer becomes **Data Not Collected**. Then remove the usage-stats section from the privacy policy and the collected data types from the privacy manifest.
 - [x] Privacy policy: [docs/privacy.html](docs/privacy.html), published at https://bryan-bee.github.io/BreedFinder/privacy.html and linked in the Support tab. Update it whenever the app starts handling data differently.
 - [x] Support page: [docs/support.html](docs/support.html), published at https://bryan-bee.github.io/BreedFinder/support.html and linked in the Support tab (*Help & FAQ*).
+- [x] Breed photo licenses checked against Wikimedia Commons (November 2026). Doberman Pinscher, Rottweiler and Sealyham Terrier were replaced: each was uploaded by someone other than its photographer, with no record of permission. Lakeland Terrier is still flagged on Commons for having no source, but its photographer (sannse) uploaded it under their own license, so it's fine to use.
 
 ## Ship it to the App Store
 

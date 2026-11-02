@@ -561,12 +561,13 @@
   "sourceURL": "https://commons.wikimedia.org/wiki/File:Dingo_(Canis_lupus_dingo)_Kakadu_2.jpg"
  },
  "Doberman Pinscher": {
-  "article": "Dobermann",
-  "author": "Miroslav Cacik",
+  "article": null,
+  "author": "Canarian",
   "file": "doberman-pinscher.jpg",
-  "license": "Copyrighted free use",
-  "licenseURL": null,
-  "sourceURL": "https://commons.wikimedia.org/wiki/File:Dobermann_handling.jpg"
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
+  "sourceURL": "https://commons.wikimedia.org/wiki/File:Doberman_Pinscher_aka_Dobermann.jpg",
+  "title": "Doberman Pinscher aka Dobermann"
  },
  "Dogue de Bordeaux": {
   "article": "Dogue de Bordeaux",
@@ -1268,12 +1269,13 @@
   "sourceURL": "https://commons.wikimedia.org/wiki/File:Rhodesian_ridgeback.jpg"
  },
  "Rottweiler": {
-  "article": "Rottweiler",
-  "author": "Dr. Manfred Herrmann Allgemeiner Deutscher Rottweiler-Klub (ADRK) e.V. http://www.ADRK.de",
+  "article": null,
+  "author": "mister b 1138",
   "file": "rottweiler.jpg",
-  "license": "CC BY-SA 3.0",
-  "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
-  "sourceURL": "https://commons.wikimedia.org/wiki/File:Rottweiler_standing_facing_left.jpg"
+  "license": "CC BY 2.0",
+  "licenseURL": "https://creativecommons.org/licenses/by/2.0",
+  "sourceURL": "https://commons.wikimedia.org/wiki/File:Rottweiler_net.jpg",
+  "title": "Rottweiler net"
  },
  "Saint Bernard": {
   "article": "St. Bernard (dog breed)",
@@ -1324,12 +1326,13 @@
   "sourceURL": "https://commons.wikimedia.org/wiki/File:Scottish_Terrier_Photo_of_Face.jpg"
  },
  "Sealyham Terrier": {
-  "article": "Sealyham Terrier",
-  "author": "Dr. Sabine Schumann",
+  "article": null,
+  "author": "Tuomas Palonen",
   "file": "sealyham-terrier.jpg",
-  "license": "Public domain",
-  "licenseURL": null,
-  "sourceURL": "https://commons.wikimedia.org/wiki/File:SealyhamTerrier01.jpg"
+  "license": "CC BY-SA 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
+  "sourceURL": "https://commons.wikimedia.org/wiki/File:Sealyham_terrier_230809.JPG",
+  "title": "Sealyham terrier 230809"
  },
  "Shar-Pei": {
   "article": "Shar Pei",

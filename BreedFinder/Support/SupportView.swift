@@ -118,9 +118,10 @@ private struct PhotoCreditsView: View {
     var body: some View {
         List {
             Section {
+                // Full-contrast text: this note (the photos were changed) and the credits
+                // below are what the licenses require us to show.
                 Text("Every breed photo comes from Wikimedia Commons. Tap a photo's title to see it there, or its license to read the license. In the app, photos are resized, and may be shown cropped or on a blurred copy of themselves.")
                     .font(.subheadline)
-                    .foregroundStyle(.secondary)
             }
             ForEach(BreedLibrary.shared.allProfiles) { profile in
                 if let credit = profile.photo {
@@ -129,7 +130,6 @@ private struct PhotoCreditsView: View {
                             .font(.headline)
                         Text(credit.attribution)
                             .font(.subheadline)
-                            .foregroundStyle(.secondary)
                             .tint(Color.accentColor)
                     }
                 }
