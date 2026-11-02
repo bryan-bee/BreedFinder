@@ -194,7 +194,7 @@ private struct CardFan: View {
 
             PhotoCard(caption: breed) {
                 if let photo = BreedLibrary.shared.photo(for: breed) {
-                    WholePhoto(image: Image(uiImage: photo))
+                    FramedPhoto(photo: photo, focus: BreedLibrary.shared.photoFocus(for: breed))
                 } else {
                     PhotoPlaceholder()
                 }

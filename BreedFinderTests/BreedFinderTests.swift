@@ -213,6 +213,53 @@ final class PhotoFocusTests: XCTestCase {
         }
     }
 
+    // MARK: The breed page's photo
+
+    /// The 4:3 photo in a wider frame loses a strip, from below the head rather than the middle.
+    func testPhotoCloseToTheFramesShapeFillsItWithTheHeadInView() {
+        let focus = PhotoFocus(dog: CGRect(x: 0.1, y: 0.05, width: 0.8, height: 0.9),
+                               head: CGRect(x: 0.6, y: 0.02, width: 0.2, height: 0.25))
+
+        let region = focus.region(of: photo, aspectRatio: 1.5)
+
+        XCTAssertEqual(region.width, 800, accuracy: 0.5)
+        XCTAssertEqual(region.height, 533.3, accuracy: 0.5)
+        XCTAssertEqual(region.minY, 12, accuracy: 0.5)  // the top of the head, 2% down
+    }
+
+    /// A tall photo in a wide frame would lose the dog's head or legs, so it's shown whole.
+    func testTallPhotoIsShownWhole() {
+        let tall = CGSize(width: 533, height: 800)
+        let focus = PhotoFocus(dog: CGRect(x: 0.05, y: 0.1, width: 0.9, height: 0.85),
+                               head: CGRect(x: 0.35, y: 0.1, width: 0.3, height: 0.25))
+
+        let region = focus.region(of: tall, aspectRatio: 4.0 / 3)
+
+        XCTAssertTrue(region.insetBy(dx: -0.5, dy: -0.5).contains(CGRect(origin: .zero, size: tall)))
+        XCTAssertEqual(region.height, 800, accuracy: 0.5)
+        XCTAssertEqual(region.midX, 266.5, accuracy: 0.5)
+    }
+
+    /// No zooming in, even on a small dog: Vision's outline of a dog often leaves out its legs.
+    func testPhotoTheFramesShapeIsShownExactly() {
+        let focus = PhotoFocus(dog: CGRect(x: 0.45, y: 0.5, width: 0.1, height: 0.1), head: nil)
+
+        let region = focus.region(of: photo, aspectRatio: 4.0 / 3)
+
+        XCTAssertEqual(region.minX, 0, accuracy: 0.5)
+        XCTAssertEqual(region.minY, 0, accuracy: 0.5)
+        XCTAssertEqual(region.width, 800, accuracy: 0.5)
+        XCTAssertEqual(region.height, 600, accuracy: 0.5)
+    }
+
+    func testNothingFoundFillsFromTheMiddle() {
+        let region = PhotoFocus().region(of: photo, aspectRatio: 1.5)
+
+        XCTAssertEqual(region.minX, 0, accuracy: 0.5)
+        XCTAssertEqual(region.midY, 300, accuracy: 0.5)
+        XCTAssertEqual(region.width, 800, accuracy: 0.5)
+    }
+
     /// tools/find_dogs_in_photos.swift has to run again whenever a photo is added or
     /// replaced, or its thumbnail gets cut around where the dog was in the old photo.
     func testEveryBreedPhotoHasBeenAnalyzed() throws {

@@ -14,22 +14,18 @@ struct PhotoFocus: Decodable, Equatable {
     /// The tightest crop, as a share of the biggest one the photo allows, so a small dog in
     /// a big photo doesn't become a blurry close-up.
     static let tightestCrop: CGFloat = 0.4
+    /// The most of a photo's width or height a frame may cut off to fill itself. Any more
+    /// risks the dog's head or legs, so the frame shows the whole photo instead.
+    static let mostCutToFill: CGFloat = 0.15
 
     /// The part of a photo of `size` to show in a frame shaped `aspectRatio` (width ÷
     /// height): the whole dog with a little room around it when it fits; otherwise as much
     /// of the dog as fits, keeping its head in view. Without the dog's outline, the biggest
     /// crop, around its head if Vision found that, or else the middle.
     func crop(of size: CGSize, aspectRatio: CGFloat, margin: CGFloat = PhotoFocus.margin) -> CGRect {
-        // The biggest frame-shaped crop the photo has room for.
-        let largest = size.width / size.height > aspectRatio
-            ? CGSize(width: size.height * aspectRatio, height: size.height)
-            : CGSize(width: size.width, height: size.width / aspectRatio)
-        func inPixels(_ rect: CGRect) -> CGRect {
-            CGRect(x: rect.minX * size.width, y: rect.minY * size.height,
-                   width: rect.width * size.width, height: rect.height * size.height)
-        }
-        let head = self.head.map(inPixels)
-        guard let subject = dog.map(inPixels) else {
+        let largest = Self.largestCrop(of: size, aspectRatio: aspectRatio)
+        let head = self.head.map { Self.inPixels($0, of: size) }
+        guard let subject = dog.map({ Self.inPixels($0, of: size) }) else {
             // Zooming in on just a head gives a blurry close-up of fur, so only slide the crop.
             let center = head.map { CGPoint(x: $0.midX, y: $0.midY) } ?? CGPoint(x: size.width / 2, y: size.height / 2)
             return CGRect(x: min(max(center.x - largest.width / 2, 0), size.width - largest.width),
@@ -50,6 +46,46 @@ struct PhotoFocus: Decodable, Equatable {
         let y = Self.start(of: height, subject: padded.minY...padded.maxY, head: head.map { $0.minY...$0.maxY },
                            photoLength: size.height, withoutHead: .start)
         return CGRect(x: x, y: y, width: width, height: height)
+    }
+
+    /// The part of a photo of `size` to show in a frame shaped `aspectRatio` that should show
+    /// the whole dog, like the breed page's photo. A photo close to the frame's shape fills
+    /// it, the strip cut off taken from where it keeps the dog's head in view (or, with no
+    /// head found, the top of the dog). Any other photo is shown whole: the rect runs past
+    /// its edges where the frame has room left over. Unlike crop(of:aspectRatio:) it never
+    /// zooms in on the dog, since Vision's outline of a dog often stops above its legs.
+    func region(of size: CGSize, aspectRatio: CGFloat) -> CGRect {
+        let photoRatio = size.width / size.height
+        guard 1 - min(photoRatio, aspectRatio) / max(photoRatio, aspectRatio) <= Self.mostCutToFill else {
+            let width = max(size.width, size.height * aspectRatio)
+            let height = width / aspectRatio
+            return CGRect(x: (size.width - width) / 2, y: (size.height - height) / 2, width: width, height: height)
+        }
+        let largest = Self.largestCrop(of: size, aspectRatio: aspectRatio)
+        let keep = (head ?? dog).map { Self.inPixels($0, of: size) }
+        func start(of length: CGFloat, photoLength: CGFloat, keeping range: ClosedRange<CGFloat>?) -> CGFloat {
+            var start = (photoLength - length) / 2
+            if let range {
+                // Its far end first, so a head longer than the frame keeps its top.
+                start = min(max(start, range.upperBound - length), range.lowerBound)
+            }
+            return min(max(start, 0), photoLength - length)
+        }
+        return CGRect(x: start(of: largest.width, photoLength: size.width, keeping: keep.map { $0.minX...$0.maxX }),
+                      y: start(of: largest.height, photoLength: size.height, keeping: keep.map { $0.minY...$0.maxY }),
+                      width: largest.width, height: largest.height)
+    }
+
+    /// The biggest frame-shaped crop a photo of `size` has room for.
+    private static func largestCrop(of size: CGSize, aspectRatio: CGFloat) -> CGSize {
+        size.width / size.height > aspectRatio
+            ? CGSize(width: size.height * aspectRatio, height: size.height)
+            : CGSize(width: size.width, height: size.width / aspectRatio)
+    }
+
+    private static func inPixels(_ rect: CGRect, of size: CGSize) -> CGRect {
+        CGRect(x: rect.minX * size.width, y: rect.minY * size.height,
+               width: rect.width * size.width, height: rect.height * size.height)
     }
 
     private enum Placement { case start, middle }

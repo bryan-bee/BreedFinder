@@ -97,20 +97,36 @@ struct PhotoCreditView: View {
 /// Shows the entire photo, with a blurred copy filling the leftover space. Reference
 /// photos are mostly wide side views; cropping them to a tall frame would cut off the
 /// dog's head or tail.
-struct WholePhoto: View {
-    let image: Image
+/// A breed's reference photo in a frame of any shape, showing the whole dog: the photo fills
+/// the frame when its shape is close, cut where the dog's head stays in view; otherwise it's
+/// shown whole over a blurred copy that fills the rest (PhotoFocus.region(of:aspectRatio:)).
+struct FramedPhoto: View {
+    let photo: UIImage
+    let focus: PhotoFocus
 
     var body: some View {
-        ZStack {
-            image
+        GeometryReader { geometry in
+            let frame = geometry.size
+            if frame.width > 0, frame.height > 0, photo.size.width > 0, photo.size.height > 0 {
+                let region = focus.region(of: photo.size, aspectRatio: frame.width / frame.height)
+                let scale = frame.width / region.width
+                Image(uiImage: photo)
+                    .resizable()
+                    .frame(width: photo.size.width * scale, height: photo.size.height * scale)
+                    .offset(x: -region.minX * scale, y: -region.minY * scale)
+            }
+        }
+        // A background, so the blurred copy, bigger than the frame, can't resize it. (In a
+        // ZStack it did, and the sharp photo was then sized to fill the frame too, cutting
+        // off heads.)
+        .background {
+            Image(uiImage: photo)
                 .resizable()
                 .scaledToFill()
                 .blur(radius: 14)
                 .opacity(0.6)
-            image
-                .resizable()
-                .scaledToFit()
         }
+        .clipped()
     }
 }
 

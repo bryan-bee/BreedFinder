@@ -66,6 +66,7 @@ CATEGORIES = {
 # "replaced": the photo before it was uploaded by someone other than its photographer
 # with no record of permission (or was a crop of a deleted file), so its license couldn't
 # be verified. Each replacement is the photographer's own upload or passed Flickr review.
+# "whole dog": the photo before cut off part of the dog, which the breed page shows whole.
 FILES = {
     "Affenpinscher": "Pinczer małpi 756.jpg",
     "Akita": "Akita Inu (male).jpg",
@@ -90,6 +91,7 @@ FILES = {
     "Norwegian Buhund": "Buhunden.jpg",
     "Norwegian Lundehund": "Lundehund 2008.jpg",  # replaced
     "Rottweiler": "Rottweiler net.jpg",  # replaced
+    "Scottish Terrier": "A Scottish Terrier.jpg",  # whole dog: the photo before was a close-up of the face
     "Sealyham Terrier": "Sealyham terrier 230809.JPG",  # replaced
     "Smooth Fox Terrier": "FoxSmooth2.jpg",  # replaced
 }

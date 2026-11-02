@@ -113,6 +113,11 @@ final class BreedLibrary {
         return UIImage(contentsOfFile: url.path)
     }
 
+    /// Where the dog is in the breed's reference photo; empty if Vision found nothing.
+    func photoFocus(for breed: String) -> PhotoFocus {
+        profiles[breed]?.photo.flatMap { focus[$0.file] } ?? PhotoFocus()
+    }
+
     /// A small, cached square of the reference photo for list rows, cut around the dog
     /// rather than from the middle, which on side-on photos shows a body without a head.
     func thumbnail(for breed: String) -> UIImage? {
@@ -121,8 +126,7 @@ final class BreedLibrary {
         var square = photo
         // Crop rects are in the photo's pixels as shown; the bundled photos are all upright.
         if photo.imageOrientation == .up, let pixels = photo.cgImage {
-            let focus = profiles[breed]?.photo.flatMap { focus[$0.file] } ?? PhotoFocus()
-            let crop = focus.crop(of: CGSize(width: pixels.width, height: pixels.height), aspectRatio: 1)
+            let crop = photoFocus(for: breed).crop(of: CGSize(width: pixels.width, height: pixels.height), aspectRatio: 1)
             if let cropped = pixels.cropping(to: crop.integral) {
                 square = UIImage(cgImage: cropped)
             }

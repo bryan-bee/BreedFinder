@@ -13,12 +13,13 @@ struct BreedDetailView: View {
                 let photo = BreedLibrary.shared.photo(for: profile.name)
                 Group {
                     if let photo {
-                        WholePhoto(image: Image(uiImage: photo))
+                        FramedPhoto(photo: photo, focus: BreedLibrary.shared.photoFocus(for: profile.name))
                     } else {
                         PhotoPlaceholder()
                     }
                 }
-                .frame(height: 260)
+                // 4:3, the shape of most of the photos, so most fill it without losing much.
+                .aspectRatio(4 / 3, contentMode: .fit)
                 .frame(maxWidth: .infinity)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
                 .accessibilityElement(children: .ignore)

@@ -1328,12 +1328,13 @@
   "sourceURL": "https://commons.wikimedia.org/wiki/File:Karrie.JPG"
  },
  "Scottish Terrier": {
-  "article": "Scottish Terrier",
-  "author": "Elise Carroll",
+  "article": null,
+  "author": "narujen",
   "file": "scottish-terrier.jpg",
-  "license": "CC BY-SA 4.0",
-  "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
-  "sourceURL": "https://commons.wikimedia.org/wiki/File:Scottish_Terrier_Photo_of_Face.jpg"
+  "license": "CC BY 2.0",
+  "licenseURL": "https://creativecommons.org/licenses/by/2.0",
+  "sourceURL": "https://commons.wikimedia.org/wiki/File:A_Scottish_Terrier.jpg",
+  "title": "A Scottish Terrier"
  },
  "Sealyham Terrier": {
   "article": null,
