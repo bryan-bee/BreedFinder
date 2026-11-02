@@ -37,7 +37,7 @@ actor DogAnalyzer {
             }
         }
         return ScanResult(source: source, frames: frames, guesses: guesses,
-                          dogPhoto: bestFrame.map(Self.cropToDog), modelVersion: modelVersion)
+                          dogPhoto: bestFrame.map(Self.photoOfDog), modelVersion: modelVersion)
     }
 
     private func loadedModel() throws -> VNCoreMLModel {
@@ -113,24 +113,20 @@ actor DogAnalyzer {
             .intersection(CGRect(x: 0, y: 0, width: 1, height: 1))
     }
 
-    /// The largest centered square, as a normalized rect.
-    static func centerSquare(imageWidth: Int, imageHeight: Int) -> CGRect {
-        let side = CGFloat(min(imageWidth, imageHeight))
-        let width = side / CGFloat(imageWidth)
-        let height = side / CGFloat(imageHeight)
-        return CGRect(x: (1 - width) / 2, y: (1 - height) / 2, width: width, height: height)
-    }
 
-    /// The frame cropped to the square the classifier looked at: around the dog, or
-    /// the center of the frame when the detector didn't find one.
-    static func cropToDog(_ frame: FrameAnalysis) -> CGImage {
-        let width = frame.image.width
-        let height = frame.image.height
-        let region = frame.dogBox.map { squareRegion(around: $0, imageWidth: width, imageHeight: height) }
-            ?? centerSquare(imageWidth: width, imageHeight: height)
-        var rect = VNImageRectForNormalizedRect(region, width, height)
-        // Vision's normalized rects start at the bottom-left; CGImage's pixels at the top-left.
-        rect.origin.y = CGFloat(height) - rect.maxY
-        return frame.image.cropping(to: rect.integral) ?? frame.image
+    /// Room left around the user's dog in the saved photo, as a share of its size on each
+    /// side. More than the reference thumbnails get: the detector's outline of a dog lying
+    /// down or being petted can stop short of its head.
+    static let photoMargin: CGFloat = 0.3
+
+    /// The frame cut to a square around the dog, for the result card and the Breeds
+    /// collection, keeping the dog's head in view (see PhotoFocus). The square the classifier
+    /// looks at is centered on the dog instead, which cut the top of the head off a dog too
+    /// big for it, such as one sitting close to the camera.
+    static func photoOfDog(in frame: FrameAnalysis) -> CGImage {
+        let focus = PhotoFocus.find(in: frame.image, dog: frame.dogBox)
+        let crop = focus.crop(of: CGSize(width: frame.image.width, height: frame.image.height),
+                              aspectRatio: 1, margin: photoMargin)
+        return frame.image.cropping(to: crop.integral) ?? frame.image
     }
 }

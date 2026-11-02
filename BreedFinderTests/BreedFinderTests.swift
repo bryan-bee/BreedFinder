@@ -110,14 +110,6 @@ final class SquareRegionTests: XCTestCase {
         XCTAssertEqual(region.width, 1, accuracy: 0.0001)
         XCTAssertEqual(region.height * 1920, 1080, accuracy: 1)
     }
-
-    func testCenterSquareIsCenteredAndSquareInPixels() {
-        let region = DogAnalyzer.centerSquare(imageWidth: 1080, imageHeight: 1920)
-
-        XCTAssertEqual(region.width, 1, accuracy: 0.0001)
-        XCTAssertEqual(region.height * 1920, 1080, accuracy: 1)
-        XCTAssertEqual(region.midY, 0.5, accuracy: 0.0001)
-    }
 }
 
 final class BreedSearchTests: XCTestCase {
@@ -189,6 +181,19 @@ final class PhotoFocusTests: XCTestCase {
             .crop(of: photo, aspectRatio: 1)
 
         XCTAssertEqual(crop, CGRect(x: 0, y: 0, width: 600, height: 600))
+    }
+
+    /// A dog whose outline stops short of its head, like one lying down being petted, still
+    /// fits with the bigger margin a scan's photo gets.
+    func testScanPhotosLeaveMoreRoomAroundTheDog() {
+        let portrait = CGSize(width: 900, height: 1200)
+        let focus = PhotoFocus(dog: CGRect(x: 0.2, y: 0.3, width: 0.4, height: 0.4), head: nil)
+
+        let thumbnail = focus.crop(of: portrait, aspectRatio: 1)
+        let scanPhoto = focus.crop(of: portrait, aspectRatio: 1, margin: DogAnalyzer.photoMargin)
+
+        XCTAssertGreaterThan(scanPhoto.width, thumbnail.width)
+        XCTAssertTrue(scanPhoto.contains(CGRect(x: 72, y: 216, width: 576, height: 768)))  // 30% around the dog
     }
 
     func testNothingFoundMeansTheMiddle() {

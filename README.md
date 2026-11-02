@@ -59,7 +59,7 @@ record 5 s video ──► pull 5 frames ──► for each frame:              
 | [Breeds/BreedCollection.swift](BreedFinder/Breeds/BreedCollection.swift) | The user's saved scans (on-device JSON + photos) |
 | [Breeds/BreedsView.swift](BreedFinder/Breeds/BreedsView.swift), [BreedGrouping.swift](BreedFinder/Breeds/BreedGrouping.swift) | The Breeds tab, its groupings and search (the text matches anywhere in a name; `*` stands for any characters) |
 | [Breeds/BreedPager.swift](BreedFinder/Breeds/BreedPager.swift) | Breed pages you swipe through, in the order the list showed them |
-| [Breeds/PhotoFocus.swift](BreedFinder/Breeds/PhotoFocus.swift) | Cuts list thumbnails around the dog instead of the middle of the photo |
+| [Breeds/PhotoFocus.swift](BreedFinder/Breeds/PhotoFocus.swift) | Cuts list thumbnails and the photos scans save around the dog, head included, instead of from the middle |
 | [Support/SupportView.swift](BreedFinder/Support/SupportView.swift) | Support tab, problem reports, credits |
 | [Support/Analytics.swift](BreedFinder/Support/Analytics.swift) | Anonymous usage stats: the TelemetryDeck App ID and every signal the app sends |
 | [ScanModel.swift](BreedFinder/ScanModel.swift) | Scan tab state: home → camera → scanning → result, and the answer to "Is it a …?" |

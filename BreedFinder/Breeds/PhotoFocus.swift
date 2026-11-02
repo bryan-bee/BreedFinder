@@ -1,4 +1,5 @@
 import CoreGraphics
+import Vision
 
 /// Where the dog is in a breed's reference photo: the whole dog and its head, as fractions
 /// of the photo's size with the origin at the top left. Found ahead of time with Apple's
@@ -18,7 +19,7 @@ struct PhotoFocus: Decodable, Equatable {
     /// height): the whole dog with a little room around it when it fits; otherwise as much
     /// of the dog as fits, keeping its head in view. Without the dog's outline, the biggest
     /// crop, around its head if Vision found that, or else the middle.
-    func crop(of size: CGSize, aspectRatio: CGFloat) -> CGRect {
+    func crop(of size: CGSize, aspectRatio: CGFloat, margin: CGFloat = PhotoFocus.margin) -> CGRect {
         // The biggest frame-shaped crop the photo has room for.
         let largest = size.width / size.height > aspectRatio
             ? CGSize(width: size.height * aspectRatio, height: size.height)
@@ -38,7 +39,7 @@ struct PhotoFocus: Decodable, Equatable {
 
         // The detector's outline sometimes stops short of an ear or the nose, so count the
         // head as part of the dog.
-        let padded = subject.insetBy(dx: -subject.width * Self.margin, dy: -subject.height * Self.margin)
+        let padded = subject.insetBy(dx: -subject.width * margin, dy: -subject.height * margin)
             .union(head ?? .null)
         // The narrowest frame-shaped crop that holds the padded dog, within the limits above.
         let width = min(max(padded.width, padded.height * aspectRatio, largest.width * Self.tightestCrop),
@@ -68,5 +69,39 @@ struct PhotoFocus: Decodable, Equatable {
             start = placement == .start ? subject.lowerBound : middle(subject) - length / 2
         }
         return min(max(start, 0), photoLength - length)
+    }
+}
+
+extension PhotoFocus {
+    /// Where the dog is in `image`, given the dog's outline from Apple's animal detector
+    /// (normalized, origin at the bottom left, as Vision gives it), with its head found by
+    /// Vision's animal pose detector. Used for the photo a scan saves of the user's dog;
+    /// tools/find_dogs_in_photos.swift does the same for the reference photos.
+    static func find(in image: CGImage, dog: CGRect?) -> PhotoFocus {
+        func topLeft(_ rect: CGRect) -> CGRect {
+            CGRect(x: rect.minX, y: 1 - rect.maxY, width: rect.width, height: rect.height)
+        }
+        return PhotoFocus(dog: dog.map(topLeft), head: headBox(in: image, dog: dog).map(topLeft))
+    }
+
+    /// A square around the eyes, nose and ears the pose detector finds, a little bigger than
+    /// they are, since they sit inside the head. Prefers the head inside `dog`.
+    private static func headBox(in image: CGImage, dog: CGRect?) -> CGRect? {
+        let request = VNDetectAnimalBodyPoseRequest()
+        guard (try? VNImageRequestHandler(cgImage: image, orientation: .up).perform([request])) != nil else { return nil }
+        let width = CGFloat(image.width), height = CGFloat(image.height)
+        let heads: [CGRect] = (request.results ?? []).compactMap { pose in
+            let points = ((try? pose.recognizedPoints(.head)) ?? [:]).values.filter { $0.confidence > 0.2 }
+            guard points.count >= 2 else { return nil }
+            let xs = points.map(\.location.x), ys = points.map(\.location.y)
+            guard let minX = xs.min(), let maxX = xs.max(), let minY = ys.min(), let maxY = ys.max() else { return nil }
+            // Normalized units differ on the two axes, so size the square in pixels.
+            let side = max(max((maxX - minX) * width, (maxY - minY) * height) * 1.6, min(width, height) * 0.12)
+            return CGRect(x: (minX + maxX) / 2 - side / 2 / width, y: (minY + maxY) / 2 - side / 2 / height,
+                          width: side / width, height: side / height)
+                .intersection(CGRect(x: 0, y: 0, width: 1, height: 1))
+        }
+        guard let dog else { return heads.first }
+        return heads.first { dog.contains(CGPoint(x: $0.midX, y: $0.midY)) } ?? heads.first
     }
 }
